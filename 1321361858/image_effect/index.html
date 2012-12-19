@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+	
+	<head>
+	
+		<title>Nautilus Demo</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="alvaro,montoro,jaen,nautilus,jquery,google,doodle,plugin,plug-in,plug" />
+		
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery.nautilus.js"></script>
+
+		
+		<style type="text/css">
+		html, body {
+			background-color: #ccc;
+		}
+		
+		#verne {
+			top: 100px;
+			left: 100px;
+		}
+		
+		.sub_ctrl {
+			position: absolute;
+		}
+		
+		.ctrlUp {
+			top:30px;
+			left:40px;
+		}
+		
+		.ctrlDown {
+			top:60px;
+			left:40px;
+		}
+		
+		.ctrlLeft {
+			top:45px;
+			left:5px;
+		}
+		
+		.ctrlRight {
+			top:45px;
+			right:5px;
+		}
+		</style>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21281616-1']);
+  _gaq.push(['_trackPageview']);
+</script>
+	</head>
+	
+	<body>
+	<!--<span style="float:right"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.alvaromontoro.com%2FimageCloud%2F&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe></span>-->	
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#verne").nautilus({
+					controls:true,
+					color: '#ffffff',
+					controlsWidth:100,
+					controlsType: 'image',
+					controlsUp: "up.jpg",
+					controlsDown: "down.jpg",
+					controlsLeft: "left.jpg",
+					controlsRight: "right.jpg",
+				});
+			});
+		</script>
+
+		<div id="verne">
+			<img src="alvaro.png" class="window" style="width:500px;height:200px;" />
+			<img src="waves2.png" class="waves"  style="width:1000px;height:300px;top:40px;" />
+			<img src="waves1.png" class="waves"  style="width:1000px;height:300px;top:30px;" />
+			<img src="layer1.png" style="width:700px;height:1000px;" />
+			<img src="layer2.png" style="width:700px;height:1000px;" />
+			<img src="layer3.png" style="width:700px;height:1000px;" />
+			<img src="layer4.png" class="moves"  style="width:200px;height:150px;top:300px;" />
+
+			<img src="fondo.jpg"  class="back"   style="width:700px;height:1000px;"/>
+		</div>
+		
+	</body>
+
+</html>

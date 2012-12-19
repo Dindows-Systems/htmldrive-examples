@@ -1,0 +1,31 @@
+body					{ background: #ffffff; font: 11px "Trebuchet MS", Verdana, Arial, sans-serif; }
+p 						{ padding-bottom:10px; position:absolute; left:47%; bottom:5px; }
+p a					{ text-decoration: none; outline: none; color:#d00000; }
+p a:hover			{ border-bottom: 2px dotted #d00000; }
+#iconbar			{ position:absolute; top:45%; left:45%; text-shadow:0 1px 0 #eee;}
+#iconbar li			{
+	float:left;
+	position:relative;
+	margin-right:20px;
+	background:#E8E8F9;
+	border: 1px dashed #ffc0ff;
+	overflow:hidden;
+}
+#iconbar a {
+	text-decoration: none;
+	outline: none;
+	color:#d00000;
+	display: block;
+	width: 24px;
+	padding: 10px;
+	cursor:pointer;
+}
+#iconbar span	{
+	width: 100px;
+	height: 35px;
+	position: absolute;
+	display: none;
+	line-height:110%;
+	color:#409BED;
+	padding-left: 10px;
+}

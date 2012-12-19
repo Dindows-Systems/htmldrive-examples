@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script src="jquery.js"></script>
+  <!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>-->
+  <style type="text/css">
+#mask {
+position:absolute;
+left:0;
+top:0;
+z-index:9000;
+display:block;
+}
+#myMenu{
+position:absolute;
+display:none;
+z-index:9999;
+background:yellow;
+border:1px solid;
+width:200px;
+height:155px; 
+}
+#textbox{
+background:orange;
+width:380px;
+border:2px solid;
+}
+img {
+height:30px; width:30px;
+}
+td{
+font-size:20px;
+cursor:pointer;
+}
+a{
+text-decoration:none;
+color:black;
+}
+a:hover{
+color:white;
+background:black;
+}
+  </style>
+  <script type="text/javascript">
+  
+  var windowwidth;
+  var windowheight;
+  var checkmenu;
+  $(window).ready(function() {
+  
+   $('#myMenu').hide();
+       
+	   $('#textbox').bind("contextmenu",function(e){
+	   
+	   windowwidth = $(window).width();
+	   windowheight = $(window).height();
+	   checkmenu = 1;
+	   $('#mask').css({
+	   'height': windowheight,
+	   'width': windowwidth
+	   });
+            $('#myMenu').show(500);  
+			  $('#myMenu').css({
+			  'top':e.pageY+'px',
+			  'left':e.pageX+'px'
+			  });
+			  
+			  return false;
+       });
+
+
+
+$('#mask').click(function(){
+$(this).height(0);
+$(this).width(0);
+$('#myMenu').hide(500);
+checkmenu = 0;
+return false;
+});
+
+$('#mask').bind("contextmenu",function(){
+$(this).height(0);
+$(this).width(0);
+$('#myMenu').hide(500);
+checkmenu = 0;
+return false;
+});
+
+$(window).resize(function(){
+if(checkmenu == 1) {
+windowwidth = $(window).width();
+	   windowheight = $(window).height();
+	   $('#mask').css({
+	   'height': windowheight,
+	   'width': windowwidth,
+	   });
+}
+
+});
+  });
+  </script>
+</head>
+<body >
+<div id="myMenu" >
+<table cellspace="3">
+<tr>
+<td ><img src="images/twitter.png" ></td><td><a href="#">tweet me</a></td>
+</tr>
+<tr>
+<td ><img src="images/facebook.png" > </td><td><a href="#">facebook share</a></td>
+</tr>
+<tr>
+<td ><img src="images/myspace.png" > </td><td><a href="#">myspace share</a></td>
+</tr>
+<tr>
+<td ><img src="images/mail.png" > </td><td><a href="#">e-mail this</a></td>
+</tr>
+
+</table>
+
+</div>
+<div id="mask"> </div>
+<div id="textbox">
+<p>Howdy,
+Its Hitesh here, if you love me you can call me Hitz.<p/>
+
+<p><b>I'm a JavaScript and PHP Programmer.</b><p/>
+
+<p>Believe in Simplicity and Smartness at the same time. <p/>
+
+<p>I'm dedicated to OPEN SOURCE. Are you? <p/>
+ </div>
+ 
+ <div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+ </div>
+</body>
+</html>

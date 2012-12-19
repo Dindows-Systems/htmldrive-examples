@@ -1,0 +1,70 @@
+body {
+	background-color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+.new{
+background:url(images/new-trans.png) no-repeat top right;
+width:58px;
+height:58px;
+position:absolute;
+right:0;
+top:0;
+}
+.temp{
+float:left;
+width:292px;
+margin-right:20px;
+margin-left:20px;
+margin-bottom:20px;
+margin-top:20px;
+}
+.temphol{
+background:#efefef;
+border:1px solid #ccc;
+position:relative;
+width:290px;
+height:155px;
+overflow:hidden;
+}
+.temphol img {
+position: absolute;
+top: 7px; left: 7px;
+}
+.tempde{
+background:url(images/tempde.jpg) repeat-x bottom;
+border-left:1px solid #ccc;
+border-right:1px solid #ccc;
+width:290px;
+height:32px;
+}
+.tempname{
+float:left;
+padding-left:15px;
+padding-top:8px;
+}
+.tempprice{
+float:right;
+background:url(images/pricebg.jpg) center no-repeat;
+width:40px;
+height:22px;
+text-align:center;
+margin-top:2px;
+color:#fff;
+padding-top:6px;
+padding-right:5px;
+padding-left:5px;
+font-weight:bold;
+}
+.thumb{
+position:absolute;
+top:7px;
+left:7px;
+width:276px;
+height:141px;
+text-indent:-999px;
+overflow:hidden;
+background:url(images/blank.gif) repeat;
+}

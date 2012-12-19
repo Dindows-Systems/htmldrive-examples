@@ -1,0 +1,28 @@
+html { font-size: 16px; min-height: 100%; margin-bottom: 1px; }
+body { font-size: 62.5%; font-family: Verdana, Arial, sans-serif; color: #555555; background: #FFFFFF; }
+a { color: #0F67A1; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+#wrapper { background: white url(../images/sidebar_bg.jpg) repeat-y top right; }
+
+#content { }
+  #content h1 { font-size: 2.4em; font-weight: normal; line-height: 32px; margin: 30px 0 50px 0; }
+  #content p { font-size: 1.4em; line-height: 22px; margin-bottom: 20px; }
+  
+  /* relevant for the tutorial - start */
+  #gallery { position: relative; }
+    #pictures { position: relative; height: 408px; }
+    #pictures img { position: absolute; top: 0; left: 0; }
+    
+    #prev, #next { margin-top: 30px; text-align: center; font-size: 2.0em; }
+  /* relevant for the tutorial - end */
+  
+  /* enhanced - start */
+  #loader { position: absolute; top: 0; left:0; height: 458px; width: 100%; background: url(../images/ajax-loader.gif) white no-repeat center center; z-index: 9999; }
+  /* enhanced - end */
+  
+
+#sidebar { }
+  #sidebar ul { margin-top: 20px; }
+  #sidebar ul li { font-size: 1.2em; padding: 20px 0 20px 0; border-bottom: 1px solid #dddcdc; line-height: 18px; }
+  #sidebar ul li h2 { font-size: 1.2em; margin-bottom: 8px; }

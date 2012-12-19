@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<title>jQuery Feed Menu</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- Feed Me - Ommm Nommm Nom -->
+        <link rel="alternate" type="application/rss+xml" title="The Blog" href="http://feeds.feedburner.com/komodomedia" />
+
+        <link rel="alternate" type="application/rss+xml" title="The Nerdlab" href="http://feeds.feedburner.com/komodomedia_nerdlab" />
+        <link rel="alternate" type="application/rss+xml" title="The Inspiration" href="http://feeds.feedburner.com/komodomedia_inspiration" />
+        <link rel="alternate" type="application/rss+xml" title="Komodomedia's del.icio.us bookmarks" href="http://del.icio.us/rss/rogie" /> 
+        <link rel="alternate" type="application/rss+xml" title="My Twitter Feed" href="http://twitter.com/statuses/user_timeline/9085252.rss" />
+	    <link rel="alternate" type="application/atom+xml" title="My Twitter Feed" href="http://twitter.com/statuses/user_timeline/9085252.atom" />
+        <link rel="alternate" type="application/atom+xml" title="My Friend Feed" href="http://friendfeed.com/tingo?format=atom" />   		
+  		<script type="text/javascript" src="jquery.js"></script>
+  		<script type="text/javascript" src="feed_menu.js"></script>
+		<script type="text/javascript">
+			$ = jQuery;
+		</script>
+		<style>
+			body {
+				color: #9D9D9D;
+				font-family:"Lucida Grande",Tahoma,Verdana,sans-serif;
+				font-size:0.9em;
+				line-height:1.65;
+				padding:0.5em 1em;
+				background:#1A1A1A;
+			}
+			a{ color:#FFCC00;}
+			h1,h2,h3,h4{
+				margin:0.5em 0;
+				padding:0;
+				color: #787878;
+			}
+			code{
+				white-space: pre;
+			}
+		</style>
+  		<link rel="stylesheet" href="feed_menu.css" type="text/css" media="all" />
+		<!--[if IE]>
+			<link rel="stylesheet" href="feed_menu_ie.css" type="text/css" media="all" />
+		<![endif]-->
+	</head>
+	<body>
+
+
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+<br />
+<br />		
+		<h3>The jQuery Feed Menu</h3>
+		<span id="jquery_feed_menu_example_1"></span><script type="text/javascript">
+//<![CDATA[
+var fm = new FeedMenu();fm.write('#jquery_feed_menu_example_1');
+//]]>
+</script>
+		<h3>Atom Feeds</h3>
+Atom Feeds: <span id="jquery_feed_menu_example_2"></span><script type="text/javascript">//<![CDATA[
+var fm2 = new FeedMenu('link' + String.fromCharCode(91) +'type*=atom' + String.fromCharCode(93));fm2.write('#jquery_feed_menu_example_2');
+//]]>
+</script>
+<h3>RSS Feeds</h3>
+RSS Feeds: <span id="jquery_feed_menu_example_3"></span><script type="text/javascript">//<![CDATA[
+var fm3 = new FeedMenu('link' + String.fromCharCode(91) +'type*=rss' + String.fromCharCode(93));fm3.write('#jquery_feed_menu_example_3');
+//]]>
+</script>
+<h3>Different Theme Classes:</h3>
+<span id="jquery_feed_menu_example_8"></span> Classic Orange<script type="text/javascript">//<![CDATA[
+var fm8= new FeedMenu();
+fm8.write('#jquery_feed_menu_example_8');
+//]]>
+</script>
+
+<br />
+
+<span id="jquery_feed_menu_example_4"></span> Komodo Media v.4 Woodgrain <script type="text/javascript">//<![CDATA[
+var fm4 = new FeedMenu(null,'wood');
+fm4.write('#jquery_feed_menu_example_4');
+//]]>
+</script>
+<br />
+<span id="jquery_feed_menu_example_5"></span> Komodo Media Azure<script type="text/javascript">//<![CDATA[
+var fm5 = new FeedMenu(null,'azure');
+fm5.write('#jquery_feed_menu_example_5');
+//]]>
+</script>
+
+<br /><br />
+
+<span style="background:#111;padding:1em 0.5em;margin-right:0.5em;" class="jquery_feed_menu_example_6"></span><span style="background:#666600;padding:1em 0.5em;margin-right:0.5em;" class="jquery_feed_menu_example_6"></span><span style="background:#663300;padding:1em 0.5em;margin-right:0.5em;" class="jquery_feed_menu_example_6"></span></span> Transparent on Dark (for dark backgrounds)<script type="text/javascript">//<![CDATA[
+var fm6 = new FeedMenu(null,'trans_on_dark');
+fm6.write('.jquery_feed_menu_example_6');
+//]]>
+</script>
+
+<br /><br /><br />
+
+<span style="background:#DDD;padding:1em 0.5em;margin-right:0.5em;" class="jquery_feed_menu_example_7"></span><span style="background:#33FFFF;padding:1em 0.5em;margin-right:0.5em;" class="jquery_feed_menu_example_7"></span><span style="background:#FFCCFF;padding:1em 0.5em;margin-right:0.5em;" class="jquery_feed_menu_example_7"></span> Transparent on Light (for light backgrounds)<script type="text/javascript">//<![CDATA[
+var fm7= new FeedMenu(null,'trans_on_light');
+fm7.write('.jquery_feed_menu_example_7');
+//]]>
+</script>
+<h3>Last, something custom</h3>
+
+<span id="jquery_feed_menu_example_9"></span><script type="text/javascript">//<![CDATA[
+var oCustomLinks = [ {title:'RSS Feed', href:"http://feeds.feedburner.com/komodomedia" },{title:'Subscribe with Bloglines', href:"http://www.bloglines.com/sub/http://feeds.feedburner.com/komodomedia" },{title:'Subscribe with Google Reader', href:"http://www.google.com/reader/view/feed/http://feeds.feedburner.com/komodomedia" }];
+var fm9 = new FeedMenu(oCustomLinks);
+fm9.write('#jquery_feed_menu_example_9');
+//]]>
+</script>
+    </body>
+</html>

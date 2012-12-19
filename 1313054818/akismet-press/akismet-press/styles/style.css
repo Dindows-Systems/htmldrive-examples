@@ -1,0 +1,183 @@
+/*
+Tutorial By Onextrapixel. http://www.onextrapixel.com
+*/
+body
+{
+	font-family: 'Helvetica Neue', Verdana, sans-serif;
+}
+
+#shadow
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 10;
+}
+
+#logo-modal
+{
+	position: absolute;
+	background: #FFFFFF;
+	width: 320px;
+	padding: 20px;
+	top: 0;
+	z-index: 20;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	
+}
+
+	#logo-modal h2
+	{
+		color: #666666;
+		line-height: 20px;
+		position: relative;
+	}
+	
+		#logo-modal h2 span
+		{
+			position: absolute;
+			right: 0;
+			top: -2px;
+			display: block;
+			padding: 0px 5px;
+			background: #CC0000;
+			cursor: pointer;
+			color: #FFFFFF;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+		
+		#logo-modal h2 span:hover
+		{
+			background: #FF0000;
+		}
+	
+	#logo-modal img
+	{
+		margin: 10px 0;
+		max-width: 100%;
+	}
+
+	#logo-modal ul
+	{
+		border-top: 1px solid #CCCCCC;
+	}
+	
+		#logo-modal ul li
+		{
+			border-bottom: 1px solid #CCCCCC;
+			border-left: 1px solid #CCCCCC;
+			border-right: 1px solid #CCCCCC;
+			
+		}
+		
+			#logo-modal ul li a
+			{
+				text-decoration: none;
+				font-size: 14px;
+				color: #44c9aa;
+				display: block;
+				position: relative;
+				padding: 10px 20px;
+			}
+			
+				#logo-modal ul li a:hover
+				{
+					background: #EFEFEF;
+				}
+			
+				#logo-modal ul li a span
+				{
+					position: absolute;
+					right: 20px;
+					color: #999999;
+					font-size: 12px;
+				}
+				
+				
+
+#banner
+{
+	width: 960px;
+	margin: 0 auto;
+	height: 150px;
+	position: relative;
+}
+
+	#banner h1
+	{
+		position: absolute;
+		text-indent: -9999em;
+	}
+
+	#logo
+	{
+		float: left;
+		padding-top: 29px;
+	}
+	
+	#banner nav
+	{
+		float: right;
+		width: 50%;
+		height: 150px;
+	}
+	
+		#banner nav ul
+		{
+			list-style: none;
+			display: block;
+		}
+		
+			#banner nav ul li
+			{
+				display: block;
+				float: left;
+				margin: 55px 20px;
+				height: 40px;
+				
+			}
+			
+			#banner nav ul li a
+			{
+				display: block;
+				background: #FFFFFF;
+				height: 100%;
+				line-height: 40px;
+				padding: 0 20px;
+				text-decoration: none;
+				color: #44c9aa;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
+			}
+			
+				#banner nav ul li a:hover
+				{
+					background: #EFEFEF;
+				}
+				
+#content
+{
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+	#content h1
+	{
+		font-size: 40px;
+		margin: 1em 0;
+		font-weight: bold;
+		color: #666666;
+		line-height: 1.5em;
+	}

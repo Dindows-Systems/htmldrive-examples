@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CSS 3D Demo</title>
+
+<script src="js/jquery-1.4.2.js" type="text/javascript" ></script>
+<script src="js/jquery-ui-1.8.custom.min.js" type="text/javascript" ></script>
+<script src="js/jquery-css-transform.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	var log = function (msg) {
+      console.log(msg);
+      return this;
+  	};
+
+	var mousePos = {x:0, y:0};
+	var animals;
+	var i;
+	function frameStep() {
+		
+		// animate labels
+		for(i=0; i<animals.length; i++) {
+			var animal = animals[i];
+			 var label = $(animal).children(".label");
+		
+			 if(!label.data("isMouseOver")) {
+				
+				var angle = label.data("angle");
+				var startLeft = label.data("leftStart");
+				var startTop = label.data("topStart");
+					
+				// animate label on circular path
+				if((angle += 0.002) >= 360) angle = 0;
+				label.css("left",  (Math.cos(180/Math.PI * angle)*7 + startLeft) + "px"); 
+				label.css("top", (Math.sin(180/Math.PI * angle)*7 + startTop) + "px");
+				label.data("angle", angle);
+				
+				// rotate animal images based on mouse position if they are not currently animating
+				var img = $(animal).children("img");
+				img.stop(false, true);
+				img.rotateY((img.offset().left+img.data("width")/2 - mousePos.x)/-10 + "deg");
+				img.rotateX((img.offset().top+img.data("height")/2 - mousePos.y)/10 + "deg");
+			 }
+		}
+	}
+	
+	$(document).ready(function() {
+		
+		animals = $(".animal").toArray();
+
+		$("#animalHeading")
+			.hide()
+			.css("top", $(window).height()/2 - parseFloat($("#animalHeading").height())/2)
+			.translate3d("0px", "0px", "100px");
+			
+		$(".animal").each(function() {
+			$(this).data("size", {width:$(this).width(), height:$(this).height()});
+			$(this).children("img").translate3d("0px", "0px", "-50px");
+		});
+		
+		$(".label").each(function() {
+			$(this).data("angle", 0)
+			.data("leftStart", parseFloat($(this).css("left")))
+			.data("topStart", parseFloat($(this).css("top")));
+		})
+		.mouseenter(function() {
+			var label = $(this);
+			
+			if(!label.data("isMouseOver")) {
+				label.data("isMouseOver", true);
+				label.addClass("labelOver");
+		
+				var img = $(this).siblings("img");
+				img.stop(false, true);
+				img.scale(0.8);
+				img.animate({scale: 1, translate3d:"0px -70px -5px", rotateY:'0deg'}, {queue:false, duration:1000, easing:"easeOutElastic" });
+			}
+		})
+		.mouseleave(function() {
+			var label = $(this);
+			var img = $(this).siblings("img");
+			
+			if(label.data("isMouseOver")) {
+				label.removeClass("labelOver");
+				img.stop(false, true);
+				img.animate({scale: 1, translate3d:"0px 0px -5px"}, {queue:false, duration:100, complete:function() { label.data("isMouseOver", false); } });
+			}
+		})
+		.click(function(event) {
+			$("#animalHeading").rotateY("-140deg");
+			$("#animalHeading").rotateX("20deg");
+			$("#animalHeading")
+				.stop(true, true)
+				.html($(event.target).parent().attr("id").toString().toUpperCase()+"!")
+				.css("left", $(window).width())
+				.show()
+				.animate({rotateX:"0deg", rotateY:"0deg", left:$(window).width()/2-parseFloat($(this).width())/2}, {easing:"easeOutElastic", duration:2500})
+				.fadeOut('fast');
+		});
+		
+		$("body").mousemove(function(event) {
+			mousePos.x = event.pageX;
+			mousePos.y = event.pageY;
+		});
+		
+		// start animation
+		log("starting animation");
+		setInterval(frameStep, 33);
+	});
+</script>
+
+<style type="text/css">
+	html, body {
+		font-family: Verdana, Arial, sans-serif;
+		width:100%;
+		height:100%;
+	}
+	body {
+		margin: 0px;
+		padding: 0px;
+		width:100%;
+		height:100%;
+		background-image:url('images/bg.gif');
+		background-repeat:repeat;
+	}
+	a {
+		color: #fff; 
+	}
+	h1,h2,h3 {
+		font-size: 2.5em;
+		color: #fff;
+		text-shadow: 2px 2px 2px #0080cc;
+		-webkit-text-stroke: 0.5px #0089db;
+		-moz-text-stroke: 0.5px #0089db;
+		text-stroke: 0.5px #0089db;
+	}
+	h3 {
+		font-size: 1.5em;
+	}
+	#content {
+		width: 760px; 
+		text-align: left; 
+		margin: 0 auto;
+		position: relative;
+	}
+	.animal {
+		position: absolute;
+	}
+	.animal .label {
+		position: relative;
+		width: 150px;
+		height: 30px;
+		background-color: #fff;
+		background: -webkit-gradient( linear, 0 0, 0% 100%, from(#eee), to(#fff) ); 
+		background: -moz-linear-gradient( top left, #ccc, #fff );
+		border: 2px solid #009af5;
+		text-align: center; 
+		color: #009af5;
+		font-size: 1.5em;
+		padding:10px 0px 10px 0px;
+		-webkit-border-radius: 9px; -moz-border-radius: 9px; border-radius: 9px;
+		-webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.6); -moz-box-shadow: 2px 2px 6px rgba(0,0,0,0.6); box-shadow: 2px 2px 6px rgba(0,0,0,0.6);	
+		cursor: pointer;
+	}
+	.animal .labelOver {
+		background: -webkit-gradient( linear, 0 0, 0% 100%, from(#009af5), to(#006baa) ); 
+		background: -moz-linear-gradient( top left, #009af5, #006baa );
+		text-align: center; 
+		color: #fff;
+	}
+	#animalHeading {
+		position:absolute;
+		font-size: 5em;
+		color: #000;
+	}
+</style>
+
+</head>
+<body>
+	<div id="content">
+		<h1>Animated CSS 3D Transforms jQuery Demo</h1>
+		<h3>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</h3>
+		<div id="animals">
+			<div id="lion" class="animal" style="left:50px; top:210px;">
+				<img src="images/lion.png" />
+				<div class="label" style="left:35px; top:-80px;">PICK ME</div>
+			</div>
+			<div id="seal" class="animal" style="left:400px; top:200px;">
+				<img src="images/seal.png" />
+				<div class="label" style="left:30px; top:-80px;">PICK ME</div>
+			</div>
+			<div id="fox" class="animal" style="left:100px; top:580px;">
+				<img src="images/fox.png" />
+				<div class="label" style="left:15px; top:-80px;">PICK ME</div>
+			</div>
+			<div id="bear" class="animal" style="left:400px; top:500px;">
+				<img src="images/bear.png" />
+				<div class="label" style="left:15px; top:-80px;">PICK ME</div>
+			</div>
+		</div>
+	</div>
+	<h1 id="animalHeading">ANIMAL!</h1>
+</body>
+</html>

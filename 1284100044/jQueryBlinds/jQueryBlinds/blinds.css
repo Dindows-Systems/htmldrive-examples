@@ -1,0 +1,13 @@
+.change_link {
+	display: block;
+	width: 20px;
+	height: 20px;
+	font-size: 12pt;
+	background-color: #eee;
+	float: left;
+	margin-right: 5px;
+	text-align: center;
+	margin-top: 10px;
+	border: 1px solid #bbb;
+	text-decoration: none;
+}

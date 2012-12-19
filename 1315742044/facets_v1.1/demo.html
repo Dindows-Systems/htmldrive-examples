@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Facets - Demo</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/facets.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.preloadimages.js"></script>
+<script type="text/javascript" src="js/jquery.clip.js"></script>
+<script type="text/javascript" src="js/jquery.facets.js"></script>
+<script type="text/javascript">
+var $zodiacXML = null;
+$(document).ready(function() {
+	var pImages = '';
+	$.get('zodiac.xml', function(xml) {
+		$zodiacXML = $(xml);
+		$zodiacXML.find('item').each(function() {
+			$.preLoadImages('images/symbolic/'+jQuery(this).children('symbol').text());
+		});
+	});
+	$('#main-image-box').facets({
+		control: '#zodiac-list',
+		autoCliping: true,
+		clipSpacing: 1,
+		keepItOpened: true,
+		contentRelations: true,
+		beforeMax: function(index) {
+			var id = $('#main-image-box div:eq('+index+')').attr('id');
+			var $item = $zodiacXML.find('item#'+id);
+			var $template = $('#zodiac-template').clone();
+			$template.find('h1').text($item.children('german').text());
+			$template.find('.element').text($item.children('element').text());
+			$template.find('.latin').text($item.children('latin').text());
+			$template.find('.period').text($item.children('period').text());
+			$template.find('.length').text($item.children('length').text());
+			$template.find('.horoscope').attr('href', $item.children('horoscope').text());
+			$template.find('.symbol').html($('<img />').attr('src', 'images/symbolic/'+$item.children('symbol').text()));
+
+			$('#zodiac-information').empty().append($template.show());
+		}
+	});
+	$('a[rel=resetAll]').click(function() {
+		jQuery.facets.restore();
+		$('#zodiac-information').empty();
+	});
+});
+</script>
+</head>
+
+<body>
+    <div id="container" style="width:1000px">
+
+		<div id="logo"><a href="http://www.tn34.de" title="www.tn34.de"><img src="images/tn34.jpg" alt="TN34.DE" /></a> <h1>facets</h1></div>
+        <hr />
+
+		<noscript><h2>Bitte aktivieren Sie JavaScript um dieses Plugin benutzen zu können!</h2></noscript>
+
+		<div id="js">
+            <div class="demo-description" style="margin-bottom:10px;float:right;width:300px;">
+            	<h2>Einstellungsbeschreibung</h2>
+                <p>"<strong>control</strong>" legt fest welches Element (Bspw. eine Navigationsleiste) als Steuerung verwendet werden soll.</p>
+                <p>"<strong>autoCliping</strong>" weist jedem Bereich gleichmäßig einen Teil der verfügbaren Breite zu, ohne diese per CSS gesetzt zu haben. <i>(Diese Option ist nicht emfehlenswert, da bei ausgeschaltetem JavaScript keine Bereichsaufteilung stattfindet und nur das Bild mit dem höchsten z-index-Wert sichtbar ist.)</i></p>
+                <p>"<strong>clipSpacing</strong>" lässt 1 Pixel Abstand zwischen den Bereichen. Durch "<strong>keepItOpened</strong>" bleibt der zuletzt geöffnete Bereich auch nach dem mouseleave offen.</p>
+                <p>Durch "<strong>contentRelations</strong>" bleiben die Steuerelemente hervorgehoben bis der Bereich geschlossen wird.</p>
+                <p>Die Funktion "<strong>beforeMax</strong>" lädt die jeweiligen Daten aus der XML-Datei.</p>
+            </div>        
+            <div id="navigation-panel" style="height:450px;">
+                <div id="main-image-box">
+                    <div class="clip" id="aries">&nbsp;</div>
+                    <div class="clip" id="taurus">&nbsp;</div>
+                    <div class="clip" id="gemini">&nbsp;</div>
+                    <div class="clip" id="cancer">&nbsp;</div>
+                    <div class="clip" id="leo">&nbsp;</div>
+                    <div class="clip" id="virgo">&nbsp;</div>
+                    <div class="clip" id="libra">&nbsp;</div>
+                    <div class="clip" id="scorpio">&nbsp;</div>
+                    <div class="clip" id="sagittarius">&nbsp;</div>
+                    <div class="clip" id="capricorn">&nbsp;</div>
+                    <div class="clip" id="aquarius">&nbsp;</div>
+                    <div class="clip" id="pisces">&nbsp;</div>
+                </div>
+                <div id="zodiac-content">
+                    <div id="zodiac-signs">
+                        <p style="font-weight:bold;line-height:16px;">Zum testen der Funktionalität fahre mit der Maus über eines der Links.</p>
+                        <ul id="zodiac-list">
+                            <li><a href="#" rel="aries" class="sign">Widder</a></li>
+                            <li><a href="#" rel="taurus" class="sign">Stier</a></li>
+                            <li><a href="#" rel="gemini" class="sign">Zwillinge</a></li>
+                            <li><a href="#" rel="cancer" class="sign">Krebs</a></li>
+                            <li><a href="#" rel="leo" class="sign">Löwe</a></li>
+                            <li><a href="#" rel="virgo" class="sign">Jungfrau</a></li>
+                            <li><a href="#" rel="libra" class="sign">Waage</a></li>
+                            <li><a href="#" rel="scorpio" class="sign">Skorpion</a></li>
+                            <li><a href="#" rel="sagittarius" class="sign">Schütze</a></li>
+                            <li><a href="#" rel="capricorn" class="sign">Steinbock</a></li>
+                            <li><a href="#" rel="aquarius" class="sign">Wassermann</a></li>
+                            <li><a href="#" rel="pisces" class="sign">Fische</a></li>
+                        </ul>
+                        <a href="#" rel="resetAll">&laquo; zurücksetzen</a>
+                    </div>
+                    <div id="zodiac-information"></div>
+                </div>
+                <div id="zodiac-template" style="display:none;">
+                    <h1 style="margin-bottom:15px;"></h1>
+                    <div style="margin-bottom:20px;" class="symbol"></div>
+                    <p class="zodiac-content" style="margin-bottom:20px;">
+                        <b>Element:</b> <span class="element"></span><br />
+                        <b>Lateinischer Begriff:</b> <span class="latin"></span><br />
+                        <b>Zeitraum des scheinbaren Sonnendurchgangs:</b><br /><span class="period"></span><br />
+                        <b>Ekliptikale Länge:</b> <span class="length"></span><br />
+                    </p>
+                    <div><a target="_blank" href="#" class="horoscope">Weitere Infos</a> <span class="sources">(wikipedia.org)</span></div>
+                    <div><a target="_blank" href="http://maya.at/Geburtsblatt/Geburtsblatt-Index.htm">Ihr Maya Geburts-Blatt finden</a> <span class="sources">(maya.at)</span></div>
+                </div>
+          </div>
+          <div class="sources">Quellen: <a target="_blank" href="http://de.wikipedia.org/">Wikipedia</a>, <a href="http://www.haus-der-astrologie.de/">haus-der-astrologie.de</a></div>
+		</div>
+        <div class="footer">
+        	<hr />
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery 
+
+plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>        </div>
+	</div>
+</body>
+</html>

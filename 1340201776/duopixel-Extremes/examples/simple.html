@@ -1,0 +1,276 @@
+<!doctype html>	
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>		<html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>		<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>		<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Extremes jQuery plug-in</title>
+	<style type="text/css">
+	   body {
+	     font: 12px/120% Georgia, Times, serif;	
+		 background-color: #212121;
+		 color: #aaa;
+	   }
+	   .code {
+	     width: 500px;
+	     margin: 40px auto 0 auto;	
+	   }
+	   * {
+		margin: 0;
+		padding: 0;
+		}
+       a, a:link, a:visited {
+	     text-decoration: none;
+	     color: #666;
+	     padding: 0 5px;
+	   }
+	   a:hover {
+	     color: #fff;
+	   }
+	   ul {
+		list-style-type: none;
+		display: none;
+		font-size: 12px;
+		margin: 0 auto;
+		margin-top: 20px;
+	   }
+	
+	   ul.simple {
+		height: 560px;
+	   }
+	
+	   ul.colors li {
+		padding: 20px;
+		font: bold 12px/130% Arial, sans-serif;
+		-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+		-moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+		box-shadow: 0 0 5px rgba(0,0,0,0.3);
+		text-transform: uppercase;
+		color: #fff;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		text-shadow: rgba(0,0,0,0.4) 1px 1px 2px;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	   }
+	
+	   ul.colors li:hover {
+	    -webkit-transform: scale(1.2);
+	    cursor: pointer;
+	   }
+	
+	   .red {background-color: #FF0000;}
+	   .brick {background-color: #FF3300;}
+	   .orange {background-color: #FF8000;}
+	   .yellow {background-color: #FFDD00;}
+	   .lime {background-color: #ABFF00;}
+	   .green {background-color: #45FF00;}
+	   .bondi {background-color: #00FF79;}
+	   .aqua {background-color: #00FFE0;}
+	   .blue {background-color: #0055FF;}
+	   .navy {background-color: #1800FF;}
+	   .purple {background-color: #7800FF;}
+	   .violet {background-color: #C000FF;}
+	   .pink {background-color: #FF00E6;}
+	
+	   ul.months {
+		font-size: 18px;
+		font-family: Arial, sans-serif;
+	}
+	  ul.months li {
+		padding: 10px;
+	}
+	
+	ul.colors {
+		height: 250px;
+		margin-bottom: 60px;
+	}
+	
+	   .winter {border-left: solid #06f 5px;}
+	   .spring {border-left: solid #3c6 5px;}
+	   .summer {border-left: solid #c00 5px;}
+	   .fall {border-left: solid #fc0 5px;}
+	   .winter.left {border-right: solid #06f 5px; border-left: none;}
+	   .spring.left {border-right: solid #3c6 5px; border-left: none;}
+	   .summer.left {border-right: solid #c00 5px; border-left: none;}
+	   .fall.left {border-right: solid #fc0 5px; border-left: none;}
+
+            
+            header {
+             display: block;
+             width: 500px;
+             margin: 50px auto;
+           }
+			h1 {
+				font-size: 36px;
+				font-weight: normal;
+				margin-bottom: 20px;
+				color: #fff;
+				text-shadow: #000 1px 1px 2px;
+			}
+			h4 {
+				font-size: 15px;
+				font-weight: normal;
+				margin-bottom: 50px;
+				line-height: 130%;
+			}
+			
+			h4 a, h4 a:link, h4 a:visited {
+				color: #fff;
+				text-decoration: underline;
+			}
+
+	
+	   footer {
+		display: block;
+		font-size: 12px;
+		width: 500px;
+		margin: 100px auto 50px auto ;
+		color: #999;
+		
+	}
+    </style>
+</head>
+
+<body>
+
+	<div class="container">
+		<header>
+                 <h1>Extremes</h1>
+                 <h4>Extremes is a really simple and lightweight jQuery plug-in to place elements around a circle. Special attention is paid to legibility. You will never encounter upside down text. <a href="#">Download</a> or <a href="#">fork</a> on github.</h4>
+		</header>
+		
+
+		<div id="main">	
+			<ul class="simple">
+			<li><a href="#">Bio-engineering</a></li>
+			<li><a href="#">Systems Design</a></li>
+			<li><a href="#">Systems Architecture</a></li>
+			<li><a href="#">Human Computer Interaction</a></li>
+			<li><a href="#">Ergonomics</a></li>
+			<li><a href="#">Human Factors</a></li>
+			<li><a href="#">Interaction Design</a></li>
+			<li><a href="#">Interface Design</a></li>
+			<li><a href="#">Information Design</a></li>
+			<li><a href="#">Industrial Design</a></li>
+			<li><a href="#">Architecture</a></li>
+			<li><a href="#">Graphic Design</a></li>
+			<li><a href="#">Photography</a></li>
+			<li><a href="#">Music</a></li>
+			<li><a href="#">Semiotics</a></li>
+			<li><a href="#">Semiotics</a></li>
+			<li><a href="#">Painting</a></li>
+			<li><a href="#">Dancing</a></li>
+			<li><a href="#">Philosophy</a></li>
+			<li><a href="#">History</a></li>
+			<li><a href="#">Literature</a></li>
+			<li><a href="#">Religion</a></li>
+			<li><a href="#">Psychoanalysis</a></li>
+			<li><a href="#">Anthropology</a></li>
+			<li><a href="#">Criticism</a></li>
+			<li><a href="#">Art history</a></li>
+			<li><a href="#">Archeology</a></li>
+			<li><a href="#">Area studies</a></li>
+			<li><a href="#">Gender studies</a></li>
+			<li><a href="#">Political Science</a></li>
+			<li><a href="#">Business</a></li>
+			<li><a href="#">Education</a></li>
+			<li><a href="#">Marketing</a></li>
+			<li><a href="#">Journalism</a></li>
+			<li><a href="#">Linguistics</a></li>
+			<li><a href="#">Socioeconomics</a></li>
+			<li><a href="#">Urbanistics</a></li>
+			<li><a href="#">Social geography</a></li>
+			<li><a href="#">Metereology</a></li>
+			<li><a href="#">Cosmology</a></li>
+			<li><a href="#">Ecology</a></li>
+			<li><a href="#">Nutrition</a></li>
+			<li><a href="#">Cognitive Psychology</a></li>
+			<li><a href="#">Medicine</a></li>
+			<li><a href="#">Agriculture</a></li>
+			<li><a href="#">Behavioral Genetics</a></li>
+			<li><a href="#">Organic Evolution</a></li>
+			<li><a href="#">Anatomy</a></li>
+			<li><a href="#">Zoology</a></li>
+			<li><a href="#">Geology</a></li>
+			<li><a href="#">Biochemistry</a></li>
+			<li><a href="#">Chemistry</a></li>
+			<li><a href="#">Astronomy</a></li>
+			<li><a href="#">Physics</a></li>
+			<li><a href="#">Mathematics</a></li>
+			<li><a href="#">Statistics</a></li>
+			<li><a href="#">Natural Language Processing</a></li>
+			<li><a href="#">Logic</a></li>
+			<li><a href="#">Systems Theory</a></li>
+			<li><a href="#">Cryptography</a></li>
+			<li><a href="#">Cognitive Science</a></li>
+			<li><a href="#">Information Theory</a></li>
+			<li><a href="#">Automation</a></li>
+			<li><a href="#">Robotics</a></li>
+			</ul>
+			<ul class="colors">
+			  <li class="red"><a href="#">Red</a></li>
+			  <li class="brick"><a href="#">Brick</a></li>
+			  <li class="orange"><a href="#">Orange</a></li>
+			  <li class="yellow"><a href="#">Yellow</a></li>
+			  <li class="lime"><a href="#">Lime</a></li>
+			  <li class="green"><a href="#">Green</a></li>
+			  <li class="bondi"><a href="#">Bondi</a></li>
+			  <li class="aqua"><a href="#">Aqua</a></li>
+			  <li class="blue"><a href="#">Blue</a></li>
+			  <li class="navy"><a href="#">Navy</a></li>
+			  <li class="purple"><a href="#">Purple</a></li>
+			  <li class="violet"><a href="#">Violet</a></li>
+			  <li class="pink"><a href="#">Pink</a></li>
+			</ul>
+			
+			<ul class="months">
+			  <li class="winter"><a href="#">January</a></li>
+			  <li class="winter"><a href="#">February</a></li>
+			  <li class="spring"><a href="#">March</a></li>
+			  <li class="spring"><a href="#">April</a></li>
+			  <li class="spring"><a href="#">May</a></li>
+			  <li class="summer"><a href="#">June</a></li>
+			  <li class="summer"><a href="#">July</a></li>
+			  <li class="summer left"><a href="#">August</a></li>
+			  <li class="fall left"><a href="#">September</a></li>
+			  <li class="fall left"><a href="#">October</a></li>
+			  <li class="fall left"><a href="#">November</a></li>
+			  <li class="winter left"><a href="#">December</a></li>
+			</ul>
+
+		</div>
+		
+		<footer>
+         Extremes was crafted by <a href="#">Mark MacKay</a> under a GPLv2/MIT License.
+		</footer>
+	</div> <!-- end of #container -->
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="lib/js/libs/jquery-1.4.2.min.js"%3E%3C/script%3E'))</script>
+	
+	
+	<script src="../src/extremes.js"></script>
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.simple').extremes();
+		$('.colors').extremes({
+			diameter: 50
+		});
+		$('.months').extremes({
+			diameter: 60
+		});
+	})
+	</script>
+	
+</body>
+</html>

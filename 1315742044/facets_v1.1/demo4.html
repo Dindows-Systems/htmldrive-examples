@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Facets - Demo</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/facets3.css" rel="stylesheet" type="text/css" />
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.clip.js"></script>
+<script type="text/javascript" src="js/jquery.facets.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#main-image-box').children().removeClass('facets').end().facets({
+		control: 'ul#mainlevel',
+		clipSpacing: 1,
+		animationSpeed: 400,
+		activePanel: true,
+		beforeMax: function(index) {
+			$('#main-image-box .clip:eq('+index+') .container').show();
+		},
+		beforeMin: function(index) {
+			$('#main-image-box .clip:eq('+index+') .container').hide();
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+    <div id="container" style="width:1000px">
+    
+        <div id="logo"><a href="http://www.tn34.de" title="www.tn34.de"><img src="images/tn34.jpg" alt="TN34.DE" /></a> <h1>facets</h1></div>
+        <hr />
+        
+        <div>
+            <div class="demo-description" style="margin-bottom:10px;float:right;width:275px;">
+            	<h2>Einstellungsbeschreibung</h2>
+                <p>"<strong>control</strong>" legt fest welches Element (Bspw. eine Navigationsleiste) als Steuerung verwendet werden soll.</p>
+                <p><strong>Unterschied zu Demo 3</strong> ist hier die Verwendung von "<strong>activePanel</strong>", dadurch werden Bereiche auch bei mouseover über den Bildbereich geöffnet und nicht nur beim mouseover des Steuerelements.</p>
+                <p>Auf "<strong>autoCliping</strong>" kann hier verzichtet, da die Bereichsaufteilung im Gegensatz zu den anderen Demos auch bei ausgeschaltetem JavaScript funktioniert, dadurch können unterschiedlich breite Bereiche definiert werden. <i>Beim aufruf des Plugins wird hier deshalb $('#main-image-box')<strong class="red">.children().removeClass('facets').end()</strong>.facets({... verwendet um bei eingeschaltetem JavaScript das aufteilen bei mouseover durch CSS aufzuheben.</i></p>
+                <p>"<strong>clipSpacing</strong>" lässt 1 Pixel Abstand zwischen den Bereichen. "<strong>animationSpeed</strong>" setzt die Animationsdauer auf 400 ms. Durch "<strong>keepItOpened</strong>" bleibt der zuletzt geöffnete Bereich auch nach dem mouseleave offen.</p>
+                <p>Die Funktion "<strong>beforeMax</strong>" macht den Text sichtbar. "<strong>beforeMin</strong>" versteckt diesen beim verlassen des geöffneten Bereichs.</p>
+            </div>
+            <div id="navigation-panel">
+                <div class="menu">
+                    <ul class="menu" id="mainlevel">
+                        <li><a href="#">Relax<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul>
+                                <li><a target="_blank" href="http://www.google.de/search?hl=de&client=firefox-a&hs=jbK&rls=org.mozilla%3Ade%3Aofficial&q=Relax+urlaub&aq=f&aqi=g3&aql=&oq=&gs_rfai=">Relaxangebote</a></li>
+                            </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                        </li>
+                        <li><a href="#">Wintersport<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul>
+                                <li><a target="_blank" href="http://www.google.de/search?hl=de&client=firefox-a&rls=org.mozilla%3Ade%3Aofficial&q=skigebiete&aq=f&aqi=g10&aql=&oq=&gs_rfai=">Skigebiete</a></li>
+                                <li><a target="_blank" href="http://www.google.de/search?hl=de&client=firefox-a&rls=org.mozilla%3Ade%3Aofficial&q=skiausr%C3%BCstung&aq=f&aqi=g10&aql=&oq=&gs_rfai=">Ausrüstung</a></li>
+                            </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                        </li>
+                        <li><a href="#">Kreuzfahrt<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul>
+                                <li><a target="_blank" href="http://www.google.de/search?hl=de&client=firefox-a&rls=org.mozilla%3Ade%3Aofficial&q=kreuzfahrt&aq=f&aqi=g10&aql=&oq=&gs_rfai=">Angebote</a></li>
+                            </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                        </li>
+                        <li><a href="#">Städte<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul>
+                               <li><a target="_blank" href="http://www.top10-charts.com/staedte-charts-die-besten.html">Lebensqualität</a></li>
+                               <li><a target="_blank" href="http://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Metropolregionen_der_Welt">Metropolen</a></li>
+                            </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                        </li>
+                        <li class="last"><a href="#">Adventure<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]--><ul>
+                                <li><a target="_blank" href="http://www.google.de/search?hl=de&client=firefox-a&hs=x7z&rls=org.mozilla%3Ade%3Aofficial&q=adventure+urlaub&aq=f&aqi=g8&aql=&oq=&gs_rfai=">Angebote</a></li>
+                            </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                        </li>
+                    </ul>
+                </div>
+                <div id="main-image-box">
+                    <div class="clip facets" id="strand">
+						<div class="container"><h1><span>1 Woche</span> Malediven</h1><h2><span class="black">2 Personen</span><span class="red">ab 1.085,00 Euro</span></h2></div>
+                    </div>
+                    <div class="clip facets" id="wintersport">
+						<div class="container"><h1><span>1 Woche action in</span> Mittenwald</h1><h2><span class="black">2 Personen</span><span class="red">ab 850,00 Euro</span></h2></div>
+                    </div>
+                    <div class="clip facets" id="kreuzfahrt">
+						<div class="container"><h1><span>14 Tage auf der</span> AIDAcara</h1><h2><span class="red">auf Anfrage</span></h2></div>
+                    </div>
+                    <div class="clip facets" id="staedte">
+                    	<div class="container"><h1><span>14 Tage</span> Paris</h1><h2><span class="black">2 Personen</span><span class="red">ab 874,00</span></h2></div>
+                    </div>
+                    <div class="clip facets" id="abenteuer">
+                    	<div class="container"><h1><span>3 Wochen Abenteuer im</span> Grand Canyon</h1><h2><span class="black">pro Personen</span><span class="red">auf Anfrage</span></h2></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+        	<hr />
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery 
+
+plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>        </div>
+    </div>
+</body>
+</html>

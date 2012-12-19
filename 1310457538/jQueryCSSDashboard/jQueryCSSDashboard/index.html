@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Create Your Own Dashboard Menu | Webstuffshare.com</title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="jquery-animate-css-rotate-scale.js"></script>
+		<script type="text/javascript" src="jquery-css-transform.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				//Create base variable, check document width and count how much dot per line.
+				var a, b, element = '';
+				documentWidth		= $(window).width();
+				dotLength			= parseInt(documentWidth/10);
+				
+				//Loop dot per line
+				for(a=0; a<= 11; a++) {
+					
+					//Check is even or odd to add some pixel to the margin left
+					className= ((a%2) == 0) ? '0' : '0.4em';
+					element 	= element + '<div style="margin-left:'+className+'; margin-bottom: -.5em">\n';
+						
+						//Loop to create the dot
+						for(b=0; b<=dotLength; b++) {
+							element = element + '\t<span class="dot">&nbsp;</span>';
+						}
+					
+					element = element + '</div>';
+				}
+				
+				//Insert dots on #dot-container
+				$('#dot-container').html(element);
+				
+				//Add event toggle on #toggle
+				$('#toggle').toggle(
+					
+					function() {
+					
+						//Rotate toggle
+						$(this).stop().animate({rotate : '-=45deg'});
+						$('#dashboard').stop().animate({bottom : '0px'});
+						$('#dashboard-menu').stop().animate({left : '3em'});
+					},
+					
+					function() {
+						
+						//Revert rotate toggle
+						$(this).stop().animate({rotate : '0deg'});
+						$('#dashboard').stop().animate({bottom : '-150px'}, 700);
+						$('#dashboard-menu').stop().animate({left : '-65em'});
+					}
+				);
+				
+			});
+			
+		</script>
+</head>
+<body>
+<span class="title">Create Your Own Dashboard Menu</span>
+<br/><br/>
+<div id="dashboard">
+	<img src="images/toggle.png" id="toggle" />
+	<div id="dashboard-menu">
+		<ul>
+			<li>
+				<img src="images/gauge.png" /> <br/> Dashboard
+			</li>
+			<li>
+				<img src="images/mail.png" /> <br/> E-Mail Client
+			</li>
+			<li>
+				<img src="images/calendar.png" /> <br/> Calendar
+			</li>
+			<li>
+				<img src="images/map.png" /> <br/> Geolocation
+			</li>
+			<li>
+				<img src="images/note.png" /> <br/> Sticky Note
+			</li>
+			<li>
+				<img src="images/wireless.png" /> <br/> AirPort
+			</li>
+			<li>
+				<img src="images/calculator.png" /> <br/> Calculator
+			</li>
+		</ul>
+	</div>
+	<div id="dot-container">
+		<span class="dot">&nbsp;</span>
+	</div>
+</div>
+<span class="small-title">Hint : Click plus symbol below</span>
+<br/><br/><br/>
+<span class="title"><a href="http://www.webstuffshare.com/2010/06/create-your-own-dashboard-menu">&laquo; Back to The Article</a></span><br/>
+<span class="small-title"><small><a href="http://www.webiconset.com/mobile-icon-set/" target="_blank"> icons by Web Icon Set </a></small><br />
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</span>
+
+</body>
+</html>

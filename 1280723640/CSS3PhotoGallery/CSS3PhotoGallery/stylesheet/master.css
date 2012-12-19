@@ -1,0 +1,33 @@
+body { background:#f4f4f4; font: 15px/1.5 Georgia, Serif; }
+a { text-decoration: none; }
+h1 { font: bold 30px Helvetica, Sans-Serif; margin: 0 0 5px 0; }
+h2 { font: bold 20px Helvetica, Sans-Serif; margin: 0 0 10px 0; }
+
+header { margin-top: 1em; }
+header p { margin: 0 0 12px 0; padding:0; }
+
+nav { background: #333; -moz-border-radius: 8px; -webkit-border-radius: 10px; }
+nav a { color: #fff; padding: 15px; display: block; border-right: solid #666 1px; }
+nav a:hover { background-color: #000; }
+nav ul { list-style: none; }
+nav ul li { float: left; font-size: 16px; }
+
+nav #primaryNav { margin-left: 10px; }
+
+nav #secondaryNav li { float:right; }
+nav #secondaryNav a { border-left:solid #666 1px; border-right:none; }
+nav #secondaryNav { margin-right: 10px; }
+
+aside { color: #666; }
+header, footer { -moz-border-radius:10px; -webkit-border-radius:10px; }
+
+section { margin-top: 2em; }
+
+a.polaroid { -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; display: block; background: #fff; padding: 10px; margin:5px; -moz-box-shadow: #ccc 5px 5px 20px; -webkit-box-shadow: #ccc 5px 5px 20px; margin-bottom:1em; }
+a.polaroid img { width: 200px; }
+a.polaroid:hover { -moz-box-shadow: #666 5px 5px 20px; -webkit-box-shadow: #666 5px 5px 20px; }
+
+footer { padding: 10px; text-align: left; background: #fff; margin-top: 2em; position: relative; }
+footer img { position: absolute; right: 15px; top: 4px; }
+
+

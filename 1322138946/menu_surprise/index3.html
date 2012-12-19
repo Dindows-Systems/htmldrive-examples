@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+<title>Animated menu </title>
+
+</head>
+<body>
+
+	<h1 class="demo_title">Menu Surprise</h1>
+	<ul class="demo_ul">
+	<li><a href="index.html">demo1</a></li><li><a href="index2.html">demo2</a></li><li><a href="index3.html">demo3</a></li>
+	</ul>
+	
+	
+	
+<!-- Navigation Top Menu -->
+	<div id="menu">
+		<ul id="nav">
+			<li>
+				<a href="#" class="icon1">
+					<span>Home Page</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="icon2">
+					<span>Portfolio</span>
+				</a>
+			</li>	
+			<li>
+				<a href="#" class="icon3">
+					<span>Our Blog</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="icon4">
+					<span>Services</span>
+				</a>
+			</li>	
+		</ul>
+	</div>
+<!-- /Navigation Top Menu -->
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>	
+
+	
+<a href="http://a-smartik.com/" class="author_info">Created by Smartik</a>
+<!-- JAVASCRIPT -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.backgroundPosition.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#nav li a')
+		.css( {backgroundPosition: "52px -240px"} )
+		.mouseover(function(){
+			$(this).stop().animate({backgroundPosition:"(52px 10px)"}, {duration:800, easing : 'easeOutBounce'})
+		})
+		.mouseout(function(){
+			$(this).stop().animate({backgroundPosition:"(52px -240px)"}, {duration:500, easing : 'easeOutCubic', complete:function(){
+				$(this).css({backgroundPosition: "52px -240px"})
+			}})
+		})
+		
+});
+</script>
+</body>
+</html>

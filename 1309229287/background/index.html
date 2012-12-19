@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="lt" lang="lt">
+
+<head>
+
+    <title>animatedBG</title>
+
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="animatedBG.js"></script>
+
+	<script type="text/javascript">
+	
+	jQuery(document).ready(function() {
+		var options = {
+			parts: 10,
+			animationWidth: 146
+		}
+		$('#bg').animatedBG(options);
+	});
+	
+	</script>
+	
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		
+		#bg {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background: #fff url('intrigue.gif') no-repeat center;
+		}
+	
+	</style>
+
+</head>
+
+<body>
+
+	<div id="bg">
+	</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></body>
+
+</html>

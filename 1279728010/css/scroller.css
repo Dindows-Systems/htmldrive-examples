@@ -1,0 +1,113 @@
+.scroller {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border:4px solid #AEC3CF;
+    background-color: #CCC;
+    clear:both;
+    margin-bottom:2em;
+    margin-top: 10px;
+
+}
+.scroller-inner {
+	border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+
+    border:1px solid #06C;
+    background-color: #FFF;
+    position:relative;
+	height: 250px;
+	overflow: hidden;
+}
+.scroller-inner .window {
+	
+}
+.scroller-inner .window ol.teaser-items {
+    margin:0;
+    padding:0;
+    position: relative;
+}
+.scroller-inner .window ol.teaser-items li {
+	width: 100%;
+    margin:0;
+    padding:0;
+    position: absolute;
+    display: none;
+}
+
+.scroller-inner .column {
+    display:inline;
+    float:left;
+    margin-left:15px;
+    width:30%;
+}
+.scroller-inner .teaser-header {
+    position: absolute;
+    -moz-border-radius:0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    -o-border-radius: 0 0 3px 3px;
+    -khtml-border-radius: 0 0 3px 3px;
+    bottom:0;
+    left:0;
+    width: 100%;
+	background-image: url(../images/listing-footer.gif);
+}
+.scroller-inner .teaser-header ol {
+    border-top:1px solid #AEC3CF;
+    list-style-type:none;
+    margin:0;
+    padding:0 45px;
+}
+.scroller-inner .teaser-header ol li {
+    float:left;
+    margin-left: 25px;
+    position:relative;
+    top:-1px;
+    white-space:nowrap;
+    font-weight: bold;
+}
+.scroller-inner .teaser-header ol li a {
+	font-size: 12px;
+    line-height: 28px;
+	color: #06C;
+	text-decoration: none;
+}
+
+.scroller-inner .teaser-header li.selected {
+    background-image:url("../images/panel-selected.png");
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+.scroller-inner .slideshow-controls {
+
+    margin:-38px 0 0;
+}
+.scroller-inner .active.prev {
+    background-position:0 -50px;
+}
+.scroller-inner .prev, .scroller-inner .next {
+    background-image:url("../images/arrows-scroller.png");
+    background-position:0 0;
+    background-repeat:no-repeat;
+    bottom:15px;
+    cursor:pointer;
+    display:block;
+    height:27px;
+    left:8px;
+    position:absolute;
+    text-decoration:none;
+    text-indent:-5000px;
+    width:27px;
+}
+.scroller-inner .active.next {
+    background-position:0 -200px;
+    left:auto;
+    right:8px;
+}

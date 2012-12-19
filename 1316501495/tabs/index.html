@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Care for design - jQuery : Plugin tytabs</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="tytabs.jquery.min.js"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	$("#tabsholder").tytabs({
+							tabinit:"2",
+							fadespeed:"fast"
+							});
+	$("#tabsholder2").tytabs({
+							prefixtabs:"tabz",
+							prefixcontent:"contentz",
+							classcontent:"tabscontent",
+							tabinit:"3",
+							catchget:"tab2",
+							fadespeed:"normal"
+							});
+});
+-->
+</script>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.center {
+width:60%;
+margin:20px auto 0 auto;
+}
+
+.marginbot {
+margin-bottom:15px;
+}
+
+ul.list li {
+list-style-type:none;
+margin-left:20px;
+}
+
+ul.tabs {
+width:100%;
+overflow:hidden;
+}
+
+ul.tabs li {
+list-style-type:none;
+display:block;
+float:left;
+color:#fff;
+padding:8px;
+margin-right:2px;
+border-bottom:2px solid #2f2f2f;
+background-color:#1f5e6f;
+-moz-border-radius: 4px 4px 0 0;
+-webkit-border-radius: 4px 4px 0 0;
+cursor:pointer;
+}
+
+ul.tabs li:hover {
+background-color:#43b0ce;
+}
+
+ul.tabs li.current {
+border-bottom:2px solid #43b0ce;
+background-color:#43b0ce;
+padding:8px;
+}
+
+.tabscontent {
+border-top:2px solid #43b0ce;
+padding:8px 0 0 0;
+display:none;
+width:100%;
+text-align:justify;
+}
+-->
+</style>
+</head>
+
+<body>
+<div class="center">
+    <p>&nbsp;</p>
+    <!-- Tabs -->
+    <div id="tabsholder">
+
+        <ul class="tabs">
+            <li id="tab1">Spiderman</li>
+            <li id="tab2">Batman</li>
+            <li id="tab3">Hulk</li>
+            <li id="tab4">Daredevil</li>
+        </ul>
+        <div class="contents marginbot">
+
+            <div id="content1" class="tabscontent">
+            Nam sed tellus metus. Nunc sem neque, mollis ac tempor sed, rhoncus vitae orci. Praesent vel tellus in felis condimentum ultrices eget at lectus. Donec aliquam, nunc et feugiat sagittis, nulla metus scelerisque risus, in eleifend magna diam vitae turpis. Proin cursus sagittis tellus sed iaculis. Donec eu nulla non dui facilisis lacinia. Integer dignissim luctus tempor. Quisque sit amet nisi erat, placerat sagittis risus. Quisque vulputate, mauris sit amet laoreet blandit, erat urna imperdiet sapien, et pretium ante augue in erat. Nullam tellus nibh, molestie ac hendrerit non, mattis eu urna. Suspendisse ac nunc ante, mollis sagittis felis. Quisque a auctor nulla. Nam tincidunt, augue ornare posuere dignissim, tellus velit vehicula massa, eu molestie ipsum quam sit amet nibh. Curabitur semper auctor leo eu elementum.
+            </div>
+            <div id="content2" class="tabscontent">
+            Donec eu velit ante, non dapibus nibh. Praesent condimentum ipsum eu ligula elementum pretium. Nullam vel mi odio, non tincidunt lorem. Etiam pulvinar eleifend velit non ornare. Etiam neque ante, posuere vitae bibendum ac, varius non augue. Sed cursus commodo dapibus. Nullam sed feugiat dolor. Praesent interdum elementum scelerisque. Etiam tincidunt lectus et nulla suscipit ut scelerisque elit egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </div>
+            <div id="content3" class="tabscontent">
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In vel sem risus. Aenean vulputate, dui quis dignissim scelerisque, magna justo dapibus diam, a luctus justo lectus non orci. Donec aliquam risus sed nisl vulputate volutpat. Etiam molestie erat quis augue lobortis volutpat. Nullam quis semper sapien. Sed vestibulum ornare elit nec vehicula. Pellentesque et purus vel justo pretium dictum vitae nec mi. Fusce ullamcorper dui nec libero pharetra pellentesque. Curabitur a tortor arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc hendrerit malesuada luctus. Proin at tellus feugiat nisl gravida blandit in nec erat. Sed varius, neque sit amet scelerisque vestibulum, augue eros hendrerit sapien, non imperdiet est ante in ipsum. Suspendisse ornare metus et velit rhoncus sodales. Proin eu arcu nec orci mollis faucibus. Sed viverra arcu et libero aliquam a ornare lectus tempor. Nunc quis orci turpis, lobortis aliquam urna.
+
+Nam facilisis porta purus sit amet volutpat. Nunc dapibus, neque at adipiscing viverra, nisi elit tincidunt metus, consequat rutrum libero felis ac mi. Aliquam ante neque, gravida pretium commodo eu, tristique vel nulla. In sit amet mi in eros cursus dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat libero, volutpat quis mollis quis, viverra ut purus. Sed bibendum diam eu neque varius ut blandit odio sagittis. Etiam nec mi lectus. Sed eu vestibulum magna. Pellentesque dolor augue, pulvinar sit amet egestas fermentum, dapibus eu neque. Nullam augue arcu, convallis laoreet commodo id, elementum vel sapien. Aenean ante massa, eleifend et porttitor sed, sodales sit amet diam. Curabitur massa metus, dictum non sagittis sed, vulputate ut nulla. Nullam consectetur, nisi eget laoreet rhoncus, augue sem lobortis lectus, at sollicitudin turpis diam sit amet velit. Mauris blandit tincidunt massa ac elementum. Nunc sollicitudin dictum urna, pellentesque convallis neque mattis eu. Aliquam nec sapien dui. Donec odio dui, ornare at mattis varius, feugiat ac metus. Pellentesque tincidunt tempor ipsum, et convallis magna condimentum a.
+
+Donec enim elit, semper rutrum vulputate fermentum, accumsan in neque. Cras viverra enim sit amet arcu elementum eleifend. Suspendisse ut eros vitae justo malesuada adipiscing. Suspendisse potenti. Maecenas metus ante, fringilla eget tincidunt nec, pharetra quis turpis. Praesent sit amet blandit leo. Nulla et purus non quam imperdiet pharetra. Etiam odio orci, gravida in interdum placerat, tincidunt ut justo. Cras posuere, purus vitae congue tempor, lacus sem sollicitudin ante, vitae hendrerit dui dolor nec metus. Pellentesque in velit lacus. In id justo ut tellus dapibus pellentesque. Sed vehicula felis nec nisi scelerisque sagittis.
+
+Maecenas mattis semper dapibus. In non elit vel diam aliquet sodales. Nam euismod nunc ut ante euismod bibendum. Sed congue posuere erat vitae ultrices. Mauris dolor massa, vulputate et tincidunt ut, semper eget felis. Nunc eget ligula erat, id varius enim. Morbi arcu ligula, sollicitudin vel pretium quis, laoreet quis massa. Aenean sagittis rutrum urna, eu vestibulum mauris facilisis ornare. Proin egestas varius tortor, vel ornare magna faucibus ac. Nam felis neque, porttitor at egestas ut, accumsan quis diam. Fusce convallis metus ut ante dictum interdum. Aliquam erat volutpat. Proin placerat sollicitudin ipsum. Etiam tellus diam, eleifend quis tempor at, dictum quis nibh. Proin tristique magna non leo fringilla feugiat. Aenean porttitor lorem sed purus condimentum accumsan. Nam congue, neque eu ultrices lobortis, neque ante vehicula massa, pulvinar venenatis leo elit ut orci.
+			</div>
+            <div id="content4" class="tabscontent">
+
+           	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante arcu, lacinia quis varius vel, pharetra eu sapien. Nulla dictum tincidunt nunc gravida congue. Pellentesque quis leo at leo porttitor aliquam sed id eros. Pellentesque id feugiat dui. Aliquam elementum arcu eu tellus commodo pellentesque. Curabitur porttitor egestas odio et malesuada. Integer ut sapien commodo nisi vulputate egestas. Vivamus porttitor cursus aliquam. Quisque vitae commodo est. Vestibulum eget lectus quis mi volutpat lobortis a et massa. Quisque scelerisque, nulla ut sollicitudin lobortis, urna neque dapibus sem, quis congue tellus purus id nibh. Pellentesque congue massa ac quam rhoncus posuere. Curabitur eleifend suscipit luctus. Sed eu risus nisi. Sed eu molestie tortor. Aenean dictum justo ac turpis feugiat ultricies. Morbi sed dictum sapien.
+           	</div>
+        </div>
+    </div>
+    <!-- /Tabs -->
+    <!-- Tabs2 -->
+    <div id="tabsholder2">
+        <ul class="tabs">
+            <li id="tabz1">Captain America</li>
+
+            <li id="tabz2">X-men</li>
+            <li id="tabz3">Iron man</li>
+            <li id="tabz4">Fantastic Four</li>
+        </ul>
+        <div class="contents marginbot">
+            <div id="contentz1" class="tabscontent">
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In vel sem risus. Aenean vulputate, dui quis dignissim scelerisque, magna justo dapibus diam, a luctus justo lectus non orci. Donec aliquam risus sed nisl vulputate volutpat. Etiam molestie erat quis augue lobortis volutpat. Nullam quis semper sapien. Sed vestibulum ornare elit nec vehicula. Pellentesque et purus vel justo pretium dictum vitae nec mi. Fusce ullamcorper dui nec libero pharetra pellentesque. Curabitur a tortor arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc hendrerit malesuada luctus. Proin at tellus feugiat nisl gravida blandit in nec erat. Sed varius, neque sit amet scelerisque vestibulum, augue eros hendrerit sapien, non imperdiet est ante in ipsum. Suspendisse ornare metus et velit rhoncus sodales. Proin eu arcu nec orci mollis faucibus. Sed viverra arcu et libero aliquam a ornare lectus tempor. Nunc quis orci turpis, lobortis aliquam urna.
+
+Nam facilisis porta purus sit amet volutpat. Nunc dapibus, neque at adipiscing viverra, nisi elit tincidunt metus, consequat rutrum libero felis ac mi. Aliquam ante neque, gravida pretium commodo eu, tristique vel nulla. In sit amet mi in eros cursus dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat libero, volutpat quis mollis quis, viverra ut purus. Sed bibendum diam eu neque varius ut blandit odio sagittis. Etiam nec mi lectus. Sed eu vestibulum magna. Pellentesque dolor augue, pulvinar sit amet egestas fermentum, dapibus eu neque. Nullam augue arcu, convallis laoreet commodo id, elementum vel sapien. Aenean ante massa, eleifend et porttitor sed, sodales sit amet diam. Curabitur massa metus, dictum non sagittis sed, vulputate ut nulla. Nullam consectetur, nisi eget laoreet rhoncus, augue sem lobortis lectus, at sollicitudin turpis diam sit amet velit. Mauris blandit tincidunt massa ac elementum. Nunc sollicitudin dictum urna, pellentesque convallis neque mattis eu. Aliquam nec sapien dui. Donec odio dui, ornare at mattis varius, feugiat ac metus. Pellentesque tincidunt tempor ipsum, et convallis magna condimentum a.
+
+Donec enim elit, semper rutrum vulputate fermentum, accumsan in neque. Cras viverra enim sit amet arcu elementum eleifend. Suspendisse ut eros vitae justo malesuada adipiscing. Suspendisse potenti. Maecenas metus ante, fringilla eget tincidunt nec, pharetra quis turpis. Praesent sit amet blandit leo. Nulla et purus non quam imperdiet pharetra. Etiam odio orci, gravida in interdum placerat, tincidunt ut justo. Cras posuere, purus vitae congue tempor, lacus sem sollicitudin ante, vitae hendrerit dui dolor nec metus. Pellentesque in velit lacus. In id justo ut tellus dapibus pellentesque. Sed vehicula felis nec nisi scelerisque sagittis.
+
+Maecenas mattis semper dapibus. In non elit vel diam aliquet sodales. Nam euismod nunc ut ante euismod bibendum. Sed congue posuere erat vitae ultrices. Mauris dolor massa, vulputate et tincidunt ut, semper eget felis. Nunc eget ligula erat, id varius enim. Morbi arcu ligula, sollicitudin vel pretium quis, laoreet quis massa. Aenean sagittis rutrum urna, eu vestibulum mauris facilisis ornare. Proin egestas varius tortor, vel ornare magna faucibus ac. Nam felis neque, porttitor at egestas ut, accumsan quis diam. Fusce convallis metus ut ante dictum interdum. Aliquam erat volutpat. Proin placerat sollicitudin ipsum. Etiam tellus diam, eleifend quis tempor at, dictum quis nibh. Proin tristique magna non leo fringilla feugiat. Aenean porttitor lorem sed purus condimentum accumsan. Nam congue, neque eu ultrices lobortis, neque ante vehicula massa, pulvinar venenatis leo elit ut orci.
+			</div>
+
+            <div id="contentz2" class="tabscontent">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante arcu, lacinia quis varius vel, pharetra eu sapien. Nulla dictum tincidunt nunc gravida congue. Pellentesque quis leo at leo porttitor aliquam sed id eros. Pellentesque id feugiat dui. Aliquam elementum arcu eu tellus commodo pellentesque. Curabitur porttitor egestas odio et malesuada. Integer ut sapien commodo nisi vulputate egestas. Vivamus porttitor cursus aliquam. Quisque vitae commodo est. Vestibulum eget lectus quis mi volutpat lobortis a et massa. Quisque scelerisque, nulla ut sollicitudin lobortis, urna neque dapibus sem, quis congue tellus purus id nibh. Pellentesque congue massa ac quam rhoncus posuere. Curabitur eleifend suscipit luctus. Sed eu risus nisi. Sed eu molestie tortor. Aenean dictum justo ac turpis feugiat ultricies. Morbi sed dictum sapien.
+            </div>
+            <div id="contentz3" class="tabscontent">
+            Donec eu velit ante, non dapibus nibh. Praesent condimentum ipsum eu ligula elementum pretium. Nullam vel mi odio, non tincidunt lorem. Etiam pulvinar eleifend velit non ornare. Etiam neque ante, posuere vitae bibendum ac, varius non augue. Sed cursus commodo dapibus. Nullam sed feugiat dolor. Praesent interdum elementum scelerisque. Etiam tincidunt lectus et nulla suscipit ut scelerisque elit egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </div>
+            <div id="contentz4" class="tabscontent">
+            Nam sed tellus metus. Nunc sem neque, mollis ac tempor sed, rhoncus vitae orci. Praesent vel tellus in felis condimentum ultrices eget at lectus. Donec aliquam, nunc et feugiat sagittis, nulla metus scelerisque risus, in eleifend magna diam vitae turpis. Proin cursus sagittis tellus sed iaculis. Donec eu nulla non dui facilisis lacinia. Integer dignissim luctus tempor. Quisque sit amet nisi erat, placerat sagittis risus. Quisque vulputate, mauris sit amet laoreet blandit, erat urna imperdiet sapien, et pretium ante augue in erat. Nullam tellus nibh, molestie ac hendrerit non, mattis eu urna. Suspendisse ac nunc ante, mollis sagittis felis. Quisque a auctor nulla. Nam tincidunt, augue ornare posuere dignissim, tellus velit vehicula massa, eu molestie ipsum quam sit amet nibh. Curabitur semper auctor leo eu elementum.
+            </div>
+        </div>
+
+    </div>
+    <!-- /Tabs2 -->
+</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

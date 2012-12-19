@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pure CSS3 Pie Charts</title>
+<style>
+body {
+	font-family:Tahoma, Geneva, sans-serif;
+}
+h2 {
+	text-align:center;
+}
+.chart {
+	position:relative;
+	width:500px;
+	height:250px;
+}
+.hold {
+	position:absolute;
+	width:200px;
+	height:200px;
+	clip:rect(0px,200px,200px,100px);
+	left:300px;
+}
+.pie {
+	position:absolute;
+/*	width:100px;
+	height:200px;
+	-moz-border-radius:100px 0 0 100px;
+	-webkit-border-radius:100px 0 0 100px; 
+	border-radius:100px 0 0 100px;
+	-moz-transform-origin:right center;
+	-webkit-transform-origin:right center;
+	transform-origin:right center; */
+	width:200px;
+	height:200px;
+	clip:rect(0px,100px,200px,0px);
+	-moz-border-radius:100px;
+	-webkit-border-radius:100px; 
+	border-radius:100px; 
+}
+.hold.gt50 {
+	clip:rect(auto, auto, auto, auto);
+}
+.pie.fill {
+	-moz-transform:rotate(180deg) !important;
+	-webkit-transform:rotate(180deg) !important;
+	-o-transform:rotate(180deg) !important;
+	transform:rotate(180deg) !important;
+}
+.legend {
+	clear:left;
+	float:left;
+	font-size:12px;
+	border:2px solid grey;
+	padding:5px;
+	width:200px;
+}
+.legend DIV {
+	margin:3px 0;
+}
+.legend span {
+	float:right;
+	padding-left:.5em;
+}
+#browse-FF {
+	margin-left:10px;
+	margin-top:-10px;
+}
+#browse-FF .pie {
+	background-color:orange;
+	border-color:orange;
+	-moz-transform:rotate(116.28deg);
+	-webkit-transform:rotate(116.28deg);
+	-o-transform:rotate(116.28deg);
+	transform:rotate(116.28deg);
+}
+#browse-FF-lbl {
+	border-left:orange solid 1em;
+	padding-left:.5em;
+}
+#browse-IE {
+	-moz-transform:rotate(116.28deg);
+	-webkit-transform:rotate(116.28deg);
+	-o-transform:rotate(116.28deg);
+	transform:rotate(116.28deg);
+}
+#browse-IE .pie {
+	background-color:blue;
+	border-color:blue;
+	-moz-transform:rotate(109.8deg);
+	-webkit-transform:rotate(109.8deg);
+	-o-transform:rotate(109.8deg);
+	transform:rotate(109.8deg);
+}
+#browse-IE-lbl {
+	border-left:blue solid 1em;
+	padding-left:.5em;
+}
+#browse-Safari {
+	-moz-transform:rotate(226.08deg);
+	-webkit-transform:rotate(226.08deg);
+	-o-transform:rotate(226.08deg);
+	transform:rotate(226.08deg);
+}
+#browse-Safari .pie {
+	background-color:purple;
+	border-color:purple;
+	-moz-transform:rotate(10.08deg);
+	-webkit-transform:rotate(10.08deg);
+	-o-transform:rotate(10.08deg);
+	transform:rotate(10.08deg);
+}
+#browse-Safari-lbl {
+	border-left:purple solid 1em;
+	padding-left:.5em;
+}
+#browse-Chrome {
+	-moz-transform:rotate(236.16deg); 
+	-webkit-transform:rotate(236.16deg); 
+	-o-transform:rotate(236.16deg); 
+	transform:rotate(236.16deg); 
+}
+#browse-Chrome .pie {
+	background-color:darkcyan;
+	border-color:darkcyan;
+	-moz-transform:rotate(6.12deg); 
+	-webkit-transform:rotate(6.12deg); 
+	-o-transform:rotate(6.12deg); 
+	transform:rotate(6.12deg); 
+}
+#browse-Chrome-lbl {
+	border-left:darkcyan solid 1em;
+	padding-left:.5em;
+}
+#browse-Other {
+	-moz-transform:rotate(242.28deg); 
+	-webkit-transform:rotate(242.28deg); 
+	-o-transform:rotate(242.28deg); 
+	transform:rotate(242.28deg); 
+}
+#browse-Other .pie {
+	background-color:salmon;
+	border-color:salmon;
+	-moz-transform:rotate(5.76deg); 
+	-webkit-transform:rotate(5.76deg); 
+	-o-transform:rotate(5.76deg); 
+	transform:rotate(5.76deg); 
+}
+#browse-Other-lbl {
+	border-left:salmon solid 1em;
+	padding-left:.5em;
+}
+#browse-Unknown {
+	-moz-transform:rotate(248.04deg);
+	-webkit-transform:rotate(248.04deg); 
+	-o-transform:rotate(248.04deg); 
+	transform:rotate(248.04deg); 
+}
+#browse-Unknown .pie {
+	background-color:grey;
+	border-color:grey;
+	-moz-transform:rotate(111.96deg); 
+	-webkit-transform:rotate(111.96deg); 
+	-o-transform:rotate(111.96deg);
+	transform:rotate(111.96deg);
+}
+#browse-Unknown-lbl {
+	border-left:grey solid 1em;
+	padding-left:.5em;
+}
+#os-Win {
+	margin-left:10px;
+	margin-top:10px;
+}
+#os-Win .pie {
+	background-color:blue;
+	border-color:blue;
+	-moz-transform:rotate(229.32deg); 
+	-webkit-transform:rotate(229.32deg); 
+	-o-transform:rotate(229.32deg);
+	transform:rotate(229.32deg);
+}
+#os-Win-lbl {
+	border-left:blue solid 1em;
+	padding-left:.5em;
+}
+#os-Mac {
+	-moz-transform:rotate(229.32deg); 
+	-webkit-transform:rotate(229.32deg);
+	-o-transform:rotate(229.32deg); 
+	transform:rotate(229.32deg); 
+}
+#os-Mac .pie {
+	background-color:purple;
+	border-color:purple;
+	-moz-transform:rotate(21.6deg); 
+	-webkit-transform:rotate(21.6deg);
+	-o-transform:rotate(21.6deg); 
+	transform:rotate(21.6deg); 
+}
+#os-Mac-lbl {
+	border-left:purple solid 1em;
+	padding-left:.5em;
+}
+#os-Other {
+	-moz-transform:rotate(250.92deg); 
+	-webkit-transform:rotate(250.92deg); 
+	-o-transform:rotate(250.92deg); 
+	transform:rotate(250.92deg); 
+}
+#os-Other .pie {
+	background-color:grey;
+	border-color:grey;
+	-moz-transform:rotate(109.44deg); 
+	-webkit-transform:rotate(109.44deg); 
+	-o-transform:rotate(109.44deg); 
+	transform:rotate(109.44deg); 
+}
+#os-Other-lbl {
+	border-left:grey solid 1em;
+	padding-left:.5em;
+}
+</style>
+</head>
+<body>
+<div class="chart">
+  <h2>Browser Usage</h2>
+  <div class="legend">
+    <div id="browse-FF-lbl">Firefox <span>32.3%</span></div>
+
+    <div id="browse-IE-lbl">Internet Explorer <span>30.5%</span></div>
+    <div id="browse-Safari-lbl">Safari <span>2.8%</span></div>
+    <div id="browse-Chrome-lbl">Chrome <span>1.7%</span></div>
+    <div id="browse-Other-lbl">Other <span>1.6%</span></div>
+    <div id="browse-Unknown-lbl">Uknown <span>31.1%</span></div>
+
+  </div>
+  <div id="browse-IE" class="hold">
+    <div class="pie"></div>
+  </div>
+  <div id="browse-FF" class="hold">
+    <div class="pie"></div>
+  </div>
+  <div id="browse-Safari" class="hold">
+    <div class="pie"></div>
+
+  </div>
+  <div id="browse-Chrome" class="hold">
+    <div class="pie"></div>
+  </div>
+  <div id="browse-Other" class="hold">
+    <div class="pie"></div>
+  </div>
+  <div id="browse-Unknown" class="hold">
+    <div class="pie"></div>
+
+  </div>
+</div>
+<div class="chart">
+  <h2>Operating System</h2>
+  <div class="legend">
+    <div id="os-Win-lbl">Windows <span>63.7%</span></div>
+    <div id="os-Mac-lbl">Macintosh <span>6.0%</span></div>
+
+    <div id="os-Other-lbl">Other<span>30.4%</span></div>
+  </div>
+  <div id="os-Win" class="hold gt50">
+    <div class="pie"></div>
+    <div class="pie fill"></div>
+  </div>
+  <div id="os-Mac" class="hold">
+    <div class="pie"></div>
+
+  </div>
+  <div id="os-Other" class="hold">
+    <div class="pie"></div>
+  </div>
+</div>
+<p>The two charts above are created comletely with CSS3 properties and contain no images whatsoever.<br />
+<a href="/blog/2010/02/20/pure-css3-pie-charts/">Back to blog post</a></p>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+</body>
+</html>

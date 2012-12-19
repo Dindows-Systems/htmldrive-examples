@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Digicrafts AJAX PayPal Cart jQuery plugin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
+    
+    <!-- CSS for this product-->
+    <link rel="stylesheet" type="text/css" href="lib/dc.core.1.1.0.min.css" />    
+    <link rel="stylesheet" type="text/css" href="lib/dc.cart.css" />
+    
+    <!-- CSS for this example only-->
+    <link rel="stylesheet" type="text/css" href="common/sample.common.css" />
+    <link rel="stylesheet" type="text/css" href="common/sample.product.css" />
+    <link rel="stylesheet" type="text/css" href="common/prettify.css" />
+    
+    <!-- Javascript for this product-->
+    <script src="lib/dc.core.1.1.0.min.js" type="text/javascript"></script>  
+    <script src="lib/dc.cart.free.min.js" type="text/javascript"></script>      
+    <script src="lib/dc.cart.lang.js" type="text/javascript"></script>
+    
+    <!-- CSS for this example only-->
+    <script src="common/prettify.js" type="text/javascript"></script>    
+        
+    <script type="text/javascript">
+        $(function(){            
+
+            // Create a new AJAXPaypalCart Object
+            var cart = $('#cart').DCAJAXPaypalCart({
+                width:600,
+                autoOpenWhenAdd:true,
+                openNewCheckOutWindow:true,
+                //themeColor:'#333',
+                //themeDarkColor:'#FFF',
+                header:'AJAX Cart Demo',
+                footer:'We accpet paypal, visa and master card. (This is a customizable footer)',
+                paypalOptions:{
+                    business:'tsangwl@digicrafts.com.hk',
+                    page_style:'digicrafts'
+                }
+            });            
+            
+            // Add the button
+            cart.addBuyButton("#macbook",{
+                name:'MacBook',                     // Item name appear on the cart
+                thumbnail:'media/macbook.jpg',      // Thumbnail path of the item (Optional)
+                price:'999',                        // Cost of the item
+                shipping:20                         // Shipping cost for the item (Optional)
+            });
+            cart.addBuyButton("#macbookair",{
+                name:'MacBook Air',             
+                thumbnail:'media/macbook.jpg',
+                price:'999',
+                shipping:20 
+            });
+            cart.addBuyButton("#macbookpro",{
+                name:'MacBook Pro',             
+                thumbnail:'media/macbookpro.jpg',
+                price:'1199',
+                shipping:0
+            });
+            cart.addBuyButton("#imac",{
+                name:'iMac',             
+                thumbnail:'media/macbook.jpg',
+                price:'1199',
+                shipping:0 
+            });
+            cart.addBuyButton("#macmini",{
+                name:'Mac Mini',             
+                thumbnail:'media/macbookpro.jpg',
+                price:'699',
+                shipping:20
+            });
+            cart.addBuyButton("#macpro",{
+                name:'Mac pro',             
+                thumbnail:'media/macpro.jpg',
+                price:'2499'
+            });
+            cart.addBuyButton("#macosx",{                
+                name:'Mac OS X',
+                thumbnail:'media/macosx.jpg',
+                price:'99',
+                allowMultiple:false
+            });           
+            
+            // For code highlight
+            prettyPrint();
+            
+        });
+    </script>
+    
+  </head>
+  <body>
+      
+    <div id="pageWrapper">
+
+    <!--Start: Common Header -->
+    <div id="header" style="">
+        <div class="logo">&nbsp;</div>
+        <div class="title">AJAX Paypal Cart <small>JQuery Plugin</small></div>
+        <div class="clean">&nbsp;</div>
+    </div>
+    <!--End: Common Header -->
+                
+    <div class="product_list">
+        <div class="product_list_header">Demo Store <div class="sub"></div><div id="cart">Cart</div></div>
+        <div id="product_list" class="product_list_content">
+            <div class="product">
+                <div class="thumbnail"><img src="media/macbook.jpg"/></div>
+                <div class="caption"><div class="text"><div class="main">MacBook</div><div class="sub">(shipping $20)</div></div><div class="button" id="macbook">buy $999</div></div>
+            </div>
+            <div class="product">
+                <div class="thumbnail"><img src="media/macbookair.jpg"/></div>
+                <div class="caption"><div class="text"><div class="main">MacBook Air</div><div class="sub">(shipping $20)</div></div><div class="button" id="macbookair">buy $999</div></div>
+            </div>
+            <div class="product">
+                <div class="thumbnail"><img src="media/macbookpro.jpg"/></div>
+                <div class="caption"><div class="text"><div class="main">MacBook Pro</div><div class="sub">(free shipping)</div></div><div class="button" id="macbookpro">buy $1199</div></div>
+            </div>
+            <div class="product">
+                <div class="thumbnail"><img src="media/macosx.jpg"/></div>
+                <div class="caption"><div class="text"><div class="main">Mac OS X</div><div class="sub">(Purchase once|Download)</div></div><div class="button" id="macosx">buy $99</div></div>
+            </div>
+            <div class="product">
+                <div class="thumbnail"><img src="media/imac.jpg"/></div>
+                <div class="caption"><div class="text"><div class="main">iMac</div><div class="sub">(free shipping)</div></div><div class="button" id="imac">buy $1199</div></div>
+            </div>
+            <div class="product">
+                <div class="thumbnail"><img src="media/macmini.jpg"/></div>
+                <div class="caption"><div class="text"><div class="main">Mac Mini</div><div class="sub">(shipping $20)</div></div><div class="button" id="macmini">buy $699</div></div>
+            </div>
+            <div class="product">
+                <div class="thumbnail"><img src="media/macpro.jpg"/></div>
+                <div class="caption"><div class="text"><div class="main">Mac Pro</div><div class="sub">(free shipping)</div></div><div class="button" id="macpro">buy $2499</div></div>
+            </div>
+        </div>    
+    </div>
+    
+    <!--Basic setup-->
+    <div class="example">
+        <div class="title">Setup a basic cart</div>
+        <div class="container" id="gallery_3"></div>
+        <pre class="prettyprint">
+&lt;!-- CSS files --&gt;
+&lt;link rel="stylesheet" type="text/css" href="lib/dc.core.1.0.0.min.css" /&gt;    
+&lt;link rel="stylesheet" type="text/css" href="lib/dc.cart.1.0.0.css" /&gt;
+
+&lt;!-- Script files --&gt;
+&lt;script src="lib/dc.core.1.0.0.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="lib/dc.cart.1.0.0.min.js" type="text/javascript"&gt;&lt;/script&gt;      
+&lt;script src="lib/dc.cart.lang.js" type="text/javascript"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+    $(function(){
+        // Create a basic cart
+        var cart = $('#cart').DCAJAXPaypalCart({
+            width:600,
+            height:400,
+            paypalOptions:{
+                business:'YOU_PAYPAL_EMAIL@email.com'
+            }
+        });
+
+        // Create a buy button from a link with id "buy_button_1"
+        cart.addBuyButton("#buy_button_1",{
+            id:'item_1',                        // Specify the unique id for this item
+            name:'Dummy Item',                  // Item name appear on the cart
+            thumbnail:'product_thumbnail.jpg',  // Thumbnail path of the item (Optional)
+            price:10                            // Cost of the item
+            shipping:5                          // Shipping cost for the item (Optional)
+        });
+    });
+&lt;/script&gt;    
+        </pre>
+        <div>This example code show the syntax for setup a basic cart. Include the above sctipr int between &lt;head&gt; tag. Also insert a '&lt;div id="cart&gt;&lt;/div&gt;" in the place you want the cart widget appear.</div>		
+    </div>
+    
+    <!--Basic setup-->
+    <div class="example">
+        <div class="title">Use your own purchase gateway</div>
+        <div class="container"></div>
+        <pre class="prettyprint">
+
+        // Create a basic cart
+        var cart = $('#cart').DCAJAXPaypalCart({
+            width:600,
+            height:400,
+            paymentOptions:{
+                server:"http://YOU_PAYMENT_GATEWAY_URL.php"
+            }
+        });
+
+  
+        </pre>
+        <div>This example code show the syntax for setup a basic cart. Include the above sctipr int between &lt;head&gt; tag. Also insert a '&lt;div id="cart&gt;&lt;/div&gt;" in the place you want the cart widget appear.</div>		
+    </div>
+    
+    <!--Properties-->
+    <div class="example">
+        <div class="title">Properties</div>
+        <div class="container"></div>
+        <pre class="prettyprint">
+        // #cart is the elements id which you wan to place the cart widget
+        var cart = $('#cart').DCAJAXPaypalCart({
+            width:600,      // Width of the cart
+            height:400,     // Height of the cart
+            currency:'USD', // The display currecy of the cart, support USD,YEN,HKD,GBP,AUD..etc (Optional)
+            language:'en',  // The language of the cart. Included en, jp, de. (Optional)
+            autoOpenWhenAdd:true,  // Enable auto open the cart window after a item added to cart (Optional)
+            autoCleanCart:true, // Enable auto clean cart after checkout button click (Optional)
+            openNewCheckOutWindow:false, // Indicate if the paypal checkout window is open in a new window (Optional)
+            themeColor:'#0066cc',       // Color in the theme (Optional)
+            themeDarkColor:'#0040a1',   // Dark color in the theme (Optional)
+            header:'Header Text Here',  // The content of header (Optional)
+            footer:'Footer Text Here',  // The content of footer (Optional)
+            paypalOptions:{
+                business:'YOU_PAYPAL_EMAIL@email.com' // The paypal email addres which use for receive money
+            }
+        });
+        </pre>
+        <div>These are the properties supported by the AJAX Paypal Cart.</div>		
+    </div>
+    
+    <!--Methods-->
+    <div class="example">
+        <div class="title">Methods</div>
+        <div class="method">openCart()</div>
+        <div>Open the cart window.</div>
+        <pre class="prettyprint">
+cart.openCart();
+        </pre>
+        <div class="method">closeCart()</div>
+        <div>Close the cart window.</div>
+        <pre class="prettyprint">
+cart.closeCart();
+        </pre>
+        <div class="method">add(item)</div>
+        <div>Add an item into cart.</div>
+        <pre class="prettyprint">
+cart.addCart({
+    id:'item_1',                        // Specify the unique id for this item
+    name:'Dummy Item',                  // Item name appear on the cart
+    thumbnail:'product_thumbnail.jpg',  // Thumbnail path of the item (Optional)
+    price:'10'                          // Cost of the item
+    shipping:5,                         // Shipping cost for the item (Optional)
+    allowMultiple:true                  // Set if allow multiple item in cart (Optional)
+});
+        </pre>
+        <div class="method">remove(id)</div>
+        <div>Remove an item with specify id.</div>
+        <pre class="prettyprint">
+cart.remove('item_1');
+        </pre>
+        <div class="method">clean()</div>
+        <div>Clean all items.</div>
+        <pre class="prettyprint">
+cart.clean();
+        </pre>
+    </div>
+    
+    <!--Styles-->
+    <div class="example">
+        <div class="title">Change the styles.</div>
+        <div class="container"></div>
+        <div>The AJAXPaypalCart support changing the theme color by the properties 'themeColor' and 'themeDarkColor'. Also, the cart is fully customizable with styles sheet. You can edit the included css file 'dc.cart.1.0.0.css' to fit your style.</div>		
+    </div>
+    
+    <!--Text Edit-->
+    <div class="example">
+        <div class="title">Change the text appear in the cart.</div>
+        <div class="container"></div>
+        <div>To change the text, you can edit the "dc.cart.lang.js". You can also include text in different language and specify the 'language' property to change the language of the cart.</div>		
+    </div>
+      
+    <!--Start: Common Header -->
+    <!--Text Edit-->
+    <div class="example">
+        <div class="title">Userful Links.</div>
+        <div class="container"></div>
+        <div>
+            <div class="link">Link to <a href="http://www.digicrafts.com.hk/components/JSAJAXPayPalCart" target="_blank">Product page.</a></div>
+        </div>		
+    </div>
+    
+    <div id="footer" style="">
+
+        <div class="copyright">&copy;Copyrights digicrafts 2011. All rights reserved. </div>
+        <div class="clean">&nbsp;</div>
+    </div>
+<!--End: Common Header -->
+
+    </div>
+	More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+  </body>
+</html>

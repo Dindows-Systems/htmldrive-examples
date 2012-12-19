@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+
+body { font-family: Verdana; font-size: 12px; background-color: #959A8F; color: #63665F }
+#page { width: 575px; margin: 30px auto; }
+#gamesHolder { background: url(shadow00.png) no-repeat center 295px; padding: 5px; margin-top: 30px; width: 565px; }
+
+#header { position: relative; height: 120px; }
+#header h1 { position: absolute; top: 2px; left: 2px; color: #333333; font-size: 70px; }
+#header .h1 { color: #f3f3f3; top: 0px; left: 0px; }
+
+
+#header h2 { position: absolute; top: 82px; left: 2px; color: #333333; font-size: 30px; }
+#header .h2 { top: 80px; left: 0px;  color: #f3f3f3; }
+
+
+#header h1, #header h2 { margin: 0; padding: 0; font-family: Georgia; font-weight: normal; }
+
+ul { padding: 0 0 0 15px; margin: 0; }
+
+.holder {
+	background: url(shadow00.png) no-repeat center bottom; padding: 17px 5px;  }
+.text { background-color: #f3f3f3; padding: 30px; margin-top: 10px; line-height: 20px; overflow: hidden; zoom: 1; }
+
+.holder h2 { font-family: Georgia; margin: 0; padding: 0px 0px 15px 0px; }
+
+code { display: block; background-color: #fff; padding: 10px; overflow: auto; }
+pre { margin: 10px 0px; padding: 0; }
+
+.download { width: 207px; height: 77px; background: url(download.png) no-repeat; float: right; }

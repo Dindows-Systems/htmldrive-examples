@@ -1,0 +1,36 @@
+@charset "utf-8"; 
+/* http://css-plus.com by Jamy Golden */
+
+/*
+	Imports
+*/
+@import url("resets.css"); 
+
+/*
+	Always Used
+*/
+#page-wrap		{ margin: 0 auto; position: relative; min-width: 991px;  max-width: 1024px;  }
+.clear			{ clear: both; }
+h2				{ color: #000; font: 30px Arial, Helvetica, sans-serif; margin: 20px 0 40px 0; }
+p				{ color: #000; }
+
+/*
+	Basic Elements
+*/
+#content		{ width: 960px; position: absolute; top: 0; left: 0; }
+
+/*
+	Demo
+*/
+#container { height: 550px; width: 331px; position: relative; }
+
+#hand-front { background: url(../images/hand-front.png) no-repeat left top; height: 169px; width: 331px; position: absolute; left: 0; top: 20px; z-index: 400; }
+#hand-back { background: url(../images/hand-back.png) no-repeat left top; height: 99px; width: 190px; position: absolute; left: 128px; top: 43px; z-index: 100; }
+#string { background: #79694c; border: 1px solid #3b2f1d; height: 20px; width: 2px; position: absolute; top: 47px; left: 243px; z-index: 200; }
+
+#yoyo { background: url(../images/yoyo.png) no-repeat center center; height: 150px; width: 150px; position: absolute; left: 169px; top: 47px; z-index: 300; }
+#yoyo a { color: white; display: block; font-size: 20px; font-weight: bold; line-height: 150px; margin-left: 27px; }
+#yoyo a:hover { text-decoration: none; text-shadow: 0 0 15px #000; }
+
+.rotate { -webkit-animation-duration:0.8s; -webkit-animation-iteration-count:infinite; -webkit-animation-name: yoyo; -webkit-animation-timing-function:linear; }
+@-webkit-keyframes yoyo { from {-webkit-transform:scale(1) rotate(0deg);} to {-webkit-transform:scale(1) rotate(360deg);} } 

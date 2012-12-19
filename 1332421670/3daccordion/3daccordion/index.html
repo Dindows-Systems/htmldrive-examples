@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>3D Accordion with CSS3</title>
+		<style>
+			body {
+				background: #D5DED9;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				font-family: Georgia, serif;
+			}
+			h1{
+				font-size:330%;
+				text-shadow:2px 2px 1px white;
+			}
+			p {
+				line-height: 140%;
+				font-size: 90%;
+			}
+			#accordion {
+				margin: 100px;
+			}
+			#accordion article {
+				-webkit-transform: perspective(900px) rotateY(60deg);
+				-webkit-transition: all 0.7s ease-in-out;
+				background: #fff;
+				border: 1px solid #f3f3f3;
+				box-shadow: 0px 5px 15px gray;
+				float: left;
+				height: 420px;
+				margin-left: -180px;
+				padding: 20px;
+				width: 220px;
+			}
+			#accordion article:first-child {
+				margin-left: 0px;
+			}
+			#accordion article img {
+				float: left;
+				padding: 0 10px 5px 0;
+			}
+			#accordion article:hover {
+				-webkit-transform: perspective(0) rotateY(-10deg);
+				margin: 0 140px 0 -60px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>3D Accordion with CSS3</h1>
+		<div id="accordion">
+			<article>
+				<h2>Section 1</h2>
+				<img src="img/img1.jpg" width="100" height="88">
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+				</p>
+				<p>
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+				</p>
+			</article>
+			<article>
+				<h2>Section 2</h2>
+				<img src="img/img2.jpg" width="100" height="75">
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+				</p>
+				<p>
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+				</p>
+			</article>
+			<article>
+				<h2>Section 3</h2>
+				<img src="img/img3.jpg" width="100" height="67">
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+				</p>
+				<p>
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+				</p>
+			</article>
+			<article>
+				<h2>Section 4</h2>
+				<img src="img/img4.jpg" width="100" height="75">
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+				</p>
+				<p>
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+				</p>
+			</article>
+		</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>	</body>
+</html>

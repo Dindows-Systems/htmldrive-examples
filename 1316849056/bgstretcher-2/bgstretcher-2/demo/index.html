@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Background Stretcher Demo</title>
+
+<link rel="stylesheet" type="text/css" href="./main.css" />
+<link rel="stylesheet" type="text/css" href="../bgstretcher.css" />
+
+<script type="text/javascript" src="../jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../swfobject.js"></script>
+<script type="text/javascript" src="../bgstretcher.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+        //  Initialize Backgound Stretcher	   
+		$('BODY').bgStretcher({
+			images: ['images/sample-1.jpg', 'images/sample-2.jpg', 'images/sample-3.jpg', 'images/sample-4.jpg', 'images/sample-5.jpg', 'images/sample-6.jpg'],
+			imageWidth: 1024, 
+			imageHeight: 768, 
+			slideDirection: 'N',
+			slideShowSpeed: 1000,
+			transitionEffect: 'fade',
+			sequenceMode: 'normal',
+			buttonPrev: '#prev',
+			buttonNext: '#next',
+			pagination: '#nav',
+			anchoring: 'left center',
+			anchoringImg: 'left center'
+		});
+		
+	});
+</script>
+
+<script type="text/javascript" src="main.js"></script>
+
+</head>
+<body>
+    <div id="page" style="display: none_;">
+		<div class="page-top">&nbsp;</div>
+		<div class="page-content"><div class="page-wrapper">
+			<h1>Background Stretcher jQuery Plugin Demo</h1>
+			
+			<form action="#"><div>
+				<div class="column">
+					<div class="row">
+						<h2>Transition Effect</h2>
+						<select id="effect">
+							<option value="none">None</option>
+							<option value="fade">Fade</option>
+							<option value="simpleSlide">Simple Slider</option>
+							<option value="superSlide">Super Slider</option>
+						</select>
+					</div>
+					<div class="row slide-directions">
+						<h2>Slide Direction</h2>
+						<div class="column small">
+							<div class="row"><input type="radio" id="dir-n" name="direction" class="direction" checked="checked"/><label for="dir-n">North</label></div>
+							<div class="row"><input type="radio" id="dir-s" name="direction" class="direction"/><label for="dir-s">South</label></div>
+							<div class="row"><input type="radio" id="dir-w" name="direction" class="direction"/><label for="dir-w">West</label></div>
+							<div class="row"><input type="radio" id="dir-e" name="direction" class="direction"/><label for="dir-e">East</label></div>
+						</div>
+						<div class="column small super-directions">
+							<div class="row"><input type="radio" id="dir-nw" name="direction" class="direction"/><label for="dir-nw">North-West</label></div>
+							<div class="row"><input type="radio" id="dir-ne" name="direction" class="direction"/><label for="dir-ne">North-East</label></div>
+							<div class="row"><input type="radio" id="dir-sw" name="direction" class="direction"/><label for="dir-sw">South-West</label></div>
+							<div class="row"><input type="radio" id="dir-se" name="direction" class="direction"/><label for="dir-se">South-East</label></div>
+						</div>
+					</div>
+					<div class="row">
+						<h2>Sequence Mode</h2>
+						<input type="radio" id="normal" name="mode" class="mode" checked="checked"/><label for="normal">Normal</label>
+						<input type="radio" id="back" name="mode" class="mode"/><label for="back">Back</label>
+						<span class="mode-randome"><input type="radio" id="random" name="mode" class="mode"/><label for="random">Random</label></span>
+					</div>
+				</div>
+				<div class="column">
+					<div class="row">
+						<h2>Manual Controls</h2>
+						<div class="nav-buttons">
+							<a href="javascript:;" id="prev">Previouse image</a>&nbsp;&nbsp;&nbsp;
+							<a href="javascript:;" id="next">Next image</a>
+						</div>
+					</div>
+					<div class="row nav-buttons">
+						<span class="pager">Pager:</span> <div id="nav">&nbsp;</div>
+					</div>
+					<div class="row">
+						<a href="javascript:;" id="toggleAnimation" >Pause Animation</a>
+					</div>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+				</div>
+			</div></form>
+		</div></div>	
+		<div class="page-bottom">&nbsp;</div>
+    </div>
+</body>
+</html>

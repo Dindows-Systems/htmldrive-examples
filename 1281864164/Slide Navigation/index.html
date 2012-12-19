@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8;charset=utf-8" />
+<title>Jquery Horizontal Slide Navigation</title>
+<meta name="description" content="Jquery Slide Navigation, Horizontal Slidein/Slideout Navigation Using Jquery" />
+<meta name="keywords" content="jquery navigation,jquery menu,jquery slide" />
+<link href="images/index.css" rel="stylesheet" media="all" />
+<script type="text/javascript" src="images/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="images/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	/*
+		Jquery Horizontal Slide Navigation
+		webmaster@chazzuka.com
+		http://www.chazzuka.com
+		October 8th 2008 @ Denpasar, Bali Paradise Island
+	*/
+    $("ul li a").each(function(){
+	$(this).hover(function(){
+		$(this).animate({width: "400px"}, {queue:false, duration:450});
+      },function() {
+		  $(this).animate({width: "128px"}, {queue:false, duration:450});
+	  });
+    });
+	/*
+		To use this you need to load jquery easing plugins
+	*/	
+    $("ul.easing li a").each(function(){
+	$(this).hover(function(){
+		$(this).animate({width: "400px"}, {queue:false, duration:450, easing:'easeOutBack'});
+      },function() {
+		  $(this).animate({width: "128px"}, {queue:false, duration:450, easing:'easeInBack'});
+	  });
+    });	
+});
+</script>
+</head>
+<body>
+<h1>Jquery Horizontal Slide Navigation</h1>
+<p class="info">This is experimental files, created by <a href="http://www.chazzuka.com/bali-freelance-web-designer.asp" title="bali freelance web developer">chazzuka</a>, to see the effect properly you need to download <a href="http://jquery.com/" rel="external,nofollow">jquery library</a>, and optionaly <a href="http://gsgd.co.uk/sandbox/jquery/easing/" rel="external,nofollow">jquery easing plugin</a></p>
+<ul>
+    <li><a href="#" title="" class="home"><p><strong>Bali Web Design</strong><br />Bali Web Design &amp; Web Development<br />Services</p></a></li>
+    <li><a href="#blog" title="" class="blog"><p><strong>Web 2.0 Blog</strong><br />Web Design, Programming, Ajax <br />PHP, ASP, &amp; Web 2.0 Stuffs</p></a></li>
+    <li><a href="#bali-web-services.asp" title="" class="services"><p><strong>Bali Web Services</strong><br />Web Design, Web Development &amp; SEO<br />Services</p></a></li>
+    <li><a href="#portofolio" title="" class="portfolio"><p><strong>Portfolio</strong><br />Freelance Web Developer Portfolio</p></a></li>
+</ul>
+<p class="info">With Easing Options</p>
+<ul class="easing">
+    <li><a href="#" title="" class="home"><p><strong>Bali Web Design</strong><br />Bali Web Design &amp; Web Development<br />Services</p></a></li>
+    <li><a href="#blog" title="" class="blog"><p><strong>Web 2.0 Blog</strong><br />Web Design, Programming, Ajax <br />PHP, ASP, &amp; Web 2.0 Stuffs</p></a></li>
+    <li><a href="#bali-web-services.asp" title="" class="services"><p><strong>Bali Web Services</strong><br />Web Design, Web Development &amp; SEO<br />Services</p></a></li>
+    <li><a href="#portofolio" title="" class="portfolio"><p><strong>Portfolio</strong><br />Freelance Web Developer Portfolio</p></a></li>
+</ul>
+<p class="footer">copyleft 2008 chazzuka.com</p><br />
+
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>
+<!-- This document saved from http://developer.web.id/jquery/horizontal-slide-nav/ -->

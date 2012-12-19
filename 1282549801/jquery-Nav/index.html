@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Jquery Navigation</title>
+		<style type="text/css" media="screen">
+			
+			body{
+				background-color: #333; color:#FFFFFF
+			}
+			a{ color:#FFCC00;}
+			/* Div Wrapper */
+			#menuBar{
+				/* Hide text that goes beyond
+				   the bottom of the wrapper */
+				overflow:hidden;
+				
+				/* Give wrapper background image */
+				width:503px;
+				height:102px;
+				background: transparent url(bar.jpg) no-repeat scroll left top;
+				
+				/* Center menu on page and give it a border */
+				margin:0 auto;
+				border:10px solid #111;
+			}
+			
+			#menuBar ul{
+				/* Center menu inside wrapper */
+				width:380px;
+				margin:0 auto;
+				
+				/* Get rid of bullets */
+				list-style-type: none;
+			}
+			#menuBar ul li{
+				/* Make menu horizontal */
+				float:left;
+				
+				/* Add spacing between menu items */
+				padding-right:40px;
+				
+			}
+
+			#menuBar a{
+				
+				/* Give each menu item a background image */
+				width:55px;
+				height:102px;
+				display:block;
+				background: transparent url(logos.jpg) no-repeat scroll left top;
+
+				/* Push text down below bottom of wrapper*/
+				padding-top:100px;
+				
+				/* Beautify Text*/
+				color:#ddd;
+				font-family: Arial, "MS Trebuchet", sans-serif;
+				text-decoration: none;
+				font-size:10pt;
+				font-weight:bold;
+				outline:none;
+			}
+			
+			
+			#menuBar a:hover{
+				/* change background image for rollover state */
+				background-image:url(logos-over.jpg);
+			}
+			
+			/* Position each background image accordingly
+			   to display icons */
+			#menuBar a#Home{
+				background-position:-67px top;
+			}
+			#menuBar a#About{
+				background-position:-166px top;
+			}
+			#menuBar a#Gallery{
+				background-position:-266px top;
+			}
+			#menuBar a#Contact{
+				background-position:-373px top;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="menuBar">
+			<ul>
+				<li><a href="#" id="Home">Home</a></li>
+				<li><a href="#" id="About">About</a></li>
+				<li><a href="#" id="Gallery">Gallery</a></li>
+				<li><a href="#" id="Contact">Contact</a></li>
+			</ul>
+		</div><br />
+<br />
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+	</body>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$("a").mouseover(function(){
+			var selected = "#"+$(this).attr("id");
+			$(selected).animate({paddingTop:"78px"}, 100);
+		}).mouseout(function(){
+			var selected = "#"+$(this).attr("id");
+			$(selected).animate({paddingTop:"100px"}, 100);
+		});
+	});
+	</script>
+	
+</html>

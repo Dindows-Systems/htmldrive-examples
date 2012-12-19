@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <!--[if IE 7]>
+    <style type="text/css">
+        #vtab > ul > li.selected{
+            border-right: 1px solid #fff !important;
+        }
+        #vtab > ul > li {
+            border-right: 1px solid #ddd !important;
+        }
+        #vtab > div { 
+            z-index: -1 !important;
+            left:1px;
+        }
+    </style>
+    <![endif]-->
+    <style type="text/css">
+        body {
+            background: #fff;
+            font-family: verdana;
+            padding-top: 50px;
+        }
+        #vtab {
+            margin: auto;
+            width: 800px;
+            height: 100%;
+        }
+        #vtab > ul > li {
+            width: 110px;
+            height: 110px;
+            background-color: #fff !important;
+            list-style-type: none;
+            display: block;
+            text-align: center;
+            margin: auto;
+            padding-bottom: 10px;
+            border: 1px solid #fff;
+            position: relative;
+            border-right: none;
+            opacity: .3;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+        }
+        #vtab > ul > li.home {
+            background: url('home.png') no-repeat center center;
+        }
+        #vtab > ul > li.login {
+            background: url('login.png') no-repeat center center;
+        }
+        #vtab > ul > li.support {
+            background: url('support.png') no-repeat center center;
+        }
+        #vtab > ul > li.selected {
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+            border: 1px solid #ddd;
+            border-right: none;
+            z-index: 10;
+            background-color: #fafafa !important;
+            position: relative;
+        }
+        #vtab > ul {
+            float: left;
+            width: 110px;
+            text-align: left;
+            display: block;
+            margin: auto 0;
+            padding: 0;
+            position: relative;
+            top: 30px;
+        }
+        #vtab > div {
+            background-color: #fafafa;
+            margin-left: 110px;
+            border: 1px solid #ddd;
+            min-height: 500px;
+            padding: 12px;
+            position: relative;
+            z-index: 9;
+            -moz-border-radius: 20px;
+        }
+        #vtab > div > h4 {
+            color: #800;
+            font-size: 1.2em;
+            border-bottom: 1px dotted #800;
+            padding-top: 5px;
+            margin-top: 0;
+        }
+        #loginForm label {
+            float: left;
+            width: 100px;
+            text-align: right;
+            clear: left;
+            margin-right: 15px;
+        }
+        #loginForm fieldset {
+            border: none;
+        }
+        #loginForm fieldset > div {
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        #loginForm #login {
+            margin-left: 115px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(1).mouseover();
+        });
+    </script>
+
+</head>
+<body>
+    <div id="vtab">
+        <ul>
+            <li class="home selected"></li>
+            <li class="login"></li>
+            <li class="support"></li>
+        </ul>
+        <div>
+            <h4>
+                Welcome Home!</h4>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum tincidunt
+            metus, vitae porta elit mollis eget. Sed id nisl nec lorem tincidunt sodales. Etiam
+            a dolor tellus, vel rhoncus ligula? Duis adipiscing vehicula urna ut pellentesque!
+            Duis eleifend lacinia diam a rhoncus. Integer viverra dolor eget eros consequat
+            facilisis. Curabitur dignissim dignissim lacinia!
+            <br />
+            <br />
+            Sed bibendum velit et magna placerat bibendum. Donec vitae leo ante. Nulla semper
+            dapibus felis et luctus. Donec congue, lectus eget ullamcorper sagittis, orci enim
+            aliquam risus, eget adipiscing quam neque sed eros. Donec commodo nisi varius augue
+            lacinia pharetra. Cras lacinia fermentum luctus. Nunc venenatis commodo lorem, vitae
+            pulvinar neque dignissim sed. Proin blandit rhoncus risus, sit amet eleifend quam
+            eleifend sed.
+        </div>
+        <div>
+            <h4>
+                Secure Login</h4>
+            <form id="loginForm" action="">
+            <fieldset>
+                <legend>You need to sign in with your Email & Password to continue.</legend>
+                <div>
+                    <label for="email">
+                        Email:</label>
+                    <input type="text" name="email" id="email" />
+                </div>
+                <div>
+                    <label for="password">
+                        Password:</label>
+                    <input type="password" name="password" id="password" />
+                </div>
+                <div>
+                    <input id="login" type="submit" value="Fake Login" />
+                </div>
+            </fieldset>
+            </form>
+        </div>
+        <div>
+            <h4>
+                Online Support</h4>
+            Maecenas in varius nulla. Morbi leo elit, volutpat ac faucibus in; aliquam eget
+            massa. Nullam a neque ac turpis luctus venenatis et placerat risus. Quisque pretium
+            scelerisque sapien, et accumsan nunc venenatis non. Donec ullamcorper, leo gravida
+            hendrerit interdum, tellus nisi vestibulum justo; quis dignissim enim risus quis
+            ipsum.<br />
+            <br />
+            Mauris fringilla, urna vitae posuere commodo, neque tellus tincidunt nisi, aliquam
+            scelerisque purus nulla ac enim. Cras urna urna, vestibulum ut aliquam sed, laoreet
+            et justo! Vestibulum eleifend porta mollis. Donec molestie, turpis sed commodo consequat,
+            erat purus sollicitudin arcu, non vestibulum risus lacus ac ipsum. Curabitur vitae
+            pellentesque purus.
+        </div>
+    </div>
+	More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

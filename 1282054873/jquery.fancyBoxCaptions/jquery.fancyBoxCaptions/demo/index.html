@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<title>FancyBox</title>
+	<link rel="stylesheet" type="text/css" href="../jquery.fancybox/jquery.fancybox.css" media="screen" />
+	<script type="text/javascript" src="../jquery.fancybox/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="../jquery.fancybox/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../jquery.fancybox/jquery.fancybox-1.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("div.fancyDemo a").fancybox();
+		});
+	</script>
+	<style>
+		html, body {
+			font: normal 11px Tahoma;
+			color: #333;
+		}
+		
+		a {
+			outline: none;	
+		}
+		
+		div#wrap {
+			width: 500px;
+			margin: 50px auto;	
+		}
+
+		img {
+			border: 1px solid #CCC;
+			padding: 2px;	
+			margin: 10px 5px 10px 0;
+		}
+	</style>
+</head>
+<body>
+<div id="wrap">
+	<h1>FancyBox with interactive captions</h1>
+
+	<div class="fancyDemo">
+		
+		<p>
+			<a rel="group" title="Here is a short caption." href="4_b.jpg"><img src="4_s.jpg" /></a>
+			<a rel="group" title="This is a caption that is longer than a short caption, but not incredibly long." href="2_b.jpg"><img src="2_s.jpg" /></a>
+			<br />
+			<a rel="group" title="This is an exceptionally long caption that should technically never really ever be this long, but in case it is FancyBox should be able to handle it without any problems whatsoever. That's right, the caption is still going on even now." href="1_b.jpg"><img src="1_s.jpg" /></a>
+			<a rel="group" title="This is an exceptionally long caption that should technically never really ever be this long, but in case it is FancyBox should be able to handle it without any problems whatsoever. That's right, the caption is still going on even now. This is an exceptionally long caption that should technically never really ever be this long, but in case it is FancyBox should be able to handle it without any problems whatsoever. That's right, the caption is still going on even now." href="3_b.jpg"><img src="3_s.jpg" /></a>
+		</p>
+	</div>
+	
+	<p>
+		This version of <a href="http://fancybox.net/" target="_blank">FancyBox</a> has been modified to handle captions
+		in a more interactive way.  It also doesn't break on excessively large captions.  This example is based on FancyBox 1.2.1.
+	</p>
+	
+	<p>
+		Modified by Cory LaViska of <a href="http://abeautifulsite.net/">A Beautiful Site</a>.  View more details on the
+		related <a href="http://abeautifulsite.net/2009/12/better-captions-for-jquerys-fancybox-plugin/">blog post</a>.
+	</p>
+	
+	<p style="margin-top: 3em; text-align: center;">
+		
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</a>
+	</p>
+	
+</div>
+</body>
+</html>

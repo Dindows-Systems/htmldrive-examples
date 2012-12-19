@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
+<head> 
+
+
+<style>
+/* Global Reset */
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,font,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td { margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline; }
+
+strong { font-weight:bold; }
+
+em { font-style:italic; }
+
+/* remember to define focus styles! */
+:focus { outline:0; }
+ol,ul { list-style:none; }
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse:separate;border-spacing:0; }
+caption,th,td { text-align:left;font-weight:normal; }
+blockquote:before,blockquote:after,
+q:before,q:after { content:""; }
+blockquote,q { quotes:"" ""; }
+
+
+#slider {
+	width: 100%;
+	overflow: hidden;
+	height: 301px;
+}
+.slider {
+	height: 301px;
+	width: 100%!important;
+}
+.slider_content {
+	width: 1020px;
+	height: 301px;
+	margin: 0 auto;
+	display: block;
+	text-indent: -9999px;
+}
+#ipad {
+	background: url('images/ipad-bg.jpg') repeat-x 50% 0;
+        width: 100%;
+        height: 301px;
+}
+#ipad .slider_content {
+	background: transparent url('images/ipad.jpg') no-repeat top left;
+}
+#iphone {
+	background: #000000 url('images/bg.jpg') repeat-x 50% 0;
+        width: 100%;
+        height: 301px;
+}
+#iphone .slider_content {
+	background: transparent url('images/iphone.jpg') no-repeat top left;
+}
+#macbook {
+	background: #000000 url('images/macbook-bg.jpg') repeat-x 50% 0;
+        width: 100%;
+        height: 301px;
+}
+#macbook .slider_content {
+	background: transparent url('images/macbook.jpg') no-repeat top left;
+}
+
+#slider_controls {
+	width: 958px;
+	position: relative;
+	margin: 0 auto;
+	height: 1px;
+}
+#slider_controls ul {
+	background: transparent url('images/nav.png') no-repeat bottom center;
+	display:block;
+	height:32px;
+	position:absolute;
+	right:0;
+	text-indent:-9999px;
+	top:-31px;
+	width:164px;
+	z-index:9998;
+}
+#slider_controls li {
+	float: left;
+	width: 82px;
+	height: 32px;
+}
+#slider_controls li a {
+	display: block;
+	height: 32px;
+}
+
+
+</style> 
+ 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script> 
+<script type="text/javascript" src="cycle.js"></script> 
+<script type="text/javascript"> 
+  $(document).ready( function($) {
+
+
+
+    $('#slider').cycle({
+      fx: 'scrollVert',
+      speed: 1000,
+      pause: 1,
+      timeout: 7000,
+      delay: 500,
+      prev: '#slider_next',
+      next: '#slider_prev'
+    });
+  });
+</script> 
+ 
+
+</head> 
+ 
+<body class="home"> 
+
+  
+  <div id="slider"> 
+    <!-- slider --> 
+    <div id="iphone" class="slider"> 
+      <a href="http://papermashup.com" title="iPhone 4 coming soon" class="slider_content">iPhone 4 coming soon</a> 
+    </div> 
+    <!-- slider --> 
+    <div id="macbook" class="slider"> 
+      <a href="http://papermashup.com" title="Macbook Get One" class="slider_content">Macbook Get One</a> 
+    </div> 
+    <!-- slider --> 
+    <div id="ipad" class="slider"> 
+      <a href="http://papermashup.com" title="The new iPad" class="slider_content">The new iPad</a> 
+    </div> 
+  </div> 
+  <div id="slider_controls"> 
+    <ul> 
+      <li><a href="#" id="slider_prev">Previous</a></li> 
+      <li><a href="#" id="slider_next">Next</a></li> 
+    </ul> 
+  </div> 
+ 
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a> 
+ 
+  
+</body> 
+</html>

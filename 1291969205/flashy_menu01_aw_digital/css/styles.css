@@ -1,0 +1,103 @@
+body {	
+	color: #ffffff;	
+	font-family: "Arial", Arial, sans-serif;	
+	font-size: 12px;
+	background: #000;
+	overflow:hidden;
+	
+}
+html, body {height:100%; width:100%; margin:0; padding:0;}
+
+#bg {background:transparent; position:fixed; top:0px; left:-5%; width:105%; height:100%;z-index:-1;}
+#filter{ width:100%; height:100%; z-index:0;position:absolute;left:0;top:0; background: url(../images/filter.png) repeat left top transparent}
+a {
+	text-decoration: none;
+	color: #0066ff;
+}
+
+a:focus {
+	outline:0;
+}
+
+
+
+a :hover{
+	text-decoration: none;
+}
+
+
+#container{	
+	position: relative;		
+	width:900px;
+	left:50%;
+	margin-left:-450px;	
+	top:120px;
+	z-index:1;
+}
+
+#white_line{
+	height:1px;
+	width:100%;
+	position:absolute;
+	z-index:98;
+	background: #fff;
+	left:0;
+	top:79px;
+}
+
+
+#menu{
+	margin-left:50px;
+	padding-top:90px;
+	margin-top:60px;
+	background: url(../images/menu.png) no-repeat 0px top;
+	width:164px;
+	overflow:visible;
+	position:relative;
+	z-index:99;
+}
+
+#menu span{
+	width:160px;
+	height:50px;
+	display:block;
+	margin-top:-90px;
+	cursor: pointer;
+}
+
+
+#menu ul{
+	list-style: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-size:13px;
+	width:auto;
+	height:auto;	
+}
+
+#menu ul li{
+	margin-left:-200px;
+	background: url(../images/li.png) repeat 150px top;
+	width:140px;
+	padding-left:10px;
+}
+
+#menu ul li a{
+	color: #000;
+	font-size:17px;
+	font-style:italic;
+}
+
+#content {
+	width:100%;
+	position:fixed;
+	top:70%;
+	height:30%;
+	background: url(../images/transparentbg.png) repeat 150px top;
+}
+
+#content p{
+	padding:30px;
+}

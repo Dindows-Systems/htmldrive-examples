@@ -1,0 +1,41 @@
+
+.container  {
+background:url("images/common_pro_con_bg.png") no-repeat scroll -2000px 0 transparent;
+float:left;
+margin:15px 0 25px;
+padding-top:6px;
+width:659px;
+}
+.container .c_left {
+border-right:1px solid #CCCCCC;
+font-size:12px;
+font-weight:bold;
+vertical-align:top;
+width:100px;
+}
+.container .no_line {
+border-top:medium none;
+}
+.container .r_name {
+background:none repeat scroll 0 0 #FFFFFF;
+font-size:12px;
+font-weight:bold;
+}
+.container .wrap {
+background:url("images/common_pro_con_bg.png") no-repeat scroll -3000px bottom transparent;
+float:left;
+padding-bottom:3px;
+width:659px;
+}
+.container table {
+border-left:1px solid #CCCCCC;
+border-right:1px solid #CCCCCC;
+float:left;
+}
+.container td {
+border-top:1px solid #CCCCCC;
+color:#333333;
+font:11px/20px arial;
+padding:5px 10px;
+}
+

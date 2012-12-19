@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<title>Feature List | Demo page</title>
+	<link rel="stylesheet" href="style.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.featureList-1.0.0.js"></script>
+	<style type="text/css">
+	
+		h3 {
+			margin: 0;	
+			padding: 7px 0 0 0;
+			font-size: 16px;
+			text-transform: uppercase;
+		}
+
+		div#feature_list {
+			width: 750px;
+			height: 240px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		div#feature_list ul {
+			position: absolute;
+			top: 0;
+			list-style: none;	
+			padding: 0;
+			margin: 0;
+		}
+
+		ul#tabs {
+			left: 0;
+			z-index: 2;
+			width: 320px;
+		}
+
+		ul#tabs li {
+			font-size: 12px;
+			font-family: Arial;
+		}
+		
+		ul#tabs li img {
+			padding: 5px;
+			border: none;
+			float: left;
+			margin: 10px 10px 0 0;
+		}
+
+		ul#tabs li a {
+			color: #222;
+			text-decoration: none;	
+			display: block;
+			padding: 10px;
+			height: 60px;
+			outline: none;
+		}
+
+		ul#tabs li a:hover {
+			text-decoration: underline;
+		}
+
+		ul#tabs li a.current {
+			background:  url('feature-tab-current.png');
+			color: #FFF;
+		}
+
+		ul#tabs li a.current:hover {
+			text-decoration: none;
+			cursor: default;
+		}
+
+		ul#output {
+			right: 0;
+			width: 463px;
+			height: 240px;
+			position: relative;
+		}
+
+		ul#output li {
+			position: absolute;
+			width: 463px;
+			height: 240px;
+		}
+
+		ul#output li a {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			padding: 8px 12px;
+			text-decoration: none;
+			font-size: 11px;
+			color: #FFF;
+			background: #000;
+			-moz-border-radius: 5px;
+		}
+		
+		ul#output li a:hover {
+			background: #D33431;
+		}
+	</style>
+	<script language="javascript">
+		$(document).ready(function() {
+
+			$.featureList(
+				$("#tabs li a"),
+				$("#output li"), {
+					start_item	:	1
+				}
+			);
+
+			/*
+			
+			// Alternative
+
+			
+			$('#tabs li a').featureList({
+				output			:	'#output li',
+				start_item		:	1
+			});
+
+			*/
+
+		});
+	</script>
+</head>
+<body>
+	<div id="content">
+		<h1>Feature List</h1>
+
+		<p>This is a demo page. You can view the supporting article <a href="http://jqueryglobe.com/article/feature-list">here</a></p>
+
+		<hr />
+
+		<div id="feature_list">
+			<ul id="tabs">
+				<li>
+					<a href="javascript:;">
+						<img src="services.png" />
+						<h3>Services</h3>
+						<span>Lorem ipsum dolor sit amet consect</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="programming.png" />
+						<h3>Programming</h3>
+						<span>Lorem ipsum dolor sit amet consect</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="applications.png" />
+						<h3>Applications</h3>
+						<span>Lorem ipsum dolor sit amet consect</span>
+					</a>
+				</li>
+			</ul>
+			<ul id="output">
+				<li>
+					<img src="sample1.jpg" />
+					<a href="#">See project details</a>
+				</li>
+				<li>
+					<img src="sample2.jpg" />
+					<a href="#">See project details</a>
+				</li>
+				<li>
+					<img src="sample3.jpg" />
+					<a href="#">See project details</a>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	 More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

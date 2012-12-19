@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>BubbleUp - This is not a demonstration</title>
+<link rel="stylesheet" href="css/reset.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script> 
+<script type="text/javascript" src="http://aext.net/example/bubbleup/jquery.bubbleup.js"></script>
+<script type="text/javascript">
+$(function(){
+
+    $("div#demo ul#menu li img").bubbleup({tooltip: true, scale:96});
+    
+});
+</script>
+</head>
+<body>
+	
+<style type="text/css">
+<!--
+
+div#demo {
+	margin: 50px auto 50px auto;
+	text-align: center;
+}
+
+div#demo ul#menu {
+    margin: 5px 0px;
+    list-style: none;
+    display: inline-block;
+}
+    
+div#demo ul#menu li {
+    padding: 0px;
+    float: left;
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 48px;
+    height: 48px;
+}
+
+div#demo ul#menu li a {
+    position: absolute;
+}
+
+div#demo ul#menu li img {
+    position: absolute;
+    width: 48px;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 0 8px 0 0;
+    border: none;
+    overflow: hidden;
+}
+
+-->
+</style>
+
+
+<div id="demo">
+  <ul id="menu">
+    <li> <a href="http://feeds2.feedburner.com/aextnet"><img src="css/images/feed.png" alt="Full RSS Feed"/></a> </li>
+    <li> <a href="http://feedburner.google.com/fb/a/mailverify?uri=aextnet&amp;loc=en_U"> <img src="css/images/email.png" alt="E-Mail Delivery"/></a> </li>
+    <li> <a href="http://twitter.com/aextnet"> <img src="css/images/twitter.png" alt="Follow us on Twitter"/></a> </li>
+    <li> <a href="http://facebook.com/aextnet"> <img src="css/images/facebook.png" alt="I'm on FaceBook"/></a> </li>
+    <li> <a href="http://delicious.com/save" onClick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url=http://aext.net&amp;title=AEXT.NET', 'delicious','toolbar=no,width=550,height=550'); return false;"> <img src="css/images/delicious.png" alt="Save it!"/></a> </li>
+    <li> <a href="http://technorati.com/faves?sub=addfavbtn&add=http://aext.net"> <img src="css/images/technorati.png" alt="Favorite this blog"/></a> </li>
+  </ul>
+</div>
+<div style="clear: both;"></div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+</body>
+</html>

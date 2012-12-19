@@ -1,0 +1,24 @@
+body, html {
+	font-family:Verdana, Arial;
+	font-size:12px;
+	background-color:#111111; color:#FFFFFF;
+} a{ color:#FFCC00;}
+#notice {
+
+	position:absolute;
+
+	background-image:url('../images/notice.png');
+
+	width:250px;
+
+	height:35px;
+
+	text-align:center;
+
+	padding:15px 0 0 0;
+
+	font-size:11px;
+
+	color:#467618;
+
+}

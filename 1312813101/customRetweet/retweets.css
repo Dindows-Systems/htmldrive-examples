@@ -1,0 +1,167 @@
+body, html { font-family: arial, sans-serif; }
+
+.retweetbtn { display: block; margin: 15px; float: left; }
+
+
+/* Text */
+#textretweet {
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	padding: 5px 15px;
+	color: #333;
+	font-size: 12px;
+	width: 300px;
+}
+
+	#textretweet strong {
+		text-shadow: 0px 0px 1px #ccc;
+	}
+	#textretweet a { 
+		color: #08f;
+	}
+
+/* Standard */
+#standardretweet {
+	width: 50px;
+	text-align: center;
+	font: 11px arial,sans-serif;
+}
+	#standardretweet a {
+		position: relative;
+		display: block;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		text-shadow: 0px 0px 2px #aaa;
+		-moz-text-shadow: 0px 0px 2px #aaa;
+		-webkit-text-shadow: 0px 0px 2px #aaa;
+		text-decoration: none;
+	}
+	#standardretweet .tweets {
+		border: 1px solid #aaa;
+		background: #eee;
+		height: 50px;
+		line-height: 67px;
+		color: #333;
+	}
+		#standardretweet .tweets strong{
+			position: absolute;
+			top: -13px;
+			left: 0;
+			width: 48px;
+			font-size: 16px;
+		}
+	#standardretweet .retweet {
+		display: block;
+		margin: 5px 0 0 0;
+		border: 1px solid #79f;
+		background: #7cf;
+		height: 15px;
+		line-height: 15px;
+		color: #fff;
+	}
+	#standardretweet .retweet:hover {
+		background: #fff;
+		color: #07f;
+		text-shadow: 0px 0px 2px #77a;
+		-moz-text-shadow: 0px 0px 2px #77a;
+		-webkit-text-shadow: 0px 0px 2px #77a;
+	}
+	
+/* Upgraded */
+#upgradedretweet {
+	width: 50px;
+	text-align: center;
+	text-transform: uppercase;
+	font: 8px verdana,sans-serif;
+}
+	#upgradedretweet a {
+		position: relative;
+		display: block;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		text-shadow: 0px 0px 3px #667ba2;
+		-moz-text-shadow: 0px 0px 3px #667ba2;
+		-webkit-text-shadow: 0px 0px 3px #667ba2;
+		text-decoration: none;
+		color: #fff;
+	}
+	#upgradedretweet .tweets {
+		border: 1px solid #92a6ca;
+		background: #bed4fb;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c2d8fe', endColorstr='#98b0da');
+		background: -webkit-gradient(linear, left top, left bottom, from(#c2d8fe), to(#98b0da));
+		background: -moz-linear-gradient(top,  #c2d8fe,  #98b0da);
+		height: 50px;
+		line-height: 70px;
+	}
+		#upgradedretweet .tweets strong{
+			position: absolute;
+			top: -15px;
+			left: 0;
+			width: 48px;
+			font-size: 20px;
+		}
+	#upgradedretweet .retweet {
+		display: block;
+		margin: 5px 0 0 0;
+		border: 1px solid #d07300;
+		background: #fbb45a;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcc37c', endColorstr='#fba63b');
+		background: -webkit-gradient(linear, left top, left bottom, from(#fcc37c), to(#fba63b));
+		background: -moz-linear-gradient(top,  #fcc37c,  #fba63b);
+		height: 15px;
+		line-height: 16px;
+	}
+	#upgradedretweet .retweet:hover {
+		background: #fff;
+		color: #bb6700;
+		text-shadow: 0px 0px 2px #aaa;
+		-moz-text-shadow: 0px 0px 2px #aaa;
+		-webkit-text-shadow: 0px 0px 2px #aaa;
+	}
+	
+/* Work */
+#wormretweet {
+	position: relative;
+	width: 140px;
+	height: 80px;
+	background: url(worm.png) top left no-repeat;
+	text-align: center;
+	text-transform: uppercase;
+	font: 9px times,serif;
+}
+	#wormretweet a {
+		position: absolute;
+		display: block;
+		text-decoration: none;
+		color: #fff;
+	}
+	#wormretweet .tweets {
+		height: 38px;
+		width: 80px;
+		right: 4px;
+		top: 3px;
+		font-size: 10px;
+		font-weight: bold;
+		text-shadow: 0px 0px 3px #187598;
+	}
+		#wormretweet .tweets strong{
+			display: block;
+			font-size: 28px;
+			letter-spacing: -1px;
+			line-height: 22px;
+		}
+	#wormretweet .retweet {
+		display: block;
+		width: 50px;
+		height: 15px;
+		top: 53px; right: 1px;
+		color: #fff;
+		font-weight: bold;
+	}
+	#wormretweet .retweet:hover {
+		text-shadow: 0px 0px 1px #000;
+	}
+	

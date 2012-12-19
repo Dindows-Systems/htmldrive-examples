@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<items>
+
+	<item>
+		<url>http://www.queness.com/post/3157/create-a-simple-interactive-css-button-with-jquery</url>
+		<image>images/3157.gif</image>		
+		<title>Create a Simple Interactive CSS Button with jQuery</title>
+		<desc>Alright, in this tutorial we will be creating a button that will replace the default submit button. It will be degrade gracefully, animated and easy to implement.</desc>
+	</item>	
+
+	<item>
+		<url>http://www.queness.com/post/3470/simplest-jquery-spotlight-effect-tutorial</url>
+		<image>images/3470.gif</image>		
+		<title>Simplest jQuery Spotlight Effect Tutorial</title>
+		<desc>This tutorial will guide you how to build a spotlight effect with caption. I have seen someone use this technique before, I think that's cool, so I decided to spice...</desc>
+	</item>	
+
+
+	<item>
+		<url>http://www.queness.com/post/3669/create-a-custom-content-slider-with-jquery</url>
+		<image>images/3669.gif</image>		
+		<title>Create a Custom Content Slider with jQuery</title>
+		<desc>In this tutorial, we are going to create a custom content slider. The concept behind it is pretty simple, when you click on a button, it uses jQuery scroll-To plugin to scoll...</desc>
+	</item>	
+
+	<item>
+		<url>http://www.queness.com/post/3956/quick-and-easy-jquery-font-resizer-tutorial</url>
+		<image>images/3956.gif</image>		
+		<title>Quick and Easy jQuery Font Resizer Tutorial</title>
+		<desc>This time, we are going to learn how to build a javascript font resizer that allow you to resize some section of your text instead of everything. This tutorial focuses more...</desc>
+	</item>	
+
+	<item>
+		<url>http://www.queness.com/post/5368/quick-and-easy-jquery-read-more-script-tutorial</url>
+		<image>images/5368.gif</image>		
+		<title>Quick and Easy jQuery Read More Script Tutorial</title>
+		<desc>Alright, back to jQuery tutorial after a long break. This time will be pretty simple script that hide the extra length of a long paragraph and toggle hide and show the...</desc>
+	</item>	
+
+	<item>
+		<url>http://www.queness.com/post/8434/re-create-googles-search-input-field-and-submit-button</url>
+		<image>images/8434.gif</image>		
+		<title>Re-create Google's Search Input Field and Submit Button</title>
+		<desc>Most likely, you have used Google to search something so you're probably familiar with their search form. In this tutorial, I'll show you how to re-create it with some lightweight HTML...</desc>
+	</item>	
+
+	<item>
+		<url>http://www.queness.com/post/8567/create-a-dead-simple-twitter-feed-with-jquery</url>
+		<image>images/8567.gif</image>		
+		<title>Create A Dead Simple Twitter Feed with jQuery</title>
+		<desc>In this tutorial, we will be creating a jQuery script that retrieve twitter tweets from user account. It's quick and easy, come with link, hash tag, alias as well as time posted...</desc>
+	</item>	
+
+	<item>
+		<url>http://www.queness.com/post/3036/create-a-custom-jquery-image-gallery-with-jcarousel</url>
+		<image>images/3036.gif</image>		
+		<title>Create a Custom jQuery Image Gallery with jCarousel</title>
+		<desc>Alright fellow web designers and developers. We are going to do something a little bit more hardcore this time. There are heaps of jQuery plugins out there, but it's hard....</desc>
+	</item>	
+
+
+</items>

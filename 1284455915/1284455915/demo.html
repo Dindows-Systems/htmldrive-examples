@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>previous-next slideshow - simple and practical image slideshow jQuery plugin</title>
+<style type="text/css">
+h2{
+	color: red;
+}
+pre{
+	padding: 4px;
+	border: #F90 dotted 1px;
+}
+</style>
+<link href="css/previousnext.css" rel="stylesheet" type="text/css"></link>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/previousnext.js"></script>
+</head>
+    <body>
+        <script language="javascript" type="text/javascript">
+            $(function() {
+                $("#previousnext_slideshow").previousnext_slideshow({
+                    slideshow_time_interval: '2000',
+                    slideshow_window_background_color: "#ccc",
+                    slideshow_window_padding: '1',
+                    slideshow_window_width: '300',
+                    slideshow_window_height: '150',
+                    slideshow_window_border_size: '1',
+                    slideshow_window_border_color: '#999',
+                    slideshow_button_style: '1',
+                    directory: 'images'
+                });
+                $("#previousnext_slideshow1").previousnext_slideshow({
+                    slideshow_time_interval: '3000',
+                    slideshow_window_background_color: "#ccc",
+                    slideshow_window_padding: '1',
+                    slideshow_window_width: '400',
+                    slideshow_window_height: '200',
+                    slideshow_window_border_size: '1',
+                    slideshow_window_border_color: '#000',
+                    slideshow_button_style: '2',
+                    directory: 'images'
+                });
+				$("#previousnext_slideshow2").previousnext_slideshow({
+                    slideshow_time_interval: '4000',
+                    slideshow_window_background_color: "#ccc",
+                    slideshow_window_padding: '1',
+                    slideshow_window_width: '400',
+                    slideshow_window_height: '180',
+                    slideshow_window_border_size: '1',
+                    slideshow_window_border_color: '#999',
+                    slideshow_button_style: '3',//options: 1,2,3
+                    directory: 'images'
+                });
+            });
+        </script>
+        <h1>previous-next slideshow - simple and practical image slideshow jQuery plugin</h1>
+<h2>Demo1</h2>
+        <div id="previousnext_slideshow" class="previousnext_slideshow">
+            <ul>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img1_m.jpg" width="407" height="301" alt="image1"/></a></li>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img2_m.jpg" width="407" height="301" alt="image2"/></a></li>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img3_m.jpg" width="407" height="301" alt="image3"/></a></li>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img4_m.jpg" width="407" height="301" alt="image4"/></a></li>
+            </ul>
+            <ul class="slideshow_nav"><li class="slideshow_nav_previous"></li><li class="slideshow_nav_next"></li></ul>
+            <div style="clear: both"></div>
+        </div>
+      <h2>Demo2</h2>
+        <div id="previousnext_slideshow1" class="previousnext_slideshow">
+            <ul>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img1_m.jpg" width="407" height="301" alt="image1"/></a></li>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img2_m.jpg" width="407" height="301" alt="image2"/></a></li>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img3_m.jpg" width="407" height="301" alt="image3"/></a></li>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img4_m.jpg" width="407" height="301" alt="image4"/></a></li>
+            </ul>
+            <ul class="slideshow_nav"><li class="slideshow_nav_previous"></li><li class="slideshow_nav_next"></li></ul>
+            <div style="clear: both"></div>
+        </div>
+        <h2>Demo3</h2>
+        <div id="previousnext_slideshow2" class="previousnext_slideshow">
+            <ul>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img1_m.jpg" width="407" height="301" alt="image1"/></a></li>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img2_m.jpg" width="407" height="301" alt="image2"/></a></li>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img3_m.jpg" width="407" height="301" alt="image3"/></a></li>
+                <li><a href="#" title="#"><img src="http://www.htmldrive.net/images/photos/img4_m.jpg" width="407" height="301" alt="image4"/></a></li>
+            </ul>
+            <ul class="slideshow_nav"><li class="slideshow_nav_previous"></li><li class="slideshow_nav_next"></li></ul>
+            <div style="clear: both"></div>
+        </div>
+    <h2>Usage</h2>
+<h3>Include js and css files.</h3>
+<pre>&lt;link href=&quot;css/previousnext.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;&lt;/link&gt;<br />&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.3.2.min.js&quot;&gt;&lt;/script&gt;<br />&lt;script type=&quot;text/javascript&quot; src=&quot;js/previousnext.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>Add html.</h3>
+<pre>        &lt;div id=&quot;previousnext_slideshow&quot; class=&quot;previousnext_slideshow&quot;&gt;<br />            &lt;ul&gt;<br />                &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;#&quot;&gt;&lt;img src=&quot;images/1.jpg&quot; width=&quot;407&quot; height=&quot;301&quot; alt=&quot;slideshow_large&quot;/&gt;&lt;/a&gt;&lt;/li&gt;<br />                &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;#&quot;&gt;&lt;img src=&quot;images/2.jpg&quot; width=&quot;407&quot; height=&quot;301&quot; alt=&quot;slideshow_large&quot;/&gt;&lt;/a&gt;&lt;/li&gt;<br />                &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;#&quot;&gt;&lt;img src=&quot;images/3.jpg&quot; width=&quot;407&quot; height=&quot;301&quot; alt=&quot;slideshow_large&quot;/&gt;&lt;/a&gt;&lt;/li&gt;<br />                &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;#&quot;&gt;&lt;img src=&quot;images/4.jpg&quot; width=&quot;407&quot; height=&quot;301&quot; alt=&quot;slideshow_large&quot;/&gt;&lt;/a&gt;&lt;/li&gt;<br />            &lt;/ul&gt;<br />            &lt;ul class=&quot;slideshow_nav&quot;&gt;&lt;li class=&quot;slideshow_nav_previous&quot;&gt;&lt;/li&gt;&lt;li class=&quot;slideshow_nav_next&quot;&gt;&lt;/li&gt;&lt;/ul&gt;<br />            &lt;div style=&quot;clear: both&quot;&gt;&lt;/div&gt;<br />        &lt;/div&gt;
+</pre>
+<h3>Add startup script.</h3>
+<pre>        &lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;<br />            $(function() {<br />                $(&quot;#previousnext_slideshow&quot;).previousnext_slideshow({<br />                    slideshow_time_interval: '2000',<br />                    slideshow_window_background_color: &quot;#ccc&quot;,<br />                    slideshow_window_padding: '1',<br />                    slideshow_window_width: '300',<br />                    slideshow_window_height: '150',<br />                    slideshow_window_border_size: '1',<br />                    slideshow_window_border_color: '#999',<br />                    slideshow_button_style: '1',//options: 1,2,3<br />                    directory: 'images'<br />                });<br />        &lt;/script&gt;</pre>
+<pre>
+Copyright 2010 <a href="http://www.htmldrive.net">htmldrive.net</a> Inc.
+
+@projectHomepage: <a href="http://www.htmldrive.net/go/to/previous-next-slideshow">http://www.htmldrive.net/go/to/previous-next-slideshow</a>
+
+@projectDescription: previous-next slideshow - simple and practical image slideshow jQuery plugin.
+
+@author: <a href="http://www.htmldrive.net">htmldrive.net</a>
+
+More script and css style : <a href="http://www.htmldrive.net">htmldrive.net</a>
+
+@version 1.0
+
+@license http://www.apache.org/licenses/LICENSE-2.0</pre>
+</body>
+</html>

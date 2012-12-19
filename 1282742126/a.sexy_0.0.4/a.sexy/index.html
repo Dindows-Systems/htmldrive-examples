@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>(a)Sexy Images jQuery Plugin</title>
+    <link rel="stylesheet" type="text/css" media="all" href="style.css"/>
+    <style type="text/css">
+    	#images img {
+    	   float:left;
+    	   margin:10px;
+    	   border:2px solid #ccc;
+    	}
+    </style>
+    <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.asexy.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#images img').asexy();
+        });
+    </script>
+    
+    <script type="text/javascript" src="http://scripts.hohli.com/brush/shCore.js"></script>
+	<script type="text/javascript" src="http://scripts.hohli.com/brush/shBrushJScript.js"></script>
+	<script type="text/javascript" src="http://scripts.hohli.com/brush/shBrushXml.js"></script>
+	<link type="text/css" rel="stylesheet" href="http://scripts.hohli.com/brush/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="http://scripts.hohli.com/brush/styles/shThemeDefault.css"/>
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = 'http://scripts.hohli.com/brush/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body>
+<h2><a name="top">Introduction</a></h2>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+<div>
+    <p>This plugin allows you to create sexy hover effect for images on your page ;)</p>
+
+    <br/>
+    
+    Requried:
+    <ul>
+        <li>jQuery 1.3+</li>
+    </ul>
+    
+    Test with following browsers:
+    <ul>
+        <li>Opera 10.0+</li>
+        <li>Mozilla Firefox 3.0+</li>
+        <li>Google Chrome 3.0.195</li>
+        <li>Safari 3.1+ (win)</li>
+        <li>Internet Explorer 8.0</li>
+    </ul>
+    
+    Go to:
+    <ul>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#install">Installation</a></li>
+        <li><a href="#options">Options</a></li>
+        <li><a href="#demo">Demo</a></li>
+    </ul>
+</div>
+
+
+<h2><a name="download">Download</a></h2>
+<div>
+    Web Access:
+    <blockquote>
+    <p>
+        <a href="http://code.google.com/p/a-sexy/downloads/list" title="Download (a)Sexy Images from Google Code">
+            http://code.google.com/p/a-sexy/downloads/list</a><br/>
+        <a href="http://plugins.jquery.com/project/a-sexy" title="Download (a)Sexy Images from jQuery">
+            http://plugins.jquery.com/project/a-sexy</a>
+    </p>
+    </blockquote>
+	
+    SVN Command-Line Access:
+    <blockquote>
+    <p>svn checkout http://a-sexy.googlecode.com/svn/trunk/ a-slideshow-read-only</p>
+    </blockquote>
+
+    <p><small>[<a href="#top">Top</a>]</small></p>
+</div>
+
+<h2><a name="install">Installation</a></h2>
+<div>
+    Include JavaScript library jQuery and (a)Sexy Images plugin:
+    <pre class="brush: xml;">
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.js?ver=1.3.2&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.asexy.js&quot;&gt;&lt;/script&gt;
+    </pre>
+
+    Create any content with images:
+    <pre class="brush: xml;">
+&lt;div id=&quot;images&quot;&gt;
+        &lt;img src="docs/images/Peach_and_Lime.jpg" alt="Peach and Lime" /&gt;
+        &lt;img src="docs/images/Rock_Chick.jpg" alt="Rock Chick" /&gt;
+        &lt;img src="docs/images/Angel.jpg" alt="Angel" /&gt;
+        &lt;img src="docs/images/More_stripes.jpg" alt="More stripes" /&gt;
+&lt;/div&gt;
+    </pre>
+
+    Initialize plugin:
+    <pre class="brush: jscript;">
+&lt;script type=&quot;text/javascript&quot;&gt;
+//&lt;![CDATA[
+$(document).ready(function(){
+    $('#images img').asexy();
+});
+//]]&gt;
+&lt;/script&gt;
+    </pre>
+
+    Result:
+    <div id="images">
+        <img src="docs/images/Peach_and_Lime.jpg" alt="Peach and Lime" />
+        <img src="docs/images/Rock_Chick.jpg" alt="Rock Chick" />
+        <img src="docs/images/Angel.jpg" alt="Angel" />
+        <img src="docs/images/More_stripes.jpg" alt="More stripes" />
+    </div>
+    <br class="clear"/>
+    <small>[<a href="#top">Top</a>]</small>
+</div>
+
+<h2><a name="options">Options</a></h2>
+<div>
+<pre class="brush: jscript;">
+&lt;script type=&quot;text/javascript&quot;&gt;
+//&lt;![CDATA[
+$(document).ready(function(){
+    $('selector img').sexy({
+        width:320,
+        height:240,
+        left:0,       // can be 'center'
+        top:0,        // can be 'center'
+        zoom:true,    // zoom to size
+        speed:500,    // only in ms
+        opacity:0.8,  // from 0.0 to 1.0
+        round:60,     // don't start new iterration for small different (for linear and zigzag functions)
+        func:"linear" // available linear, zigzag, vertical, horizontal, x  
+    });
+});
+//]]&gt;
+&lt;/script&gt;
+</pre>
+
+
+<small>[<a href="#top">Top</a>]</small>
+</div>
+
+
+<h2><a name="demo">Demo</a></h2>
+<div>
+<ul>
+    <li><a href="docs/demo00.html">Default configuration</a></li>
+    <li><a href="docs/demo01.html">Custom  configuration</a></li>
+    <li><a href="docs/demo02.html">Many on one page</a></li>
+</ul>
+<small>[<a href="#top">Top</a>]</small>
+</div>
+
+<h2>P.S</h2>
+<div>
+    <p>Thank to <a href="http://dominic-marco.deviantart.com/" title="Dominic-Marco">Dominic-Marco</a> for really sexy images</p>
+    <p>Author Homepage: <a href="http://anton.shevchuk.name">http://anton.shevchuk.name</a></p>
+</div>
+</body>
+</html>

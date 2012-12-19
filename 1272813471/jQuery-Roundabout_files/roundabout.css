@@ -1,0 +1,219 @@
+HTML {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #2c6567; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 13px/1.6 "Lucida Grande", Helvetica, Arial, sans-serif; COLOR: #333; PADDING-TOP: 0px
+}
+BODY {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #2c6567; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 13px/1.6 "Lucida Grande", Helvetica, Arial, sans-serif; COLOR: #333; PADDING-TOP: 0px
+}
+H1 {
+	MARGIN: 1em 0px 0px; FONT-FAMILY: Georgia, "Times New Roman", serif; FONT-WEIGHT: normal
+}
+H2 {
+	MARGIN: 1em 0px 0px; FONT-FAMILY: Georgia, "Times New Roman", serif; FONT-WEIGHT: normal
+}
+H3 {
+	MARGIN: 1em 0px 0px; FONT-FAMILY: Georgia, "Times New Roman", serif; FONT-WEIGHT: normal
+}
+H4 {
+	MARGIN: 1em 0px 0px; FONT-FAMILY: Georgia, "Times New Roman", serif; FONT-WEIGHT: normal
+}
+H5 {
+	MARGIN: 1em 0px 0px; FONT-FAMILY: Georgia, "Times New Roman", serif; FONT-WEIGHT: normal
+}
+H6 {
+	MARGIN: 1em 0px 0px; FONT-FAMILY: Georgia, "Times New Roman", serif; FONT-WEIGHT: normal
+}
+H1 {
+	POSITION: relative; LINE-HEIGHT: 1; MARGIN-TOP: 0.8em; FONT-FAMILY: Helvetica, Arial, sans-serif; MARGIN-BOTTOM: 0px; FONT-SIZE: 3em; FONT-WEIGHT: bold
+}
+H1 EM {
+	FONT-STYLE: normal; FONT-SIZE: 0.4em
+}
+H2 {
+	MARGIN-TOP: 1.2em; FONT-SIZE: 1.8em
+}
+H3 {
+	MARGIN-TOP: 1.6em; FONT-FAMILY: "Lucida Grande", Helvetica, Arial, sans-serif; MARGIN-BOTTOM: -0.75em; FONT-WEIGHT: bold
+}
+H4 {
+	MARGIN-TOP: 1.3em; MARGIN-BOTTOM: -0.6em; FONT-SIZE: 1em; FONT-WEIGHT: bold
+}
+H5 {
+	FONT-STYLE: italic; MARGIN: 0px 0px 1em; COLOR: #8da; FONT-SIZE: 1.1em
+}
+H6 {
+	PADDING-BOTTOM: 0.2em; MARGIN-TOP: 0px; FONT-FAMILY: "Lucida Grande", Helvetica, Arial, sans-serif; FONT-SIZE: 1em
+}
+H3 SMALL {
+	COLOR: #888; FONT-SIZE: 0.8em; FONT-WEIGHT: normal
+}
+TABLE SMALL {
+	LINE-HEIGHT: 1.8; DISPLAY: block; COLOR: #888
+}
+A {
+	COLOR: #497; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #497; TEXT-DECORATION: none
+}
+BLOCKQUOTE {
+	PADDING-BOTTOM: 1em; MARGIN: 1em 0px; PADDING-LEFT: 3.2em; PADDING-RIGHT: 0px; BACKGROUND: url(../img/quote.gif) no-repeat 0px 0.4em; PADDING-TOP: 0.2em
+}
+DT {
+	FONT-WEIGHT: bold
+}
+DD {
+	MARGIN: 0px 0px 0px 2em
+}
+DD CITE {
+	TEXT-ALIGN: right; PADDING-RIGHT: 11em; DISPLAY: block
+}
+P {
+	PADDING-RIGHT: 11em
+}
+OL {
+	PADDING-RIGHT: 11em
+}
+CODE {
+	BORDER-BOTTOM: #ccc 1px dashed; POSITION: relative; BORDER-LEFT: medium none; PADDING-BOTTOM: 0.4em; BACKGROUND-COLOR: #fff; MARGIN: 1em -2em; PADDING-LEFT: 2em; PADDING-RIGHT: 0px; DISPLAY: block; BORDER-TOP: #ccc 1px dashed; BORDER-RIGHT: medium none; PADDING-TOP: 0.4em
+}
+CODE {
+	FONT-FAMILY: Consolas, Monaco, Courier, fixed; FONT-SIZE: 0.95em
+}
+TT {
+	FONT-FAMILY: Consolas, Monaco, Courier, fixed; FONT-SIZE: 0.95em
+}
+TT {
+	PADDING-BOTTOM: 0.1em; BACKGROUND-COLOR: #ddd; PADDING-LEFT: 0.2em; PADDING-RIGHT: 0.2em; WHITE-SPACE: nowrap; COLOR: #843; PADDING-TOP: 0.1em; border-radius: .2em; -moz-border-radius: .2em; -webkit-border-radius: .2em
+}
+.changes DT {
+	TEXT-ALIGN: right; WIDTH: 15%; FLOAT: left; CLEAR: both
+}
+.changes DT SMALL {
+	DISPLAY: block; COLOR: #888; FONT-WEIGHT: normal
+}
+.changes DD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 0px 1.5em; PADDING-LEFT: 0px; WIDTH: 78%; PADDING-RIGHT: 0px; FLOAT: right; PADDING-TOP: 0px
+}
+.changes DD UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.clear {
+	DISPLAY: block; CLEAR: both
+}
+TABLE {
+	WIDTH: 100%; BORDER-COLLAPSE: collapse
+}
+TH {
+	BORDER-BOTTOM: #999 1px solid; TEXT-ALIGN: left; TEXT-TRANSFORM: lowercase; PADDING-RIGHT: 1em; WHITE-SPACE: nowrap
+}
+TD {
+	BORDER-BOTTOM: #ddd 1px solid; PADDING-BOTTOM: 0.4em; PADDING-LEFT: 0px; PADDING-RIGHT: 1em; VERTICAL-ALIGN: top; PADDING-TOP: 0.4em
+}
+#prelude {
+	POSITION: relative; MARGIN: 0px auto; WIDTH: 870px; COLOR: #eee
+}
+#page {
+	POSITION: relative; MARGIN: 0px auto 2em; WIDTH: 870px
+}
+.stage {
+	PADDING-BOTTOM: 1em; PADDING-LEFT: 2em; WIDTH: 590px; PADDING-RIGHT: 2em; PADDING-TOP: 1em; border-radius: .5em; -moz-border-radius: .5em; -webkit-border-radius: .5em
+}
+#page .stage {
+	BACKGROUND-COLOR: #f3f3f3
+}
+H2:first-child {
+	MARGIN-TOP: 0.2em
+}
+#prelude .stage {
+	WIDTH: 870px; PADDING-TOP: 0.7em
+}
+#prelude SMALL {
+	Z-INDEX: 10; POSITION: relative; DISPLAY: block; FONT-FAMILY: "Lucida Grande", Helvetica, Arial, sans-serif; MARGIN-BOTTOM: 0.6em; COLOR: #6b9; MARGIN-LEFT: 0.1em; FONT-SIZE: 0.9em; FONT-WEIGHT: normal
+}
+.bg {
+	Z-INDEX: 0; POSITION: absolute; TOP: 0px; LEFT: -100px
+}
+.footnote {
+	MARGIN-BOTTOM: 1em; COLOR: #888; FONT-SIZE: 0.8em
+}
+.copy-and-paste-warning {
+	BORDER-BOTTOM: #cca 1px solid; BORDER-LEFT: #cca 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffc; MARGIN: 0px 11em 0px -1em; PADDING-LEFT: 1em; PADDING-RIGHT: 1em; BORDER-TOP: #cca 1px solid; BORDER-RIGHT: #cca 1px solid; PADDING-TOP: 0px; border-radius: .5em; -moz-border-radius: .5em; -webkit-border-radius: .5em
+}
+.copy-and-paste-warning H3 {
+	MARGIN-TOP: 0.6em; MARGIN-BOTTOM: 0em
+}
+.copy-and-paste-warning P {
+	PADDING-RIGHT: 0px
+}
+.clouds .html-tag {
+	COLOR: rgb(96,96,96)
+}
+.clouds .css-attribute {
+	COLOR: rgb(96,96,96)
+}
+.clouds .string {
+	COLOR: rgb(93,144,205)
+}
+.clouds .comment {
+	COLOR: rgb(188,200,186)
+}
+.clouds .css-selector {
+	COLOR: rgb(197,39,39)
+}
+.clouds .storage {
+	COLOR: rgb(197,39,39)
+}
+.clouds .number {
+	COLOR: rgb(70,166,9)
+}
+.clouds .unit {
+	COLOR: rgb(150,220,95)
+}
+.clouds .keyword {
+	COLOR: rgb(175,149,111)
+}
+.clouds .helper {
+	COLOR: rgb(191,120,204)
+}
+.clouds .constant {
+	COLOR: rgb(57,148,106)
+}
+#example {
+	WIDTH: 48%; PADDING-RIGHT: 2em; FLOAT: right; HEIGHT: 15em; MARGIN-LEFT: 1em; FONT-SIZE: 16px
+}
+#example .roundabout-holder {
+	LIST-STYLE-TYPE: none; HEIGHT: 8em; MARGIN-LEFT: 2em; FONT-SIZE: 1em; LIST-STYLE-IMAGE: none
+}
+#example .roundabout-moveable-item {
+	BORDER-BOTTOM: #999 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #999 1px solid; LINE-HEIGHT: 3em; BACKGROUND-COLOR: #fff; WIDTH: 3em; HEIGHT: 4em; FONT-SIZE: 28px; BORDER-TOP: #999 1px solid; CURSOR: pointer; BORDER-RIGHT: #999 1px solid
+}
+#example .roundabout-in-focus {
+	CURSOR: auto
+}
+#example .caption {
+	TEXT-ALIGN: center; COLOR: #555; MARGIN-LEFT: 1em; FONT-SIZE: 0.75em
+}
+#example .caption .footnote {
+	COLOR: #888; FONT-SIZE: 0.8em
+}
+#example #amazing {
+	DISPLAY: none
+}
+#sidebar {
+	POSITION: absolute; WIDTH: 210px; COLOR: #cec; TOP: 0px; RIGHT: 0px
+}
+#sidebar .wrap {
+	PADDING-BOTTOM: 0.6em; BACKGROUND-COLOR: #6b9394; MARGIN-TOP: 1.2em; PADDING-LEFT: 1em; PADDING-RIGHT: 1em; PADDING-TOP: 0.6em; border-radius: .5em; -moz-border-radius: .5em; -webkit-border-radius: .5em
+}
+#sidebar .first.wrap {
+	MARGIN: 0px
+}
+#sidebar H2 {
+	MARGIN-TOP: 0px; FONT-FAMILY: Helvetica, Arial, sans-serif; COLOR: #eee; FONT-WEIGHT: bold
+}
+#sidebar UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+#sidebar A {
+	COLOR: #bfd
+}

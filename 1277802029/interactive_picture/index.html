@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+Making an Interactive Picture with jQuery
+By Sam Dunn
+2009 Build Internet!
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Making an Interactive Picture with jQuery | Build Internet!</title>	
+	
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		
+			//Blur Links (Prevents Outline)
+			$('a').click(function() {
+        		this.blur();
+        	});
+		
+			//Hide all item descriptions in the info box
+			$("#infobox > div").css("display", "none");
+		
+			//Call in the info box
+			$(".more a").click(function(){
+				$("#infobox").animate({bottom: '233px' }, 300);
+				$("#fade_bg").fadeIn();
+				return false;
+			});
+			
+			//Expand more info button on hover
+			$(".more").hover(function(){
+				$(this).stop().animate({width: '225px' }, 200).css({'z-index' : '10'}); //Change the width increase caption size
+			}, function () {
+				$(this).stop().animate({width: '50px' }, 200).css({'z-index' : '1'});
+      		});
+      		
+      		//Show description for selected item
+      		$("#couch a").click(function(){
+				$("#couch_info").show();
+			});
+			
+			$("#plant a").click(function(){
+				$("#plant_info").show();
+			});
+
+      		$("#monitor a").click(function(){
+				$("#monitor_info").show();
+			});
+			
+      		$("#board a").click(function(){
+				$("#board_info").show();
+			});
+						
+			//Remove background, info box and hide all descriptions
+			$("#fade_bg, .close").click(function(){
+				$("#fade_bg").fadeOut();
+				$("#infobox").animate({bottom: '-200px' }, 300, function() {
+					$("#infobox > div").css("display", "none");
+				});
+				return false;
+			});
+		
+		}); 
+	</script>
+	
+	<style type="text/css">
+		
+		/* General Styles */
+		*{ padding:0px; margin:0px; }
+		img{ border: none; }
+		a:focus, a:active{ outline:none; }
+		body{ text-align:center; background:#111; }
+		h1{ font:bold 18px Helvetica, Arial, sans-sarif; color:#FFF; margin:20px 0 0 0; }
+		
+		/* Picture Styles */
+		#picture{ position:relative; top:20px; width:700px; height:466px; margin:0px auto; background:#FFF url('office.jpg'); overflow:hidden; }
+			
+			/* General More Button */		
+			.more{ position:absolute; width:50px; height:50px; background:url('dim.png'); border:1px solid #444; padding:5px; text-align:left; overflow:hidden; }
+			
+			.more span{ position:absolute; left:60px; width:160px; padding:15px 0 0 5px; color:#FFF; font:bold 13px Lucida Grande, Arial, sans-serif; text-shadow:#000 1px 1px 0px; }
+			
+			/* Item Specific More Button */
+			#couch{ top:240px; left:75px;}
+			#plant{ top:180px; left:370px; }
+			#monitor{ top:335px; left:390px; }
+			#board{ top:50px; left:450px; }
+			
+			/* General Info Box */
+			#infobox{ position:absolute; bottom:-200px; left: 350px; height:200px; width:300px; z-index:20; margin:0 0 -100px -150px; background:#FFF; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; }
+				#infobox a, #infobox a:visited{ font:italic 16px Georgia, serif; color:#555; text-decoration:none; }
+				#infobox a:hover{ text-decoration:underline; }
+				
+				/* Close button for info box */
+				span.close{position:absolute; right:5px; top:5px;}
+			
+			/* The dimmed background when the info box is showing */	
+			#fade_bg{ position:absolute; z-index:15; width:100%; height:100%; background:url('dim.png'); display:none;}
+		.whitef{ color:#FFFFFF;}
+		.whitef a{ color:#FFFFFF;}
+	</style>
+	
+</head>
+
+<body>
+	<h1>Making an Interactive Picture with jQuery      </h1>
+	<div id="picture">
+		
+		<!-- More Info Buttons -->
+		
+		<div class="more" id="couch">
+			
+			<a href="#"><img src="more.png"/></a>
+			<span>IKEA Klippan Couch</span>
+			
+		</div>
+		
+		<div class="more" id="plant">
+			<a href="#"><img src="more.png"/></a>
+			<span>Cornelius, Office Plant</span>
+		</div>
+		
+		<div class="more" id="monitor">
+			<a href="#"><img src="more.png"/></a>
+			<span>Samsung 305t Monitor</span>
+		</div>
+		
+		<div class="more" id="board">
+			<a href="#"><img src="more.png"/></a>
+			<span>Custom White Board</span>
+		</div>
+		
+		<!-- Info Boxes -->
+		<div id="infobox">
+			<span class="close"><a href="#"><img src="close.png"/></a></span>
+			<br/>
+			
+			<div id="couch_info">
+				<img src="klippan.jpg"/><br/>
+				<a href="http://www.ikea.com/us/en/catalog/products/10138530">IKEA Klippan Couch</a>
+			</div>
+			
+			<div id="plant_info">
+				<img src="plant.jpg"/><br/>
+				<a href="http://images.google.com/images?q=office%20plants&oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&um=1&ie=UTF-8&sa=N&hl=en&tab=wi">Office Plants</a>
+			</div>
+			
+			<div id="monitor_info">
+				<img src="samsung.jpg"/><br/>
+				<a href="http://www.samsung.com/us/consumer/office/monitors/professional/LS30HUXCB/XAA/index.idx?pagetype=prd_detail">Samsung 305t Monitor</a>
+			</div>
+			
+			<div id="board_info">
+				<img src="whiteboard.jpg"/><br/>
+				<a href="http://www.lowes.com/lowes/lkn?action=productDetail&productId=61082-46498-31023248&lpage=none">Custom Whiteboards</a>
+			</div>		
+		</div>
+		
+		<!-- Dimmed Background -->
+		<div id="fade_bg">&nbsp;</div>
+			<p class="whitef">More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></p>
+	</div>
+
+</body>
+</html>

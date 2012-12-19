@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Link external icon</title>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/link_external_icon.js"></script>
+<style type="text/css">
+h2{
+	color: red;
+}
+pre{
+	border: #F90 dotted 1px;
+}
+</style>
+</head>
+    <body>
+    <h1>Link external icon</h1>
+    <p>This's jQuery plugin for show external link(target="_blank") icon</p>
+    <script language="javascript" type="text/javascript">
+            $(function() {
+                $("body").link_external_icon({
+					icon_path:"images/link_external.png"
+				});
+            });
+        </script>
+    <h2>Demo</h2>
+	<p>More script and css style : <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library" target="_blank">www.htmldrive.net </a>
+    <h3>More script and css style : <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library" target="_blank">www.htmldrive.net </a></h3>
+    </p>  
+    <h2>Help</h2>
+
+<h4>Step1:include js.</h4>
+<pre>
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.3.2.min.js&quot;&gt;&lt;/script&gt;<br />
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/link_external_icon.js&quot;&gt;&lt;/script&gt;<br/>
+</pre>
+<h4>Step2:add script.</h4>
+<p>
+<pre>
+	$(function() {
+		$("body").link_external_icon({
+			icon_path:"images/link_external.png"
+		});
+	});
+</pre>
+Tips: <span style="color:red;">$("body")</span> is work area; <span style="color:red;">icon_path</span> is icon path
+</p>
+<p> More script and css style : <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></p>
+    <pre>
+Copyright 2010 <a href="http://www.htmldrive.net">htmldrive.net</a> Inc.
+
+@projectHomepage <a href="http://www.htmldrive.net/go/to/link-external-icon">http://www.htmldrive.net/go/to/link-external-icon</a>
+
+@projectDescription Show external link icon
+
+@author <a href="http://www.htmldrive.net">htmldrive.net</a>
+
+More script and css style : <a href="http://www.htmldrive.net">htmldrive.net</a>
+
+@version 1.0
+
+@license http://www.apache.org/licenses/LICENSE-2.0
+    </pre>
+</body>
+</html>

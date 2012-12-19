@@ -1,0 +1,136 @@
+/*
+CSS for the demo: jQuery Media Rich Dropdown Menu
+Demo: jQuery Media Rich Dropdown Menu
+Author: Ian Lunn
+Author URL: http://www.ianlunn.co.uk/
+Demo URL: http://www.ianlunn.co.uk/demos/jquery-media-rich-drop-down-menu/
+Tutorial URL: http://www.ianlunn.co.uk/blog/code-tutorials/jquery-media-rich-dropdown-menu/
+
+License: http://creativecommons.org/licenses/by-sa/3.0/ (Attribution Share Alike). Please attribute work to Ian Lunn simply by leaving these comments in the source code or if you'd prefer, place a link on your website to http://www.ianlunn.co.uk/.
+
+Dual licensed under the MIT and GPL licenses:
+http://www.opensource.org/licenses/mit-license.php
+http://www.gnu.org/licenses/gpl.html
+*/
+
+@charset "utf-8";
+
+#container{margin: 0 auto; width: 960px;}
+body{font-family: Arial, Helvetica, sans-serif;}
+
+a{color: black; text-decoration: none;} 
+img{border: 0;}
+
+
+/*--WHEN JAVASCRIPT IS DISABLED--*/
+
+
+.show{ /* class="show" is used for the second level navigation of a category */
+	display: inline !important; /* all navigation elements are hidden by default, !important overrides that */
+	width: 960px; /* width of the <body> */
+} 
+.show ul li{
+	display: inline !important;
+}
+.show ul{
+	background-color: #999;
+}
+span{ /* spans are applied to the titles of second level navigation which are hidden when JS is disabled */
+	display: none;
+} 
+.active ul{ /* style the second level menu and make it appear for the active page */
+	padding: 10px;
+	position: relative;
+} 
+#nav li{ /* hide all navigation elements except the top level navigation links */
+	display: none;
+} 
+
+
+/*--GLOBAL STYLES FOR USE WHEN JAVASCRIPT IS BOTH ENABLED AND DISABLED--*/
+
+#nav{ /*the top level, unordered list of navigation links*/
+	position: relative;
+	width: 100%;
+} 
+
+.active{ /* this is the class for the tab/page we are currently viewing */
+	background-color: #999 !important;
+} 
+
+#nav ul li a:hover{
+	text-decoration: underline;
+}
+#nav > li{
+	background-color: #ececec;
+	display: inline;
+	margin: 0 10px;
+}
+#nav > li > ul{
+	left: 0;
+	padding: 0;
+	position: absolute;
+	width: 960px;
+}
+
+#nav > li > ul > li{
+	color: black;
+	height: 100%;
+	width: 175px;
+}
+
+
+/*--STYLE ELEMENTS OF THE DROPDOWN MENUS--*/
+
+ul li{
+	font-size: 18px;
+	font-weight: bold;
+	list-style: none;
+	width: 150px;
+}
+
+li li{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 0 10px;
+}
+
+li li li{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.price, #nav img{ /* price tags and product images */
+	display: block;
+}
+
+
+/*--STYLES FOR THE PURPOSE OF THE DEMO PAGE--*/
+
+#content{
+	background: #ececec;
+	clear: both;
+	height: 800px;
+	padding: 10px;
+}
+
+.prod1{
+	float: left;
+}
+
+.prod2{
+	float: right;
+}
+
+.credits{
+	margin: 0 0 40px 0;
+}
+
+.credits a{
+	color: blue;
+	text-decoration: underline;
+}
+
+.credits a:hover{
+	text-decoration: none;	
+}

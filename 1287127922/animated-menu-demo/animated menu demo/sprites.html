@@ -1,0 +1,201 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+<style>
+body {
+	background:#eeeeee;
+}
+
+#parent { 
+	width:14px;
+	height:20px; 
+	background:url(people.gif); 
+	background-position:0% 0%; 
+	border:none;
+	position:absolute;
+	z-index:10;
+}
+
+#parentmask {
+	background:#ffffff; 
+	width:120px;
+	height:20px;
+	position:absolute;
+	z-index:1;
+	margin-left:8px;
+}
+
+#girl { 
+	width:16px;
+	height:20px; 
+	background:url(people.gif); 
+	background-position:27.2% 0%; 
+	border:none;
+	position:absolute;
+	z-index:10;
+}
+
+#girlmask {
+	background:#ffffff; 
+	width:120px;
+	height:20px;
+	position:absolute;
+	z-index:1;
+	margin-left:8px;
+}
+
+#boy { 
+	width:16px;
+	height:20px; 
+	background:url(people.gif); 
+	background-position:53.8% 0%; 
+	border:none;
+	position:absolute;
+	z-index:10;
+}
+
+#boymask {
+	background:#ffffff; 
+	width:120px;
+	height:20px;
+	position:absolute;
+	z-index:1;
+	margin-left:8px;
+}
+
+#kid { 
+	width:16px;
+	height:20px; 
+	background:url(people.gif); 
+	background-position:79.9% 0%; 
+	border:none;
+	position:absolute;
+	z-index:10;
+}
+
+#kidmask {
+	background:#ffffff; 
+	width:120px;
+	height:20px;
+	position:absolute;
+	z-index:1;
+	margin-left:8px;
+}
+
+.item {
+	background:#cccccc;
+	width:128px;
+	height:20px;
+}
+
+.item a {
+	margin-left:20px;
+}
+</style>
+<script type="text/javascript">
+	var foot = [50,0,100,0];
+	var step = 12;
+	var sleeptime = 70;
+	var mapping = Array();
+	mapping["parent"] = { xr:20, xl:6.6, np:"0% 0%" };
+	mapping["girl"] = { xr:47.5, xl:33, np:"27.2% 0%" };
+	mapping["boy"] = { xr:74, xl:60.4, np:"53.8% 0%" };
+	mapping["kid"] = { xr:100, xl:87, np:"79.9% 0%" };
+
+	px = function(val){
+		return String(val)+"px";
+	}
+
+	mpx = function(val){
+		if(val == "auto")
+			return 0;
+		return Number(String(val).substring(0,String(val).length - 2));
+	}
+
+	$(document).ready(function(){
+
+		$(".item").find(".mask").css("opacity","0.8");
+
+		move = function(el,elmask){
+			var newleft;
+			if($(el).data("direction") == "R"){
+				if($(el).position().left >= $(el).parent().width()){
+					$(el).css("background-position", mapping[$(el).attr("id")].np);
+					$(el).data("isMoving",false);
+					return;
+				}
+				newleft = $(el).position().left + step;
+				newwidth = $(elmask).width() - step;
+				newwidth = (newwidth < 0)?0:newwidth;
+			} else {
+				if($(el).position().left <= step){
+					$(el).css("background-position", mapping[$(el).attr("id")].np);
+					$(el).data("isMoving",false);
+					return;
+				}
+				newleft = $(el).position().left - step;
+				newwidth = $(elmask).width() + step;
+			}
+			if($(el).data("index") == 4)
+				$(el).data("index",0);
+			var y = foot[($(el).data("index"))];
+			$(el).data("index",($(el).data("index")+1))
+			$(el).css("background-position",$(el).data("x")+"% "+y+"%").css("left",px(newleft));
+			$(elmask).css("left",px(newleft)).css("width",px(newwidth));
+			setTimeout(function(){ move(el,elmask); },sleeptime);
+		}
+
+		$(".item").each(function(){
+			$(this).find(".object").data("isMoving",false);
+		});
+
+		$(".item").mouseenter(function(e){
+			var obj = $(this).find(".object");
+			eval($(this).find("a").attr("rel"))
+			obj.data("x",mapping[obj.attr("id")].xr);
+			obj.data("index",0);
+			obj.data("direction","R");
+			if(!obj.data("isMoving")){
+				obj.data("isMoving",true);
+				move(obj.get(0),$(this).find(".mask").get(0));
+			}
+		});
+
+		$(".item").mouseleave(function(e){
+			var obj = $(this).find(".object");
+			eval($(this).find("a").attr("rel"))
+			obj.data("x",mapping[obj.attr("id")].xl);
+			obj.data("direction","L");
+			if(!obj.data("isMoving")){
+				move(obj.get(0),$(this).find(".mask").get(0));
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="item">
+		<div id="parent" class="object"></div>
+		<div id="parentmask" class="mask"></div>
+		<a href="#" rel="var xr=20; var xl=6.6;">Parents</a>
+	</div>
+	<div class="item">
+		<div id="girl" class="object"></div>
+		<div id="girlmask" class="mask"></div>
+		<a href="#" rel="var xr=47.5; var xl=33;">Girls</a>
+	</div>
+	<div class="item">
+		<div id="boy" class="object"></div>
+		<div id="boymask" class="mask"></div>
+		<a href="#">Boys</a>
+	</div>
+	<div class="item">
+		<div id="kid" class="object"></div>
+		<div id="kidmask" class="mask"></div>
+		<a href="#">Kids</a>
+	</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+</body>
+</html>

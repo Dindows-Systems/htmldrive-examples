@@ -1,0 +1,100 @@
+body{
+	font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+	background: url("images/bg_1.jpg") repeat scroll 0 0 transparent;
+	color: #444444;
+	outline:0;
+}
+button::-moz-focus-inner{border:0}
+a{
+	color:#fefefe;
+	text-decoration:none;
+}
+a:hover{
+	color:#1f8bcc;
+	text-decoration:underline;
+}
+#main{
+	width:900px;
+	height:auto;
+	min-height:200px;
+	margin:50px auto 0;
+}
+#header #logo{
+	padding-bottom:0;
+	margin-bottom:0;
+}
+#header #logo a {
+	background: url("images/logo.png") no-repeat scroll 0 0 transparent;
+	display: block;
+	height: 96px;
+	outline: medium none;
+	text-indent: -999px;
+	width: 318px;
+}
+#header #tagline{
+	color:#414141;
+	font-size: 19px;
+	letter-spacing: -1px;
+	text-shadow: 0 2px 0 #222222;
+	padding:0;margin:0;
+}
+	#title{
+	text-align:center;
+	color:#fefefe;
+	font-size:40px;
+	letter-spacing: -1px;
+	text-shadow: 0 2px 0 #222222;
+	margin-bottom:20px;
+}
+#content{
+	text-shadow: 0 2px 0 #222222;
+	width:435px;
+	height:500px;
+	margin:0 auto
+}
+#img_url{
+	color:#444444;
+	font-size:20px;
+	border: 0 none;
+	height: 31px;
+	width: 333px;
+	vertical-align:top;
+	margin-right:0;
+	text-shadow: 0 1px 0 #C5C4C4;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#load_img{
+	background: none repeat scroll 0 0 #1F8BCC;
+    border: 0 none;
+    color: #363636;
+    font-weight: bold;
+    height: 33px;
+    text-shadow: 0 1px 0 #C5C4C4;
+	-webkit-border-radius:5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	cursor:pointer;
+}
+#image_content{
+	background:#fefefe;
+	width:435px;
+	height:400px;
+	text-align:center;
+	overflow:hidden;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+#img_holder{
+	height:400px;
+	width:435px;
+	margin:0 auto;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+#img_holder img{max-width:435px;max-height:400px;}
+.loadit{background:url("images/ajaxload.gif") no-repeat scroll center center transparent;}
+.credit{font-size:12px;}

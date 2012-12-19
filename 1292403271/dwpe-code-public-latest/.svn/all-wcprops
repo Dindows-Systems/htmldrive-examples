@@ -1,0 +1,21 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 14
+/svn/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 22
+/svn/!svn/ver/30/trunk
+END
+license.txt
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/3/trunk/license.txt
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/15/trunk/index.html
+END

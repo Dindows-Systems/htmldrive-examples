@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Media Rich Dropdown Menu</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!--[if IE 8]><link href="ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if lt IE 8]><link href="ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="dropdown-menu.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<p class="credits">Demo by <a href="http://www.ianlunn.co.uk/" title="Freelance Web Design">Ian Lunn Design</a><br />
+View the tutorial: <a href="http://www.ianlunn.co.uk/blog/code-tutorials/jquery-media-rich-dropdown-menu/" title="jQuery Media Rich Dropdown Menu">jQuery Media Rich Dropdown Menu</a><br />
+Download the demo: <a href="http://www.ianlunn.co.uk/demos/jquery-media-rich-drop-down-menu/jquery-media-rich-drop-down-menu.zip" title="jQuery Media Rich Dropdown Menu">Demo</a>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</p>
+
+<div id="container">
+<ul id="nav">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">DVD</a>
+    	<ul>
+        	<li><span>Shop By Category</span>
+            <ul>
+                <li><a href="#">Family</a>
+                    <ul>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Cartoons</a></li>
+                        <li><a href="#">Interactive</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Drama</a>
+                    <ul>
+                        <li><a href="#">Period</a></li>
+                        <li><a href="#">Modern</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+        	<li><span>Browse DVD</span>
+                <ul>
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">Now Available</a></li>
+                    <li><a href="#">Top Sellers</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Pre-Order Chart</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </li>
+            <li><span>Latest Releases</span>
+                <ul>
+                    <li><a href="#">Titanic</a></li>
+                    <li><a href="#">Alien Vs Predator</a></li>
+                    <li><a href="#">Terminator 2</a></li>
+                    <li><a href="#">Meet the Parents</a></li>
+                </ul>
+            </li>
+            <li><span>Hottest Title</span>
+            <ul>
+                <li><a href="#"><img src="images/dvd.jpg" width="123" alt="DVD" />DVD</a><span class="price">£1.99</span></li>
+            </ul>
+            </li>
+        </ul>        
+    </li>
+    <li><a href="#">Music</a>
+    	<ul>
+        	<li><span>Shop By Category</span>
+            <ul>
+                <li><a href="#">Pop</a></li>
+                <li><a href="#">Rock</a></li>
+                <li><a href="#">Classical</a></li>
+                <li><a href="#">Dance</a></li>
+                <li><a href="#">Rap</a></li>
+                <li><a href="#">Hip Hop</a></li>
+                <li><a href="#">Country</a></li>
+                <li><a href="#">Soundtracks</a></li>
+            </ul>
+            </li>
+        	<li><span>Browse Music</span>
+                <ul>
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">Now Available</a></li>
+                    <li><a href="#">Top Sellers</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Pre-Order Chart</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </li>
+            <li><span>Latest Releases</span>
+            <ul>
+                <li><a href="#">Elvis Presley</a></li>
+                <li><a href="#">Inception Soundtrack</a></li>
+                <li><a href="#">Spice Girls</a></li>
+                <li><a href="#">Coldplay</a></li>
+                <li><a href="#">The Editors</a></li>
+                <li><a href="#">Silversun Pickups</a></li>
+                <li><a href="#">Cliff Richard</a></li>
+            </ul>
+            </li>
+            <li><span>Hottest Title</span>
+            <ul>
+                <li><a href="#"><img src="images/cd.jpg" width="140" alt="CD" />CD</a><span class="price">£2.99</span></li>
+            </ul>
+            </li>
+            <li><span>Released on Friday</span>
+            <ul>
+                <li><a href="#"><img src="images/cd2.jpg" width="140" alt="CD" />CD</a><span class="price">£0.49</span></li>
+            </ul>
+            </li>
+        </ul>        
+    </li>
+    <li><a href="#">Games</a>
+    	<ul>
+        	<li><span>Shop By Category</span>
+            <ul>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Adventure</a></li>
+                <li><a href="#">Puzzle</a></li>
+                <li><a href="#">Family</a></li>
+                <li><a href="#">RPG</a></li>
+                <li><a href="#">MMO</a></li>
+            </ul>
+            </li>
+            <li><span>Browse Games</span>
+                <ul>
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">Now Available</a></li>
+                    <li><a href="#">Top Sellers</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Pre-Order Chart</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </li>
+            <li><span>Hottest Title</span>
+            <ul>
+                <li><a href="#"><img src="images/game.jpg" width="123" alt="Game" />Game</a><span class="price">£29.99</span></li>
+            </ul>
+            </li>
+        </ul>  
+    </li>
+    <li><a href="#">Books</a>
+    	<ul>
+        	<li><span>Shop By Category</span>
+            <ul>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Adventure</a></li>
+                <li><a href="#">Puzzle</a></li>
+                <li><a href="#">Family</a></li>
+                <li><a href="#">Romance</a></li>
+            </ul>
+            </li>
+            <li><span>Browse Books</span>
+                <ul>
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">Now Available</a></li>
+                    <li><a href="#">Top Sellers</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Pre-Order Chart</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </li>
+            <li><span>Hottest Book</span>
+            <ul>
+                <li><a href="#"><img src="images/book.jpg" width="123" alt="Book" />Book</a><span class="price">12.99</span></li>
+            </ul>
+            </li>
+        </ul>  
+    </li>  
+    <li class="active"><a href="#">Clothing</a>
+    	<ul>
+        	<li class="show"><span>Shop By Category</span>
+            <ul>
+                <li><a href="#">Mens</a></li>
+                <li><a href="#">Womens</a></li>
+                <li><a href="#">Shirts</a></li>
+                <li><a href="#">Ties</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Fancy Dress</a></li>
+            </ul>
+            </li>
+            <li><span>Browse Clothing</span>
+                <ul>
+                    <li><a href="#">Mens</a></li>
+                    <li><a href="#">Womens</a></li>
+                    <li><a href="#">Top Sellers</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </li>
+            <li><span>Hottest Clothing</span>
+            <ul>
+                <li><a href="#"><img src="images/prod1.jpg" width="123" alt="Clothing" />Clothing</a><span class="price">12.99</span></li>
+            </ul>
+            </li>
+        </ul>  
+    </li>  
+    <li><a href="#">Computing</a>
+    	<ul>
+        	<li><span>Shop By Category</span>
+            <ul>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Software</a></li>
+                <li><a href="#">Hardware</a></li>
+                <li><a href="#">Laptops</a></li>
+                <li><a href="#">Desktops</a></li>
+                <li><a href="#">Monitors</a></li>
+            </ul>
+            </li>
+            <li><span>Browse Computing</span>
+                <ul>
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">Now Available</a></li>
+                    <li><a href="#">Top Sellers</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Pre-Order Chart</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </li>
+            <li><span>Hottest Laptop</span>
+            <ul>
+                <li><a href="#"><img src="images/computing.jpg" width="123" alt="Laptop" />Laptop</a><span class="price">399.99</span></li>
+            </ul>
+            </li>
+        </ul>  
+    </li>  
+    <li><a href="#">Gadgets</a>
+    	<ul>
+        	<li><span>Shop By Category</span>
+            <ul>
+                <li><a href="#">For Him</a></li>
+                <li><a href="#">For Her</a></li>
+                <li><a href="#">Electronic</a></li>
+                <li><a href="#">For Fun</a></li>
+            </ul>
+            </li>
+            <li><span>Browse Gadgets</span>
+                <ul>
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">Now Available</a></li>
+                    <li><a href="#">Top Sellers</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Pre-Order Chart</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </li>
+        </ul>  
+    </li>  
+    <li><a href="#">Mobile</a>
+    	<ul>
+        	<li><span>Shop By Category</span>
+            <ul>
+                <li><a href="#">Orange</a></li>
+                <li><a href="#">T-Mobile</a></li>
+                <li><a href="#">Vodafone</a></li>
+                <li><a href="#">O2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+            </li>
+            <li><span>Browse Mobile</span>
+                <ul>
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">Now Available</a></li>
+                    <li><a href="#">Top Sellers</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Pre-Order Chart</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </li>
+            <li><span>Hottest Mobile Phone</span>
+            <ul>
+                <li><a href="#"><img src="images/mobile.jpg" width="123" alt="Game" />Mobile</a><span class="price">£499.99</span></li>
+            </ul>
+            </li>
+        </ul>  
+    </li>  
+    <li><a href="#">Sale</a>
+    	<ul>
+        	<li><span>Shop By Category</span>
+            <ul>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Adventure</a></li>
+                <li><a href="#">Puzzle</a></li>
+                <li><a href="#">Family</a></li>
+                <li><a href="#">RPG</a></li>
+                <li><a href="#">MMO</a></li>
+            </ul>
+            </li>
+            <li><span>Browse Sale</span>
+                <ul>
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">Now Available</a></li>
+                    <li><a href="#">Top Sellers</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Pre-Order Chart</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </li>
+        </ul>  
+    </li>  
+</ul>
+
+<div id="content">
+	<p>jQuery drop down menu keeps your website simple yet still navigable and allows the full width of your website to be used to let your products shine!</p>
+    <img class="prod1" src="images/prod2.jpg" alt="Product 1" />
+    <img class="prod2" src="images/prod1.jpg" alt="Product 2" />
+</div>
+</div>
+
+</body>
+</html>

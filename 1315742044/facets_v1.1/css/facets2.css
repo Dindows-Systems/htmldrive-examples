@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+/*
+#navigation-panel {
+	margin:0 1.6667em 1.6667em 1.6667em;
+	overflow:hidden;
+}
+*/
+
+#navigation-panel {
+	overflow:visible;
+	position:relative;
+}
+		
+	/* main image box */
+	#main-image-box {
+		margin:0;
+		width:550px;
+		height:340px;
+		position:relative;
+		margin-bottom:20px;
+	}
+		/* container Styles */
+		#main-image-box .container {
+			margin-top:20px;
+		}
+			#main-image-box .container h1 {
+				font-family:Georgia, "Times New Roman", Times, serif;
+				font-style:italic;
+				font-size:24px;
+				border:none;
+				padding:2px 0;
+			}
+			#main-image-box .container p {
+				display:none;
+				margin-top:150px;
+				position:absolute;
+				bottom:40px;
+				width:430px;
+			}
+
+		#main-image-box #elefant {
+			background-image:url("../images/illustrations/elefant.jpg");
+			clip:rect(0px 136px 340px 0px);
+		}
+			#main-image-box #elefant .container {
+				margin-left:20px;
+			}
+				#main-image-box #elefant .container h1 {
+					color:#fff;
+				}
+				#main-image-box #elefant .container span {
+					background-color:#fff;
+					background:rgba(255, 255, 255, 0.8);
+					color:#000;
+				}
+		
+		#main-image-box #giraffe {
+			background-image:url("../images/illustrations/giraffe.jpg");
+			clip:rect(0px 273px 340px 138px);
+		}
+			#main-image-box #giraffe .container {
+				margin-left:45px;
+				width:430px;
+			}
+				#main-image-box #giraffe .container h1 {
+					margin-left:118px;
+					color:#000;
+				}
+				#main-image-box #giraffe .container span {
+					background-color:#000;
+					background: rgba(0, 0, 0, 0.8);
+					color:#fff;
+				}
+		
+		#main-image-box #loewe {
+			background-image:url("../images/illustrations/loewe.jpg");
+			clip:rect(0px 410px 340px 275px);
+		}
+			#main-image-box #loewe .container {
+				margin-left:70px;
+			}
+				#main-image-box #loewe .container h1 {
+					margin-left:240px;
+					color:#fff;
+				}
+				#main-image-box #loewe .container span {
+					background-color:#fff;
+					background: rgba(255, 255, 255, 0.8);
+					color:#000;
+				}
+		
+		#main-image-box #zebra {
+			background-image:url("../images/illustrations/zebra.jpg");
+			clip:rect(0px 550px 340px 412px);
+		}
+			#main-image-box #zebra .container {
+				margin-left:95px;
+			}
+				#main-image-box #zebra .container h1 {
+					margin-left:351px;
+					color:#000;
+				}
+				#main-image-box #zebra .container span {
+					background-color:#fff;
+					background: rgba(255, 255, 255, 0.8);
+					color:#000;
+				}
+
+		#main-image-box .clip {
+			width:550px;
+			height:340px;
+			position:absolute;
+			top:0;
+			left:0;
+			display:block;
+			background-color:#fff;
+			background-position:center top;
+			background-repeat:no-repeat;
+			z-index:1;
+		}
+		#main-image-box .facets:hover {
+			clip:rect(0px 550px 340px 0px) !important;
+		}
+		#main-image-box .facets:hover .container {
+			display:block;
+		}
+		#main-image-box .facets:hover {
+			z-index:10 !important;
+		}
+		
+		#main-image-box .facets:hover .container p  {
+			display:block;
+		}
+		
+
+		/* other Styles */
+		#text a {
+			color:#000;
+			font-style:italic;
+			text-decoration:underline;
+		}
+		#text a.on {
+			background-color:yellow;
+			padding:2px 2px;
+		}
+		
+		a.wikipedia {
+			background-color:yellow;
+			padding:0 2px;
+			text-decoration:none;
+			font-style:italic;
+			white-space:nowrap;
+		}
+		.clip .container a.infotext {
+			position:absolute;
+			bottom:14px;
+			display:none;
+			cursor:pointer;
+			width:190px;
+		}
+			a.infotext span.i {
+				font-family:Georgia, "Times New Roman", Times, serif;
+				font-style:italic;
+				font-weight:bold;
+				padding:1px 7px 1px 7px;
+				font-size:18px;
+				width:10px;
+				height:16px;
+				background-color:#000 !important;
+				color:#fff !important;
+				border:1px solid #fff;
+				cursor:pointer;
+				position:relative;
+				top:2px;
+			}
+			a.infotext span.text {
+				display:none !important;
+				padding:0 2px;
+			}
+			a.infotext:hover span.text {
+				display:inline !important;
+			}

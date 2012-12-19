@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Create a Custom Content Slider with jQuery</title>
+
+<script type="text/javascript" src="jquery-1.4.min.js"></script>
+<script type="text/javascript" src="jquery.scrollto.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+	$('#hero-slider ul a').click(function () {
+	
+		//reset all the items
+		$('.customBlock ul a').removeClass('active');
+		
+		//set current item as active
+		$(this).addClass('active');	
+		
+		//scroll it to the right position
+		$('.mask').scrollTo($(this).attr('rel'), 300);
+		
+		//disable click event
+	    return false;		
+		
+	});
+	
+});
+</script>
+<style type="text/css">
+
+#hero-slider {
+	text-align:left; 
+	background-color:#efefef; 
+	border:1px solid #ccc; width:450px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	margin:0 auto;
+	font-family:arial;
+}
+
+#hero-slider .mask { 
+	float:left; 
+	width:300px; 
+	height:280px; 
+	margin:15px 0 0 10px; 
+	overflow:hidden;
+}
+
+#hero-slider .panel { 
+	width:300px; 
+	height:280px; 
+	text-align:left;
+}
+
+#hero-slider ul {
+	margin:0; 
+	padding:15px 15px 0 15px; 
+	list-style:none; 
+	float:left; 
+	border-right:1px solid #dedede; 
+	height:285px;
+}
+
+#hero-slider ul li {
+	margin:10px 0;
+}
+
+#hero-slider ul a {
+	outline:none; 
+	text-decoration: underline;
+	display:block;
+	width:75px; 
+	height:74px; 
+	text-indent:-999em;	
+}
+
+#hero-slider a {
+	background: url(button.png) no-repeat 0 0;
+}
+
+#hero-slider ul a.active {
+	background-position: -75px;
+}
+
+.panel h2 {
+	padding:15px 0 0 0;
+	color:#0058a9;
+}
+
+.panel p {
+	color:#666;
+}
+
+.clear {clear:both}
+</style>
+</head>
+<body>
+
+
+	<div id="hero-slider">
+		<ul>
+			<li><a href="#" rel="#panel-1" class="active">Item 1</a></li>
+			<li><a href="#" rel="#panel-2">Item 2</a></li>
+			<li><a href="#" rel="#panel-3">Item 3</a></li>
+		</ul>
+		<div class="mask">
+			<div class="slider-body">
+				<div class="panel" id="panel-1">
+					<h2>Lorem Ipsum Sit Dolor</h2>
+					<p>Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis nulla vitae urna tincidunt congue sed ut dui. Morbi malesuada nulla nec purus convallis consequat. In condimentum orci id nisl volutpat bibendum. </p>
+				</div>
+				<div class="panel" id="panel-2">
+					<h2>Lorem Ipsum Sit Dolor</h2>
+					<p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. </p>
+				</div>
+				<div class="panel" id="panel-3">
+					<h2>Lorem Ipsum Sit Dolor</h2>
+					<p>Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
+				</div>
+			</div>
+		</div> <!-- .mask -->
+		<div class="clear"></div>
+	</div> <!-- #hero-slider -->
+
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+
+</body>
+</html>

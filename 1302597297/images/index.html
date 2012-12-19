@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Scratchie Plugin &raquo; alexweber.com.br</title>
+<script src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("jquery", "1.4.4");</script>
+<script type="text/javascript" src="jquery.scratchie.js"></script>
+
+<style type="text/css">
+/* PAGE LAYOUT ONLY */
+body{font-size: 11px;font-family:Verdana, Geneva, sans-serif;}
+a{color:#FF9900;text-decoration: none;}
+a:hover, a:active{background:#FF9900;color:#eee;}
+img{border:0;}
+#container{width: 640px;margin: 40px auto 0;position:relative;}
+#content{width: 640px;margin-top: 20px;}
+pre{border:1px dashed #222;padding:4px;}
+
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#raspadinha').scratchie({
+    	target : 'target',
+        img : 'prize.jpg',
+        imgHeight : 200, // target (prize) img height
+        imgWidth : 400, // target (prize) img width
+        title : 'Try your luck!',
+        fillImg : 'overlay.jpg',
+        requireMouseClick : true,
+        callback: function(){
+        	alert('Congratulations!');
+        }
+	});
+	
+	// end of scratchie stuff!
+
+	// language switcher
+	$('#lang_pt').click(function(){
+		$('.en').fadeOut(function(){
+			$('.pt').show();
+		});
+	});
+	$('#lang_en').click(function(){
+		$('.pt').fadeOut(function(){
+			$('.en').show();
+		});
+	});	
+});
+
+// shameless self-promotion
+$(window).load(function(){
+	setTimeout(function(){
+		$('#aw').slideDown(320);
+	}, 1150);	
+});
+</script>
+</head>
+
+<body>
+<div id="container">
+<div id="content">
+
+<div id="raspadinha">
+	<img id="target" />
+
+</div><!-- raspadinha -->
+
+</div><!--content-->
+</div><!--container-->
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3947692-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

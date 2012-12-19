@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery slide with minimum height</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var slideHeight = 75; // px
+	var defHeight = $('#wrap').height();
+	if(defHeight >= slideHeight){
+		$('#wrap').css('height' , slideHeight + 'px');
+		$('#read-more').append('<a href="#">Click to Read More</a>');
+		$('#read-more a').click(function(){
+			var curHeight = $('#wrap').height();
+			if(curHeight == slideHeight){
+				$('#wrap').animate({
+				  height: defHeight
+				}, "normal");
+				$('#read-more a').html('Close');
+				$('#gradient').fadeOut();
+			}else{
+				$('#wrap').animate({
+				  height: slideHeight
+				}, "normal");
+				$('#read-more a').html('Click to Read More');
+				$('#gradient').fadeIn();
+			}
+			return false;
+		});		
+	}
+});
+</script>
+</head>
+<body>
+	<div id="container">
+		<h1>jQuery slide with minimum height
+		<h2>About Billabong</h2>
+
+		<div id="wrap">
+			<div>
+				<p>Gordon Merchant founded Billabong in Burleigh Heads on the Gold Coast in 1973. Combining his passion for surfing with hard work, Gordon designed boardshorts, manufacturing them on the kitchen table and selling through local surf shops and markets.</p>
+				<p>Gordon developed his own stitching technique, which made the garments more durable, cost effective and less labor intensive. He employed machinists, moved the operation into a factory, set up a distribution network and sponsored a team of renowned Australian surfers. The business thrived.</p>
+				<p>Since those beginnings, Billabong has expanded its product range to include boardsport products such as wetsuits, watches, surfboards, snowboard outerwear and skateboarding apparel.</p>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>			</div>
+			<div id="gradient"></div>
+		</div>
+		<div id="read-more"></div>
+	</div>
+</body>
+</html>

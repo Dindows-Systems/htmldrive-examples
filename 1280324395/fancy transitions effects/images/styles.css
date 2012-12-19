@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+body { padding: 0px; margin: 0px; font-family: Georgia; font-size: 14px; background: #CFCFCF url(main0000.png) no-repeat center 50px; }
+
+#page { width: 1000px; margin: 20px auto; }
+
+a { color: #5C7F99; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+/*--- shared */
+
+
+
+#ftHolder { width: 500px; float: left; text-align: center; height: 332px; padding-top: 90px; }
+#ft { border: 5px solid #BAD340; -moz-border-radius: 5px; }
+#example { float: left; }
+.ft-title { padding: 10px 10px; width: 480px; text-align: left; }
+
+
+
+.ft-prev, .ft-next { background-color: #000; padding: 0 10px; }
+
+.ft-button-ft-active { color: black; }

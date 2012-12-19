@@ -1,0 +1,57 @@
+@charset "utf-8";
+body{ 
+	font:italic 0.8em/0.8em Georgia, "Times New Roman", Times, serif; 
+	color:#999; padding:50px; 
+	text-align:center; 
+	background:white; 
+}
+a{ 
+	text-decoration:none; 
+	color:#999; 
+}
+ul{ 
+	list-style: none; 
+	margin:10px 0px; 
+	padding: 0; 
+}
+ul li{
+	padding: 0px; 
+	margin:0 2px 0 0; 
+	list-style:none; 
+	display:inline;
+}
+ul li a{
+	display: inline-block!important; 
+	overflow: hidden; 
+	height: 90px; 
+	line-height:90px; 
+	width: 128px; 
+	white-space:nowrap; 
+	text-align:left; 
+}
+ul li a p { 
+	padding:0 0 0 135px; 
+	line-height:normal;
+}
+ul li a p strong {
+	font-size:24px; 
+	color:#336600;
+}
+ul li a.home {
+	background:url(chazzuka.jpg) top left no-repeat;
+}
+ul li a.blog {
+	background:url(blog.jpg) top left no-repeat;
+}
+ul li a.services {
+	background:url(services.jpg) top left no-repeat;
+}
+ul li a.portfolio {
+	background:url(portfoli.jpg) top left no-repeat;
+}
+
+p.info { width:500px; margin:10px auto; border-top:dotted 1px #ccc; border-bottom:dotted 1px #ccc; color:#666; padding:10px 0px; text-align:left; line-height:normal; display:inline-block;}
+p.info a:hover { color:red; }
+p.info h1 a { text-decoration:underline; color:#999; }
+
+.footer { font:italic 11px/normal Arial, Helvetica, sans-serif; color:#999; display:inline-block; padding:5px 0 0 0; }

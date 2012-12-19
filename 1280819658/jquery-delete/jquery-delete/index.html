@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Papermashup.com | jQuery Ajax Delete</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#load').hide();
+});
+
+$(function() {
+$(".delete").click(function() {
+$('#load').fadeIn();
+var commentContainer = $(this).parent();
+var id = $(this).attr("id");
+var string = 'id='+ id ;
+	
+$.ajax({
+   type: "POST",
+   url: "delete.php",
+   data: string,
+   cache: false,
+   success: function(){
+	commentContainer.slideUp('slow', function() {$(this).remove();});
+	$('#load').fadeOut();
+  }
+   
+ });
+
+return false;
+	});
+});
+
+
+</script>
+<style>
+body{ font:Arial, Helvetica, sans-serif; font-size:13px;}
+.box {
+	padding:3px;
+	background-color:#dedede;
+	margin-bottom:3px;
+	border-bottom:2px solid #ccc;
+	width:450px;
+	height:90px;
+}
+.box:hover{background-color:#ccc;}
+
+#load {
+	position:absolute;
+	left:225px;
+	background-image:url(images/loading-bg.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	width:159px;
+	color:#999;
+	font-size:18px;
+	font-family:Arial, Helvetica, sans-serif;
+	height:40px;
+	font-weight:300;
+	padding-top:14px;
+	top: 23px;
+}
+#container {
+	position:relative;
+}
+.avatar {
+	float:left;
+	margin-right:20px;
+}
+.text {
+	float:left;
+	width:300px;
+	font-size:13px;
+}
+.text span {
+	font-size:18px;
+	line-height:23px;
+	font-weight:700;
+}
+.delete {
+	margin-top:30px;
+	float:left;
+	margin-left:30px;
+}
+a.delete {
+	padding:3px;
+	text-align:center;
+	font-size:18px;
+	font-weight:700;
+	text-decoration:none;
+	color:#C00;
+}
+a.delete:hover {
+	background-color:#900;
+	color:#FFF;
+}
+.date {
+	padding-top:10px;
+	font-weight:700;
+	color:#333;
+	font-size:12px;
+}
+</style>
+</head>
+<body>
+<div id="container">
+  <h3>Delete Comments</h3>
+
+  <div id="load" align="center"><img src="images/loading.gif" width="28" height="28" align="absmiddle"/> Loading...</div>
+    click the x to delete a comment<br/>
+    <br/>
+  <div class="box"><img src="images/avatar.png" width="75" height="75" border="0" class="avatar"/>
+    <div class="text"><span>Ashley Ford</span><br/>
+      This is my first comment here! wow i love it here
+      <div class="date">17th July 2009</div>
+    </div>
+    <a href="#" id="1" class="delete">x</a>
+    <div class="clear"></div>
+  </div>
+  <div class="box"><img src="images/avatar.png" width="75" height="75" border="0" class="avatar"/>
+    <div class="text"><span>Ashley Ford</span><br/>
+      You can subscribe to my RSS feed to get my latest blog posts delivered right to your favourite feed reader right <a href="#" target="_blank">here</a>
+      <div class="date">16th July 2009</div>
+    </div>
+    <a href="#" id="2" class="delete">x</a>
+    <div class="clear"></div>
+  </div>
+  <div class="box"><img src="images/avatar.png" width="75" height="75" border="0" class="avatar"/>
+    <div class="text"><span>Ashley Ford</span><br/>
+      The weather outside is really bad!
+      <div class="date">15th July 2009</div>
+    </div>
+    <a href="#" id="3" class="delete">x</a>
+    <div class="clear"></div>
+  </div>
+</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7025232-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

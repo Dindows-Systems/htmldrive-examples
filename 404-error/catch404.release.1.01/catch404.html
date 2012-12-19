@@ -1,0 +1,93 @@
+
+<html>
+<title>AddyOsmani.com - Catch404 Demo</title>
+<head></head>
+<body>
+
+<link rel="stylesheet" href="styles.css" type="text/css"> 
+<link rel="stylesheet" href="popup.css" type="text/css">
+
+
+<style type="text/css">
+ body {  font-family:"ff-clifford-eighteen-web-pro-1","ff-clifford-eighteen-web-pro-2",Georgia,"Times New Roman",Times,serif !important;; font-size:13px;}
+ h1 { font-family:Arial; font-weight:bold; letter-spacing:-4px; font-size:80px; line-height: 87px; }
+ h2 { font-family:Georgia; letter-spacing:2px; font-size:15px; text-transform:uppercase;}
+ .equate { letter-spacing:-1px; color:#64A0C8; }
+ .examplebox { background-color: #64A0C8; float:left; -moz-border-radius: 5px; -webkit-border-radius: 5px; width:150px; height:150px; margin:10px;}
+ .examplecontainer { width:550px; list-style-type:none; clear:both;}
+ .exampletitle { font-family:Arial; letter-spacing:-1px; color:white; font-weight:bold; font-size:18px;}
+ .siteexample { width:960px; }
+ .subtitle {  font-size:20px; letter-spacing:-1px; margin-left:-248px; margin-top:-17px;  color:#666;}
+ #footerel { width:500px; height:200px; margin-top:20px;}
+ .spacer { width:100%; height:50px;}
+ </style>
+
+<br>
+
+<center>
+  
+  <div class="spacer"></div>
+  <span class="subtitle">jQuery</span>
+  
+ <div class="siteexample">
+    
+    <h1>Catch404</h1>
+	<h2>Catch 404's Without Leaving Your Current Page</h2>
+  
+  <p>
+  <ul class="examplecontainer">
+     <li class="examplebox"> <span class="exampletitle">
+	 
+	 <a href="ajaxme.html" class="ajaxcheck">This is a broken local link.</a>
+	 
+	 </span></li>
+	  <li class="examplebox"> <span class="exampletitle">
+	  
+	  <a href="http://imbroken.com/somebrokenfile/broken.html" class="ajaxcheck">This is a broken external link.</a>
+	  
+	  </span> </li>
+	   <li class="examplebox"> <span class="exampletitle">
+	   
+	  <a href="http://www.google.com/products" class="ajaxcheck"> This is a working external link.</a>
+	   
+	   </span></lu>
+	   </ul>
+  </p>
+ </center> 
+<script src="js/jquery.js"></script> 
+<script type="text/javascript">
+
+ $(document).ready(function()
+ {
+   $(".ajaxcheck").catch404();
+ });
+</script>
+
+
+<script src="js/catch404.min.js"></script> 
+
+
+
+<div id="404message" class="popup_block"> 
+	<img src="images/alert.png" alt="alert" style="float: right; margin: 50px 0 0 20px;" />
+    <h2>404 Error. Oops!</h2> 
+    <br>
+    <p>We did a quick check and the page you requested could not be found. Let us know about this via our <a class="alta" href="">contact form</a>.</p>
+	<br>
+	<p>
+	If you would you like 
+    to see if this file's still somewhere else on the site check out our<a class="alta" href="http://www.google.com"> search page.</a>
+	</p> 
+    
+</div> 
+
+
+ <center> 
+  <div id="footerel">
+     Brought To You By <a class="altf" href="http://www.addyosmani.com">AddyOsmani.com</a>. <span class="equate"><i>Follow Me on</i></span>&nbsp; <a class="altf" href="http://www.twitter.com/addyosmani">Twitter</a>.<br>
+More script and css style
+: <a href="http://www.htmldrive.net/" class="altf" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+  </div>
+  </div>
+</center>

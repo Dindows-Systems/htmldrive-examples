@@ -1,0 +1,109 @@
+/* Lumebox jQuery plugin
+ * Copyright Anders Zakrisson/Sogeti 2009
+ * http://anders.zakrisson.se, http://www.sogeti.se
+ * This software is released under the GPL License.
+ */
+#lumebox-bg {
+    display: none;
+    position: fixed;
+    _position: absolute; /* hack for internet explorer 6*/
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    border: 1px solid #cecece;
+    z-index: 11;
+}
+
+#lumebox-popup {
+    display: none;
+    position: absolute;
+    z-index: 12;
+	-webkit-box-shadow: 2px 2px 14px #777;
+	-moz-box-shadow: 1px 1px 12px #000;
+	box-shadow: 2px 2px 14px #777;
+}
+
+#lumebox-topmenu {
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	z-index: 12;
+	background-color: rgba(0,0,0,0.4);
+	text-align: right;
+	padding-top: 2px;
+}
+
+#lumebox-topmenu a.lumebox-controls {
+	font: 16px Arial, 'Courier New', fixed;
+	font-weight: bold;
+	color: #ccc;
+	z-index: 12;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px #989898;
+	padding: 4px 10px;
+}
+
+/*
+#lumebox-help {
+	position: absolute;
+	top: 0;
+	left: 0;
+	clear: both;
+	top: 20px;
+	width: 100%;
+	z-index: 13;
+	background-color: rgba(0,0,0,0.4);
+	text-align: left;
+	display: none;
+	color: #ccc;
+	padding: 0 30px;
+}
+*/
+
+#lumebox-previous {
+	display: block;
+	position: absolute;
+    top: 20px;
+	left: 0;
+	height: 100%;
+	width: 50%;
+	min-height: 30px;
+	z-index: 13;
+}
+
+#lumebox-next {
+	display: block;
+	position: absolute;
+    top: 20px;
+	right: 0;
+	height: 100%;
+	width: 50%;
+	min-height: 30px;
+	z-index: 13;
+}
+
+#lumebox-content {
+    margin: 0 auto;
+    padding: 30px;
+    z-index: 12;
+    background-color: rgb(21,21,21);
+	color: #ccc;
+}
+
+#lumebox-content.fullscreen {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#lumebox-content p {
+    padding: 30px 0;
+    margin: 0;
+}
+
+#lumebox-caption {
+    padding: 10px 0;
+    margin: 0;
+    min-height: 20px;
+}

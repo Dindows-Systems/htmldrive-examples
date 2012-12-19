@@ -1,0 +1,17 @@
+Contained Sticky Scroll jQuery Plugin
+(c) 2010 Echo Enduring Media
+
+This plugin is free for you to use for both personal and commercial works. I would appreciate credit wherever possible, and would love to see any creation or design that makes use of this plugin.
+
+YOU MAY NOT:
+
+- sell or otherwise profit from the distribution of this plugin
+
+- distribute this plugin without proper credit and acknowledgement to the author (me).
+
+- use this plugin for any use that would (or potentially could) be deemed pornographic, racist, hateful, criminal or otherwise damaging.
+
+Thanks for understanding! And if you do use these textures, I encourage you to drop me a line! I always love seeing my freebies in action!
+
+matt@echoenduring.com
+blog.echoenduring.com

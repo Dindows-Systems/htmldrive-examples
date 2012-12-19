@@ -1,0 +1,137 @@
+<!--
+Make T-Shirt Gallery with jQuery (Like Threadless Type Tees)
+index.html
+By Sam Dunn
+2009 Build Internet! www.buildinternet.com
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Build Internet | Make T-Shirt Gallery with jQuery (Like Threadless Type Tees)</title>
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {  
+			$(".teebox a").mouseover(function(){
+				$(this).parent().addClass("selected");
+				$(this).find('img').animate({opacity: "0.0"}, 0); //Hides overlay
+				$(this).parent().find('.caption').hide(); //Hides Caption
+			}).mouseout(function(){
+				$(this).parent().removeClass("selected");
+				$(this).find('img').animate({opacity: "1.0"}, 0); //Shows overlay
+				$(this).parent().find('.caption').show(); //Shows Caption
+			});
+		});	
+	</script>
+	<style type="text/css">
+	    *{
+	    	margin:0;
+	    	padding:0;
+	    }
+	    img{
+			border: none;
+		}
+	    body {
+	    	text-align: center;
+	    	background: #222;
+	    }
+	    h2{
+	    	color: #333;
+			font:italic 36px Georgia, serif;
+			padding: 20px;
+			border-bottom: dashed 1px #999;
+			clear: both;
+		}
+	    #content{
+	    	width: 100%;
+	    	margin: 0px auto;
+			background: #fff;
+	    	text-align: center;
+	    	margin-bottom: 50px;
+		}
+		.row{ /*Container for each row of shirts*/
+			width: 495px;
+			margin: 0px auto;
+			clear:both;
+			padding: 20px 0;
+		}
+		.teebox{
+			overflow: hidden; /*Prevents excess of image from showing*/
+			position: relative;
+	    	margin: 0 10px;
+			width: 144px; /*Width and height define thumbnail size*/
+			height: 183px;
+			float: left;
+			clear: right;
+			z-index: 0;
+		}
+		.selected{
+			overflow: visible; /*Display part of image that not currently visible*/
+			z-index: 10;
+		}
+		
+		.teebox img {
+			left:-84px; /*Use this number to center your image when not hovered*/
+			position: absolute;
+		}
+		.teebox a{ /*Area that changes to selected class when hovered over*/
+			display:block;
+			position: relative;
+			float: left;
+			left: 84px; /*Use to line up the overlay image*/
+			z-index: 1;
+		}
+		.caption{
+			color: #2FB5FF;
+			font:14px Arial;
+			position: relative;
+			float: left;
+			left: 0px;
+			top: 146px;
+			padding: 10px;
+			background: #222;
+			z-index: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="content">
+		<h2>Build Internet's Tee Palace</h2>
+		<div class="row">
+				<div class="teebox">
+					<a href="#"><img src="overlay.png"/></a><img src="pinktee.png"/>
+					<div class="caption">$10</div>
+				</div>
+				<div class="teebox">
+					<a href="#"><img src="overlay.png"/></a><img src="bluetee.png"/>
+					<div class="caption">$10</div>
+				</div>
+				<div class="teebox">
+				<a href="#"><img src="overlay.png"/></a><img src="greytee.png"/>
+					<div class="caption">$10</div>
+				</div>
+		</div>
+		<div class="row">
+				<div class="teebox">
+					<a href="#"><img src="overlay.png"/></a><img src="redtee.png"/>
+					<div class="caption">$10</div>
+				</div>
+				<div class="teebox">
+					<a href="#"><img src="overlay.png"/></a><img src="redtee.png"/>
+					<div class="caption">$10</div>
+				</div>
+				<div class="teebox">
+					<a href="#"><img src="overlay.png"/></a><img src="redtee.png"/>
+					<div class="caption">$10</div>
+				</div>
+		</div>
+		<h2>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</h2>
+	</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+body{
+margin: 0 auto;					/*align the header at the center*/
+text-align: center;				/*align the header at the center*/
+}
+
+
+div.image
+{
+width: 600px;					/* width of each container*/
+height: 350px;					/* height of each container*/
+position: absolute;				/* instructure each container to obey the position absolutely*/
+float: left;					/* float all the container so that they overlapped each other*/
+left: 27%;						/* align them to the center of the screen */
+z-index: -1;
+
+}
+
+
+div#box1
+{
+background: #66A666 url('../images/blue.png');
+}
+div#box2
+{
+background: #E37373 url('../images/green.png');
+}
+div#box3
+{
+background: #B2B2B2 url('../images/orange.png');
+}
+div#box4
+{
+background: #A51515 url('../images/red.png');
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>tooltipsy - samples</title>
+</head>
+<body>
+
+<div id="container">
+<div id="content">
+    <h2>Yes, I&rsquo;ll put my money where my mouth is.</h2>
+
+    <h3>Naked&mdash;because you&rsquo;re in control</h3>
+    <div class="sample">
+        <pre class="code">
+$('.hastip').tooltipsy();</pre>
+        <div class="hover">
+            <span title="Lorem ipsum blah blah">Show me</span>
+
+        </div>
+    </div>
+
+    <h3>Style it however you like, but I&rsquo;ll keep it simple</h3>
+    <div class="sample">
+        <pre class="code">
+$('.hastip').tooltipsy({
+    css: {
+        'padding': '10px',
+        'max-width': '200px',
+        'color': '#303030',
+        'background-color': '#f5f5b5',
+        'border': '1px solid #deca7e',
+        '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'text-shadow': 'none'
+    }
+});</pre>
+        <div class="hover">
+
+            <span title="Lorem ipsum blah blah">Show me</span>
+        </div>
+    </div>
+
+    <h3>How about 10px below?</h3>
+    <div class="sample">
+        <pre class="code">
+$('.hastip').tooltipsy({
+    offset: [0, 10],
+    css: {
+        'padding': '10px',
+        'max-width': '200px',
+        'color': '#303030',
+        'background-color': '#f5f5b5',
+        'border': '1px solid #deca7e',
+        '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'text-shadow': 'none'
+    }
+});</pre>
+
+        <div class="hover">
+            <span title="Lorem ipsum blah blah">Show me</span>
+        </div>
+    </div>
+
+    <h3>On the right?</h3>
+    <div class="sample">
+        <pre class="code">
+
+$('.hastip').tooltipsy({
+    offset: [10, 0],
+    css: {
+        'padding': '10px',
+        'max-width': '100px',
+        'color': '#303030',
+        'background-color': '#f5f5b5',
+        'border': '1px solid #deca7e',
+        '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'text-shadow': 'none'
+    }
+});</pre>
+        <div class="hover">
+            <span title="Lorem ipsum blah blah">Show me</span>
+        </div>
+    </div>
+
+    <h3>On the left?</h3>
+    <div class="sample">
+
+        <pre class="code">
+$('.hastip').tooltipsy({
+    offset: [-10, 0],
+    css: {
+        'padding': '10px',
+        'max-width': '200px',
+        'color': '#303030',
+        'background-color': '#f5f5b5',
+        'border': '1px solid #deca7e',
+        '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'text-shadow': 'none'
+    }
+});</pre>
+        <div class="hover">
+            <span title="Lorem ipsum blah blah">Show me</span>
+        </div>
+    </div>
+
+    <h3>Custom animation you say?</h3>
+
+    <div class="sample">
+        <pre class="code">
+$('.hastip').tooltipsy({
+    offset: [-10, 0],
+    show: function (e, $el) {
+        $el.css({
+            'left': parseInt($el[0].style.left.replace(/[a-z]/g, '')) - 50 + 'px',
+            'opacity': '0.0',
+            'display': 'block'
+        }).animate({
+            'left': parseInt($el[0].style.left.replace(/[a-z]/g, '')) + 50 + 'px',
+            'opacity': '1.0'
+        }, 300);
+    },
+    hide: function (e, $el) {
+        $el.slideUp(100);
+    },
+    css: {
+        'padding': '10px',
+        'max-width': '200px',
+        'color': '#303030',
+        'background-color': '#f5f5b5',
+        'border': '1px solid #deca7e',
+        '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'text-shadow': 'none'
+    }
+});</pre>
+        <div class="hover">
+            <span title="Lorem ipsum blah blah">Show me</span>
+        </div>
+    </div>
+
+    <h3>More extreme? How about falling from the sky</h3>
+
+    <div class="sample">
+        <pre class="code">
+$('.hastip').tooltipsy({
+    offset: [0, -1],
+    show: function (e, $el) {
+        var cur_top = parseInt($el[0].style.top.replace(/[a-z]/g, '')) + 'px'; 
+        $el.css({
+            'top': (window.pageYOffset - $el.outerHeight()) + 'px',
+            'display': 'block'
+        }).animate({
+            'top': cur_top,
+            'opacity': '1.0'
+        }, 500, 'easeOutBounce').css('top', cur_top);
+    },
+    hide: function (e, $el) {
+        $el.animate({
+            'top': '+=200px',
+            'opacity': '0.0'
+        }, 200);
+    },
+    css: {
+        'padding': '10px',
+        'max-width': '200px',
+        'color': '#303030',
+        'background-color': '#f5f5b5',
+        'border': '1px solid #deca7e',
+        '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'text-shadow': 'none'
+    }
+});</pre>
+        <div class="hover">
+            <span title="Lorem ipsum blah blah">Show me</span>
+        </div>
+    </div>
+
+    <h3>Or align it to the cursor 10px below and to the right</h3>
+
+    <div class="sample">
+        <pre class="code">
+$('.hastip').tooltipsy({
+    alignTo: 'cursor',
+    offset: [10, 10],
+    css: {
+        'padding': '10px',
+        'max-width': '200px',
+        'color': '#303030',
+        'background-color': '#f5f5b5',
+        'border': '1px solid #deca7e',
+        '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'text-shadow': 'none'
+    }
+});</pre>
+        <div class="hover">
+            <span title="Lorem ipsum blah blah">Show me</span>
+        </div>
+    </div>
+
+	<h3>Can it be.... AJAXified?</h3>
+
+    <div class="sample">
+        <pre class="code">
+$('.hastip').tooltipsy({
+    content: function ($el, $tip) {
+        $.get('api.php', function (data) {
+            $tip.html(data);
+        });
+        return 'Fallback content';
+    },
+    css: {
+        'padding': '10px',
+        'max-width': '200px',
+        'color': '#303030',
+        'background-color': '#f5f5b5',
+        'border': '1px solid #deca7e',
+        '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'text-shadow': 'none'
+    }
+});</pre>
+        <div class="hover">
+            <span>Show me</span>
+        </div>
+    </div>
+
+</div>
+</div>
+<script type="text/javascript" src="all.js"></script>
+<script type="text/javascript">
+    $('.hover:eq(0) span').tooltipsy();
+    $('.hover:eq(1) span').tooltipsy({
+        css: {
+            'padding': '10px',
+            'max-width': '200px',
+            'color': '#303030',
+            'background-color': '#f5f5b5',
+            'border': '1px solid #deca7e',
+            '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'text-shadow': 'none'
+        }
+    });
+    $('.hover:eq(2) span').tooltipsy({
+        offset: [0, 10],
+        css: {
+            'padding': '10px',
+            'max-width': '200px',
+            'color': '#303030',
+            'background-color': '#f5f5b5',
+            'border': '1px solid #deca7e',
+            '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'text-shadow': 'none'
+        }
+    });
+    $(window).trigger('scroll');
+    $('.hover:eq(3) span').tooltipsy({
+        offset: [10, 0],
+        css: {
+            'padding': '10px',
+            'max-width': '100px',
+            'color': '#303030',
+            'background-color': '#f5f5b5',
+            'border': '1px solid #deca7e',
+            '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'text-shadow': 'none'
+        }
+    });
+    $('.hover:eq(4) span').tooltipsy({
+        offset: [-10, 0],
+        css: {
+            'padding': '10px',
+            'max-width': '200px',
+            'color': '#303030',
+            'background-color': '#f5f5b5',
+            'border': '1px solid #deca7e',
+            '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'text-shadow': 'none'
+        }
+    });
+    $('.hover:eq(5) span').tooltipsy({
+        offset: [-10, 0],
+        show: function (e, $el) {
+            $el.css({
+                'left': parseInt($el[0].style.left.replace(/[a-z]/g, '')) - 50 + 'px',
+                'opacity': '0.0',
+                'display': 'block'
+            }).animate({
+                'left': parseInt($el[0].style.left.replace(/[a-z]/g, '')) + 50 + 'px',
+                'opacity': '1.0'
+            }, 300);
+        },
+        hide: function (e, $el) {
+            $el.slideUp(100);
+        },
+        css: {
+            'padding': '10px',
+            'max-width': '200px',
+            'color': '#303030',
+            'background-color': '#f5f5b5',
+            'border': '1px solid #deca7e',
+            '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'text-shadow': 'none'
+        }
+    });
+
+    $('.hover:eq(6) span').tooltipsy({
+        offset: [0, -1],
+        show: function (e, $el) {
+            var cur_top = parseInt($el[0].style.top.replace(/[a-z]/g, '')) + 'px'; 
+            $el.css({
+                'top': (window.pageYOffset - $el.outerHeight()) + 'px',
+                'display': 'block'
+            }).animate({
+                'top': cur_top,
+                'opacity': '1.0'
+            }, 500, 'easeOutBounce').css('top', cur_top);
+        },
+        hide: function (e, $el) {
+            $el.animate({
+                'top': '+=200px',
+                'opacity': '0.0'
+            }, 200);
+        },
+        css: {
+            'padding': '10px',
+            'max-width': '200px',
+            'color': '#303030',
+            'background-color': '#f5f5b5',
+            'border': '1px solid #deca7e',
+            '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'text-shadow': 'none'
+        }
+    });
+
+    $('.hover:eq(7) span').tooltipsy({
+        alignTo: 'cursor',
+        offset: [10, 10],
+        css: {
+            'padding': '10px',
+            'max-width': '200px',
+            'color': '#303030',
+            'background-color': '#f5f5b5',
+            'border': '1px solid #deca7e',
+            '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'text-shadow': 'none'
+        }
+    });
+
+    $('.hover:eq(8) span').tooltipsy({
+        content: function ($el, $tip) {
+            $.get('api.php', function (data) {
+                $tip.html(data);
+            });
+            return 'Fallback content';
+        },
+        css: {
+            'padding': '10px',
+            'max-width': '200px',
+            'color': '#303030',
+            'background-color': '#f5f5b5',
+            'border': '1px solid #deca7e',
+            '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+            'text-shadow': 'none'
+        }
+    });
+</script>
+
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>
+
+

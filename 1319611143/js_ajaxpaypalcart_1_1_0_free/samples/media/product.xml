@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item
+		source="macbook.jpg"	
+	>		
+		<title>MacBook</title>
+		<description><![CDATA[
+                    <div class="main">MacBook</div>
+                    <div class="sub">($20 shipping)</div>
+                ]]></description>
+                <price>999</price>
+                <shipping>20</shipping>
+	</item>
+	<item
+		source="macbookair.jpg"
+	>		
+		<title>MacBook Air</title>
+		<description><![CDATA[
+                    <div class="main">MacBook Air</div>
+                    <div class="sub">($20 shipping)</div>
+                ]]></description>
+                <price>999</price>
+                <shipping>20</shipping>
+	</item>	
+	<item
+		source="macbookpro.jpg"
+	>		
+		<title>MacBook Pro</title>
+		<description><![CDATA[
+                    <div class="main">MacBook Pro</div>
+                    <div class="sub">(free shipping)</div>
+                ]]></description>
+                <price>1199</price>
+                <shipping>0</shipping>
+	</item>	
+	<item
+		source="macosx.jpg"		
+	>		
+		<title>Mac OS X</title>
+		<description><![CDATA[
+                    <div class="main">Mac OS X</div>
+                    <div class="sub">(purchase once | no shipping )</div>
+                ]]></description>
+                <price>99</price>
+                <allowMultiple>false</allowMultiple>
+	</item>
+	<item
+		source="macmini.jpg"
+	>		
+		<title>Mac Mini</title>
+		<description><![CDATA[
+                    <div class="main">Mac Mini</div>
+                    <div class="sub">($20 shipping)</div>
+                ]]></description>
+                <price>699</price>
+                <shipping>20</shipping>
+	</item>	
+	<item
+		source="imac.jpg"
+	>		
+		<title>iMac</title>
+		<description><![CDATA[
+                    <div class="main">iMac</div>
+                    <div class="sub">(free shipping)</div>
+                ]]></description>
+                <price>1199</price>
+                <shipping>0</shipping>
+	</item>	
+	<item
+		source="macpro.jpg"		
+	>		
+		<title>Mac Pro</title>
+		<description><![CDATA[
+                    <div class="main">Mac Pro</div>
+                    <div class="sub">(free shipping)</div>
+                ]]></description>
+                <price>2499</price>
+                <shipping>0</shipping>
+	</item>
+
+</items>

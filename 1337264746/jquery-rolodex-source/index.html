@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>jQuery Rolodex Countdown Animation[Demo]</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body>	
+
+	<div id="wrapping">
+		<div id="clock-ticker" class="clearfix">
+			<div class="block">
+				<span class="flip-top" id="numdays">8</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Days</footer>
+			</div>
+			
+			<div class="block">
+				<span class="flip-top" id="numhours">14</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Hours</footer>
+			</div>
+			
+			<div class="block">
+				<span class="flip-top" id="nummins">34</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Mins</footer>
+			</div>
+			
+			<div class="block">
+				<span class="flip-top" id="numsecs">9</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Secs</footer><br>
+
+			</div>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+		</div>
+	</div>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+	var theDaysBox  = $("#numdays");
+	var theHoursBox = $("#numhours");
+	var theMinsBox  = $("#nummins");
+	var theSecsBox  = $("#numsecs");
+	
+	var refreshId = setInterval(function() {
+	  var currentSeconds = theSecsBox.text();
+	  var currentMins    = theMinsBox.text();
+	  var currentHours   = theHoursBox.text();
+	  var currentDays    = theDaysBox.text();
+	  
+	  if(currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0) {
+	  	// if everything rusn out our timer is done!!
+	  	// do some exciting code in here when your countdown timer finishes
+	  	
+	  } else if(currentSeconds == 0 && currentMins == 0 && currentHours == 0) {
+	  	// if the seconds and minutes and hours run out we subtract 1 day
+	  	theDaysBox.html(currentDays-1);
+	  	theHoursBox.html("23");
+	  	theMinsBox.html("59");
+	  	theSecsBox.html("59");
+	  } else if(currentSeconds == 0 && currentMins == 0) {
+	  	// if the seconds and minutes run out we need to subtract 1 hour
+	  	theHoursBox.html(currentHours-1);
+	  	theMinsBox.html("59");
+	  	theSecsBox.html("59");
+	  } else if(currentSeconds == 0) {
+	  	// if the seconds run out we need to subtract 1 minute
+	  	theMinsBox.html(currentMins-1);
+	  	theSecsBox.html("59");
+	  } else {
+      	theSecsBox.html(currentSeconds-1);
+      }
+   }, 1000);
+});
+</script>
+
+</body>
+</html>

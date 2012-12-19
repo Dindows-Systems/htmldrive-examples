@@ -1,0 +1,36 @@
+/*
+                                __      _ _                   _   
+                               / _|    | (_)                 | |  
+ _ __ ___   __ _ _ __ ___ ___ | |_ ___ | |_  ___   _ __   ___| |_ 
+| '_ ` _ \ / _` | '__/ __/ _ \|  _/ _ \| | |/ _ \ | '_ \ / _ \ __|
+| | | | | | (_| | | | (_| (_) | || (_) | | | (_) || | | |  __/ |_ 
+|_| |_| |_|\__,_|_|  \___\___/|_| \___/|_|_|\___(_)_| |_|\___|\__|
+                                                                  
+*/
+
+/* BASIC RESET */
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{margin:0; padding:0;}
+
+/* HTML ELEMENTS */
+body { font-family:Georgia,serif; font-size:14px; background-color:#313131; line-height: 18px; }
+p { margin-top:10px; color:#888888; text-align:justify; }
+a { color:#718374; text-decoration:underline; }
+a:hover { color:#EEEEEE; }
+h1 { margin:20px; color:#CCCCCC; }
+h2 { margin-top:10px; padding-left:20px; border-left-color:#EEEEEE; border-left-width:10px; border-left-style:solid; color:#AAAAAA; font-style:italic; }
+
+/* COMMON CLASSES */
+.break { clear:both; }
+
+/* WRAPPER */
+#wrapper { width:700px; margin-left:auto; margin-right:auto; }
+
+/* COLORHOVER */
+.colorhover { }
+
+/* hiding the links by giving it the same colour as the text */
+.colorhover a { text-decoration:none; color:#888888; }
+
+/* :hover on a <p> doesn't work in IE6 */
+.colorhover:hover a { color:#718374; text-decoration:underline; }
+.colorhover:hover a:hover { color:#EEEEEE; }

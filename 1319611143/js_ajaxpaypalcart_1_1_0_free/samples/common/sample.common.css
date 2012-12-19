@@ -1,0 +1,126 @@
+@CHARSET "UTF-8";
+
+/*
+ * Sample General
+ * 
+ */
+
+body {
+	background:#FFFFFF;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:100%;
+}
+
+.clean {
+	clear: both;
+	font-size: 1px;
+	height: 0px;
+	line-height: 0px;
+}
+
+#pageWrapper {
+	width:800px;
+	margin:10px auto;
+}
+ 
+/*
+ * Page Header
+ * 
+ */
+#header {
+	padding-top:10px;
+}
+
+	#header .logo {
+		width:200px;
+		height:50px;
+		float:left;
+		background:url(logo.png) no-repeat;	
+	}
+	
+	#header .title {		
+		font-size:1.5em;
+		color:#333333;
+		float:left;
+		
+		border-left:#666666 dotted 1px;
+		padding-left:10px;
+		margin-left:10px;
+	}
+	
+	#header .title small{		
+		font-size:.5em;
+	}
+
+/*
+ * Page Footer
+ * 
+ */
+
+#footer {
+	color:#333333;
+}
+
+#footer a,
+#footer a:link{
+	color:#000000;
+}
+	#footer .link{
+		font-size:1em;
+		/*text-align:center;*/
+		margin:10px 0;
+	}
+	
+	#footer .copyright{
+		font-size:.8em;
+	}
+
+/*
+ * Each Example
+ * 
+ */
+
+ .example { 	
+	float:left;
+	margin:10px;
+	width:100%;
+ }
+
+	 .example > .title{
+	 	font-size:1em;
+		font-weight:bold;
+		padding:5px;
+		margin-bottom:10px;
+		border-bottom:#666666 dotted 1px;
+	 }
+	 
+	 .example > .container{
+	 	margin:0 auto;
+		background:#000000;
+	 }
+	 
+	 .example > .description{
+		
+	 }
+	 
+	 .example > .doc{
+		background:#BBBBBB;
+	 }
+	 
+	 .example > .code{
+		
+	 }
+	 .example > .method{
+		font-weight: bold;
+                font-size: .8em;
+                color:#080;
+	 }
+
+         .example > .prettyprint{
+             padding: 10px;
+             font-size: .8em;
+             border: 1px solid #999;
+             background-color: #EEE;
+
+         }
+	 

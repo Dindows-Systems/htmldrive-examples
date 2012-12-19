@@ -1,0 +1,43 @@
+/* simple reset */
+html,body,div,h2,p {margin:0;padding:0;}
+
+html {
+	font:1em Arial, Helvetica, sans-serif;
+	color:#444;
+}
+a {color:#0087f1;}
+p {margin-bottom:5px;}
+#container {
+	margin:0 auto;
+	width:600px;
+}
+#container h2 {
+	font-size:20px;
+	color:#0087f1;
+}
+#wrap {
+	position: relative; 
+	padding: 10px; 
+	overflow: hidden;
+}
+#gradient {
+	width:100%; 
+	height:35px; 
+	background:url(images/bg-gradient.png) repeat-x; 
+	position:absolute; 
+	bottom:0; 
+	left:0; 
+}
+#read-more { 
+	padding:5px; 
+	border-top:4px double #ddd;
+	background:#fff; 
+	color:#333; 
+}
+#read-more a { 
+	padding-right:22px; 
+	background:url(images/icon-arrow.gif) no-repeat 100% 50%;
+	font-weight:bold;
+	text-decoration:none;
+}
+#read-more a:hover {color:#000;}

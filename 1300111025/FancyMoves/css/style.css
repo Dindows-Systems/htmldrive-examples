@@ -1,0 +1,121 @@
+/* WebDesignAndSuch.com */
+
+
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background:url(../images/pageBack.jpg)
+	
+}
+
+				
+
+
+
+/* Slider Styles Starts */
+
+#intro {
+    padding-bottom: 10px;
+}
+#slider-outer{
+	height:470px;
+	padding:15px 0 0 0;
+	text-transform:uppercase
+}
+#slider {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+.scroll {
+	overflow: hidden;
+	width: 790px;
+    margin: 0 auto;
+    position: relative;
+}
+.scrollContainer {
+	position: relative;
+}
+.scrollContainer div.panel {
+    padding: 10px;
+    width: 274px;
+	height: 470px;
+}
+.inside {
+	padding: 10px 0; text-align:center
+}
+.inside img {
+	display: block;
+	margin: 0 0 10px 0;
+	width: 250px;
+}
+.inside h2 {
+	font-weight: normal;
+	color: #111;
+	font-size: 16px;
+	margin: 0 0 8px 0;
+}
+.inside p {
+	font-size: 11px;
+	color: #ccc;
+}
+.scrollButtons {
+    position: absolute;
+    top: 150px;
+    cursor: pointer;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+.scrollButtons:hover {
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+	
+}
+.scrollButtons.left {
+    left: -70px;
+	
+}
+.scrollButtons.left:hover {
+    left: -70px;
+	
+}
+.scrollButtons.right {
+    right: -70px;
+	
+}
+.scrollButtons.right:hover {
+    right: -70px;
+	
+}
+.hide {
+    display: none;
+}
+
+#slider p{position:relative; top:-2.8em; text-align:center; font-weight:bold; font-family:Arial, Helvetica, sans-serif}
+
+/* Slider Styles Ends */
+
+img {border:0px}
+
+
+#slider a:link, #slider a:visited {color:#0CF; text-decoration:none; font-size:.6em; }
+#slider a:hover, #slider a:active {color:#fff; text-decoration:none; font-size:.6em; cursor:pointer}
+
+
+/* DEMO STYLES - delete these */
+#info {width:800px; margin:0 auto; color:#666; margin-top:50px; text-align:center; font-size:12px; padding-bottom:25px}
+#info a:link, #info a:visited {color:#ccc}
+#info a:hover, #info a:active {color:#fff}
+
+#demo-outer {width:980px; margin:0 auto; background:#202020; -webkit-box-shadow: 0px 0px 4px #000;
+-moz-box-shadow: 0px 0px 15px #000; padding-bottom:25px}
+
+
+
+

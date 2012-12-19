@@ -1,0 +1,14 @@
+* { padding: 0; margin: 0; text-decoration: none; border: none; }
+body { background: #cacaca url(images/pattern.gif); text-align: center; margin-top: 25px; color: #5f5f5f; font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; font-weight: normal; line-height: 22px; }
+a { margin-top: 30px; color: #22c3eb; text-align: center; }
+a.back, a.logo { display: block; }
+
+@font-face { font-family: Graublau; }
+h1 { font-family: Graublau; margin: 45px 0 75px; font-weight: normal; }
+
+#carbonads-container { margin: 0 auto; margin-top: 80px; width: 300px; }
+#carbonads-container .carbonad-text, #carbonads-container span { text-align: left !important; }
+
+
+
+

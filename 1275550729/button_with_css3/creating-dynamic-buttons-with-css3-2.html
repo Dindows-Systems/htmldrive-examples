@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Experimenting with CSS3 - Creating Dynamic Buttons - naioo.com</title>
+<style type="text/css">
+* {
+	margin:0px;
+	padding:0px;
+	border:0px;
+	outline:0px;
+}
+
+p {
+	margin-bottom:20px;
+	margin-top:20px;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #121212;
+	background-color: #EFEFEF;
+	margin: 50px;
+}
+
+/* CSS3 BUTTON */
+
+.btn {
+	display: inline-block;
+	background: url(btn.bg.png) repeat-x 0px 0px;
+	padding:5px 10px 6px 10px;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+	border:1px solid rgba(0,0,0,0.4);
+	-moz-border-radius: 15px;
+	-moz-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+	-webkit-border-radius: 15px;
+	-webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+}
+
+.btn:hover {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	cursor:pointer;
+}
+
+/* COLOR VARIATIONS */
+
+.blue		{background-color: #CCCCCC; color: #141414;}
+.blue:hover	{background-color: #00c0ff; color: #ffffff;}
+
+.green		{background-color: #CCCCCC; color: #141414;}
+.green:hover{background-color: #8aff00; color: #ffffff;}
+
+.red		{background-color: #CCCCCC; color: #141414;}
+.red:hover	{background-color: #ff004e; color: #ffffff;}
+
+</style></head>
+
+<p><a 
+href="creating-dynamic-buttons-with-css3.html">Example
+ 1</a> | Example 2</p>
+<p><strong>Dynamic Buttons With CSS3</strong></p>
+<div class="btn green">Continue</div>
+<div class="btn blue">Add to Shopping Cart</div>
+<div class="btn red">Logout</div>
+
+<p>Font-size decreased to 12px:</p>
+
+<div style="font-size: 12px;">
+<div class="btn green">Continue</div>
+<div class="btn blue">Add to Shopping Cart</div>
+<div class="btn red">Logout</div>
+</div>
+
+<p>Font-size decreased to 10px:</p>
+
+<div style="font-size: 10px;">
+<div class="btn green b2">Continue</div>
+<div class="btn blue">Add to Shopping Cart</div>
+<div class="btn red">Logout</div>
+</div>
+
+</body></html>

@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8;charset=utf-8" />
+		<title>Coverflow featuring css transitions</title>
+		<style type="text/css" media="screen">
+			body,html {
+				margin: 0;
+				padding: 0;
+				background: #000;
+				height: 100%;
+				color: #eee;
+				font-family: Arial;
+				font-size: 10px;
+			}
+			
+			h1 {
+				margin: 20px;
+			}
+			a{ color:#FFCC00;}
+			p {
+				margin: 20px;
+			}
+			
+			div.magnifyme {
+				height: 80px;
+				padding: 30px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 2000px;
+			}
+			
+			div.wrapper {
+				margin: 20px;
+				height: 160px;
+				border: 2px solid #999;
+				overflow: hidden;
+				width: 600px;
+				position: relative;
+			}
+			
+			div.slider {
+				position: absolute;
+				bottom: 5px;
+				left: 30px;
+				width: 542px;
+				height: 19px;
+				background: url(images/productb.png) no-repeat;
+			}
+			
+			div.ui-slider-handle {
+				position: absolute;
+				cursor: pointer;
+				cursor: hand;
+				top: 0px;
+				left: 0px;
+				height: 100%;
+				width: 181px;
+            	background: url(images/handle.png) no-repeat;
+				
+			}
+		
+			div.magnifyme img {
+				width: 64px;
+				height: 64px;
+				float: left;
+				margin: 5px;
+				position: relative;
+				border: 1px solid #999;
+			}
+		</style>
+<script type="text/javascript" src="images/jquery-1.js"></script>
+<script type="text/javascript" src="images/ui.js"></script>
+<script type="text/javascript" src="images/ui1.js"></script>
+<script type="text/javascript" src="images/effects.js"></script>
+<script type="text/javascript" src="images/ui2.js"></script>
+
+<script type="text/javascript" src="images/sylveste.js"></script>
+<script type="text/javascript" src="images/pb.js"></script>
+
+
+								
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$("div.magnifyme").coverflow();
+
+			});
+			
+		</script>
+	</head>
+	<body>
+		
+	<h1>Coverflow effect featuring CSS transformations and jQuery UI</h1>
+	
+	<p>
+		This proof-of-concept shows a coverflow effect using the new CSS transformation feature from Webkit (featured in Safari 3.1). Needless
+		to say that it won't run in other browsers at this point (however, adapting it to canvas should be quite easy, and even now, it won't break in other browsers).
+	</p>
+	
+	<p>
+		Unlike other demos, this one can truly animate between two half states, making a slider implementation like the iTunes slider really easy (will come
+		to this demo soon!). Have fun and try using the keyboard for hotness ;)
+	</p>
+		
+<div class="wrapper">
+	<div class="magnifyme">
+		<img src="images/1.png" />
+		<img src="images/2.png" />
+		<img src="images/3.png" />
+		<img src="images/4.png" />
+		<img src="images/5.png" />
+		<img src="images/6.png" />
+		<img src="images/7.png" />
+		<img src="images/8.png" />
+		<img src="images/9.png" />
+		<img src="images/11.png" />
+		<img src="images/1.png" />
+		<img src="images/2.png" />
+		<img src="images/3.png" />
+		<img src="images/4.png" />
+		<img src="images/5.png" />
+		<img src="images/6.png" />
+		<img src="images/7.png" />
+		<img src="images/8.png" />
+		<img src="images/9.png" />
+		<img src="images/11.png" />
+	</div>
+	<div class="slider">
+		<div class="ui-slider-handle"></div>
+	</div>
+</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+	</body>
+</html>  
+

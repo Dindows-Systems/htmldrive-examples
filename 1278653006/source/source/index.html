@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Amazon.com Books Widget</title>
+<link rel="stylesheet" href="css/books.css" type="text/css" media="screen" />
+<script language="javascript" type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/books.js"></script>
+<script language="javascript" type="text/javascript">
+
+	$(function(){
+		BOOKS.init({
+			xmlPath : "data/books.xml",
+			imgPath : "images",
+			perView : 4
+		});
+	});
+
+</script>
+</head>
+<body>
+
+	<div id="books">
+		<div class="overclear buttons">
+			<a href="#" class="prev"><img src="images/books_prev.gif" width="40" height="30" alt="Previous" /></a>
+			<div class="showing"><!-- showing --></div>
+			<a href="#" class="next"><img src="images/books_next.gif" width="40" height="30" alt="Next" /></a>
+		</div>
+		<div class="overclear top">
+			<img src="images/books_left_top.gif" width="20" height="20" alt="" class="float_left" />
+			<img src="images/books_right_top.gif" width="20" height="20" alt="" class="float_right" />
+		</div>
+		<div class="inner">
+			<ul class="overclear">
+				<li class="loader"><!-- loader --></li>
+			</ul>
+		</div>
+		<div class="overclear btm">
+			<img src="images/books_left_btm.gif" width="20" height="20" alt="" class="float_left" />
+			<img src="images/books_right_btm.gif" width="20" height="20" alt="" class="float_right" />
+		</div>
+	</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></body>
+</html>

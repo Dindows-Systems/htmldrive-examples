@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>jQuery Custom Events</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<style type="text/css">
+		body 		{background: #fefefe; color: #111; font: 12px Arial, Helvetica, sans-serif;}
+		
+		#tree	{color: #333; line-height: 14px}		
+			.directory 	{list-style-image: url('images/directory.png');}
+			.css 		{list-style-image: url('images/css.png');}
+			.html	 	{list-style-image: url('images/html.png');}
+			.js			{list-style-image: url('images/js.png');}
+			.gif, 
+			.png,
+			.jpg 		{list-style-image: url('images/image.png');}
+	</style>
+	
+</head>
+<body>	
+	<ul id="tree">
+		<li>root/
+			<ul>
+				<li>index.html</li>
+				<li>about.html</li>
+				<li>gallery.html</li>
+				<li>contact.html</li>
+				<li>assets/
+					<ul>
+						<li>images/
+							<ul>
+								<li>logo.png</li>
+								<li>background.jpg</li>
+							</ul>
+						</li>
+						<li>js/
+							<ul>
+								<li>jquery.js</li>
+								<li>myscript.js</li>
+							</ul>
+						</li>
+						<li>css/
+							<ul>
+								<li>page.css</li>
+								<li>typography.css</li>
+							</ul>					
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>		
+	</ul>
+	
+	<script type="text/javascript" src="http://google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.load("jquery", "1");
+		google.setOnLoadCallback(function() {
+			$(function() {
+				addIcons(); 
+			});
+			
+			function addIcons()
+			{
+				$("#tree li").each(function() {
+					if($(this).children("ul").length)
+					{
+						$(this).addClass("directory");
+					}
+					else
+					{
+						var txt = $(this).text();				
+						var fileType = txt.substr(txt.indexOf(".") + 1);
+						$(this).addClass(fileType);
+					}
+				});
+			}
+		});
+	</script>
+</body>
+</html>

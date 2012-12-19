@@ -1,0 +1,144 @@
+body {
+	background: #ddd;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	line-height: 1.6em;
+}
+
+h1.demo_title {
+font-size: 42px;
+text-align: center;
+text-shadow: 1px 1px 2px #fff;
+color: #555;
+margin-top: 30px;
+border-bottom: 1px dashed #333;
+padding-bottom: 30px;
+margin-bottom: 30px;
+}
+
+.demo_ul {
+display: block;
+width: 200px;
+margin: 0 auto;
+}
+
+.demo_ul li {
+width: 100%;
+list-style: none;
+display: inline;
+}
+
+.demo_ul li a{
+color: #333;
+text-decoration: none;
+padding: 10px 5px;
+margin: 0 5px 5px;
+background: #fff;
+border: 1px solid #555;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+
+.demo_ul li a:hover{
+color: #fff;
+text-decoration: none;
+background: #999;
+}
+
+.author_info {
+position: fixed;
+top: 90%;
+left: 10px;
+background: #333;
+width: auto;
+padding: 0 30px;
+height: 40px;
+line-height: 40px;
+color: #fff;
+color: #fff;
+text-decoration: none;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+.author_info:hover {
+background: #2F4F4F;
+}
+
+
+/*Menu style begin from here
+----------------------------------
+---------------------------------*/
+#menu {
+width: 100%;
+background: #a7cfdf; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #a7cfdf 0%, #23538a 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#a7cfdf), color-stop(100%,#23538a)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #a7cfdf 0%,#23538a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #a7cfdf 0%,#23538a 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #a7cfdf 0%,#23538a 100%); /* IE10+ */
+background: radial-gradient(center, ellipse cover,  #a7cfdf 0%,#23538a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+position: relative;
+margin-top: 100px;
+border-top: 4px solid #eee;
+border-bottom: 4px solid #FFF; 
+overflow: hidden;
+}
+
+/*======== Horizontal menu =========*/
+#nav {
+z-index: 99999;
+margin:0;
+padding:0;
+}
+
+#nav li a,#nav li {
+float:left;
+}
+
+#nav li {
+list-style:none;
+position:relative;
+}
+
+#nav li a {
+padding: 0 10px;
+width: 130px;
+height: 102px;
+text-decoration:none;
+margin:0;
+font-size:12px;
+font-weight:400;
+text-transform:uppercase;
+text-align: center;
+color:#FFF;
+}
+
+#nav li a.icon1 {
+background: url(../images/11.png) no-repeat center 0; 
+}
+#nav li a.icon2 {
+background: url(../images/22.png) no-repeat center 0;
+}
+#nav li a.icon3 {
+background: url(../images/33.png) no-repeat center 0;
+}
+#nav li a.icon4 {
+background: url(../images/44.png) no-repeat center 0;
+}
+
+#nav li a span{
+position: absolute;
+top: 70px;
+left:0;
+right: 0;
+font-size: 17px;
+color:#cfcfcf;
+}
+
+#nav li a:hover span{
+color:#fff;
+}

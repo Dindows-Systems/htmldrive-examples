@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Bubble Popup v.1.0 by Max Vergelli</title>
+<meta name="description" content="Create easily smart bubble popups with only a line of code in jQuery! attach popups to any DOM element, create smart shadowed popups. Developed by Max Vergelli." />
+<meta name="keywords" content="bubble, popups, popup, jquery, DOM, element, mouseover, mouseout, events, shadowed, IE, Internet Explorer, Firefox, Opera, Safari, style, template, HTML, message, distance, velocity, delay, color, shadow" />
+<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js" type="text/javascript"></script> 
+<script src="jquery.BubblePopup-1.1.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+<!--
+$(document).ready(function() {
+
+	/* 
+	------------------------------------------------------------------------------------------------------------------------------------
+	Tutorial #1: How to create a simple Bubble Popup!
+	------------------------------------------------------------------------------------------------------------------------------------*/
+	
+	// The following code creates a simple Bubble Popup opening when mouse is over on the element with ID '#dummy1'.
+	$('#dummy1').SetBubblePopup({
+									innerHtml: '<p>You can set any HTML tag<br />inside this popup!<br /><a href="#">this is a link</a></p>'
+								});
+
+	/* 
+	------------------------------------------------------------------------------------------------------------------------------------
+	Tutorial #2: How to create Bubble Popups with custom styles!
+	------------------------------------------------------------------------------------------------------------------------------------*/
+	
+	// We define a custom style and message for the Bubble Popup on '#dummy2' element...
+	$('#dummy2').SetBubblePopup({
+									innerHtml: '<p>Bubble Popup!</p>', 
+									bubbleAlign: 'left',
+									tailAlign: 'left',
+									color: 'green',
+									contentStyle: 'font-size:16px;'
+								});
+
+	//Then, we define a common style both for elements with class '.myclass' and rel attribute 'nofollow';
+	//Note: we call the "SetBubblePopup()" method from "jQuery" object to select more elements at time.
+	jQuery().SetBubblePopup({
+									cssClass: [ ".myclass" ],
+									relAttribute: [ "nofollow" ],
+
+									innerHtml: '<p>another Bubble Popup!</p>', 
+									bubbleAlign: 'right',
+									tailAlign: 'right',
+									color: 'violet',
+									contentStyle: 'color:#CC0066; font-family:Arial; font-size:11px; font-weight:bold;'
+								});
+
+	/* 
+	------------------------------------------------------------------------------------------------------------------------------------
+	Tutorial #3: How to create Bubble Popups with custom events!
+	------------------------------------------------------------------------------------------------------------------------------------
+	
+	This code creates a Bubble Popup for each element and attach to it a default HTML message.
+	Besides, it disables "showOnMouseOver" event for all Bubble Popups, 
+	because we will implement own custom events and messages for each element!
+	*/
+	
+	jQuery().SetBubblePopup({ 
+								tagID:['#dummy3', '#dummy4'], 
+								innerHtml: '<p>This is the default message<br />for all Bubble Popups!</p>',
+								showOnMouseOver: false
+							});
+
+	// Show Bubble Popup on mouse over'#dummy3' and hide it on mouse out;
+	// Bubble Popup will display the default HTML message.
+	$('#dummy3').mouseover(function(){
+										$('#dummy3').ShowBubblePopup();
+									});
+	$('#dummy3').mouseout(function(){ 
+										$('#dummy3').HideBubblePopup(); 
+									});
+
+	// Show Bubble Popup only on click '#dummy4' and hide it on mouse out;
+	// however, Bubble Popup will display a custom HTML message.
+	$('#dummy4').click(function(){
+									$('#dummy4').ShowBubblePopup({ innerHtml: "This is a custom text!" });
+									return false;
+								});
+	$('#dummy4').mouseout(function(){ 
+										$('#dummy4').HideBubblePopup(); 
+									});
+
+	/* 
+	------------------------------------------------------------------------------------------------------------------------------------
+	Tutorial #4: Control Bubble Popups events externally.
+	------------------------------------------------------------------------------------------------------------------------------------*/
+
+	//Set a Bubble Popup with events controlled inside the HTML tag.
+	$('#dummy5').SetBubblePopup({ 
+									innerHtml: '<p>Bubble Popup!</p>',
+									showOnMouseOver: false
+								});
+
+	/*
+	------------------------------------------------------------------------------------------------------------------------------------
+	Tutorial #5: Options.
+	------------------------------------------------------------------------------------------------------------------------------------
+
+	When we call the "SetBubblePopup()" method from an element, we can set the following options:
+
+			STRING	 	innerHtml 			HTML message inside Bubble Popup.
+			STRING	 	bubbleAlign 		accepts 'center', 'left' or 'right' values.
+			STRING	 	tailAlign 			Bubble Popup's tail alignment, accepts 'center', 'left' or 'right' values.
+			INT		 	distanceFromTarget Bubble Popup's distance from element.
+			INT		 	openingVelocity 	fade in velocity.
+			INT		 	closingDelay 		accepts an integer.
+			BOOLEAN	 	showOnMouseOver		disable "onmouseover" event.
+			STRING	 	color				change Bubble Popup color based on default template folder;
+												accepts 'azure', 'blue', 'green', 'orange', 'violet', 'yellow', 'grey'.
+			STRING	 	imageFolder 		folder name that stores color templates.
+			BOOLEAN	 	hideTail			true or false;
+			ARRAY	 	hideObjectID		hide specific object tags if it is needed for incompatibility.
+			STRING	 	contentStyle		set a custom CSS style to the HTML message.
+			INT		 	zIndex				CSS z-index property of Bubble Popup.
+			INT/STRING	width				Bubble Popup's width: 'auto' (as default), an integer value or a string like '200px'.
+
+
+			$('#mydummy').SetBubblePopup({ 
+		
+								innerHtml: 'custom HTML message',
+								bubbleAlign: 'center',
+								tailAlign: 'center',
+								distanceFromTarget: 25,
+								openingVelocity: 250,
+								closingDelay: 150,
+								showOnMouseOver: true,
+								color: 'green',
+								imageFolder: 'bp_images',
+								hideTail: false,
+								hideObjectID: [ "#id1", "#id2" ],
+								contentStyle: 'color:#CC0000; font-size:16px;',
+								zIndex: 100
+								width: 'auto'
+						});
+
+
+	When we call the "SetBubblePopup()" method from the "jQuery" object,
+	we can set also the following options to select multiple elements at time.
+	
+			ARRAY	 tagID			select elements defined by an ID attribute.
+			ARRAY	 cssClass		select elements defined by a CSS class.
+			ARRAY	 relAttribute	select "A" tags with specific "rel" attributes.
+			ARRAY	 htmlTag		select HTML tags.			
+
+
+			jQuery().SetBubblePopup({
+		
+								tagID: [ "#id1", "#id2", "#id3" ],
+								cssClass: [ ".myclass1", ".myclass2" ],
+								relAttribute: [ "nofollow" ],
+								htmlTag: [ "a", "img", "span", "div" ]
+		
+		
+								innerHtml: 'custom HTML message',
+								bubbleAlign: 'center',
+								tailAlign: 'center',
+								distanceFromTarget: 25,
+								openingVelocity: 250,
+								closingDelay: 150,
+								showOnMouseOver: true,
+								color: 'green',
+								imageFolder: 'bp_images',
+								hideTail: false,
+								hideObjectID: [],
+								contentStyle: '',
+								zIndex: 100
+								width: 'auto'
+								
+						});
+*/
+});
+//-->
+</script>
+<style type="text/css">
+div.example {
+	width:100%;
+	height:50px;
+	padding: 5px;
+	border:#F4F4F4 1px dotted;
+	display:block;
+	float:none;
+	clear:both;
+}
+div.example div {
+	width:200px; height:30px; margin:5px; padding:5px; background-color:#0066CC; border:#003366 1px solid;
+	color:#FFFFFF; font-family:'Trebuchet MS', Arial; font-size: 11px; text-align:center; cursor:pointer;
+	float:left; display:block;
+}
+div.example a, div.example span {
+	float:left; display:block; margin:10px;
+}
+pre {
+	padding:5px; margin:5px;
+	background-color:#F4F4F4;
+	border:#CCCCCC 1px dashed;
+}	
+</style>
+</head>
+
+<body>
+<div style="display:block; float:left; margin-right:15px; margin-bottom:50px;"><img src="http://www.vegabit.com/jquery_bubble_popup/logo_jqBubblePopup.gif" alt="jQuery Bubble Popup" width="137" height="112" style="border:0px;" /></div>
+<div style="display:block; float:none;">
+<h1>jQuery Bubble Popup v.1.1 </h1>
+<p>developed by  Max Vergelli<br />
+  <br />More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+<br />
+<br />
+
+<h2>Create easily smart bubble popups!</h2>
+<p>With jQuery Bubble Popup you can create easily smart bubble popups with only a line of code in jQuery! <br />
+  <br />
+  - attach popups to any DOM element!<br />
+  - mouseover/mouseout events automatically managed!<br />
+  - set custom popups events!<br />
+  - create smart shadowed popups! (in IE too!)<br />
+  - choose popup's style templates at runtime!<br />
+  - insert HTML messages inside popups!<br />
+  - many other options: distances, velocity, delays, colors, shadows... <br />
+  <br />
+  Popup's shadows and colorized templates are fully supported by
+  Internet Explorer 6+, Firefox, Opera 9+, Safari</p>
+</div>
+
+<br />
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+    <td>
+		<h2>Tutorial #1: How to create a simple Bubble Popup!</h2>
+		<div class="example">
+			<div id="dummy1">mouse over!</div>
+		</div>
+		<p>The following code creates a simple Bubble Popup opening when mouse is over on the element with ID '#dummy1'.</p>
+		<pre>
+		$('#dummy1').SetBubblePopup({
+			innerHtml: '&lt;p&gt;You can set any HTML tag&lt;br /&gt;inside this popup!&lt;br /&gt;&lt;a href="#"&gt;this is a link&lt;/a&gt;&lt;/p&gt;'
+		});
+		</pre>
+	</td>
+  </tr>
+
+  <tr>
+    <td>
+		<h2>Tutorial #2: How to create Bubble Popups with custom styles!</h2>
+		<div class="example">	
+			<div id="dummy2">Green Bubble Popup aligned to left</div> 
+			<div class="myclass">Violet Bubble Popup aligned to right</div> 
+			<a href="#" rel="nofollow"><b>another Bubble Popup...</b></a>
+		</div>
+		<p>We define a custom style and message for the Bubble Popup on '#dummy2' element...<br />
+			Then, we define a common style both for elements with class '.myclass' and rel attribute 'nofollow';<br />
+			Note: we call the "SetBubblePopup()" method from "jQuery" object to select more elements at time.</p>
+		<pre>
+			$('#dummy2').SetBubblePopup({
+				innerHtml: '&lt;p&gt;Bubble Popup!&lt;/p&gt;', 
+				bubbleAlign: 'left',
+				tailAlign: 'left',
+				color: 'green',
+				contentStyle: 'font-size:16px;'
+			});
+			
+			jQuery().SetBubblePopup({
+				cssClass: [ ".myclass" ],
+				relAttribute: [ "nofollow" ],
+				
+				innerHtml: '&lt;p&gt;another Bubble Popup!&lt;/p&gt;', 
+				bubbleAlign: 'right',
+				tailAlign: 'right',
+				color: 'violet',
+				contentStyle: 'color:#CC0066; font-family:Arial; font-size:11px; font-weight:bold;'
+			});
+		</pre>
+	</td>
+  </tr>
+
+  <tr>
+    <td>
+		<h2>Tutorial #3: How to create Bubble Popups with custom events!</h2>
+		<div class="example">
+			<div id="dummy3">mouse over to open!</div> <div id="dummy4">click to open!</div>
+		</div>
+		<p>This code creates a Bubble Popup for each element and attach to it a default HTML message.<br />
+			Besides, it disables "showOnMouseOver" event for all Bubble Popups, <br />
+			because we will implement own custom events and messages for each element!</p>
+		<pre>
+		jQuery().SetBubblePopup({ 
+			tagID:['#dummy3', '#dummy4'], 
+			innerHtml: '&lt;p&gt;This is the default message&lt;br /&gt;for all Bubble Popups!&lt;/p&gt;'
+			showOnMouseOver: false
+		});
+		
+		// Show Bubble Popup on mouse over'#dummy3' and hide it on mouse out;
+		// Bubble Popup will display the default HTML message.
+		$('#dummy3').mouseover(function(){
+			$('#dummy3').ShowBubblePopup();
+		});
+		$('#dummy3').mouseout(function(){ 
+			$('#dummy3').HideBubblePopup(); 
+		});
+		
+		// Show Bubble Popup only on click '#dummy4' and hide it on mouse out;
+		// however, Bubble Popup will display a custom HTML message.
+		$('#dummy4').click(function(){
+			$('#dummy4').ShowBubblePopup({ innerHtml: "This is a custom text!" });
+			return false;
+		});
+		$('#dummy4').mouseout(function(){ 
+			$('#dummy4').HideBubblePopup(); 
+		});
+		</pre>
+	</td>
+  </tr>
+
+  <tr>
+    <td>
+		<h2>Tutorial #4: Control Bubble Popups events externally.</h2>
+		<div class="example">
+			<div id="dummy5" onmouseover="$(this).ShowBubblePopup();" onmouseout="$(this).HideBubblePopup();">open bubble on mouse over</div>
+		</div>
+		<p>Set a Bubble Popup with events controlled inside the HTML tag.</p>
+		<pre>
+		$('#dummy5').SetBubblePopup({ 
+			innerHtml: '&lt;p&gt;Bubble Popup!&lt;/p&gt;',
+			showOnMouseOver: false
+		});
+		</pre>
+	</td>
+  </tr>
+
+  <tr>
+    <td>
+		<h2>Tutorial #5: Options.</h2>
+		<p>When we call the "SetBubblePopup()" method from an element, we can set the following options:</p>
+		<pre>
+		STRING	 	innerHtml 			HTML message inside Bubble Popup.
+		STRING	 	bubbleAlign 		accepts 'center', 'left' or 'right' values.
+		STRING	 	tailAlign 			Bubble Popup's tail alignment, accepts 'center', 'left' or 'right' values.
+		INT		 	distanceFromTarget Bubble Popup's distance from element.
+		INT		 	openingVelocity 	fade in velocity.
+		INT		 	closingDelay 		accepts an integer.
+		BOOLEAN	 	showOnMouseOver		disable "onmouseover" event.
+		STRING	 	color				change Bubble Popup color based on default template folder;
+		accepts 'azure', 'blue', 'green', 'orange', 'violet', 'yellow'.
+		STRING	 	imageFolder 		folder name that stores color templates.
+		BOOLEAN	 	hideTail			true or false;
+		ARRAY	 	hideObjectID		hide specific object tags if it is needed for incompatibility.
+		STRING	 	contentStyle		set a custom CSS style to the HTML message.
+		INT		 	zIndex				CSS z-index property of Bubble Popup.
+		INT/STRING	width				Bubble Popup's width: 'auto' (as default), an integer value or a string like '200px'.
+		
+		$('#mydummy').SetBubblePopup({ 
+		
+			innerHtml: 'custom HTML message',
+			bubbleAlign: 'center',
+			tailAlign: 'center',
+			distanceFromTarget: 25,
+			openingVelocity: 250,
+			closingDelay: 150,
+			showOnMouseOver: true,
+			color: 'green',
+			imageFolder: 'bp_images',
+			hideTail: false,
+			hideObjectID: [ "#id1", "#id2" ],
+			contentStyle: 'color:#CC0000; font-size:16px;',
+			zIndex: 100,
+			width: 'auto'
+		
+		});
+		</pre>
+		
+		<p>When we call the "SetBubblePopup()" method from the "jQuery" object, we can set also the following options to select multiple elements at time.</p>
+		<pre>
+		ARRAY	 tagID			select elements defined by an ID attribute.
+		ARRAY	 cssClass		select elements defined by a CSS class.
+		ARRAY	 relAttribute	select "A" tags with specific "rel" attributes.
+		ARRAY	 htmlTag		select HTML tags.			
+		
+		jQuery().SetBubblePopup({
+			
+			tagID: [ "#id1", "#id2", "#id3" ],
+			cssClass: [ ".myclass1", ".myclass2" ],
+			relAttribute: [ "nofollow" ],
+			htmlTag: [ "a", "img", "span", "div" ]
+			
+			
+			innerHtml: 'custom HTML message',
+			bubbleAlign: 'center',
+			tailAlign: 'center',
+			distanceFromTarget: 25,
+			openingVelocity: 250,
+			closingDelay: 150,
+			showOnMouseOver: true,
+			color: 'green',
+			imageFolder: 'bp_images',
+			hideTail: false,
+			hideObjectID: [],
+			contentStyle: '',
+			zIndex: 100,
+			width: 'auto'
+		
+		});
+		</pre>
+	</td>
+  </tr>
+
+</table>
+<h3>jQuery Bubble Popup &copy; 2010 Max Vergelli</h3>
+</body>
+</html>

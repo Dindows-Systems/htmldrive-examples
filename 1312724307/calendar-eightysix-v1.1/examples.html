@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-language" content="en" />
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="robots" content="index, follow" />
+	<meta name="author" content="R. Schoo" />
+	<meta name="copyright" content="R. Schoo. All other copyrights are property of their respective owners." />
+	
+	<link rel="stylesheet" type="text/css" href="css/page.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/calendar-eightysix-v1.1-default.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/calendar-eightysix-v1.1-vista.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/calendar-eightysix-v1.1-osx-dashboard.css" media="screen" />
+	
+	<script type="text/javascript" src="js/mootools-1.2.4-core.js"></script>
+	<script type="text/javascript" src="js/mootools-1.2.4.4-more.js"></script>
+	<script type="text/javascript" src="js/calendar-eightysix-v1.1.js"></script>
+	
+	<script type="text/javascript">
+		window.addEvent('domready', function() {
+			//Example I
+			new CalendarEightysix('exampleI', { 'offsetY': -4 });
+			
+			//Example II
+			new CalendarEightysix('exampleII', { 'startMonday': true, 'slideTransition': Fx.Transitions.Back.easeOut, 'format': '%m-%d-%Y', 'draggable': true, 'offsetY': -4 });
+			
+			//Example III
+			new CalendarEightysix('exampleIII', { 'excludedWeekdays': [0, 6], 'toggler': 'exampleIII-picker', 'offsetY': -4 });
+			
+			//Example IV
+			new CalendarEightysix('exampleIV', { 'excludedDates': ['12/25/2012', '12/26/2012'], 'defaultDate': '12/01/2012', 'format': '%d.%m.%Y', 'offsetY': -4 });
+			
+			//Example V
+			new CalendarEightysix('exampleV', { 'theme': 'default red', 'defaultDate': 'next Wednesday', 'minDate': 'tomorrow', 'offsetY': -4 });
+			
+			//Example VI
+			new CalendarEightysix('exampleVI', { 'defaultView': 'decade', 'theme': 'vista', 'disallowUserInput': true, 'offsetY': -4 });
+			
+			//Example VII
+			new CalendarEightysix('exampleVII', { 'defaultView': 'year', 'theme': 'osx-dashboard', 'createHiddenInput': true, 'alignX': 'left', 'alignY': 'bottom', 'offsetX': -4 });
+			
+			//Example VIII
+			new CalendarEightysix('exampleVIII', { 'format': '%A %D %B', 'alignX': 'middle', 'alignY': 'top' });
+			
+			//Example IX
+			var calendarIX = new CalendarEightysix('exampleIXb', { 'linkWithInput': false, 'defaultDate': '1/1/2010', 'minDate': '1/1/2010', 'maxDate': '12/31/2014', 'format': '%d', 
+																    'toggler': 'exampleIX-picker', 'offsetY': -4, 'offsetX': 76 });
+			calendarIX.addEvent('change', function(date) { 
+				$('exampleIXa').set('value', date.get('month') + 1);
+				$('exampleIXc').set('value', date.get('year')); 
+			});
+			var dateIXchange = function() {
+				//Get the current date
+				var date = calendarIX.getDate();
+				//Set the variables from the input and select elements
+				date.set('month', $('exampleIXa').get('value') - 1);
+				date.set('date', $('exampleIXb').get('value'));
+				date.set('year', $('exampleIXc').get('value'));
+				//Set the new date
+				calendarIX.setDate(date);
+			}
+			$('exampleIXa').addEvent('change', dateIXchange);
+			$('exampleIXb').addEvent('change', dateIXchange);
+			$('exampleIXc').addEvent('change', dateIXchange);
+			
+			//Example X
+			MooTools.lang.set('nl-NL', 'Date', {
+				months:    ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December'],
+				days:      ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
+				dateOrder: ['date', 'month', 'year', '/']
+			});
+			MooTools.lang.set('de-DE', 'Date', {
+				months:    ['Januar', 'Februar', 'M&auml;rz', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+				days:      ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+				dateOrder: ['date', 'month', 'year', '/']
+			});
+			$('exampleXa').addEvent('click', function() { MooTools.lang.setLanguage('nl-NL'); });
+			$('exampleXb').addEvent('click', function() { MooTools.lang.setLanguage('de-DE'); });
+			
+			//Example XI
+			var calendarXIa = new CalendarEightysix('exampleXIa', { 'disallowUserInput': true, 'minDate': 'today',  'alignX': 'left', 'alignY': 'bottom', 'offsetX': -4 });
+			var calendarXIb = new CalendarEightysix('exampleXIb', { 'disallowUserInput': true, 'minDate': 'tomorrow', 'alignX': 'left', 'alignY': 'bottom', 'offsetX': -4 });
+			calendarXIa.addEvent('change', function(date) {
+				date = date.clone().increment(); //At least one day higher; so increment with one day
+				calendarXIb.options.minDate = date; //Set the minimal date
+				if(calendarXIb.getDate().diff(date) >= 1) calendarXIb.setDate(date); //If the current date is lower change it
+				else calendarXIb.render(); //Always re-render
+			});
+			
+			//Example XII
+			new CalendarEightysix('exampleXII', { 'excludedWeekdays': [0, 6], 'excludedDates': ['01/12/2012', '01/17/2012'], 'minDate': '01/01/2012', 'disallowUserInput': true, 'keyNavigation': true, 'offsetY': -4 });
+			
+			//Example XIII
+			var calendarXIII = new CalendarEightysix('exampleXIII', { 'injectInsideTarget': true, 'alwaysShow': true, 'pickable': false });
+			calendarXIII.addEvent('rendermonth', function(e) {
+				//The event returns all the date related elements within the calendar which can easily be iterated
+				e.elements.each(function(day) {
+					day.set('title', day.retrieve('date').format('%A %d %B'));
+					if(day.retrieve('date').get('date') == 14) {
+						day.setStyles({ 'color': 'firebrick', 'font-weight': 'bold', 'cursor': 'pointer' }).addEvent('click', function() { alert('Fourteen is awesome!'); } );
+					}					
+				});
+			});
+			calendarXIII.render(); //Render again because while initializing and doing the first render it did not have the event set yet
+		
+		});	
+	</script>
+	
+	<title>Calendar Eightysix version 1.1</title>
+</head>
+<body>
+	<h2>Calendar Eightysix version 1.1 - Examples</h2>
+	Full documentation at <a href="http://dev.base86.com/scripts/mootools_javascript_datepicker_calendar_eightysix.html">http://dev.base86.com/scripts/mootools_javascript_datepicker_calendar_eightysix.html</a>.<br />
+	Look at the source code of this document for the HTML and JS-code.<br />
+	<br /><br />
+	<table cellpadding="0">
+		<tr>
+			<th style="width: 100px">Example I</th>
+			<td><input id="exampleI" name="dateI" type="text" maxlength="10" /></td>
+		</tr>
+		<tr><td></td><td>Standard datepicker.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example II</th>
+			<td><input id="exampleII" name="dateII" type="text" maxlength="10" /></td>
+		</tr>
+		<tr><td></td><td>Datepicker week starts on Monday. Different slide transition and date format. The datepicker is draggable.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example III</th>
+			<td>
+				<input id="exampleIII" name="dateIII" type="text" maxlength="10" style="padding-right: 22px;" />
+				<div class="picker inElement" id="exampleIII-picker"></div>
+			</td>
+		</tr>
+		<tr><td></td><td>Datepicker with Saturday and Sunday as excluded weekdays. The calendar icon toggles the datepicker.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example IV</th>
+			<td><input id="exampleIV" name="dateIV" type="text" maxlength="10" /></td>
+		</tr>
+		<tr><td></td><td>Datepicker with a default date of December 1st 2012 and with first and second Christmas day as excluded dates.<br />
+						 The format is <i>dd-mm-yyyy</i>. (!) Note that the parsing of the dates has nothing to do with provided format.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example V</th>
+			<td><input id="exampleV" name="dateIV" type="text" maxlength="10" /></td>
+		</tr>
+		<tr><td></td><td>Datepicker with minimum date of 'tomorrow', so only dates in the future can be picked. The default date is set on 'next Wednesday'. Theme is Default, red style.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example VI</th>
+			<td><input id="exampleVI" name="dateVI" type="text" maxlength="10" /></td>
+		</tr>
+		<tr><td></td><td>Datepicker with decade as the default view and Vista theme. User input is disallowed.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example VII</th>
+			<td><input id="exampleVII" name="dateVII" type="text" maxlength="10" /></td>
+		</tr>
+		<tr><td></td><td>Datepicker with year as the default view and OSX Dashboard theme. Position is bottom left.<br />
+						 An hidden input is created next to the input element (which you can see in the DOM whith for example Firebug). This hidden element receives timestamp as value whenever a date is picked.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example VIII</th>
+			<td><div id="exampleVIII">&nbsp;</div></td>
+		</tr>
+		<tr><td></td><td>Datepicker with a middle top position and different date format. Target is a div element instead of an input text element.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example IX</th>
+			<td>
+				<select id="exampleIXa" style="vertical-align: bottom;"><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+				<input id="exampleIXb" type="text" maxlength="2" style="width: 24px; vertical-align: bottom;" />
+				<select id="exampleIXc" style="vertical-align: bottom;"><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option></select>
+				<img id="exampleIX-picker" src="img/calendar.gif" width="13" height="12" alt="" style="cursor: pointer; margin-bottom: 2px;" />
+			</td>
+		</tr>
+		<tr><td></td><td>Datepicker with a custom events, which set the month and year drop-downs. Changing the select and inputs manually will change the calendar date.<br />
+						 The date is ranged from January 1st 2010 to December 31st 2014.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example X</th>
+			<td><button id="exampleXa" type="button">Dutch (nl-NL)</button> <button id="exampleXb" type="button">German (de-DE)</button></td>
+		</tr>
+		<tr><td></td><td>Change the language of all the datepickers by clicking one of the buttons above.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example XI</th>
+			<td>A) <input id="exampleXIa" name="dateXIa" type="text" maxlength="10" /> &nbsp;&nbsp;&nbsp;till&nbsp;&nbsp;&nbsp; B) <input id="exampleXIb" name="dateXIb" type="text" maxlength="10" /></td>
+		</tr>
+		<tr><td></td><td>Date range example where date A influences date B. Date B has to at least one day higher as date A.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example XII</th>
+			<td><input id="exampleXII" name="dateXII" type="text" maxlength="10" /></td>
+		</tr>
+		<tr><td></td><td>Datepicker with arrow key navigation. Automaticly skips excluded days. Press <i>left</i> or <i>right</i> to navigate days, press <i>up</i> or <i>down</i> to navigate months.<br /><br /></td></tr>
+		
+		<tr>
+			<th>Example XIII</th>
+			<td id="exampleXIII" style="height: 180px;"></td>
+		</tr>
+		<tr><td></td><td>This calendar is injected inside the target, and is always visible. It makes use of a custom event which adds titles to each day, and added some styling and a click event the fourteenth.<br /><br /></td></tr>
+		
+	</table>
+	More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

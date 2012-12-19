@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>jFlip Gallery Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <!--[if IE]><script type="text/javascript" src="excanvasX.js"></script><![endif]-->
+  <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+  <script type="text/javascript" src="jquery.jflip-0.4.js"></script>
+  <script type="text/javascript">
+  (function($){    
+      $(function(){    
+        $("#g1").jFlip(300,300,{background:"green",cornersTop:false}).
+        bind("flip.jflip",function(event,index,total){
+          $("#l1").html("Image "+(index+1)+" of "+total);
+        });
+        $("#g2").jFlip(300,300,{background:"green",cornersTop:true,scale:"fit"});
+        $("#g3").jFlip(300,300,{background:"green",cornersTop:true,scale:"fill"});
+      });
+  })(jQuery);
+  </script>
+
+  <style type="text/css">
+  .flip_gallery,#l1 {margin:10px}
+  </style>
+</head>
+<body><h1>jFlip Gallery Demo</h1>
+<h2>A flipping page gallery</h2>
+<p>Author: <strong>Renato Formato</strong>.</p>
+
+<h2>Common HTML code for the examples</h2>
+<pre id="htmlcode">
+&lt;ul id="g1"&gt;
+
+  &lt;li&gt;
+    &lt;img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img1.jpg" /&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img2.jpg" /&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;img src="http://www.htmldrive.net/edit_media/2010/201008/20100825/a.slideshow/docs/img/image_0.jpg" /&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="http://www.htmldrive.net/edit_media/2010/201008/20100817/image_gallery/images/lotus.jpg" /&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;img src="http://www.htmldrive.net/edit_media/2010/201008/20100822/jReelGallery/images/thumbnap.jpg" /&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img6.jpg" /&gt;
+  &lt;/li&gt;  
+
+&lt;/ul&gt;
+</pre>
+<h2>jQuery code</h2>
+<p>
+  Flip gallery with:
+  <ul>
+    <li>green background (for images smaller than canvas)</li>
+    <li>flipping corners on the bottom</li>
+    <li>no image resize</li>
+
+    <li>flip.jflip event binded to show infos</li>
+  </ul>
+</p>
+<pre>
+$("#g1").jFlip(300,300,{background:"green",cornersTop:false}).
+bind("flip.jflip",function(event,index,total){
+  $("#l1").html("Image "+(index+1)+" of "+total);
+});
+</pre>
+
+<ul id="g1">
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img1.jpg" />
+  </li>
+
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img2.jpg" />
+  </li>
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201008/20100825/a.slideshow/docs/img/image_0.jpg" />
+  </li>
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201008/20100817/image_gallery/images/lotus.jpg" />
+  </li>
+
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201008/20100822/jReelGallery/images/thumbnap.jpg" />
+  </li>
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img6.jpg" />
+  </li>  
+</ul>
+<div id="l1">Image 1 of 6</div>
+<h2>jQuery code</h2>
+
+<p>
+  Flip gallery with:
+  <ul>
+    <li>green background (for images smaller than canvas)</li>
+    <li>flipping corners on the top</li>
+    <li>images bigger than canvas are resized to be completely visible</li>
+  </ul>
+</p>
+<pre>
+
+$("#g2").jFlip(300,300,{background:"green",cornersTop:true,scale:"fit"});
+</pre>
+
+<ul id="g2">
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img1.jpg" />
+  </li>
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img2.jpg" />
+  </li>
+  <li>
+
+    <img src="http://www.htmldrive.net/edit_media/2010/201008/20100825/a.slideshow/docs/img/image_0.jpg" />
+  </li>
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201008/20100817/image_gallery/images/lotus.jpg" />
+  </li>
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201008/20100822/jReelGallery/images/thumbnap.jpg" />
+  </li>
+  <li>
+
+    <img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img6.jpg" />
+  </li>  
+</ul>
+
+<h2>jQuery code</h2>
+<p>
+  Flip gallery with:
+  <ul>
+    <li>green background (for images smaller than canvas)</li>
+    <li>flipping corners on the top</li>
+
+    <li>all images are adjusted to fill the canvas while keeping aspect ratio</li>
+  </ul>
+</p>
+<pre>
+$("#g3").jFlip(300,300,{background:"green",cornersTop:true,scale:"fill"});
+</pre>
+
+<ul id="g3">
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img1.jpg" />
+  </li>
+
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img2.jpg" />
+  </li>
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201008/20100825/a.slideshow/docs/img/image_0.jpg" />
+  </li>
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201008/20100817/image_gallery/images/lotus.jpg" />
+  </li>
+
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201008/20100822/jReelGallery/images/thumbnap.jpg" />
+  </li>
+  <li>
+    <img src="http://www.htmldrive.net/edit_media/2010/201010/20101009/class.noobSlide/img6.jpg" />
+  </li>  
+</ul>
+
+<div id="log"></div>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+
+</body></html>
+

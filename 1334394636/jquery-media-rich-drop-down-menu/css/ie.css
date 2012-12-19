@@ -1,0 +1,19 @@
+/*
+CSS for the demo: jQuery Media Rich Dropdown Menu
+Demo: jQuery Media Rich Dropdown Menu
+Author: Ian Lunn
+Author URL: http://www.ianlunn.co.uk/
+Demo URL: http://www.ianlunn.co.uk/demos/jquery-media-rich-drop-down-menu/
+Tutorial URL: http://www.ianlunn.co.uk/blog/code-tutorials/jquery-media-rich-dropdown-menu/
+
+License: http://creativecommons.org/licenses/by-sa/3.0/ (Attribution Share Alike). Please attribute work to Ian Lunn simply by leaving these comments in the source code or if you'd prefer, place a link on your website to http://www.ianlunn.co.uk/.
+
+Dual licensed under the MIT and GPL licenses:
+http://www.opensource.org/licenses/mit-license.php
+http://www.gnu.org/licenses/gpl.html
+*/
+
+
+.active > ul{
+	margin: 20px 0 0 -80px;
+}

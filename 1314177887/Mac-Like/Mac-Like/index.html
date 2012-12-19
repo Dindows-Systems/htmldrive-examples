@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Mac-like Login</title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+		<script type="text/javascript" src="js/jquery.backgroundPosition.js"></script>
+		<script>
+			
+			$(document).ready(function() {
+				
+				myPassword 		= "webstuffshare";
+				fieldPassword	= $('.field-password');
+				shieldPassword	= $('.the-password');
+				
+				$('.the-username').mouseover(function() {
+											if(shieldPassword.css('display') == "none") 
+												$(this).addClass('the-username-focus');
+										})
+										.mouseout(function() {
+											$(this).removeClass('the-username-focus');
+										})
+										.click(function() {
+											shieldPassword.slideDown();
+											fieldPassword.focus();
+										});
+				
+				$(document).keyup(function(e) {
+					
+					if(e.keyCode == 27){
+						
+						if(fieldPassword.attr('class') == "field-password")
+							shieldPassword.slideUp();
+					}
+					
+				});
+				
+				$('.the-form').submit(function() {
+					
+					if(fieldPassword.val() != myPassword) {
+						
+						options = {distance: 10, times: 2}
+						
+						$('.login').effect('shake', options, 35, function() {
+							fieldPassword.focus();
+						});
+						
+						
+					} else {
+					
+						fieldPassword.val('')
+										 .blur()
+										 .addClass('field-password-loading')
+										 .animate(	{backgroundPosition: "(0 0)"},
+														 1000, 
+														 function() {
+														 	alert('Login Successfully, Now you can try again.');
+														 });
+					}
+					
+					return false;
+					
+				});
+				
+				$('.try-again').click(function() {
+					
+					shieldPassword.slideUp();
+					
+					fieldPassword.removeClass('field-password-loading')
+									 .animate( { backgroundPosition: "(-188px 0)" } );
+									 
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div class="login">
+				<div class="shield">
+				<img alt="webstuffshare login" src="images/design_08.png" class="form-title" />
+				<span class="form-box-top">&nbsp;</span>
+				<div class="form-box-content">
+					<div class="the-username">
+						<img src="images/messi.jpg" align="absmiddle" />
+						Hidayat Sagita
+					</div>
+					<div class="the-password">
+						<form class="the-form">
+							Password : <input type="password" name="password" class="field-password" />
+						</form>
+					</div>
+				</div>
+				<span class="form-box-bottom">&nbsp;</span>
+				<div class="back">
+					<p>
+						<a href="#" class="try-again">
+							<img src="images/try-again.png" border="0" /> <br />
+							Try Login Again
+						</a>
+					</p>
+					<p>
+						<a href="#">
+							<img src="images/back-article.png" border="0" /> <br />
+							Back to article
+						</a>
+					</p>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

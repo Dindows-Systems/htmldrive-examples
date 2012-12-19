@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" type="image/gif" href="../../../images/favicon.ico" />
+
+<title>Yoyo with jQuery and CSS3</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2'></script>
+<script type='text/javascript' src='js/jquery.easing-1.3.pack.js'></script>
+<script type="text/javascript"> 
+$(document).ready(function() {	
+		
+	$("#container").hover(function(){
+		$("#yoyo").addClass("rotate");	
+		$("#string").stop().animate({height: '400px'}, {duration:1000, easing: 'easeOutBack'});
+		$("#yoyo").stop().animate({top: '400px'}, {duration:1000, easing: 'easeOutBack'});
+			}, function() {
+		$("#yoyo").removeClass("rotate");	
+		$("#string").stop().animate({height: '20px'}, {duration:600, easing: 'easeInOutExpo'} );
+		$("#yoyo").stop().animate({top: "47px"}, {duration:600, easing: 'easeInOutExpo'} );
+	});   
+	
+	$("#yoyo a").hover(function(){
+		$("#yoyo").toggleClass("rotate");
+	}); 
+	
+});
+</script>
+</head>
+<body>
+    <div id="content">
+        <h2>Yoyo with jQuery and CSS3</h2>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a><br />
+        <p>Hover over the hand  to make it throw the yoyo!</p>
+        <div id="container">
+            <div id="hand-back"></div>
+            <div id="hand-front"></div>
+            <div id="string"></div>
+            <div id="yoyo"><a href="http://css-plus.com/">{CSS: +; }</a></div>
+        </div>
+    </div>
+</body>
+</html>

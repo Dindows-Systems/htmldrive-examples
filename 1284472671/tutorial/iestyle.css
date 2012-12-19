@@ -1,0 +1,9 @@
+.new{
+background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/new-trans.png',sizingMeth od='scale');
+width:58px;
+height:58px;
+position:absolute;
+right:0;
+top:0;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Coda Effect</title>
+        <style type="text/css">
+            body{
+            	background:#D6D3C9;
+				color:#383835;
+				font-family:Arial, Arial, Helvetica, sans-serif;
+            }
+			
+			
+            #bubblemenu li {
+                display: inline;
+                margin-left: 15px;
+				cursor:pointer;
+            }
+			
+            
+            #bubblemenu li > div {
+                width: 150px;
+                min-height: 100px;
+			    position: absolute;
+                display: inline;
+                margin-left: -120px;
+                padding: 5px;
+				visibility:hidden;
+                opacity: 0;
+                margin-top: -125px;
+				background: #ffffff;
+				font-size:1em;
+				
+				/* Setting the border-radius property for all Browsers */
+                -moz-border-radius: 5px; /* Firefox */
+                -webkit-border-radius: 5px; /* Safari and Chrome */
+                border-radius: 5px; /* Browsers that Support it like Opera */
+				
+				/* Setting the box-shadow property for all Browsers */
+                -moz-box-shadow: 0 0 8px gray; /* Firefox */
+                -webkit-box-shadow: 0 0 8px gray; /* Safari and Chrome */
+				filter: progid:DXImageTransform.Microsoft.Shadow(color='#272229', Direction=135, Strength=3); /* IE */
+                box-shadow: 0 0 8px gray; /* Browsers that Support it like Opera */
+
+				/* Setting the transition property for all Browsers */
+				-moz-transition: all 0.5s ease-in-out; /* Firefox */
+                -webkit-transition: all 0.5s ease-in-out; /* Safari and Chrome */
+                -o-transition: all 0.5s ease-in-out; /* Opera */
+                transition: all 0.5s ease-in-out; /* Browsers that Support it */
+
+				
+            }
+            
+			
+            #bubblemenu li:hover > div {
+            	
+				visibility:visible;
+                opacity: 1;
+                margin-top: -150px;
+				
+				/* Setting the transition property for all Browsers */
+				-moz-transition: all 0.5s ease-in-out; /* Firefox */
+                -webkit-transition: all 0.5s ease-in-out; /* Safari and Chrome */
+                -o-transition: all 0.5s ease-in-out;  /* Opera */
+                transition: all 0.5s ease-in-out; /* Browsers that Support it */
+            }
+        </style>
+    </head>
+    <body>
+    <h1>Coda Effect With CSS3</h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <ul id="bubblemenu">
+        <li>
+            Penn Jillett
+            <div>
+               My favorite thing about the Internet is that you get to go into the private world of real creeps without having to smell them. 
+            </div>
+        </li>
+        <li>
+            Thomas Watson
+            <div>
+                I think there is a world market for maybe five computers.
+            </div>
+        </li>
+        <li>
+             Bill Gates
+            <div>
+               640K ought to be enough for anybody. 
+            </div>
+        </li>
+        <li>
+            Sam Ewing 
+            <div>
+               Computers are like bikinis. They save people a lot of guesswork.
+            </div>
+        </li>
+    </ul>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

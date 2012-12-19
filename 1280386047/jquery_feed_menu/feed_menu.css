@@ -1,0 +1,36 @@
+.feed_menu{
+	background: url(images/feed_menu_orange.png) 0 center no-repeat;
+    padding:2px 0;
+    display:-moz-inline-box;
+    display:inline-block;
+    width:38px;
+    vertical-align:middle;
+    overflow: hidden;
+    margin:0 .25em;
+}
+.feed_menu.wood{
+    background-image: url(images/feed_menu_wood.png);
+}
+.feed_menu.azure{
+    background-image: url(images/feed_menu_azure.png);
+}
+.feed_menu.trans_on_light{
+    background-image: url(images/feed_menu_trans_light.png);
+}
+.feed_menu.trans_on_dark{
+    background-image: url(images/feed_menu_trans_dark.png);
+}
+.feed_menu.open{
+    background-position: -38px center !important;
+}
+.feed_menu select{
+    opacity:0;
+    margin:0;
+    padding:0;
+    border:0;
+}
+.feed_menu option img{
+    border:0;
+    margin:2px;
+    vertical-align: middle;
+}

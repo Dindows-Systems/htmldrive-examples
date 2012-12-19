@@ -1,0 +1,48 @@
+/* GENERAL & PREPARATORY */
+
+.jaws_container * { font-family: Trebuchet MS; }
+.jaws_container li, .jaws_container p { font-size: 13px; }
+
+
+/* CONTAINER */
+
+.jaws_container {
+	background: #404040; padding: 10px; width: 300px; border-radius: 12px; -moz-border-radius: 12px; -webkit-border-radius: 12px; position: relative;
+}
+
+
+	/* TITLE */
+	
+	.jaws_container h4 { font-size: 17px; position: absolute; top: -21px; display: block; padding: 3px 9px; background: #404040; color: #26a1ce; border-top-left-radius: 12px; border-top-right-radius: 12px; border-top-left-radius: 12px; -moz-border-radius-topleft: 12px; -moz-border-radius-topright: 12px; -webkit-border-top-left: 12px; -webkit-border-top-right: 12px; }
+
+	
+	/* MAIN UL AND LIS */
+
+	.jaws_container ul { padding: 0; margin: 0 !important; }
+	.jaws_container ul.mainList {
+		width: 100%; background: #606060; list-style: none; margin: 0; padding: 0; border-radius: 7; -moz-border-radius: 7; webkit-border-radius: 7; overflow: hidden;
+	}
+	.jaws_container ul.mainList li { display: block; padding: 10px; border-bottom: solid 1px #888; }
+	.jaws_container ul.mainList li.odd { background: #555; }
+		.jaws_container ul.mainList li a { text-decoration: none; font-weight: bold; color: #ddd; font-size: 13px; }
+		.jaws_container ul.mainList li a:hover { color: #fff; }
+		
+	
+	/* MORE INFO */
+	
+	.jaws_container ul.mainList li.info { background: #ddd; display: none; padding: 20px; position: relative }
+		.jaws_container ul.mainList li.info p { color: #606060; display: none; margin: 0; font-weight: bold; text-align: left !important; }
+		.jaws_container ul.mainList li.info img { height: 85px; float: right; display: none; margin-left: 12px; border: solid 1px #777; box-shadow: 0 0 18px #0681ae; }
+		.jaws_container ul.mainList li.info div { display: none; position: absolute; left: 0; width: 100%; _width: 280px; height: 30px; background: #759537; border-top: solid 1px #658527; }
+			.jaws_container ul.mainList li.info div a { color: #ddd; padding: 5px; }
+			.jaws_container ul.mainList li.info div a:hover { color: #fff; }
+			
+		
+	/* NAV TABS */
+			
+	.jaws_container ul.nav { position: absolute; top: -11px; right: 30px; list-style: none; margin: 0; padding: 0; }
+		.jaws_container ul.nav li {
+			float: left; display: block; width: 12px; fontSize: 12px; text-align: center; padding: 1px 3px 2px 3px; color: #fff; background: #404040; cursor: pointer; border-top-left-radius: 7px; border-top-right-radius: 7px; -moz-border-radius-topleft: 7px; -moz-border-radius-topright: 7px; -webkit-border-top-left-radius: 7px; -webkit-border-top-right-radius: 7px; position: relative;
+		}
+		.jaws_container ul.nav li.hover { padding-bottom: 4px; margin-top: -2px; color: #f90; }
+		.jaws_container ul.nav li.on { background: #759537; cursor: default; padding-bottom: 2px; margin: 0; color: #fff; }

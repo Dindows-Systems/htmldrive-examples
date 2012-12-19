@@ -1,0 +1,123 @@
+body {
+margin:0;
+padding:0;
+background: url(images/css3-transform-transition-bg_pattern.png) 0 0 repeat;
+font: 12px "Yanone Kaffeesatz", arial, serif;
+}
+#content {
+margin:20px 100px 0 100px;
+width:500px;
+}
+h1 {
+padding:20px 10px;
+margin:0 0 20px 0;
+font-size: 24px;
+font-weight: normal;
+background:rgb(144,144,144);
+background:rgba(255,255,255,.1);
+color:#FFF;
+}
+h1 a {
+color: #ff7e00;
+font-size: 20px;
+}
+.tutorialMenu {
+padding: 10px 0;
+margin:0;
+list-style-type: none;
+}
+
+.tutorialMenu h2 {
+margin:5px 0;
+padding:0;
+}
+.tutorialMenu h2 a {
+font-size: 18px;
+display: block;
+font-weight: normal;
+color:#FFF;
+text-decoration:none;
+margin:0;
+padding:10px;
+background:rgb(144,144,144);
+background:rgba(255,255,255,.3);
+position:relative;
+}
+
+.tutorialMenu :not(:target) h2 a {
+background:rgb(59,59,59);
+background:rgba(0,0,0,.4);
+position:relative;
+}
+.tutorialMenu h2 a:hover,
+.tutorialMenu h2 a:active,
+.tutorialMenu h2 a:focus {
+background-color:rgb(59,59,59);
+background-color:rgba(255,255,255,.3);
+}
+.tutorialMenu :target p,
+.tutorialMenu :not(:target) p {
+padding:0;
+margin:0;
+height:0;
+overflow: hidden;
+-moz-transition: height 1.5s ease-in;
+-webkit-transition: height 1.5s ease-in;
+-o-transition: height 1.5s ease-in;
+transition: height 1.5s ease-in;
+}
+.tutorialMenu :target p {
+height:295px;
+}
+.tutorialMenu #coffeecards p,
+.tutorialMenu #blogcomments p,
+.tutorialMenu #onlineform p {
+position:relative;
+background: url(images/css3-transform-transition-coffee-cards.jpg) top left no-repeat;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.tutorialMenu #blogcomments p {
+background-image: url(images/css3-transform-transition-blog-comments.jpg);
+}
+.tutorialMenu #onlineform p {
+background-image: url(images/css3-transform-transition-online-form.jpg);
+}
+.tutorialMenu p {
+height:295px;
+}
+.tutorialMenu p span{
+font-size:14px;
+display:block;
+height:35px;
+padding:15px 0 0 0;
+text-indent:10px;
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+color:#FFF;
+background:rgb(144,144,144);
+background: rgba(0,0,0,.6);
+-webkit-border-bottom-right-radius:5px;
+-webkit-border-bottom-left-radius:5px;
+-moz-border-radius-bottomright:5px;
+-moz-border-radius-bottomleft:5px;
+border-bottom-right-radius:5px;
+border-bottom-left-radius:5px;
+}
+h1,
+.tutorialMenu h2 a,
+.tutorialMenu :not(:target) p  {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+.reload  {
+display:block;
+padding:60px 0 0 0;
+color:#fff;
+font-size: 14px;
+}

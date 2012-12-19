@@ -1,0 +1,6 @@
+#pg li { filter:alpha(opacity=50); }
+#pg li.active { filter:alpha(opacity=100); }
+#pg li.selected {
+	filter:alpha(opacity=100);
+	background: black;
+}

@@ -1,0 +1,191 @@
+/* 
+Create 3D Buttons with CSS & jQuery DEMO
+Author: Benjamin Charity
+URL: http://eyemilk.com
+*/
+@font-face {
+	font-family: 'BebasNeueRegular';
+	src: url('../fonts/bebasneue-webfont.eot');
+	src: local('☺'), url('../fonts/bebasneue-webfont.woff') format('woff'), url('../fonts/bebasneue-webfont.ttf') format('truetype'), url('../fonts/bebasneue-webfont.svg#webfontSEszHvDl') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html {
+	background: rgb(150,150,150);
+	background-attachment: fixed;
+	background-image: -moz-radial-gradient(50% 0, circle farthest-corner, rgb(240, 240, 240) 0pt, rgb(130, 130, 130) 100%);
+	background-image: -webkit-gradient(radial, 50% 0, 0, 50% 0, 700, from(rgb(240, 240, 240)), to(rgb(130, 130, 130))); 
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+	color: #333;
+	font-size: 20px;
+	min-height: 100%;
+	text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;
+	text-transform: uppercase;
+}
+#three-d {
+	font-family: 'BebasNeueRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 700px;
+	opacity: 0.05;
+	position: absolute;
+		left: -23px;
+		top: 3px;
+	text-shadow: 0 1px 0 #fff,0 2px 0 #fff,0 3px 0 #fff, 0 -1px 0 #000,0 -2px 0 #000,0 -3px 0 #000;
+	z-index: 1;
+}
+#container {
+	margin: 0 auto;
+	position: relative;
+	width: 700px;
+	z-index: 10;
+}
+	#container>header h1 {
+		font-size: 80px;
+		line-height: .9em;
+		margin: 25px 0 50px 0;
+	}
+	#container article {
+		border: 5px dashed rgb(193,193,193);
+		margin: 15px 0;
+		padding: 10px 30px 20px;
+		position: relative;
+	}
+		#container article h1 {
+			margin: 0 0 25px -20px;
+		}
+		#container article#long {
+			height: 150px;
+		}
+	#container footer {
+		font-size: 12px;
+		line-height: 1.2em;
+	}
+		#container footer a:link,
+		#container footer a:visited {
+			color: rgb(66,66,66);
+		}
+/* END General styles */
+
+
+/* BEGIN Toggle styles */
+a.button {
+	box-shadow: 
+		1px -1px 0 rgb(241,91,38),
+		2px -2px 0 rgb(241,91,38),
+		3px -3px 0 rgb(241,91,38),
+		4px -4px 0 rgb(241,91,38),
+		0 0 10px rgba(0,0,0,0.6);
+		-webkit-box-shadow: /* Safari, Chrome */
+			1px -1px 0 rgb(241,91,38),
+			2px -2px 0 rgb(241,91,38),
+			3px -3px 0 rgb(241,91,38),
+			4px -4px 0 rgb(241,91,38),
+			0 0 10px rgba(0,0,0,0.6);
+		-moz-box-shadow: /* Firefox */
+			1px -1px 0 rgb(241,91,38),
+			2px -2px 0 rgb(241,91,38),
+			3px -3px 0 rgb(241,91,38),
+			4px -4px 0 rgb(241,91,38),
+			0 0 10px rgba(0,0,0,0.6);
+		-o-box-shadow: /* Opera */
+			1px -1px 0 rgb(241,91,38),
+			2px -2px 0 rgb(241,91,38),
+			3px -3px 0 rgb(241,91,38),
+			4px -4px 0 rgb(241,91,38),
+			0 0 10px rgba(0,0,0,0.6);
+	color: rgb(193,193,193);
+	display: block;
+	font-size: 12px;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+a#tutorial-toggle {
+	background: rgb(255,255,255);
+	border-radius: 25px;
+		-webkit-border-radius: 25px; /* Safari, Chrome */
+		-moz-border-radius: 25px; /* Firefox */
+		-o-border-radius: 25px; /* Opera */
+	height: 30px;
+	line-height: 30px;
+	width: 30px;
+}
+	a.on {
+		box-shadow: 
+			1px -1px 0 rgb(241,91,38),
+			2px -2px 0 rgb(241,91,38),
+			0 0 6px rgba(0,0,0,0.6);
+			-webkit-box-shadow: /* Safari, Chrome */
+				1px -1px 0 rgb(241,91,38),
+				2px -2px 0 rgb(241,91,38),
+				0 0 6px rgba(0,0,0,0.6);
+			-moz-box-shadow: /* Firefox */
+				1px -1px 0 rgb(241,91,38),
+				2px -2px 0 rgb(241,91,38),
+				0 0 6px rgba(0,0,0,0.6);
+			-o-box-shadow: /* Opera */
+				1px -1px 0 rgb(241,91,38),
+				2px -2px 0 rgb(241,91,38),
+				0 0 6px rgba(0,0,0,0.6);
+		color: rgb(0,0,0);
+		margin: -2px -2px 2px 2px;
+	}
+	a.button:active,
+	a.on:active {
+		box-shadow: 
+			1px -1px 0 rgb(241,91,38),
+			0 0 3px rgba(0,0,0,0.3);
+			-webkit-box-shadow: /* Safari, Chrome */
+				1px -1px 0 rgb(241,91,38),
+				0 0 3px rgba(0,0,0,0.3);
+			-moz-box-shadow: /* Firefox */
+				1px -1px 0 rgb(241,91,38),
+				0 0 3px rgba(0,0,0,0.3);
+			-o-box-shadow: /* Opera */
+				1px -1px 0 rgb(241,91,38),
+				0 0 3px rgba(0,0,0,0.3);
+		margin: -3px -3px 3px 3px;
+	}
+a.dot {
+	background: rgb(240,240,240);
+	border-radius: 4px;
+		-webkit-border-radius: 4px; /* Safari, Chrome */
+		-moz-border-radius: 4px; /* Firefox */
+		-o-border-radius: 4px; /* Opera */
+	display: none;
+	padding: 10px 20px 7px;
+	position: absolute;
+		right: 20px;
+		top: 30%;
+}
+
+/* Demo #2 */
+a#long-toggle {
+	background: rgb(193,193,193);
+	border-radius: 7px;
+		-webkit-border-radius: 7px; /* Safari, Chrome */
+		-moz-border-radius: 7px; /* Firefox */
+		-o-border-radius: 7px; /* Opera */
+	color: rgb(0,0,0);
+	font-size: 25px;
+	padding: 10px 10px 7px;
+}
+	a#long-toggle.on {
+		color: rgb(191,77,52);
+	}	
+a.dot2 {
+	background: rgb(255,255,255);
+	border: 3px solid rgb(66,66,66);
+	border-radius: 12px;
+		-webkit-border-radius: 12px; /* Safari, Chrome */
+		-moz-border-radius: 12px; /* Firefox */
+		-o-border-radius: 12px; /* Opera */
+	color: rgb(55,55,55);
+	display: none;
+	font-size: 20px;
+	padding: 10px 20px 7px;
+	position: absolute;
+		bottom: 25px;
+		left: 27%;
+}

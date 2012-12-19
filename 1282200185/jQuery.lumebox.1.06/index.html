@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <title>Lumebox Example</title>
+     <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="style/style.css" />
+     <link rel="stylesheet" type="text/css" href="style/lumebox.css" />
+</head>
+
+<body>
+
+<article class="hentry post">
+	<header>
+		<h1 class="entry-title"><a href="#" rel="bookmark">Showing Rss Feeds</a></h1>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+<br>
+<br>
+
+	</header>
+	<div class="entry-content">
+		 <p>
+			<a href="#" onClick="$.lumebox.open(); void(0);">Open Lumebox</a>
+		 </p>
+  <ul>
+    <li><a href="feed.rss" rel="lightbox[rss]">Local Feed</a></li>
+    <li><a href="http://anders.zakrisson.se/photos/street/world-war-III-survivalist.jpg" rel="lightbox[photo]" title="Some friends decided to play some post-apocalyptic World War III dress-up and I happened to be nearby with my camera which resulted in some cool photos. When this photo was taken it was practically pitch black, it was too dark for the autofocus to lock on anything and to clearly see through the viewfinder, but the ISO capability of the 5D mark II and the 1.4 aperture provides unparalleled creative freedom for photographers like me."><img src="http://anders.zakrisson.se/photos/street/world-war-III-survivalist.jpg" width="60" height="40" /></a></li>
+    <li><a href="http://anders.zakrisson.se/photos/portraits/molly-at-skansen.jpg" rel="lightbox[images]" title="Molly climbing at Skansen. The wooden structure (and the out of focus background in some extent) is used as natural framing. Photographing children is easiest when their minds are occupied with something else than the camera and you can just wait for a good frame."><img src="http://anders.zakrisson.se/photos/portraits/molly-at-skansen.jpg" width="60" height="40" /></a></li>
+    <li><a href="http://anders.zakrisson.se/wp-content/uploads/2009/12/jessica-by-tree.jpg" rel="lightbox[images]" title="Sometimes the elements are against you when trying to take photos and you just have to fight 'em or go with the flow. The wind gave Jessicas hair a hard time but in the end I think it adds important dynamics to a quite standard straight on portrait."><img src="http://anders.zakrisson.se/wp-content/uploads/2009/12/jessica-by-tree.jpg" width="40" height="60" /></a></li>
+  </ul>
+	</div>
+</article>
+
+<script type="text/javascript" src="js/jquery.lumebox.js"></script>
+<script type="text/javascript">
+$(function(){
+    $.lumebox.init({showAsList: false});
+});
+</script>
+</body>
+</html>

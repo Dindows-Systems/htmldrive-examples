@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tech News | A free Aggregator Template | made in PV.M Garage</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+  //hide toolbar and make visible the 'show' button
+	$("span.downarr a").click(function() {
+    $("#toolbar").slideToggle("fast");
+    $("#toolbarbut").fadeIn("slow");    
+  });
+  
+  //show toolbar and hide the 'show' button
+  $("span.showbar a").click(function() {
+    $("#toolbar").slideToggle("fast");
+    $("#toolbarbut").fadeOut();    
+  });
+  
+  //show tooltip when the mouse is moved over a list element 
+  $("ul#social li").hover(function() {
+		$(this).find("div").fadeIn("fast").show(); //add 'show()'' for IE
+    $(this).mouseleave(function () { //hide tooltip when the mouse moves off of the element
+        $(this).find("div").hide();
+    });
+  });
+  
+  //don't jump to #id link anchor 
+  $(".facebook, .twitter, .delicious, .digg, .rss, .stumble, .menutit, span.downarr a, span.showbar a").click(function() {
+   return false;                                         
+	});
+	
+  //show quick menu on click 
+	$("span.menu_title a").click(function() {
+		if($(".quickmenu").is(':hidden')){ //if quick menu isn't visible 
+			$(".quickmenu").fadeIn("fast"); //show menu on click
+		}
+		else if ($(".quickmenu").is(':visible')) { //if quick menu is visible 
+      $(".quickmenu").fadeOut("fast"); //hide menu on click
+    }
+	});
+	
+	//hide menu on casual click on the page
+	$(document).click(function() {
+			$(".quickmenu").fadeOut("fast");
+			$(".quickmenu").css({'vivibility': 'hidden'});
+	});
+	$('.quickmenu').click(function(event) { 
+		event.stopPropagation(); //use .stopPropagation() method to avoid the closing of quick menu panel clicking on its elements 
+	});
+
+		
+});
+	
+</script>
+
+<div id="toolbarbut"> <!-- hide button -->
+<span class="showbar"><a href="#">show bar</a></span>
+</div>
+
+<div id="toolbar"> <!-- toolbar container -->
+
+<div class="leftside"> <!-- all things in floating left side -->
+  <ul id="social">
+    <li><a class="rss" href="#"></a><!-- icon -->
+      <div id="tiprss" class="tip"><!-- tooltip -->
+        <ul>
+          <li><a href="#">580 Readers</a></li>
+          <li><a href="#"><small>[Subscribe]</small></a></li>
+        </ul>  
+      </div>
+    </li>
+    <li><a class="facebook" href="#"></a>
+      <div id="tipfacebook" class="tip">
+        <ul>
+          <li><a href="#">Share Page</a></li>
+          <li><a href="#">| Profile</a></li>
+        </ul>  
+      </div>  
+    </li>
+    <li><a class="twitter" href="#"></a>
+      <div id="tiptwitter" class="tip">
+        <ul>
+          <li><a href="#">ReTweet</a></li>
+          <li><a href="#">| Profile</a></li>
+        </ul>  
+      </div>
+    </li>
+    <li><a class="delicious" href="#"></a>
+      <div id="tipdelicious" class="tip">
+        <ul>
+          <li><a href="#">Bookmark</a></li>
+          <li><a href="#">| Profile</a></li>
+        </ul>  
+      </div>
+    </li>
+    <li><a class="digg" href="#"></a>
+      <div id="tipdigg" class="tip">
+        <ul>
+          <li><a href="#">Digg</a></li>
+          <li><a href="#">| Profile</a></li>
+        </ul>  
+      </div>
+    </li>
+    <li><a class="stumble" href="#"></a>
+      <div id="tipstumble" class="tip">
+        <ul>
+          <li><a href="#">Stumble</a></li>
+          <li><a href="#">| Profile</a></li>
+        </ul>  
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="rightside"> <!-- all things in floating left side -->
+  <span class="downarr"> <!-- hide button -->
+  <a href="#"></a>
+  </span>
+  <span class="menu_title">
+    <a class="menutit" href="#">quick menu</a> <!-- quick menu title -->
+  </span>
+  <div class="quickmenu">
+    <ul> <!-- quick menu list -->
+      <li><a href="#">Premium Member</a></li>
+      <li><a href="#">Become Author</a></li>
+      <li><a href="#">Submit News</a></li>
+      <li><a href="#">Send Feedback</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul> 
+  </div>
+</div>
+
+</div>
+
+<div id="header">
+  <h1><a href="http://www.pvmgarage.com/downloads/newsaggregator">Nice Toolbar for You Website</a></h1>
+</div>
+
+<div id="downhead">
+  <h2>How to Realize a Simple and Nice Toolbar Using CSS and jQuery - <em>by PV.M Garage</em></h2>
+  <img src="images/preview.jpg" alt="preview" />
+  <p>In This page you can observe the final result of a tutorial that explains some simple steps to create a useful toolbar. We hope you can find interesting this solution for your custom bar. Thanks for reading!<br />
+
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></p>
+</div>
+
+</body>
+</html>

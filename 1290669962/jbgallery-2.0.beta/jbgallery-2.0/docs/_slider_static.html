@@ -1,0 +1,163 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="jbg">
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-type">
+        <title>jbgallery 2.0 demo - static slider</title>
+        <meta content="Massimiliano Balestrieri" name="author">
+        <link media="screen" rel="stylesheet" id="jbgallery-css" href="../jbgallery-2.0.css">
+    </head>
+    <body class="jbg">
+        <div id="jbgallery-api" class="jbgallery" style="display: block;">
+            <div class="centered" id="jbg">
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzuSpC-0zI/AAAAAAAAA48/M2GPV81K4Ak/100_2090.jpg" alt="tokyo" id="jbgallery-target" class="centered" style="display: inline; width: auto; height: 540px;">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="jbgs-opacity" style="opacity: 0.8;">
+        </div>
+		<style type="text/css">
+			#jbgs ul{margin-top:3px;}
+			#jbgs li a{height:51px;width:51px;overflow:hidden;border:2px solid #999999;padding:0;}
+			#jbgs li img{height:auto;width:auto;border:0;width:51px;}
+		</style>
+        <div id="jbgs">
+            <div id="jbgs-wrapper">
+                <div id="jbgs-left">
+                    <a class="jbgs-h" id="jbgs-h-play" href="#" style="opacity: 0.8;">&nbsp;</a>
+                    <a class="jbgs-h" id="jbgs-h-pause" href="#" style="opacity: 0.8; display: none;">&nbsp;</a>
+                    <a class="jbgs-h" id="jbgs-h-left" href="#" style="opacity: 0.8;">&nbsp;</a>
+                </div>
+                <div style="width: 1140px;" id="jbgs-viewer">
+                    <ul style="" id="jbgs-inner">
+                        <li>
+                            <a href="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzuamwkzII/AAAAAAAABOM/j3HnzPk5VnU/100_2768.jpg" title="gundam1"><img alt="" src="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzuamwkzII/AAAAAAAABOM/j3HnzPk5VnU/s288/100_2768.jpg" style="opacity: 0.7;" class=""></a>
+                        </li>
+                        <li>
+                            <a href="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzvrjvU83I/AAAAAAAABAU/8tbAipa9wgk/P1020533.jpg" title="nara"><img alt="" src="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzvrjvU83I/AAAAAAAABAU/8tbAipa9wgk/s288/P1020533.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzuSpC-0zI/AAAAAAAAA48/M2GPV81K4Ak/100_2090.jpg" title="tokyo" style=""><img alt="" src="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzuSpC-0zI/AAAAAAAAA48/M2GPV81K4Ak/s288/100_2090.jpg" style="opacity: 1;" class="focus"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzuWQEufiI/AAAAAAAAA5Y/icGZTrIp1eE/100_2115.jpg" title="shibuya"><img alt="" src="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzuWQEufiI/AAAAAAAAA5Y/icGZTrIp1eE/s288/100_2115.jpg" style="opacity: 0.7;" class=""></a>
+                        </li>
+                        <li>
+                            <a href="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzuXGNNqrI/AAAAAAAAA5c/zBCyqXjlofc/100_2122.jpg" title="shibuya crossing"><img alt="" src="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzuXGNNqrI/AAAAAAAAA5c/zBCyqXjlofc/s288/100_2122.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzuQ1g3S7I/AAAAAAAAA4w/eO2gBSkV2XM/100_2077.jpg" title="ginza"><img alt="" src="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzuQ1g3S7I/AAAAAAAAA4w/eO2gBSkV2XM/s288/100_2077.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzvjOmg5-I/AAAAAAAAA_g/S8wow3zLays/P1020744.jpg" title="hiroshima"><img alt="" src="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzvjOmg5-I/AAAAAAAAA_g/S8wow3zLays/s288/P1020744.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzuPgD8hZI/AAAAAAAAA4k/fQ9a-r7mb40/100_2024.jpg" title="minowa"><img alt="" src="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzuPgD8hZI/AAAAAAAAA4k/fQ9a-r7mb40/s288/100_2024.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzuRvGTl5I/AAAAAAAAA44/N4D2_Jversc/100_2082.jpg" title="godzilla"><img alt="" src="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzuRvGTl5I/AAAAAAAAA44/N4D2_Jversc/s288/100_2082.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzubRTa5QI/AAAAAAAAA58/XwW9WAlfzkk/100_2770.jpg" title="gundam2"><img alt="" src="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzubRTa5QI/AAAAAAAAA58/XwW9WAlfzkk/s288/100_2770.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzubyiFG-I/AAAAAAAAA6A/RoxUut3atZU/100_2773.jpg" title="odaiba"><img alt="" src="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzubyiFG-I/AAAAAAAAA6A/RoxUut3atZU/s288/100_2773.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzunPI5qJI/AAAAAAAAA7A/jx6GqZwwAgg/P1020828.jpg" title="odaiba"><img alt="" src="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzunPI5qJI/AAAAAAAAA7A/jx6GqZwwAgg/s288/P1020828.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzucSZqm2I/AAAAAAAAA6E/4d1LDeMgU1A/P1010491.jpg" title="asakusa"><img alt="" src="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzucSZqm2I/AAAAAAAAA6E/4d1LDeMgU1A/s288/P1010491.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzufohFyEI/AAAAAAAAA6Y/V3lUC-m1v54/P1010552.jpg" title="market"><img alt="" src="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzufohFyEI/AAAAAAAAA6Y/V3lUC-m1v54/s288/P1010552.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh4.ggpht.com/_JJJpzXdPAI4/Spzuh9WohMI/AAAAAAAAA6k/28TfGKwJUKE/P1010572.jpg" title="sony building"><img alt="" src="http://lh4.ggpht.com/_JJJpzXdPAI4/Spzuh9WohMI/AAAAAAAAA6k/28TfGKwJUKE/s288/P1010572.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzujJKy3WI/AAAAAAAAA6s/K4KiXwGzm4k/P1010576.jpg" title="ginza2"><img alt="" src="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzujJKy3WI/AAAAAAAAA6s/K4KiXwGzm4k/s288/P1010576.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzujlAuYyI/AAAAAAAAA6w/znLTpwDyITE/P1010613.jpg"><img alt="" src="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzujlAuYyI/AAAAAAAAA6w/znLTpwDyITE/s288/P1010613.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh4.ggpht.com/_JJJpzXdPAI4/Spzup7DkT5I/AAAAAAAAA7Q/eiq3mBIcStg/P1030025.jpg" title="ginza notte"><img alt="" src="http://lh4.ggpht.com/_JJJpzXdPAI4/Spzup7DkT5I/AAAAAAAAA7Q/eiq3mBIcStg/s288/P1030025.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzvMFFAgKI/AAAAAAAAA9U/ZG1ChpZ2ylY/P1020139.jpg" title="shinkanzen"><img alt="" src="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzvMFFAgKI/AAAAAAAAA9U/ZG1ChpZ2ylY/s288/P1020139.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh5.ggpht.com/_JJJpzXdPAI4/Spzv4pIaTMI/AAAAAAAABBk/JGc6pzLRUr0/P1020365.jpg" title="sushi shinkanzen"><img alt="" src="http://lh5.ggpht.com/_JJJpzXdPAI4/Spzv4pIaTMI/AAAAAAAABBk/JGc6pzLRUr0/s288/P1020365.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzwapudpJI/AAAAAAAABE8/Efw8IirE8Ts/P1020073.jpg" title="manga"><img alt="" src="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzwapudpJI/AAAAAAAABE8/Efw8IirE8Ts/s288/P1020073.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzwlwxsTlI/AAAAAAAABGA/RxKVZKChlik/P1020779.jpg" title="oldboy"><img alt="" src="http://lh4.ggpht.com/_JJJpzXdPAI4/SpzwlwxsTlI/AAAAAAAABGA/RxKVZKChlik/s288/P1020779.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzwLe1RCcI/AAAAAAAABDM/cy-i-d6jSJI/P1010952.jpg" title="zen"><img alt="" src="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzwLe1RCcI/AAAAAAAABDM/cy-i-d6jSJI/s288/P1010952.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzvbyPhCHI/AAAAAAAAA-w/rf8dATWiOK8/100_2274.jpg" title="magome"><img alt="" src="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzvbyPhCHI/AAAAAAAAA-w/rf8dATWiOK8/s288/100_2274.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzwKoWX0fI/AAAAAAAABDI/1MgoC14jVbA/P1010930.jpg" title="kyoto"><img alt="" src="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzwKoWX0fI/AAAAAAAABDI/1MgoC14jVbA/s288/P1010930.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzurK_N9PI/AAAAAAAAA7c/jcOZEyYmR0w/P1010631.jpg" title="shibuya crossing"><img alt="" src="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzurK_N9PI/AAAAAAAAA7c/jcOZEyYmR0w/s288/P1010631.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                        <li>
+                            <a href="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzvR10H1cI/AAAAAAAAA94/n4OjsO0TYH8/P1020543.jpg" title="koyasan"><img alt="" src="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzvR10H1cI/AAAAAAAAA94/n4OjsO0TYH8/s288/P1020543.jpg" style="opacity: 0.7;"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="jbgs-right">
+                    <a class="jbgs-h" id="jbgs-h-right" href="#" style="opacity: 0.8;">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="jbgs-thumb-2" class="jbgs-thumb" style="left: 193.333px; display: block;">
+            <img class="jbgs-thumb-landscape" alt="" src="http://lh5.ggpht.com/_JJJpzXdPAI4/SpzuSpC-0zI/AAAAAAAAA48/M2GPV81K4Ak/s288/100_2090.jpg">
+            <div class="jbgs-thumb-btn">
+                <div class="jbgs-thumb-tip">
+                </div>
+            </div>
+        </div>
+        <div id="jbgs-thumb-11" class="jbgs-thumb" style="left: 733.333px; display: block;">
+            <img class="jbgs-thumb-landscape" alt="" src="http://lh6.ggpht.com/_JJJpzXdPAI4/SpzunPI5qJI/AAAAAAAAA7A/jx6GqZwwAgg/s288/P1020828.jpg">
+            <div class="jbgs-thumb-btn">
+                <div class="jbgs-thumb-tip">
+                </div>
+            </div>
+        </div>
+        <div id="jbgs-thumb-15" class="jbgs-thumb" style="left: 985px; display: block;">
+            <img class="jbgs-thumb-portrait" alt="" src="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzujJKy3WI/AAAAAAAAA6s/K4KiXwGzm4k/s288/P1010576.jpg">
+            <div class="jbgs-thumb-btn">
+                <div class="jbgs-thumb-tip">
+                </div>
+            </div>
+        </div>
+        <div id="jbgs-thumb-7" class="jbgs-thumb" style="left: 505px; display: block;">
+            <img class="jbgs-thumb-portrait" alt="" src="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzuPgD8hZI/AAAAAAAAA4k/fQ9a-r7mb40/s288/100_2024.jpg">
+            <div class="jbgs-thumb-btn">
+                <div class="jbgs-thumb-tip">
+                </div>
+            </div>
+        </div>
+        <div id="jbgs-thumb-5" class="jbgs-thumb" style="left: 373.333px; display: block;">
+            <img class="jbgs-thumb-landscape" alt="" src="http://lh3.ggpht.com/_JJJpzXdPAI4/SpzuQ1g3S7I/AAAAAAAAA4w/eO2gBSkV2XM/s288/100_2077.jpg">
+            <div class="jbgs-thumb-btn">
+                <div class="jbgs-thumb-tip">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

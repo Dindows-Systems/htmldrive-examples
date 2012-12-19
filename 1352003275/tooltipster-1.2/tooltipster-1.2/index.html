@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tooltipster - The jQuery Tooltip Plugin</title>
+	<meta charset="UTF-8" />
+	
+	<meta name="description" content="Tooltipster is a lightweight jQuery plugin that enables you to easily create clean, HTML5 validated tooltips." />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+	<link rel="stylesheet" type="text/css" href="css/prettify.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+	<script type="text/javascript" src="js/prettify.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<div class="container">
+	  <section id="examples">
+			<h2>A Few of the Options</h2>
+			<div class="example">
+				<div class="test tooltip-example-1" title="These are the default settings! :)">Default Settings</div>
+				<div class="code">
+					<pre class="prettyprint">
+$('.tooltip-example-1').tooltipster();
+					</pre>
+				</div>
+			</div>
+			<div class="example">
+				<div class="test tooltip-example-2" title="<img src='images/cookie.png' width='50' height='50' align='left' />Set a <u>fixed width</u> or use a <u>fluid width</u> that will automatically expand with your content, choose from <u>six different positions</u>, and <u>add your own classes</u> for multiple tooltip styles. ">Fixed Width + Position + Custom Style</div>
+				<div class="code">
+					<pre class="prettyprint">
+$('.tooltip-example-2').tooltipster({
+    fixedWidth: 400,
+    position: 'bottom-left',
+    tooltipTheme: '.tooltip-custom-2'
+});
+					</pre>
+				</div>
+			</div>
+			<div class="example last">
+				<div class="test tooltip-example-3" title="Add a <u>delay</u> before the tooltip displays, have the tooltip <u>follow the mouse</u>, and add a <u>timer</u> that will hide the tooltip after hovering for a set time.">Delay + Mouse Tracking + Timer</div>
+				<div class="code">
+					<pre class="prettyprint">
+$('.tooltip-example-3').tooltipster({
+    arrow: false,
+    delay: 500,		
+    followMouse: true,
+    position: 'top-right',
+    timer: 8000,
+    tooltipTheme: '.tooltip-custom-3'
+});
+					</pre>
+				</div>
+			</div>
+	  </section>
+	</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></body>
+</html>

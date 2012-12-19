@@ -1,0 +1,40 @@
+.fLeft{float:left;height:500px; width:1700px;}
+.iDance {
+	float:left;
+	position:relative;
+	width:150px;
+	margin: 0 -1px 0 0;
+	overflow:hidden;
+	height:500px;
+}
+	.iDance div {
+		position:relative;
+		display:block;
+		z-index:5;
+	}
+	.iDance .open img{
+		position:relative;
+		float:right;
+	
+		border:0;
+	}
+	.iDance .open{
+		position:absolute;
+		top:0;
+		right:0;
+		border:0;
+		z-index:1000;
+		display:block;
+		border:0;
+	}
+	.iDance .interior {width:710px;height:502px; padding:10px;}
+	.iDance .jean1 {
+		background:url(../img/det_model6.jpg) top left no-repeat;
+	}
+	.iDance .jean2 {
+		background:url(../img/det_model3.jpg) top left no-repeat;
+	}
+	.iDance .jean3 {
+		background:url(../img/det_model4.jpg) top left no-repeat;
+	}
+a{outline:none;}

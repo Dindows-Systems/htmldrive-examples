@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>malihu jQuery Image Gallery</title>
+<style type="text/css">
+<!--
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans+Std+Light);
+html,body{height:100%;}
+body{margin:0px; padding:0px; background:#000; color:#FFFFFF;}
+#toolbar{position:fixed; z-index:2; right:10px; top:10px; padding:5px; background:url(fs_img_g_bg.png);}
+#toolbar img{border:none;}
+#img_title{position:fixed; z-index:2; left:10px; top:10px; padding:10px; background:url(fs_img_g_bg.png); color:#FFF; font-family:'Josefin Sans Std Light', arial, serif; font-size:24px; text-transform:uppercase;}
+#bg{position:fixed; z-index:1; overflow:hidden;}
+#bgimg{display:none;}
+#preloader{position:relative; z-index:2; width:32px; padding:20px; top:80px; margin:auto; background:#000;}
+#outer_container{z-index:2; position:fixed; bottom:0; margin:0; height:170px; padding:40px 5px;}
+#thumbScroller{position:relative; overflow:hidden; background:url(fs_img_g_bg.png);}
+#thumbScroller .container{position:relative; left:0;}
+#thumbScroller .content{float:left;}
+#thumbScroller .content div{margin:10px; height:100%;}
+#thumbScroller img{border:5px solid #fff;}
+#thumbScroller a{padding:5px; display:block;}
+-->
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+</head>
+<body>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+<div id="bg"><img src="images/Universe_and_planets_digital_art_wallpaper_denebola.jpg" width="1680" height="1050" alt="Denebola" title="Denebola" id="bgimg" /></div>
+<div id="preloader"><img src="ajax-loader_dark.gif" width="32" height="32" /></div>
+<div id="img_title"></div>
+<div id="toolbar"><a href="#" title="Maximize" onClick="ImageViewMode('full');return false"><img src="toolbar_fs_icon.png" width="50" height="50"  /></a></div>
+<div id="outer_container">
+<div id="thumbScroller">
+	<div class="container">
+    	<div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_denebola.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_denebola_thumb.jpg" title="Denebola" alt="Denebola" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_lux.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_lux_thumb.jpg" title="Lux Aeterna" alt="Lux Aeterna" class="thumb" /></a></div>
+        </div>
+    	<div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_dk.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_dk_thumb.jpg" title="X-Wing on patrol" alt="X-Wing on patrol" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_albireo.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_albireo_thumb.jpg" title="Albireo Outpost" alt="Albireo Outpost" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_church.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_church_thumb.jpg" title="Church of Heaven" alt="Church of Heaven" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_Decampment.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_Decampment_thumb.jpg" title="Decampment" alt="Decampment" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_Hibernaculum.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_Hibernaculum_thumb.jpg" title="Hibernaculum" alt="Hibernaculum" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_lucernarium.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_lucernarium_thumb.jpg" title="Supremus Lucernarium" alt="Supremus Lucernarium" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_moons.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_moons_thumb.jpg" title="Aurea Mediocritas" alt="Aurea Mediocritas" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_praedestinatio.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_praedestinatio_thumb.jpg" title="Praedestinatio" alt="Praedestinatio" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_transitorius.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_transitorius_thumb.jpg" title="Transitorius" alt="Transitorius" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+        	<div><a href="images/Universe_and_planets_digital_art_wallpaper_victimofgravity.jpg"><img src="images/Universe_and_planets_digital_art_wallpaper_victimofgravity_thumb.jpg" title="Victim of Gravity" alt="Victim of Gravity" class="thumb" /></a></div>
+        </div>
+	</div>
+</div>
+</div>
+<script>
+$outer_container=$("#outer_container");
+$thumbScroller=$("#thumbScroller");
+$thumbScroller_container=$("#thumbScroller .container");
+$thumbScroller_content=$("#thumbScroller .content");
+$thumbScroller_thumb=$("#thumbScroller .thumb");
+$preloader=$("#preloader");
+$toolbar=$("#toolbar");
+$toolbar_a=$("#toolbar a");
+$bgimg="#bgimg";
+
+$(window).load(function() {
+	//thumbnail scroller
+	sliderLeft=$thumbScroller_container.position().left;
+	padding=$outer_container.css("paddingRight").replace("px", "");
+	sliderWidth=$(window).width()-padding;
+	$thumbScroller.css("width",sliderWidth);
+	var totalContent=0;
+	fadeSpeed=200;
+	
+	$thumbScroller_content.each(function () {
+		var $this=$(this);
+		totalContent+=$this.innerWidth();
+		$thumbScroller_container.css("width",totalContent);
+		$this.children().children().children(".thumb").fadeTo(fadeSpeed, 0.6);
+	});
+
+	$thumbScroller.mousemove(function(e){
+		if($thumbScroller_container.width()>sliderWidth){
+	  		var mouseCoords=(e.pageX - this.offsetLeft);
+	  		var mousePercentX=mouseCoords/sliderWidth;
+	  		var destX=-(((totalContent-(sliderWidth))-sliderWidth)*(mousePercentX));
+	  		var thePosA=mouseCoords-destX;
+	  		var thePosB=destX-mouseCoords;
+	  		var animSpeed=600; //ease amount
+	  		var easeType="easeOutCirc";
+	  		if(mouseCoords>destX){
+		  		//$thumbScroller_container.css("left",-thePosA); //without easing
+		  		$thumbScroller_container.stop().animate({left: -thePosA}, animSpeed,easeType); //with easing
+	  		} else if(mouseCoords<destX){
+		  		//$thumbScroller_container.css("left",thePosB); //without easing
+		  		$thumbScroller_container.stop().animate({left: thePosB}, animSpeed,easeType); //with easing
+	  		} else {
+				$thumbScroller_container.stop();  
+	  		}
+		}
+	});
+
+	$outer_container.fadeTo(fadeSpeed, 0.8);
+	$outer_container.hover(
+		function(){ //mouse over
+			var $this=$(this);
+			$this.stop().fadeTo("slow", 1);
+		},
+		function(){ //mouse out
+			var $this=$(this);
+			$this.stop().fadeTo("slow", 0);
+		}
+	);
+
+	$thumbScroller_thumb.hover(
+		function(){ //mouse over
+			var $this=$(this);
+			$this.stop().fadeTo(fadeSpeed, 1);
+		},
+		function(){ //mouse out
+			var $this=$(this);
+			$this.stop().fadeTo(fadeSpeed, 0.6);
+		}
+	);
+
+	//on window resize scale image and reset thumbnail scroller
+	$(window).resize(function() {
+		FullScreenBackground($bgimg);
+		$thumbScroller_container.stop().animate({left: sliderLeft}, 400,"easeOutCirc"); 
+		var newWidth=$(window).width()-padding;
+		$thumbScroller.css("width",newWidth);
+		sliderWidth=newWidth;
+	});
+
+	FullScreenBackground($bgimg); //scale 1st image
+});
+
+$($bgimg).load(function() {
+	$preloader.fadeOut("fast"); //hide preloader
+	var $this=$(this);
+	$this.removeAttr("width").removeAttr("height").css({ width: "", height: "" });
+	FullScreenBackground($this);
+	var imageTitle=$("#img_title").data("imageTitle");
+	if(imageTitle){
+		$this.attr("alt", imageTitle).attr("title", imageTitle);
+		$("#img_title").html(imageTitle);
+	} else {
+		$("#img_title").html($(this).attr("title"));
+	}
+	$this.fadeIn("slow"); //fadein background image
+});
+
+//mouseover toolbar
+$toolbar.fadeTo("fast", 0.4);
+$toolbar.hover(
+	function(){ //mouse over
+		var $this=$(this);
+		$this.stop().fadeTo("fast", 1);
+	},
+	function(){ //mouse out
+		var $this=$(this);
+		$this.stop().fadeTo("fast", 0.4);
+	}
+);
+
+//Clicking on thumbnail changes the background image
+$("#outer_container a").click(function(event){
+	event.preventDefault();
+	$preloader.fadeIn("fast"); //show preloader
+	var $this=$(this);
+	var title_attr=$this.children("img").attr("title"); //get image title attribute
+	$("#img_title").data("imageTitle", title_attr); //store image title
+	$($bgimg).css("display","none").attr("src", this); //change image source
+}); 
+
+//Image scale function
+function FullScreenBackground(theItem){
+var winWidth=$(window).width();
+var winHeight=$(window).height();
+var imageWidth=$(theItem).width();
+var imageHeight=$(theItem).height();
+var picHeight = imageHeight / imageWidth;
+var picWidth = imageWidth / imageHeight;
+if($toolbar.data("imageViewMode")=="full"){ //fullscreen size image mode
+	if ((winHeight / winWidth) < picHeight) {
+		$(theItem).css("width",winWidth);
+		$(theItem).css("height",picHeight*winWidth);
+	} else {
+		$(theItem).css("height",winHeight);
+		$(theItem).css("width",picWidth*winHeight);
+	};
+} else { //normal size image mode
+	if ((winHeight / winWidth) > picHeight) {
+		$(theItem).css("width",winWidth);
+		$(theItem).css("height",picHeight*winWidth);
+	} else {
+		$(theItem).css("height",winHeight);
+		$(theItem).css("width",picWidth*winHeight);
+	};
+}
+$(theItem).css("margin-left",(winWidth-$(theItem).width())/2);
+$(theItem).css("margin-top",(winHeight-$(theItem).height())/2);
+}
+
+//Image view mode function - fullscreen or normal size
+function ImageViewMode(theMode){
+	$toolbar.data("imageViewMode", theMode);
+	FullScreenBackground($bgimg);
+	if(theMode=="full"){
+		$toolbar_a.html("<img src='toolbar_n_icon.png' width='50' height='50'  />").attr("onClick", "ImageViewMode('normal');return false").attr("title", "Restore");
+	} else {
+		$toolbar_a.html("<img src='toolbar_fs_icon.png' width='50' height='50'  />").attr("onClick", "ImageViewMode('full');return false").attr("title", "Maximize");
+	}
+}
+</script>
+</body>
+</html>

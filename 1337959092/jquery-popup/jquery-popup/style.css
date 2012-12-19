@@ -1,0 +1,58 @@
+body{
+	background:url("glossymetal.jpg") repeat scroll left top transparent;
+	
+}
+
+#wrapper{
+	color:#000000;
+	font-family:tahoma;
+	font-size:14px;
+	margin:0 auto;
+	width:800px;
+	margin-top:50px;
+}
+
+#wrapper a{
+	cursor:pointer;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+.box {
+    background-color: #ffffff;
+    color: #888888;
+    height: 205px;
+    left: 100%;
+    padding: 20px;
+    position: fixed;
+    right: 30%;
+    top: 25%;
+    width: 555px;
+    z-index: 101;
+	border:5px solid #888888;
+	border-radius:10px;
+	-moz-border-radius:10px;
+}
+
+.overlay {
+    background: #000000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+	opacity:0.5;
+}
+
+a.boxclose {
+    background: url("cancel.png") repeat scroll left top transparent;
+    cursor: pointer;
+    float: right;
+    height: 26px;
+    left: 32px;
+    position: relative;
+    top: -33px;
+    width: 26px;
+}

@@ -1,0 +1,11 @@
+.DS_Store
+.espressostorage
+*.esproj
+*.php
+themes/dev/*
+downloads/*
+inc/*
+images/*
+css/*
+_notes/*
+themes/demo-theme/*

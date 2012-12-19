@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jquery Select Test</title>
+<script type="text/javascript" src="../scripts/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.customselect-0.2.js"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+ $('#customselector').customSelect();
+  $('#customselector2').customSelect();
+ })</script>
+ <style type="text/css">
+<!--
+.iconselect {
+	background: url(images/select-bg.gif) no-repeat;
+	height: 25px;
+	width: 250px;
+	font: 13px Arial, Helvetica, sans-serif;
+	padding-left: 15px;
+	padding-top: 4px;
+}
+.selectitems {
+	width:230px;
+	height:25px;
+	border-bottom: dashed 1px #ddd;
+	padding-left:10px;
+	padding-top:2px;
+}
+.selectitems span {
+	margin-left: 5px;
+}
+.iconselectholder {
+	width: 250px;
+	overflow: auto;
+	display:none;
+	position:absolute;
+	background-color:#FFF5EC;
+}
+.hoverclass{
+background-color:#FFFFFF;
+curson:hand;}
+.selectedclass{
+	background-color:#FFFF99;
+}
+-->
+ </style>
+</head>
+
+<body>
+
+<select name="select" class="customselect" title="Choose an icon" id="customselector">
+  <option value="icon1" selected="selected" id="icon1" title="../icons/attention.gif">Attention icon</option>
+  <option value="icon2"  id="icon2" title="../icons/backward.gif">Back Icon</option>
+  <option value="icon3"  id="icon3" title="../icons/base.gif">Base Icon</option>
+</select>
+
+<select name="select" class="customselect" title="Choose an icon" id="customselector2">
+  <option value="icon4"  id="icon4" title="../icons/attention.gif">Attention icon</option>
+  <option value="icon5"  selected="selected" id="icon5" title="../icons/backward.gif">Back Icon</option>
+  <option value="icon6"  id="icon6" title="../icons/base.gif">Base Icon</option>
+</select>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></body>
+</html>

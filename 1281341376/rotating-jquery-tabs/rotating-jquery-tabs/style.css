@@ -1,0 +1,83 @@
+/*  By ilovecolors.com.ar  *
+  *  http://www.ilovecolors.com.ar/rotating-jquery-tabs/ */
+body{
+	height: 100%;
+	width: 100%;
+	font: 0.75em Arial, Helvetica, sans-serif;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+a:hover{ color:#d00; }
+#block {
+	margin: 15px auto 0;
+	width: 285px;
+	padding-right:5px;
+	padding-left: 5px;
+	clear:both;
+	overflow:hidden;
+	border: 10px solid #eee;
+}
+.h{
+	font: 1.500em Fontin, Georgia, "Times New Roman", Times, serif;
+	padding: 13px 0 10px 5px;
+	color:#666;
+	font-size: 1.417em;
+	border-bottom:1px solid #eee;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+.htabs{	overflow:hidden; }
+.htabs h2 a{
+	font-size:0.917em;
+	font-weight:bold;
+	padding: 7px;
+	/*color:#d00;*/
+	font-family:"museo 700","goodpro-widelight";
+}
+.htabs h2 a:hover{
+	/*color: #000;*/
+}
+.htabs li{
+	float:left;
+	margin-top:2px;
+	padding: 3px 2px 0 0;
+	overflow:hidden;
+}
+.tabs .bullet{
+	border-right:1px solid #e00;
+	color:#d00;
+	font: bold 1em Georgia,"Times New Roman",Times,serif;
+	margin: 0px 4px 4px 0;
+	padding-right:4px;
+	clear:right;
+	display:block;
+	float:left;
+	height:17px;
+	overflow:hidden;
+	text-align:right;
+	width:10px;
+}
+.bmod .bullet{
+	background-color:#fff;
+	margin:-9px 6px 0 -10px;
+	padding:8px;
+}
+.tabs{
+	margin-top:2px;
+	overflow:hidden;
+}
+.tabs li{
+	background-color:#EEEEEE;
+	clear:both;
+	margin:4px 0;
+	padding:9px;
+	font-family: "NuvoOT-medi";
+}
+.tabs li a:hover{
+	padding-left:1px;
+}
+.select{
+	color: #d00;
+}

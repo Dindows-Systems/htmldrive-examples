@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <title>jbgallery 2.0 demo</title>
+    <meta name="author" content="Massimiliano Balestrieri" />
+    <link href="jbgallery-2.0.css" id="jbgallery-css" rel="stylesheet" media="javascript-screen" />
+    <script src="jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="jbgallery-2.0.min.js" type="text/javascript"></script>
+	<script type="text/javascript"><!--
+    jQuery(document).ready(function(){
+		jQuery(".jbgallery").jbgallery({
+			menu : "simple", 
+			style: "zoom", 
+			caption : false
+		});
+	});
+	--></script>
+    
+    <!-- DOCS -->
+    <style type="text/css">
+    /**/
+    body{font-family:FreeSans,Arial,Helvetica,sans-serif;color:#fff;}
+    a, a:visited, a:focus{color:#fff;}
+	  /* inner jbg-content */
+	  #docs-opacity, #docs{width:600px;right:100px;top:15%;position:absolute;z-index:1000;}
+    #docs .wrapper{padding:10px;margin:10px;}
+	  #docs-opacity{background:#333;}
+    
+    /* z-index 1001 => jbg-content z-index 1000;*/
+    #toggle-docs{z-index:1001;position:absolute;left:0px;bottom:0px;padding:5px;font-size:15px;font-weight:bold;text-decoration:none;color:#fff;background:#333;}
+	  #credits{z-index:1001;position:absolute;left:0;bottom:0;height:13px;width:200px;background:#000;color:#fff;text-decoration:none;font-size:11px;}
+    </style>
+    <script type="text/javascript"><!--
+	//ONLY FOR DEMO
+	jQuery(document).ready(function(){
+		jQuery("#docs-opacity").height(jQuery("#docs").height()).css("opacity","0.7");
+		jQuery('a.blank').each(function(){
+            this.target = "_blank";
+        });
+        jQuery('<a id="toggle-docs" href="#">jbgallery docs</a>').click(function(){
+            jQuery("#docs, #docs-opacity").toggle();
+            return false;
+		 })
+        .prependTo("body");
+        //.trigger("click");
+	});
+	--></script>
+    <!-- /DOCS -->
+</head>    
+<body>
+<div id="jbg-content">
+
+<!-- PUT HERE CONTENT -->
+<div id="docs-opacity"></div>
+<div id="docs">
+    <div class="wrapper">
+		<h1>jbgallery 2.0 BETA</h1>
+    <p>
+    jbgallery is a UI widget webpage written in javascript on top of the jQuery library.<br />
+	Its function is to show a single big image, multiple images, multiple galleries, slideshows, as a site's background, in a "dialog" mode or as a common pop-up.<br />
+	jbgallery has two basic menus: the first one has music player buttons while the other one links  directly to single images.<br />
+	I added a "complex" menu on the 2.0 version, which in inspired by the <a href="http://www.flickr.com/search/show/?q=assisi" class="blank">flickr</a> slider-equipped slideshow that allows to scroll the thumbnail previews.<br />
+	jbgallery provides a pubblic API to remote control the component, so it would be easier to bind also with a more complex menu.<br />
+    <br />
+    Examples: 
+    </p>
+    <ul>
+    <li>Option "style": 
+    	<ul>
+			<li><a href="docs/centered.html" class="blank">centered</a> (default)</li>
+    	<li><a href="docs/zoom.html" class="blank">zoom</a></li>
+      <li><a href="docs/original.html" class="blank">original</a></li>
+		</ul>	
+	</li>
+	<li>Option "menu":
+    	<ul>
+    	<li><a href="docs/menuslider.html" class="blank">slider</a> (default) *NEW</li>
+			<li><a href="docs/numbers.html" class="blank">numbers</a></li>
+			<li><a href="docs/simple.html" class="blank">simple</a></li>
+			<li><a href="docs/nomenu.html" class="blank">nothing</a> (slideshow true, use arrows)</li>
+		</ul>	
+	</li>
+	<li><a href="docs/background.html" class="blank">Single image background</a></li>
+	<li><a href="docs/bgcentered.html" class="blank">Single image centered</a></li>
+	<li><a href="docs/multi.html" class="blank">Multi "fullscreen lightbox" gallery</a></li>
+	<li><a href="docs/popup_launcher.html" class="blank">"Fullscreen lightbox" vs Traditional popup</a></li>
+	<li><a href="docs/labels.html" class="blank">Custom labels</a></li>
+	<li><a href="docs/nofade.html" class="blank">No fade effect</a></li>
+	<li><a href="docs/nofade2.html" class="blank">No fade effect</a> (slider)</li>
+	<li><a href="docs/interval.html" class="blank">Timers: interval</a></li>
+	<li><a href="docs/autohide.html" class="blank">Timers: autohide</a></li>
+	<li><a href="docs/callback.html" class="blank">Callback for developers</a></li>
+	<li><a href="docs/api.html" class="blank">Api for designer/developers</a></li>
+	<li><a href="docs/click.html" class="blank">Clickable</a></li>
+	<li><a href="docs/caption.html" class="blank">Caption</a></li>
+	<!--li><a href="docs/links.html" class="blank">Links (with callback)</a></li-->
+	<li><a href="docs/picasa.html" class="blank">Picasa adapter (NEW)</a></li>
+	<li><a href="docs/picasa-album.html" class="blank">Picasa adapter (NEW)</a> (album)</li>
+	<li><a href="docs/style_test.html" class="blank">Style test</a></li>
+    </ul>
+	<h2>Installation</h2>
+	<h3>Download and extract</h3>
+	<p><a href="jbgallery-2.0.beta.zip">jbgallery-2.0.beta.zip</a></p>
+    <p>Download single files : </p>
+    <ul>
+        <li>jbgallery-2.0.js : <a href="jbgallery-2.0.js" class="blank">source</a> | <a href="jbgallery-2.0.min.js" class="blank">min</a></li>
+        <li><a href="jbgallery-2.0.css" class="blank">jbgallery-2.0.css</a></li>
+        <li><a href="ajax-loader.gif" class="blank">ajax-loader.gif</a></li>
+	    <li><a href="sprite.png" class="blank">sprite.png</a></li>
+        <li><a href="jquery-1.4.2.min.js" class="blank">jquery-1.4.2.min.js</a></li>
+    </ul>
+	<p>Extra files : </p>
+    <ul>
+        <li>jbpicasa.js : <a href="adapters/jbpicasa.js" class="blank">source</a> - test adapter that you can use building an html structure, getting data from an external rss feed.</li>
+    </ul>
+	<h3>js and css (include in head tag)</h3>
+	<div class="code"><pre>
+&lt;link href=&quot;jbgallery-2.0.css&quot; id=&quot;jbgallery-css&quot; 
+rel=&quot;stylesheet&quot; media=&quot;javascript-screen&quot; /&gt;		
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.1.4.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jbgallery-2.0.js&quot;&gt;&lt;/script&gt;
+</pre></div>
+	<h3>HTML structure (minimal menu)</h3>
+	<div class="code"><pre>
+&lt;div class=&quot;jbgallery&quot;&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;1.jpg&quot; &gt;1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;2.jpg&quot; &gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;!-- etc --&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;
+</pre></div>
+	<h3>HTML structure (thumbnails - menu with slider)</h3>
+	<div class="code"><pre>
+&lt;div class=&quot;jbgallery&quot;&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;big1.jpg&quot;&gt;&lt;img src=&quot;small1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;big2.jpg&quot;&gt;&lt;img src=&quot;small2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;!-- etc --&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;
+</pre></div>
+	<h3>HTML structure (caption)</h3>
+	<div class="code"><pre>
+&lt;div class=&quot;jbgallery&quot;&gt;
+ &lt;ul&gt;
+  &lt;li&gt;
+   &lt;a href=&quot;big.jpg&quot; title=&quot;Caption title&quot;&gt;&lt;img src=&quot;small.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+   &lt;div class=&quot;caption&quot;&gt;Long long long text&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;!-- etc --&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;
+</pre></div>
+
+	<h3>JS</h3>
+	<div class="code"><pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+jQuery(document).ready(function(){
+  jQuery(&quot;.jbgallery&quot;).jbgallery();
+});
+&lt;/script&gt;
+</pre></div>
+	<h2>OPTIONS &amp; DEFAULTS</h2>
+	<p>Write options HERE : </p>
+<div class="code"><pre>
+    jQuery(&quot;.jbgallery&quot;).jbgallery({HERE});
+</pre></div>
+<h3>DEFAULTS</h3>
+	<div class="code"><pre>
+{
+  style     : "centered",//centered, zoom, original
+  menu      : 'slider', //false, numbers, simple, slider
+  shortcuts : [37,39],
+  slideshow : false,
+  fade      : true,
+  popup     : false,
+  caption   : true,  //NEW 2.0
+  autohide  : false, //NEW 2.0
+  clickable : false, //NEW 2.0
+  current   : 1,   //NEW 2.0
+  webkit    : (navigator.userAgent.toLowerCase().search(/webkit/) != -1),
+  ie6       : (/MSIE 6/i.test(navigator.userAgent)),
+  ie7       : (/MSIE 7/i.test(navigator.userAgent)),
+  labels    : {
+    play : "play",
+    next : "next",
+    prev : "prev",
+    stop : "stop",
+    close: "close",
+    info : "info"
+  },
+  timers    : {
+    fade      : 400,
+    interval  : 7000,
+    autohide  : 7000  
+  },
+  delays    : {
+    mousemove : 200,
+    resize    : 500,
+    mouseover : 800
+  },
+  close     : function(){},
+  before    : function(){},
+  after     : function(ev){},
+  load      : function(ev){},
+  ready     : function(){}
+}
+</pre></div>
+	<h3>OPTIONS</h3>
+	<ul>
+		<li>style : string ('zoom'/'centered'/'original')</li>
+		<li>slideshow : boolean (true/false)</li>
+		<li>menu  : string/boolean ('slider'/'simple'/'numbers'/false)</li>
+		<li>caption : boolean (show info button in menu - NEW)</li>
+		<li>autohide: boolean (autohide interface - NEW)</li>
+		<li>clickable: boolean (NEW)</li>
+		<li>current: number (set the initial photo NEW)</li>
+		<li>fade  : boolean (false/true)</li>
+		<li>shortcuts : array (keycodes for trigger events left/right via keyboard)</li>
+		<li>before: function (callback)</li>
+        <li>load  : function(ev) (callback - native image load event)</li>
+		<li>after : function (callback)</li>
+		<li>ready : function (callback - interface ready)</li>
+		<li>popup : boolean (show close button)</li>
+		<li>close : function(ev) (callback after click close button. i.e. window.close())</li>
+        <li>labels: object - default: 
+        <pre>
+{
+   play : "play",
+   next : "next",
+   prev : "prev",
+   stop : "stop",
+   close: "close",
+   info : "info"
+}</pre></li>
+        <li>timers: object - default: 
+        <pre>
+{
+  fade      : 400,  //fadeIn-Out timer
+  interval  : 7000, //slideshow timer
+  autohide  : 7000  //autohide timer
+}</pre></li>
+		<li>delays: object - default: 
+        <pre>
+{
+  mousemove : 200, 
+  resize    : 500, 
+  mouseover : 800  
+}</pre></li>
+	</ul>
+	<h3>API (developers/designers)</h3>
+	<ul>
+		<li>jQuery(&quot;#jbgallery&quot;).jbgallery(); // build object FIRST</li>
+		<li>jQuery(&quot;#jbgallery&quot;).jbgallery("go" , 2); // go to photo 2 if exist </li>
+		<li>jQuery(&quot;#jbgallery&quot;).jbgallery("left"); // prev photo </li>
+		<li>jQuery(&quot;#jbgallery&quot;).jbgallery("right"); // next photo </li>
+		<li>jQuery(&quot;#jbgallery&quot;).jbgallery("play"); // autoplay start </li>
+		<li>jQuery(&quot;#jbgallery&quot;).jbgallery("stop"); // autoplay stop</li>
+		<li>jQuery(&quot;#jbgallery&quot;).jbgallery("destroy"); // destroy object, events, expando</li>
+		<li>jQuery(&quot;#jbgallery&quot;).jbgallery("current"); // return number of current photo</li>
+	</ul>
+
+    <h2>CONTENTS/FURTHER ELEMENTS</h2>
+    <p>
+	To add to the image further contents or other kind of elements you can use the following div. Otherwise you can add other divs copying the styles below.
+    </p>
+    <div class="code"><pre>
+&lt;div id=&quot;jbg-content&quot;&gt;
+    &lt;!-- PUT HERE CONTENT --&gt;
+    &lt;div id=&quot;docs&quot;&gt;
+        &lt;div class=&quot;wrapper&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- /PUT HERE CONTENT --&gt;
+&lt;/div&gt;
+</pre></div>
+    <div class="code"><pre>
+#docs{width:500px;right:200px;top:15%;position:absolute;z-index:1000;}
+#docs .wrapper{padding:10px;margin:10px;background:#fff;}
+</pre></div>
+    
+    <h2>BROWSERS TESTED</h2>
+    <ul>
+    <li>Firefox 3.5 (winxp/linux)</li>
+    <li>Safari 3.2, 4, 5 (winxp)</li>
+    <li>Chrome/Chromium  (winxp/linux)</li>
+    <li>Opera 9/10 (winxp/linux)</li>
+    <li>Internet Explorer 6/7/8 (winxp)</li>
+    </ul>
+    
+    <!--h2>KNOWN BUGS</h2>
+    <h3>Opera</h3>
+    <p>
+    I can't prevent a weird keydown default event (arrows)  in Opera.<br />
+	On "arrows" keydown that causes a dumb effect (only in style:"zoom").<br />
+	If you know a solution, please contact me. <br />
+    </p-->
+    <h2>DESIGN/GRAPHIC</h2>
+    <p>
+    This component is published with a minimalist graphic layout.<br />
+	You are free to customize css and to ask me any change to add classes to the simple menus edited by me.<br />
+	If you use API or design more complex menus, or if you write plugins populating html lists via ajax by flickr 
+	or similar services, please share with me for the next version of this plugin.<br />
+    </p>
+    <h2>CREDITS</h2>
+    <p>
+        This work is inspired by <a href="http://www.ringvemedia.com/" class="blank">http://www.ringvemedia.com/</a> and <a href="http://www.chicchicken.cc/" class="blank">Chicca</a><br />
+        The slider is inspired by <a href="http://www.flickr.com/search/show/?q=assisi" class="blank">http://www.flickr.com/search/show/</a>
+        <br />
+        Depends on jQuery (1.3.2/1.4.2) by <a href="http://ejohn.org/" class="blank">John Resig</a>.
+        <br />
+        Thanks to Simone Parato, Aaron Hutten, Alain Bourgeoa, Steffen Wenzel
+    </p>
+    <h2>COMMENTS &amp; CONTACTS</h2>
+    <p>
+    Post a comment in my blog. <br />
+    <a href="http://maxb.net/blog/2010/03/29/jbgallery-2-0/" class="blank">http://maxb.net/blog/</a>
+    </p>
+    <h2>LICENSE</h2>
+    <p>
+    Copyright (c) 2010 Massimiliano Balestrieri<br />
+    Licensed GPL licenses:<br />
+    <a href="http://www.gnu.org/licenses/gpl.html" class="blank">http://www.gnu.org/licenses/gpl.html</a><br />
+    </p>
+	More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+    </div>
+    
+</div>
+<!-- /PUT HERE CONTENT -->
+
+</div>
+
+<div class="jbgallery">
+	<ul>
+		<li><a title="gundam1" href="http://www.htmldrive.net/edit_media/2010/201009/20100906/advanced_bgimg_slideshow/images/work.jpg">1</a></li>
+		<li><a title="nara" href="http://www.htmldrive.net/edit_media/2010/201009/20100906/advanced_bgimg_slideshow/images/nature.jpg">2</a></li>
+		<li><a title="tokyo" href="http://www.htmldrive.net/edit_media/2010/201009/20100906/advanced_bgimg_slideshow/images/vacation.jpg">3</a></li>
+		<li><a title="shibuya" href="http://www.htmldrive.net/edit_media/2010/201009/20100906/advanced_bgimg_slideshow/images/biking.jpg">4</a></li>
+	</ul>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-258871-1");
+pageTracker._setDomainName(".maxb.net"); 
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

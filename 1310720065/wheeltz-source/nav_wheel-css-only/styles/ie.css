@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***********************************************
+These styles are important to make sure everything displays properly in Internet Explorer
+***********************************************/
+
+ul.menuBuild ul.submenu li, ul.menuBuild ul.submenu li.first, ul.menuBuild ul.submenu li.second, ul.menuBuild ul.submenu li.third, ul.menuBuild ul.submenu li.last, ul.menuBuild li > ul, ul.menuBuild li#menu1, ul.menuBuild li#menu2, ul.menuBuild li#menu3, ul.menuBuild li#menu4, ul.menuBuild li#menu1, ul.menuBuild li#menu2, ul.menuBuild li#menu3, ul.menuBuild li#menu4, ul.menuBuild li#menu2, ul.menuBuild li#menu3, ul.menuBuild li#menu4, ul.menuBuild li#menu2 > ul, ul.menuBuild li#menu3 > ul, ul.menuBuild li#menu4 > ul, .wrap1, .wrap2, .wrap3, .wrap4, .wrap5, .nav-holder, .completer, .completer2{behavior: url(styles/csspie/PIE.php); } /* CSS3 IE fix - Supports 'border-radius', 'box-shadow', 'border-image', -pie-background', liinear-gradients', 'RGBA' */
+
+ul.menuBuild ul.submenu li{filter:alpha(opacity=70);} /* IE has too many problems for gradual opacity so we'll just use 70 for all submenus*/
+
+.completer, .completer2{display:none;}
+
+.nav-holder{ border-bottom-style:none; height:0px;}

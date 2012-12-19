@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/*
+#navigation-panel {
+	margin:0 1.6667em 1.6667em 1.6667em;
+	overflow:hidden;
+}
+*/
+
+#navigation-panel {
+	overflow:visible;
+	position:relative;
+}
+		
+	/* main image box */
+	#main-image-box {
+		margin:0;
+		width:700px;
+		height:455px;
+		position:relative;
+		margin-bottom:20px;
+		z-index:1;
+	}
+		/* container Styles */
+		#main-image-box .container {
+			display:none;
+		}
+			#main-image-box .container h1 {
+				font-family:Georgia, "Times New Roman", Times, serif;
+				font-style:italic;
+				color:#000;
+				font-size:26px;
+				border:none;
+				margin-bottom:5px;
+			}
+				#main-image-box .container h1 span {
+					font-size:20px;
+				}
+				
+			#main-image-box .container h2 {
+				color:#000;
+				font-family:Arial, Helvetica, sans-serif;
+				font-style:normal;
+				margin-bottom:5px;
+			}
+				#main-image-box .container h2 * {
+					font-size:16px;
+				}
+				
+			#main-image-box .container h2 span.black,
+			#main-image-box .container h2 span.red {
+				padding:1px 3px;
+				color:#fff;
+			}
+			#main-image-box .container h2 span.black {
+				background-color:black;
+			}
+			#main-image-box .container h2 span.red {
+				background-color:red;
+			}
+			#main-image-box .container a {
+				font-weight:bold;
+				font-style:italic;
+				color:#000;
+			}
+
+		#main-image-box #strand {
+			background-image:url("../images/illustrations/strand.jpg");
+			clip:rect(0px 139px 455px 0px);
+		}
+			#main-image-box #strand .container {
+				margin:314px 0 0 53px;
+			}
+
+		#main-image-box #wintersport {
+			background-image:url("../images/illustrations/wintersport.jpg");
+			clip:rect(0px 279px 455px 140px);
+		}
+			#main-image-box #wintersport .container {
+				margin:40px 0 0 300px;
+			}
+				#main-image-box #wintersport .container h1 {
+					color:#fff;
+				}
+
+		#main-image-box #kreuzfahrt {
+			background-image:url("../images/illustrations/kreuzfahrt.jpg");
+			clip:rect(0px 419px 455px 280px);
+		}
+			#main-image-box #kreuzfahrt .container {
+				margin:60px 0 0 230px;
+			}	
+		
+		#main-image-box #staedte {
+			background-image:url("../images/illustrations/staedte.jpg");
+			clip:rect(0px 559px 455px 420px);
+		}
+			#main-image-box #staedte .container {
+				margin:115px 0 0 129px;
+			}
+				#main-image-box #staedte .container h1 {
+					color:#fff;
+				}
+				
+		#main-image-box #abenteuer {
+			background-image:url("../images/illustrations/abenteuer.jpg");
+			clip:rect(0px 700px 455px 560px);
+		}
+			#main-image-box #abenteuer .container {
+				margin:190px 0 0 170px;
+			}
+				#main-image-box #abenteuer .container h1 {
+					color:#fff;
+				}
+				
+		#main-image-box .clip {
+			width:700px;
+			height:455px;
+			position:absolute;
+			top:0;
+			left:0;
+			display:block;
+			background-color:#fff;
+			background-position:center top;
+			background-repeat:no-repeat;
+			z-index:1;
+		}
+		#main-image-box .facets:hover {
+			clip:rect(0px 700px 455px 0px) !important;
+		}
+		#main-image-box .facets:hover .container {
+			display:block;
+		}
+		#main-image-box .facets:hover {
+			z-index:10 !important;
+		}

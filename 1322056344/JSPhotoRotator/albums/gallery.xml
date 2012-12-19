@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item
+		source="large/o1.jpg"
+		thumbnail="thumb/o1.jpg"
+		category="Ocean"
+	>		
+		<title>Caption 1</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae nulla neque. </description>
+	</item>	
+	<item
+		source="large/o2.jpg"
+		thumbnail="thumb/o2.jpg"
+		category="Ocean"		
+	>		
+		<title>Caption 1</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae nulla neque. </description>
+
+	</item>
+	<item
+		source="large/o3.jpg"
+		thumbnail="thumb/o3.jpg"
+		category="Ocean"		
+	>		
+		<title>Caption 1</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae nulla neque. </description>
+	</item>	
+	<item
+		source="large/f1.jpg"
+		thumbnail="thumb/f1.jpg"
+		category="Ocean"		
+	>		
+		<title>Caption 1</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae nulla neque. </description>
+
+	</item>	
+	<item
+		source="large/f2.jpg"
+		thumbnail="thumb/f2.jpg"
+		category="Ocean"		
+	>		
+		<title>Caption 1</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae nulla neque. </description>
+	</item>	
+		
+	<item
+		source="large/f1.jpg"
+		thumbnail="thumb/f1.jpg"
+		category="Fruit"		
+	>		
+		<title>Caption 1</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae nulla neque. </description>
+	</item>	
+	<item
+		source="large/f2.jpg"
+		thumbnail="thumb/f2.jpg"
+		category="Fruit"		
+	>		
+		<title>Caption 1</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae nulla neque. </description>
+		
+	</item>	
+
+
+</items>

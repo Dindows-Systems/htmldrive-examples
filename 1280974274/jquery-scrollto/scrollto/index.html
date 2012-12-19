@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>jQuery Sidebar Sliding Tab Menu Tutorial</title>
+
+<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+
+<script>
+
+$(document).ready(function() {	
+
+	//Get the height of the first item
+	$('#mask').css({'height':$('#panel-1').height()});	
+	
+	//Calculate the total width - sum of all sub-panels width
+	//Width is generated according to the width of #mask * total of sub-panels
+	$('#panel').width(parseInt($('#mask').width() * $('#panel div').length));
+	
+	//Set the sub-panel width according to the #mask width (width of #mask and sub-panel must be same)
+	$('#panel div').width($('#mask').width());
+	
+	//Get all the links with rel as panel
+	$('a[rel=panel]').click(function () {
+	
+		//Get the height of the sub-panel
+		var panelheight = $($(this).attr('href')).height();
+		
+		//Set class for the selected item
+		$('a[rel=panel]').removeClass('selected');
+		$(this).addClass('selected');
+		
+		//Resize the height
+		$('#mask').animate({'height':panelheight},{queue:false, duration:500});			
+		
+		//Scroll to the correct panel, the panel id is grabbed from the href attribute of the anchor
+		$('#mask').scrollTo($(this).attr('href'), 800);		
+		
+		//Discard the link default behavior
+		return false;
+	});
+	
+});
+</script>
+
+<style>
+body {
+	padding:0;
+	margin:0 20px;
+	background:#d2e0e5;
+	font:12px arial;
+}
+
+#scroller-header a {
+	text-decoration:none; 
+	color:#867863; 
+	padding:0 2px;
+}
+
+#scroller-header a:hover {
+	text-decoration:none; 
+	color:#4b412f
+}
+
+a.selected {
+	text-decoration:underline !important; 
+	color:#4b412f !important;
+}
+
+#scroller-header {
+	background:url(images/header.gif) no-repeat;
+	width:277px;
+	height:24px;
+	padding:35px 0 0 15px;
+	font-weight:700;
+}
+
+#scroller-body {
+	background:url(images/body.gif) no-repeat bottom center;
+	width:277px;
+	padding-bottom:30px;
+}
+
+#mask {
+	width:250px;
+	overflow:hidden;
+	margin:0 auto;
+}
+
+#panel {
+
+}
+
+#panel div {
+float:left;
+
+}
+
+/* Extra styling for each panel*/
+
+#panel ul {
+list-style:none;
+margin:0 5px;
+padding:0;
+}
+
+	#panel ul li {
+		padding:5px;
+		color:#557482;
+		border-bottom:1px dotted #ccc;
+	}
+
+	#panel ul li.last {
+		border-bottom:none !important;
+	}
+
+#panel-1 {
+}
+
+#panel-2 {
+}
+
+#panel-3 {
+}
+
+
+</style>
+</head>
+
+<body>
+<h2><a href="http://www.queness.com">jQuery Sidebar Sliding Tab Menu Tutorial</a></h2>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+<div id="scroller-header">
+<a href="#panel-1" rel="panel" class="selected">Populars</a>
+<a href="#panel-2" rel="panel">Comments</a>
+<a href="#panel-3" rel="panel">Recents</a>
+<a href="#panel-4" rel="panel">Categories</a>
+</div>
+<div id="scroller-body">
+<div id="mask">
+<div id="panel">
+	<div id="panel-1">
+	<ul>
+	<li>Simple JQuery Image Slide Show with Semi-Transparent Caption</li>
+	<li>A Really Simple jQuery Plugin Tutorial</li>
+	<li>Create a Simple CSS + Javascript Tooltip with jQuery</li>
+	<li>Simple jQuery Modal Window Tutorial</li>
+	<li>Simple JQuery Image Slide Show with Semi-Transparent Caption</li>
+	<li>Create a Ajax based Form Submission with jQuery</li>
+	<li>Dock Content Tutorial with jQuery and jQuery Easing Plugin</li>
+	<li>Horizontal Scroll Menu with jQuery Tutorial</li>
+	<li class="last">jQuery Tabbed Interface / Tabbed Structure Menu Tutorial</li>
+	</ul>
+	</div>
+	<div id="panel-2">
+	<ul>
+	<li>30 Javascript Menu Plugins and Scripts</li>
+	<li>10+ jQuery photo gallery and slider plugins</li>
+	<li>10 jQuery and non-jQuery javascript Rich Text Editors</li>
+	<li class="last">25+ jQuery Plugins that enhance and beautify HTML form elements</li>
+	</ul>	
+	</div>
+	<div id="panel-3">
+	<ul>
+	<li>CSS and Web Gallery List : Promote and Increase your Website Traffic</li>
+	<li class="last">15+ Photo Slider Examples for Inpiration</li>
+	</ul>	
+	</div>
+	<div id="panel-4">
+	<ul>
+    <li>ajax</li>
+    <li>browser</li>
+    <li>cms</li>
+    <li>css-html</li>
+    <li>design</li>
+    <li>font</li>
+    <li>freebies</li>
+    <li>graphic</li>
+    <li>icon</li>
+    <li>inspiration</li>
+    <li>javascript</li>
+    <li>logo</li>
+    <li>photography</li> 
+	<li>photoshop</li>
+	<li>php</li>
+	<li>seo</li>
+	<li>template</li>
+	<li>tips</li>
+	<li>tools</li>
+	<li>trend</li>
+	<li>tutorial</li>
+	<li>usability</li>
+	<li>wallpaper</li>
+	<li class="last">wordpress</li>
+	</ul>	
+	</div>	
+</div>
+</div>
+</div>
+
+<div style="font-size:10px;color:#888">Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution 3.0 License.</div>
+
+</body>
+</html>

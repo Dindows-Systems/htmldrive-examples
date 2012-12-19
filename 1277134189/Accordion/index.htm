@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+	<title>jQuery Tools standalone demo</title>
+
+	<!-- include the Tools -->
+	<script src="js/jquery00.js"></script>
+
+	<!-- standalone page styling (can be removed) -->
+	<link rel="stylesheet" type="text/css" href="css/standalo.css"/>	
+
+
+	<!-- accordion styling -->	
+	<link rel="stylesheet" type="text/css" href="css/tabs-acc.css"/> 
+
+<meta http-equiv="Content-Type" content="text/html;charset=windows-1252">
+</head>
+
+<body> 	
+
+<!-- accordion root -->
+<div id="accordion">
+
+	<!-- accordion header #1 -->
+	<img src="images/streamin.png" />
+	
+	<div style="width:200px;">
+		<h3>First pane</h3>
+		<p>
+			Consectetur adipiscing elit. Praesent bibendum eros ac nulla. Integer vel lacus ac neque viverra.
+		</p>
+	</div>
+	
+	<img src="images/flash000.png" />
+	
+	<div>
+		<h3>Second pane</h3>
+		<p>
+			Cras diam. Donec dolor lacus, vestibulum at, varius in, mollis id, dolor. Aliquam erat volutpat. 
+		</p>
+	</div>
+
+	<img src="images/streamio.png" />
+	
+	<div>
+		<h3>Third pane</h3>
+		<p>
+			Non lectus lacinia egestas. Nulla hendrerit, felis quis elementum viverra, purus felis egestas magna.
+		</p>
+	</div>	
+
+</div>
+
+<!-- activate tabs with JavaScript -->
+<script>
+$(function() {
+
+$("#accordion").tabs("#accordion div", {
+	tabs: 'img', 
+	effect: 'horizontal'
+});
+});
+</script>
+
+</body>
+
+</html>
+
+<!-- This document saved fromhttp://www.htmldrive.net/ -->

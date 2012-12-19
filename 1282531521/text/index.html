@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>3D Flying Text</title>
+		<style type="text/css" media="screen">
+
+			body{
+				background:#000;
+				margin:0;
+				overflow:hidden;
+				padding:0; 
+			}
+			li{
+				color:#fff;
+				font:bold 13px Arial,sans-serif;
+				list-style: none;
+			}
+			a{
+				text-decoration:none;
+			}
+		
+		</style>
+
+	</head>
+	<body>
+		<ul>
+			<li><a href="#">A</a></li>
+	        <li><a href="#">B</a></li>
+	        <li><a href="#">C</a></li>
+	        <li><a href="#">D</a></li>
+	        <li><a href="#">E</a></li>
+	        <li><a href="#">F</a></li>
+	        <li><a href="#">G</a></li>
+	        <li><a href="#">H</a></li>
+	        <li><a href="#">I</a></li>
+	        <li><a href="#">J</a></li>
+	        <li><a href="#">K</a></li>
+	        <li><a href="#">L</a></li>
+	        <li><a href="#">M</a></li>
+	        <li><a href="#">N</a></li>
+	        <li><a href="#">O</a></li>
+	        <li><a href="#">P</a></li>
+	        <li><a href="#">Q</a></li>
+	        <li><a href="#">R</a></li>
+	        <li><a href="#">S</a></li>
+	        <li><a href="#">T</a></li>
+	        <li><a href="#">U</a></li>
+	        <li><a href="#">V</a></li>
+	        <li><a href="#">W</a></li>
+	        <li><a href="#">X</a></li>
+	        <li><a href="#">Y</a></li>
+	        <li><a href="#">Z</a></li>
+		</ul>
+<a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">More script and css style
+: www.htmldrive.net </a>		
+	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	
+	//Setup Arrays that will hold the x,y,z of each element.
+	var x = new Array();
+	var y = new Array();
+	var z = new Array();
+	
+	//Get the list of items.
+	var items = $('li');
+	
+	//Animate the items.
+	function animate()
+	{
+		
+		//Step through each item.
+		for(i = items.length - 1; i >= 0; i--){
+			
+			
+			//variables for movement.			
+			var xVar = 50 + x[i] 			// x value
+			var yVar = 50 + y[i] * z[i]++;	// y value, move towards bottom of screen
+			var zVar = 10 * z[i]++;			// z value, text get larger.
+			
+			
+			//Check to see if text position is still on the screen.
+			// the #'s are %.   100 is far right or bottom, 0 is top or left.
+			// for z value it's the font size in %.
+			if (!xVar | xVar < 0 | xVar > 90| 
+				yVar < 0 | yVar > 90 | 
+				zVar < 0 | zVar > 1500)
+			{
+				//if it's off the screen randomly pick a starting place.
+				x[i]= Math.random() * 2 - 1;
+				y[i] = Math.random() * 2 - 1;
+				z[i] = 2; 
+				
+			}
+			else
+			{
+				//if it's still on the screen apply the appropiate styles.
+				
+				$(items[i]).css("position", "absolute"); // make sure we can move the text around.
+				$(items[i]).css("top", xVar+"%");  // y value
+				$(items[i]).css("left", yVar+"%"); // x value
+				
+				$(items[i]).css("fontSize", zVar+"%"); // font size (illusion of perspective.)
+				$(items[i]).css("opacity",(zVar)/3000); // fade in from the distance.
+			}
+		}
+	
+		setTimeout(animate, 9);
+	}
+
+animate();
+</script>
+
+
+</html>

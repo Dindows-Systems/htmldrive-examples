@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+<title>jQuery Sliding Clock v1.1</title>
+
+<style type="text/css">
+
+body { background:#bae1ea url(back.jpg) 50% 0px no-repeat; color:#000; }
+
+/* container for clock */
+#wrap { position:relative; margin: 100px auto 0; width:700px; height:440px; background:url("slider clock(trans).png") no-repeat top left; border-style:solid; border-width:1px; overflow:hidden; }
+
+/* style background and size of all sliding divs */
+#wrap div { position:absolute; margin-left:-700px; width:1400px; height:40px; background:url("slider clock(trans).png") repeat-x; } 
+
+/* specific position and background position for sliding divs */
+#wrap #day { top:40px; background-position:0 -440px; }
+
+#wrap #month { top:120px; background-position:0 -480px; }
+
+#wrap #date { top:200px; background-position:0 -520px; }
+
+#wrap #hour { top:280px; background-position:0 -560px; }
+
+#wrap #min { top:320px; background-position:0 -600px; }
+
+#wrap #sec { top:400px; background-position:0 -640px; }
+
+#title { margin:20px auto; width:550px; text-align:center; }
+
+#other { margin:10px auto; width:550px; text-align:center; }
+
+</style>
+
+
+
+<script type="text/javascript" src="jquery.js"> </script>
+
+<script>
+
+  $(document).ready(function(){
+
+    function checktime(olddel){
+
+      var now = new Date();
+
+        var nowdel = now.getDay() + "|" + now.getMonth() + "|" + now.getDate() + "|" + now.getHours() + "|" + now.getMinutes() + "|" + now.getSeconds();
+
+        if ( olddel != nowdel ) {
+
+          var oldsplit = olddel.split("|");
+          var nowsplit = nowdel.split("|");
+
+          if ( oldsplit[5] != nowsplit[5] ) {
+
+            clock_slide('#sec',nowsplit[5],11);
+            if ( oldsplit[4] != nowsplit[4] ) {
+
+              clock_slide('#min',nowsplit[4],11);
+              if ( oldsplit[3] != nowsplit[3] ) {
+
+                clock_slide('#hour',nowsplit[3],28);
+                if ( oldsplit[2] != nowsplit[2] ) {
+
+                  clock_slide('#day',nowsplit[0],100);
+                  clock_slide('#date',(nowsplit[2]-1),22);
+
+                  if ( oldsplit[1] != nowsplit[1] ) {
+                    clock_slide('#month',nowsplit[1],57);
+
+                  };
+                };
+              };
+            };
+          };
+        };
+
+        function clock_slide(which,howmuch,multiple){
+          $(which).stop().animate({marginLeft: ((howmuch*multiple)-700)+'px'}, 250, 'linear');
+        };
+
+        setTimeout(function(){checktime(nowdel);}, 250);
+
+
+    };
+
+      checktime("0|0|0|0|0|0");
+
+  });
+
+</script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div id="wrap">
+
+    <div id="day"> </div>
+
+    <div id="month"> </div>
+    <div id="date"> </div>
+    <div id="hour"> </div>
+    <div id="min"> </div>
+    <div id="sec"> </div>
+
+  </div> <!-- End "wrap" -->
+
+  <div id="title">jQuery transpearant Slider clock with CSS sprites - by <a href="http://doodleaday.wordpress.com">vonholdt</a></div>
+
+  <div id="other">Check out my other jQuery clock <a href="http://home.comcast.net/~vonholdt/test/clock/index.htm">here</a><br />
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></div>
+
+
+</body>
+
+</html>

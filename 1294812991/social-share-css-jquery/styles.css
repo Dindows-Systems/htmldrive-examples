@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #eee;
+	color: #999;
+	font-family: Futura, Verdana, Sans-Serif;
+}
+a {
+	text-decoration: none;
+	color: #999;
+}
+a:hover {
+	text-decoration: underline;
+}
+#wrapper {
+	margin: 0 auto;
+	width: 900px;
+	margin-top: 60px;
+}
+h2 {
+	background: #B2F9F1;
+	font-family: Futura, Verdana, Sans-Serif;
+	color: #FFF;
+	text-align: center;
+	margin-bottom: 20px;
+}
+#social_nav_horizontal {
+	margin-left: 100px;
+	font-family: Futura, Verdana, Sans-Serif;
+	font-size: 18px;
+	color: #8E9090;
+	height: 100px;
+}
+#social_nav_horizontal h3 {
+	display: inline;
+	padding: 0 10px;
+	border-bottom: dashed 1px #ccc;
+}
+#social_nav_horizontal ul {
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+}
+#social_nav_horizontal ul li {
+	float: left;
+	padding: 5px 0 0 5px;
+	margin-left: 5px;
+	list-style-type: none;
+}
+#social_nav_horizontal ul li a {
+	padding: 4px 0 0 28px;
+	height: 32px;
+	color: #999;
+	text-decoration: none;
+	line-height: 1.45em;
+}
+#social_nav_horizontal ul li a:hover {
+	color: #6DCAFF;
+	text-decoration: underline;
+}
+.delicious {
+	background: url(images/delicious.png)no-repeat;
+	background-position: 0 -1px;
+}
+.facebook {
+	background: url(images/facebook.png)no-repeat;
+	background-position: 0 -1px;
+}
+.stumbleupon {
+	background: url(images/stumbleupon.png)no-repeat;
+	background-position: 0 -1px;
+}
+.twitter {
+	background: url(images/twitter.png)no-repeat;
+	background-position: 0 -1px;
+}
+/* -----------------------------Vertical Menu -----------------*/
+
+#social_nav_vertical {
+	margin-left: 100px;
+	margin-top: 30px;
+	font-family: Futura, Verdana, Sans-Serif;
+	font-size: 18px;
+	color: #8e9090;
+	height: 160px;
+	background: #E2E2E2;
+	padding: 10px;
+	width: 550px;
+	border: 2px dashed #DFDFDF;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+#social_nav_vertical h3 {
+	display: inline;
+	padding: 0 10px;
+	border-bottom: dashed 1px #ccc;
+}
+#social_nav_vertical  ul {
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+}
+#social_nav_vertical ul li {
+	padding: 5px 0 0 5px;
+	margin-left: 5px;
+	list-style-type: none;
+}
+#social_nav_vertical  ul li a {
+	padding: 4px 0 0 28px;
+	height: 32px;
+	color: #999;
+	text-decoration: none;
+	line-height: 1.45em;
+}
+#social_nav_vertical ul li a:hover {
+	color: #6DCAFF;
+	text-decoration: underline;
+}
+.vertical_title {
+	position: relative;
+	top: -120px;
+	left: 170px;
+	font-size: 35px;
+}

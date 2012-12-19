@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+        <title>Digicrafts Photo Rotator</title>
+		
+		<!-- 
+		*********************************
+
+		Resources for Digicrafts Gallery
+		
+		*********************************
+		-->
+		<!-------------  START COPY ------------->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>		
+		<script src="lib/dc.photorotator.ycomp.js" type="text/javascript"></script>		
+		<link rel="stylesheet" href="css/dc.photorotator.ycomp.css" type="text/css" media="screen" />
+
+		
+		<!-- Resources for this sample only-->
+		<link rel="stylesheet" href="css/sample.common.css" type="text/css" media="screen" />
+		<script src="lib/prettify.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="css/prettify.css" type="text/css" media="screen" />		
+		
+		
+		<script type="text/javascript">
+
+			$(document).ready(function() {	
+				
+				/*******************************************
+				 * Example 1
+				 * 
+				 */
+				// Create a gallery with default settings
+							
+				$('#gallery_1').dcPhotoRotator({
+					'defaultCategory':'Ocean',
+					'source':'albums/gallery.xml',
+					//'thumbnailSize':20
+				});
+			
+				/*******************************************
+				 * Example 2
+				 * 
+				 */
+				// Create a gallery with different settings
+				
+				$('#gallery_2').dcPhotoRotator({
+					'source':'albums/gallery.xml',										
+					'settings':{
+						'gallery':{		
+							'titleEnabled':true,	
+							'titlePosition':'top',
+							'navigationEnabled':true,
+							'thumbnailEnabled':false,
+							
+							'thumbnailResizeMode':5,
+							'thumbnailSize':20,	
+							'transitionType':'random',		
+							'resizeMode':5,		
+								
+							'controlThemeColor':'#000000',
+							'controlThemeAlpha':40
+						},
+						'basic':{							
+							'backgroundColor':'#111111',
+							'themeColor':'#ff8800',
+							'themeTextColor':'#FFFFFF',
+							'themeAlpha':100,							
+							'autoSlideShowEnabled':true,
+							'slideShowEnabled':true,
+							'slideShowInterval':5
+						}
+					}
+				});
+				
+				/*******************************************
+				 * Example 3
+				 * 
+				 */				 
+				// Create a gallery with array source				
+				var mediaPath = 'albums/';				
+				$('#gallery_3').dcPhotoRotator({
+					'source':[
+						{'source':mediaPath+'large/o1.jpg','thumbnail':mediaPath+'thumb/o1.jpg',
+						'title':'Title 1','description':'This is a description.'},
+						
+						{'source':mediaPath+'large/o2.jpg','thumbnail':mediaPath+'thumb/o2.jpg',
+						'title':'Title 2','description':'This is a description with <a href="abc">LINK</a>.'},
+						
+						{'source':mediaPath+'large/o3.jpg','thumbnail':mediaPath+'thumb/o3.jpg',
+						'title':'Title 3','description':'This is a description.'},
+						
+						{'source':mediaPath+'large/f1.jpg','thumbnail':mediaPath+'thumb/f1.jpg',
+						'title':'Title 4','description':'This is a description.'},
+						
+						{'source':mediaPath+'large/f2.jpg','thumbnail':mediaPath+'thumb/f2.jpg',
+						'title':'Title 5','description':'This is a description.'},
+					]
+				});
+					
+				// For code highlight
+				prettyPrint();				
+				
+			});
+						
+						
+		</script>
+		
+		<style type="text/css">
+			
+			.example .container{
+				width:550px;
+				height:350px;	
+			}
+			
+		</style>
+
+		
+    </head>
+    <body>
+    
+	<div id="pageWrapper">	
+		<!--Start: Common Header -->
+    	<div id="header" style="">
+    		<div class="logo">&nbsp;</div>
+			<div class="title">Photo Rotator <small>JQuery Plugin</small></div>
+			<div class="clean">&nbsp;</div>
+
+		</div>
+		<!--End: Common Header -->
+		
+		
+		<!--Start: Example 1 -->
+		<div class="example">
+			<div class="title">Example 1 - Default Settings</div>
+			<div class="container" id="gallery_1"></div>
+			<pre class="prettyprint">
+// Create a gallery with default settings				
+$('#gallery_1').dcThumbnailGallery({
+	'source':'images/gallery.xml'
+});
+			</pre>
+
+			<div>This example code show the basic syntax for building a thumbnail gallery. "#gallery_1" is the id of the div container which hold the gallery. The paramter object specify the path of the xml which driven the gallery. </div>
+		</div>
+		
+		<!--Start: Example 2 -->
+		<div class="example">
+			<div class="title">Example 2 - With Custom Settings </div>
+			<div class="container" id="gallery_2"></div>
+			<pre class="prettyprint">
+// Create a gallery with different settings
+$('#gallery_2').dcThumbnailGallery({
+	'source':'images/gallery.xml',										
+	'settings':{
+		'gallery':{		
+		'titlePosition':'top',		
+		'thumbnailEnabled':false,		
+		'thumbnailSize':20,		
+		'controlThemeColor':'#000000',
+		'controlThemeAlpha':40,
+		'resizeMode':5   
+		},
+		'basic':{							
+		'backgroundColor':'#333333',
+		'themeColor':'#000000',
+		'themeTextColor':'#FFFFFF'
+		}
+	}
+});
+		</pre>	
+		<div>This example code show the syntax for config the thumbnail gallery. You can secify a "settings" object in the paramter object to config the gallery. The paramters supported is show in below table.</div>
+
+		<pre class="prettyprint doc">
+'settings':{
+	'gallery':{		
+	'titleEnabled':true,          // Enable/disable the title
+	'titlePosition':'top',        // The position of the title
+	
+	'thumbnailEnabled':true,      // Enable/disable the slide controls		
+	'thumbnailSize':20,	          // The size of the thumbnail.
+	
+	'navigationEnabled':false,	  // Enable/disable the slide controls
+	'controlThemeColor':'#000000',// The color of the controls
+	'controlThemeAlpha':40,       // The alpha of the controls
+	
+	'transitionType':'random',    // Set the transition type
+	                              // 'slide' : sliding out left/right
+	                              // 'flip'  : 3d flip
+	                              // 'slideup' : sliding up/down
+	                              // 'swap'  : 3d swap
+	                              // 'cube'  : 3d cube
+	                              // 'pop'   : pop up
+	                              // 'fade'  : fade
+	                              // 'random' : random
+	                              // *3D transition only supported by Safari
+		
+	'resizeMode':0                // Set the resize mode of main image
+	                              // 	AUTO		:0
+	                              //	AUTO_WIDTH	:1
+	                              //	AUTO_HEIGHT	:2
+	                              //	STRETCH		:3
+	                              //	AUTO_FILL	:5	
+	},
+	'basic':{							
+	'backgroundColor':'#333333',  // Set main background color
+	'themeColor':'#000000',       // Set the overall theme color
+	'themeTextColor':'#FFFFFF',   // Set the overall theme text color
+	'themeAlpha':100,             // Set the overall theme background alpha
+	
+	'autoSlideShowEnabled':false, // Enable/disable auto start slide show
+	'slideShowEnabled':true,      // Enable/disable slide show
+	'slideShowInterval':5,        // Time between slide (sec);
+	}
+}
+		</pre>	
+		</div>
+		
+		<!--Start: Example 2 -->
+		<div class="example">
+			<div class="title">Example 3 - Load from arrays </div>
+			<div class="container" id="gallery_3"></div>
+			<pre class="prettyprint">
+// Create a gallery with array source
+var mediaPath = 'images/';				
+$('#gallery_3').dcSlideGallery({
+	'source':[
+		{'source':mediaPath+'large/o1.jpg',
+		 'thumbnail':mediaPath+'thumb/o1.jpg',
+		 'title':'Title 1',
+		 'description':'This is a description.'},
+		
+		{'source':mediaPath+'large/o2.jpg',
+		 'thumbnail':mediaPath+'thumb/o2.jpg',
+		 'title':'Title 2',
+		 'description':'This is a description with <a href="abc">LINK</a>.'},
+		
+		{'source':mediaPath+'large/o3.jpg',
+		 'thumbnail':mediaPath+'thumb/o3.jpg',
+		 'title':'Title 3',
+		 'description':'This is a description.'},
+		
+		{'source':mediaPath+'large/f1.jpg',
+		 'thumbnail':mediaPath+'thumb/f1.jpg',
+		 'title':'Title 4',
+		 'description':'This is a description.'},
+		
+		{'source':mediaPath+'large/f2.jpg',
+		 'thumbnail':mediaPath+'thumb/f2.jpg',
+		 'title':'Title 5',
+		 'description':'This is a description.'},
+		
+		{'source':mediaPath+'large/f3.jpg',
+		 'thumbnail':mediaPath+'thumb/f3.jpg',
+		 'title':'Title 6',
+		 'description':'This is a description.'}
+	]
+});
+		</pre>		
+		<div>This example code show the syntax for develop a gallery with a array instead of xml file.</div>
+
+		</div>	
+		
+		<!--Start: Common Header -->
+    	<div id="footer" style="">
+    		
+    		<div class="link">Link to <a href="http://www.digicrafts.com.hk/components/JSThumbnailGallery" target="_blank">Product page.</a></div>
+			<div class="link">Link to <a href="http://support.digicrafts.com.hk" target="_blank">Support page.</a></div>
+			
+    		<div class="copyright">&copy;Copyrights digicrafts 2011. All rights reserved. </div>
+			<div class="clean">&nbsp;</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>		</div>
+		<!--End: Common Header -->
+
+	</div>
+    </body>
+</html>

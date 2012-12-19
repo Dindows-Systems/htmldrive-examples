@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo: How to create Skype-like buttons using jQuery</title>
+
+    <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".button").hover(function(){
+                $(".button img")
+                .animate({top:"-10px"}, 200).animate({top:"-4px"}, 200) // first jump
+                .animate({top:"-7px"}, 100).animate({top:"-4px"}, 100) // second jump
+                .animate({top:"-6px"}, 100).animate({top:"-4px"}, 100); // the last jump
+            });
+        }); 
+    </script>
+
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-size: 12px;
+            margin: 20px;
+        }
+        .button {
+            padding: 4px 10px 3px 25px;
+            border: solid 1px #8AB134;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            background-image: url( 'bkg.png' );
+            background-repeat: repeat-x;
+            font-size: 11px;
+            height: 16px;
+            text-decoration: none;
+            color: #40740D;
+            -moz-border-radius-bottomleft: 5px;
+            -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+        }
+        .button img {
+            position: absolute;
+            top: -4px;
+            left: -12px;
+            border: none;
+        }
+        .button:hover {
+            color: #8AB134;
+        }
+        input, textarea {
+            display: block;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>
+        JankoAtWarpSpeed Demos</h2>
+    <h1>
+        How to create Skype-like buttons using jQuery</h1>
+    <p>
+        <a href="http://www.jankoatwarpspeed.com/post/2009/03/11/How-to-create-Skype-like-buttons-using-jQuery.aspx">Go back to original article</a></p>
+
+    <hr />
+    <label for="name">
+        Your name</label>
+    <input type="text" id="name" />
+    <label for="message">
+        Your message</label>
+    <textarea cols="20" rows="5" id="message"></textarea>
+
+    <a class="button" href="#">
+        <img src="button.png" alt="" />Send info</a> or <a href="#">cancel</a><br />
+	<img src="click_here.png" alt="Click here">
+	More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

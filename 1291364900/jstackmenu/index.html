@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mojebus&rsquo; jStackmenu By Seamus P. H. Leahy</title>
+		
+		<link rel="stylesheet" type="text/css" href="jstackmenu.css" />
+	<style>
+		@font-face {
+			font-family: 'JournalRegular';
+			src: url('journal.eot');
+			src: local('Journal'), local('Journal'), url('journal.woff') format('woff'), url('journal.ttf') format('truetype'), url('journal.svg#Journal') format('svg');
+		}
+		
+		body, html {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		
+		#wrapper {
+			min-height: 500px;
+			min-width: 900px;
+			height: 100%;
+			width: 100%;
+			position: relative;
+		}
+		
+		body {
+			background-color: #37aac6;
+			color: #2f370f;
+			font-family: "JournalRegular";
+		}
+		
+		#info {
+			position: absolute;
+			top: 80px;
+			right: 50px;
+			color: #fff;
+		}
+		h1 {
+			font-weight: normal;
+			font-size: 120px;
+			position: relative;
+			margin: 0;
+			border-bottom: dashed 6px #3bb5d4;
+			line-height: 80px;
+			padding-left: 45px;
+			
+		}
+		
+		h1 small {
+			font-size: 60px;
+			display: block;
+			position: absolute;
+			top: -60px;
+			left: 0px;
+			line-height: normal;
+		}
+		
+		#info p {
+			font-size: 30px;
+			margin: 0;
+			position: relative;
+			left: 50px;
+		}
+		
+		#info p.download {
+			font-size: 20px;
+			margin-top: .5em;
+		}
+		
+		#info a {
+			text-decoration: none;
+			padding: 0 5px;
+			color: #fff;
+			border-bottom: 2px dotted #43cdf0;
+			line-height: 90%;
+			display: inline-block;
+			margin-right: .3em;
+		}
+		
+		#info a:hover {
+			background-color: #3bb3d1;
+		}
+		
+		#stack {
+			width: 68px;
+			height: 68px;
+			padding: 0;
+			position: absolute;
+			left: 100px;
+			bottom: 10px;
+		}
+		
+		
+		#stack .trigger {
+			position: absolute;
+			z-index: 50;
+			height: 64px;
+			width: 64px;
+			padding: 2px;
+			left: 0;
+			top: 0;
+			cursor: pointer;
+			
+			
+		}
+		
+		#stack ul {
+			position: absolute;
+			top: 0;
+			left: 18px;
+			height: 64px;
+			width: 32px;
+			bottom: 0;
+			margin: 0;
+			padding: 0;
+		}
+		
+		#stack ul li {
+			display: block;
+			padding: 0px;
+			width: 32px;
+			height: 32px;
+			margin: 6px 0;
+		}
+		
+		#stack ul li .title {
+			display: none;
+		}
+		
+		#stack ul li a:hover .title {
+			display: block;
+			position: absolute;
+			right: 38px;
+			top: 8px;
+			padding: 1px 8px;
+			height: 14px;
+			font-size: 11px;
+			background-color: #fff;
+			color: #333;
+			font-family: Arial, sans-serif;
+			-moz-border-radius: 8px;
+			-webkit-border-radius: 8px;
+			border-radius: 8px;
+			
+		}
+		
+		#stack ul li img {
+			border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			box-shadow: 0 0 5px #222;
+			-webkit-box-shadow: 0 0 5px #222;
+			-moz-box-shadow: 0 0 5px #222;
+			-o-box-shadow: 0 0 5px #222;
+			border: none 0;
+			padding: 2px;
+			background-color: #fff;
+		}
+		
+		#stack ul li a:hover img,
+		#stack ul li a:hover .title {
+			box-shadow: 0 0 10px #00a;
+			-webkit-box-shadow: 0 0 10px #00a;
+			-moz-box-shadow: 0 0 10px #00a;
+			-o-box-shadow: 0 0 10px #00a;
+		}
+		
+		
+		
+		#stack .trigger {
+			border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			box-shadow: 0 0 3px #222;
+			-webkit-box-shadow: 0 0 3px #222;
+			-moz-box-shadow: 0 0 3px #222;
+			-o-box-shadow: 0 0 3px #222;
+			background-color: #7ee6ff;
+		}
+		
+		
+		#click-me-message {
+			position: absolute;
+			left: 180px;
+			bottom: 30px;
+			width: 300px;
+			padding: 0 0 10px 75px;
+			font-family: JournalRegular;
+			font-size: 45px;
+			
+			background-image: url("arrow.png");
+			background-position: 0 100%;
+			background-repeat: no-repeat;
+		}
+		
+		
+		#sources {
+			position: absolute;
+			bottom: 10px;
+			right: 50px;
+			margin: 0;
+		}
+		
+		#sources li {
+			display: block;
+			list-style-type: none;
+		}
+		
+		#sources li:before {
+			content: "* ";
+		}
+		
+		#sources a {
+			text-decoration: none;
+			color: #6cd5f0;
+		}
+		
+		</style>
+		
+		<script type="text/javascript" src="jquery-ui-1.7.2/development-bundle/jquery-1.3.2.js"></script>
+		<script type="text/javascript" src="jquery-ui-1.7.2/development-bundle/ui/jquery-ui-1.7.2.custom.js"></script>
+
+		<script type="text/javascript" src="jquery-css-transform.js"></script>
+		<script type="text/javascript" src="jquery-animate-css-rotate-scale.js"></script>
+		<script type="text/javascript" src="jstackmenu.js"></script>
+		
+		<script>
+		jQuery( document ).ready( function( ){
+			var stack = jQuery( '#stack ul' ).stackmenu( );	
+			jQuery( '#stack .trigger' ).click( function( ){
+				stack.stackmenu( 'toggle' );
+			} );
+		} );
+		</script>
+</head>
+	<body>
+			<div id="wrapper">
+
+			<div id="info">
+				<h1><small>Mojebus'</small> jStackmenu</h1>
+				<p>A jQuery UI widget for creating stack menus.</p>
+				<p class="download"><a href="jstackmenu.zip">Download</a> <a href="..">Learn more</a> 2010 Mar 22</p>
+
+			</div>
+			<div id="click-me-message">
+				Click the <img src="icons/heart-32x32.png" title="heart icon" /> to see jStackmenu in action.
+			</div>
+			
+			
+			<div id="stack">
+				<div class="trigger"><img src="icons/heart-64x64.png" alt="share" /></div>
+				<ul>
+					<li><a href="http://twitter.com/"><span class="title">Twitter</span><img src="icons/twitter-32x32.png" alt="Twitter"></a></li>
+
+					<li><a href="http://digg.com/"><span class="title">Digg</span><img src="icons/digg-32x32.png" alt="Digg"></a></li>
+					<li><a href="http://www.facebook.com/"><span class="title">Facebook</span><img src="icons/facebook-32x32.png" alt="Facebook"></a></li>
+					<li><a href="http://reddit.com/"><span class="title">Reddit</span><img src="icons/reddit-32x32.png" alt="Reddit"></a></li>
+					<li><a href="http://stumbleupon.com/"><span class="title">StumbleUpon</span><img src="icons/stumbleupon-32x32.png" alt="StumbleUpon"></a></li>
+					<li><a href="http://delicious.com/"><span class="title">Delicious</span><img src="icons/delicious-32x32.png" alt="Delicious"></a></li>
+					<li><a href="http://flickr.com/"><span class="title">Flickr</span><img src="icons/flickr-32x32.png" alt="Flickr"></a></li>
+
+				</ul>
+			
+			</div>
+			<ul id="sources">
+				<li><a href="http://www.blogperfume.com/new-27-circular-social-media-icons-in-3-sizes/">27 Circular Social Media Icons in 3 Sizes</a></li>
+				<li><a href="http://www.fontsquirrel.com/fonts/Journal">Journal font</a><br>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></li>
+			</ul>
+		</div>
+	</body>
+
+</html>

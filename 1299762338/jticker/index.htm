@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>jticker | Demo</title>
+<style type="text/css" media="screen, projection">
+  
+  #ticker
+    {height: 12em; padding: 0.6em 0; margin: 0 0 1.8em 0; border-top:3px solid #efefef; border-bottom:3px solid #efefef; position: relative;}
+  #ticker .cursor
+    {display: inline-block; background: #565c61; width: 0.6em; height: 1em; text-align: center;}
+  #ticker p
+    {margin-bottom: 0.8em;}
+  #ticker code
+    {margin: 0.4em 0.4em; display: block;}
+  #ticker .next 
+    {position: absolute; bottom: 1em;}
+</style>
+<script type="text/javascript" SRC="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" SRC="js/jquery.jticker.js"></script>
+<script type="text/javascript">
+<!--
+  jQuery(document).ready(function(){
+    // Instantiate jTicker 
+	jQuery("#ticker").ticker({
+ 		cursorList:  " ",
+ 		rate:        10,
+ 		delay:       4000
+	}).trigger("play").trigger("stop");
+
+    // Trigger events 
+    jQuery(".stop").click(function(){
+        jQuery("#ticker").trigger("stop");
+        return false;
+    });
+    
+    jQuery(".play").click(function(){
+        jQuery("#ticker").trigger("play");
+        return false;
+    });
+    
+    jQuery(".speedup").click(function(){
+        jQuery("#ticker")
+        .trigger({
+            type: "control",
+            item: 0,
+            rate: 10,
+            delay: 4000
+        })
+        return false;
+    });
+    
+    jQuery(".slowdown").click(function(){
+        jQuery("#ticker")
+        .trigger({
+            type: "control",
+            item: 0,
+            rate: 90,
+            delay: 8000
+        })
+        return false;
+    });
+    
+    jQuery(".next").live("click", function(){
+        jQuery("#ticker")
+        .trigger({type: "play"})
+        .trigger({type: "stop"});
+        return false;
+    });
+
+    jQuery(".style").click(function(){
+        jQuery("#ticker")
+        .trigger({
+            type: "control",
+            cursor: jQuery("#ticker").data("ticker").cursor.css({width: "4em", background: "#efefef", position: "relative", top: "1em", left: "-1em"})
+        })
+        return false;
+    });
+  	
+  });
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+<div id="content">
+
+  <h2>jTicker Demo  </h2>
+  <div id="ticker">
+    <div>
+      <h3>What does jTicker do?</h3>
+        <p>jTicker takes an elements' children and displays them one by one, in sequence, writing their text 'ticker tape' style. It is smart enough to ticker text from an element heirarchy, inserting elements back into the DOM tree as it needs them. That means almost any content can be 'tickered'.</p>
+        <p>It can be controlled with jQuery events.</p>
+        <a class="next" href="#">next</a>
+    </div>
+    <div>
+      <h3>Not my cup of tea, really, ...</h3>
+        <p>annoying little blinky things trying to distract attention when you want to get on with the serious business of reading a website, but if it's your thing, here it is.</p>
+        <a class="next" href="#">next</a>
+    </div>
+    <div>
+        <h3>jTicker has some neat features:</h3>
+        <ul>
+        	<li>jTicker can be declared on any element, and it respects that element's DOM tree, printing it back out with the same hierarchy.</li>
+            <li>jTicker handles any number of alternating cursors (or just one).</li>
+            <li>jTicker's cursor container is styleable using the class .cursor, or can be defined as your own jQuery object</li>
+            <li>jTicker reacts to jQuery events "play", "stop" and "control". You can try them out below.</li>
+        </ul>
+        <a class="next" href="#">next</a>
+    </div>
+    
+    <div>
+        <h3>There is one caveat:</h3>
+        <ul>
+            <li><span>jTicker can't understand text and children at the same level (I don't know how to do that yet), so if you want some text and then a link, you have to wrap the text in, say, a span, like this:</span>
+                <code>|span| some text |/span| |a|and then a link|/a|</code>
+            </li>
+            <li>But obviously not with those brackets. That's another thing, jTicker is not good at handling html character entities. So make that two caveats.</li>
+        </ul>
+        <a class="next" href="#">next</a>
+    </div>
+  </div>
+  
+  <h3>Events</h3>
+  <dl class="events">
+    <dt><a HREF="../..//index.htm" class="play">play</a></dt><dd>plays from the next item. You can also define the item to play.</dd>
+    <dt><a HREF="../..//index.htm" class="stop">stop</a></dt><dd>stops tickering at the end of the current item.</dd>
+    <dt><a href="#" class="slowdown">control</a></dt><dd>accesses controls like rate.  Ooops, <a href="#" class="speedup">Speed it up again.</a> Or <a class="style" href="#">cursor element</a>.</dd>
+  </dl>
+
+</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

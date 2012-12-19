@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Navigation</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+
+	$("li").hover(function() {
+			var itemwidth = $(this).width(); /* Getting the LI width */
+			$(this).prepend("<div class='hover'></div>"); /* Inserting a blank div into within li above the <a> tag*/
+			$(this).find("div").fadeIn('10000').css({ 'width' : itemwidth}); /* Using the itemwidth for the div to display properly*/
+			$(this).find("ul").fadeIn('1000').slideDown('10000').css("display", "block");
+			
+		
+		
+		
+		
+		
+	} , function() {
+		$(this).find("div").slideUp('1000').fadeOut('1000');/* sliding up and fading out the hover div */
+		$(this).find("div").remove();/* removing the <div> code from html at every mouseout event*/
+		$(this).find("ul").fadeOut('1000'); /* fading out the sub menu */
+		
+	});
+	
+	
+
+	$(".search-input").focus(function(){
+		$(this).animate({width:'180px'}, 500); /* on focus, increasing the input width of search to left side*/
+	});
+	
+	$(".search-input").focusout(function(){
+		$(this).animate({width:'117px'}, 500);  /* on focus, decreasing the input width of search to left side*/
+	});
+	
+	
+
+});
+
+
+
+	
+	
+  
+
+
+</script>
+
+</head>
+
+<body>
+
+<div class="main-navigation">
+	<ul>
+		<li><a href="#">Home</a>
+		
+			<ul>
+				<li><a href="#">Sub Menu Item 1</a></li>
+				<li><a href="#">Sub Menu Item 2</a></li>
+				<li><a href="#">Sub Menu Item 3</a></li>
+
+				<li><a href="#">Sub Menu Item 4</a></li>
+				<li><a href="#">Sub Menu Item 5</a></li>
+				
+			</ul>
+			
+		</li>
+		<li><a href="#">Services</a>
+		
+			<ul>
+				<li><a href="#">Sub Menu Item 1</a></li>
+
+				<li><a href="#">Sub Menu Item 2</a></li>
+				<li><a href="#">Sub Menu Item 3</a></li>
+				<li><a href="#">Sub Menu Item 4</a></li>
+				<li><a href="#">Sub Menu Item 5</a></li>
+				
+			</ul>
+		
+		</li>
+		<li><a href="#">Portfolio</a>
+
+			
+			<ul>
+				<li><a href="#">Sub Menu Item 1</a></li>
+				<li><a href="#">Sub Menu Item 2</a></li>
+				<li><a href="#">Sub Menu Item 3</a></li>
+				<li><a href="#">Sub Menu Item 4</a></li>
+				<li><a href="#">Sub Menu Item 5</a></li>
+
+				
+			</ul>
+			
+		</li>
+		<li><a href="#">Contact</a>
+		
+			<ul>
+				<li><a href="#">Sub Menu Item 1</a></li>
+				<li><a href="#">Sub Menu Item 2</a></li>
+				<li><a href="#">Sub Menu Item 3</a></li>
+
+				<li><a href="#">Sub Menu Item 4</a></li>
+				<li><a href="#">Sub Menu Item 5</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+	<div class="search">
+		<input type="text" name="search" class="search-input" />
+		<input type="submit" name="search" value="" class="search-btn" />
+
+	</div>
+	
+</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></body>
+</html>

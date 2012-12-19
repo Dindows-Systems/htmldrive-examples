@@ -1,0 +1,148 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#logo
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    top: 10px;
+    height: 200;
+    width: 160px;
+    background-image:url('images/logo.png');
+    z-index: 2;
+}
+
+#triangle
+{
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    top: 0px;
+    height: 400px;
+    width: 750px;
+    background-image:url('images/triangle.png');
+}
+
+#nav
+{
+    position: absolute;
+    bottom: 10px;
+    width: 300px;
+    height: 20px;
+    left: 40%;
+}
+
+#nav ul
+{
+    position: absolute;
+    bottom: 10px;
+    width: 300px;
+    height: 20px;
+    clear: both;
+    display: block;
+    list-style-type: none;
+    list-style-position: outside;
+    list-style-image: none;
+}
+
+#nav ul li
+{
+    float: left;
+}
+
+#nav ul li a
+{
+    position: relative;
+    top: 0px;
+    margin-right: 5px;
+    background-color: Black;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+#nav ul li a:hover
+{
+    background-color: #e1e1e1;
+}
+
+#nav ul li .selected
+{
+    background-color: #e5e5e5;
+}
+
+#rightButton
+{
+    position:absolute;
+    width:80px;
+    right:0px;
+    height:100%;
+    z-index:3;
+}
+#rightButton a
+{
+    position:absolute;
+    top:40%;
+    width:80px;
+    height:80px;
+    background-image:url('images/button.png');
+    display:block;
+}
+
+#contentWrapper
+{
+   position:absolute;
+   overflow:hidden;
+}
+.contentItem
+{
+    position: absolute;
+    background-color: #fff;
+}
+
+#contentPicture1
+{
+    position:relative;
+    top:30%;
+    left:40%;
+    width:250px;
+    height:550px;
+    background-color:#fff;
+    background-image:url('http://www.htmldrive.net/edit_media/2010/201010/20101011/mobileapp_website/img/phones/iphone.png');
+}
+#contentPicture2
+{
+    position:relative;
+    top:30%;
+    left:40%;
+    width:250px;
+    height:550px;
+    background-color:#fff;
+    background-image:url('http://www.htmldrive.net/edit_media/2010/201010/20101011/mobileapp_website/img/phones/iphone.png');
+}
+#contentPicture3
+{
+    position:relative;
+    top:30%;
+    left:40%;
+    width:250px;
+    height:550px;
+    background-color:#fff;
+    background-image:url('http://www.htmldrive.net/edit_media/2010/201010/20101011/mobileapp_website/img/phones/nokia.png');
+}
+#contentPicture4
+{
+   position:relative;
+    top:30%;
+    left:40%;
+    width:250px;
+    height:550px;
+    background-color:#fff;
+    background-image:url('http://www.htmldrive.net/edit_media/2010/201010/20101011/mobileapp_website/img/phones/nexus_one.png');
+}

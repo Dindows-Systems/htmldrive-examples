@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1;charset=windows-1252" />
+<title>CSS Overlapping Tabs Menu with a Tab On- Result</title>
+
+<style media="screen" type="text/css">
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+#ts_tabmenu {
+	font-size: .75em; /* set the font size */
+	padding: 20px 0px 0px 20px; /* set the padding */
+}
+#ts_tabmenu ul {
+	line-height: 1em; /* setting the line height now so we don't have any headaches*/
+	margin: 0px; /* let's keep the margin set to 0 for the same reasons as above*/
+	list-style-type: none; /* we remove the UL's default disc bullets */
+	float: left; /* we float the list to the left like we will all the elements inside*/
+	padding: 0px 0px 0px 5px; /* give it a left padding of 5px to counter the effect of margin -5px below */
+}
+#ts_tabmenu ul li {
+	float: left; /* floatin' left */
+}
+#ts_tabmenu ul li a {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 10px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(images_files/tabs0000.gif) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -5px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	z-index: 0; /* keep it on layer 0 (default) */
+	position: relative;  /* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+	color: #666666;  /* color of the tab text */
+}
+#ts_tabmenu ul li a strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(images_files/tabs0000.gif) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 6px 10px 7px 5px;  /* important, as through this you define the position of the text within the tab */
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+}
+#ts_tabmenu ul li a:hover {
+	position: relative; /* again, keep things relative */
+	z-index: 5; /* we show this tab over all other tabs in the menu, which would be on layer 0, thus overlapping occurs */
+	background: url(images_files/tabs0000.gif) no-repeat left bottom;  /* now we show the bottom part of the tabs image, the "hover" instance */
+	color: #000000;   /* we color the hovered tab's text black */
+}
+#ts_tabmenu ul li a:hover strong {
+	background-image: url(images_files/tabs0000.gif) no-repeat;  
+	position: relative; /* keep it relative */
+	z-index: 5; /* show this on layer 5 as well */
+	background-position: right bottom; /* we show the right bottom part of the tabs image (the hover instance) */
+}
+#tsmenu1 #li_tsmenu1 a, #tsmenu2 #li_tsmenu2 a, 
+#tsmenu3 #li_tsmenu3 a, #tsmenu4 #li_tsmenu4 a, 
+#tsmenu5 #li_tsmenu5 a, #tsmenu6 #li_tsmenu6 a, 
+#tsmenu7 #li_tsmenu7 a {
+	position: relative;
+	z-index: 5; 
+	background: url(images_files/tabs0000.gif) no-repeat left bottom;  
+	color: #000000; 
+}
+#tsmenu1 #li_tsmenu1 a strong, #tsmenu2 #li_tsmenu2 a strong, 
+#tsmenu3 #li_tsmenu3 a strong, #tsmenu4 #li_tsmenu4 a strong, 
+#tsmenu5 #li_tsmenu5 a strong, #tsmenu6 #li_tsmenu6 a strong, 
+#tsmenu7 #li_tsmenu7 a strong {	
+	background-image: url(images_files/tabs0000.gif) no-repeat;  
+	position: relative; 
+	z-index: 5; 
+	background-position: right bottom; 
+}
+
+</style>
+
+
+</head>
+
+<body id="tsmenu2">
+
+	<div id="ts_tabmenu">
+		<ul>
+			<li id="li_tsmenu1"><a href="http://www.tutorialsphere.com/"><strong>Tutorialsphere</strong></a></li>
+			<li id="li_tsmenu2"><a href="http://www.tutorialsphere.com/tutorials/photoshop"><strong>Photoshop</strong></a></li>
+			<li id="li_tsmenu3"><a href="http://www.tutorialsphere.com/tutorials/illustrator"><strong>Illustrator</strong></a></li>
+			<li id="li_tsmenu4"><a href="http://www.tutorialsphere.com/tutorials/fireworks"><strong>Fireworks</strong></a></li>
+			<li id="li_tsmenu5"><a href="http://www.tutorialsphere.com/tutorials/flash"><strong>Flash</strong></a></li>
+			<li id="li_tsmenu6"><a href="http://www.tutorialsphere.com/tutorials/css"><strong>CSS</strong></a></li>
+			<li id="li_tsmenu7"><a href="http://www.tutorialsphere.com/tutorials/php"><strong>PHP</strong></a></li>
+		</ul>
+	</div><br />
+<br />
+
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>
+
+<!-- This document saved from http://www.tutorialsphere.com/homemade/uploads/2009/02/css-overlapping-tabs-menu_tabon.html -->

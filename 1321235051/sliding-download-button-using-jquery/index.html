@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+	<title>Sliding Download Button Using jQuery</title>
+	<style type="text/css">
+		/*
+			Written by Andrew Champ
+			URL:	http://andrewchamp.com
+			POST:	http://andrewchamp.com/articles/sliding-download-button-using-jquery
+			ICON:	Created by Andrew Champ
+		*/
+		
+	
+		/* STYLES FOR THE DEMO */
+		*{border:0; outline:0; margin:0; padding:0;}
+		#container{margin:0 auto; width:500px; padding:20px 0 0 0;}
+		
+
+		
+		/* BUTTON SLIDER */
+		.buttonWrap{width:170px; height:80px; display:block;}
+	
+		.toggleButton{
+			display:block;
+			width:170px;
+			height:30px;
+			padding:10px 0 0 0;
+			text-size:24px;
+			font-family:arial, sans-serif;
+			font-weight:bold;
+			text-align:center;
+			color:#FFF;
+			text-decoration:none;
+			border-radius:7px; -moz-border-radius:7px;
+			cursor:pointer;
+			border:1px solid #05ABE0;
+			text-shadow:-1px -1px 0px #05ABE0;
+			background: #87E0FD;
+			background: -moz-linear-gradient(top, #87E0FD 0%, #53CBF1 40%, #05ABE0 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87E0FD), color-stop(40%,#53CBF1), color-stop(100%,#05ABE0));
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87E0FD', endColorstr='#05ABE0',GradientType=0 );
+
+		}
+		.toggleButton:active{		
+			background: #87e0fd;
+			background: -moz-linear-gradient(top, #05ABE0 0%, #53CBF1 40%, #87E0FD 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#05ABE0), color-stop(40%,#53CBF1), color-stop(100%,#87E0FD));
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05ABE0', endColorstr='#87E0FD',GradientType=0 );
+		}
+		
+		a.toggleSection{
+			display:none;
+			color:#333;
+			background:#EEE url(icon-dl.png) no-repeat 5px center;
+			border-left:1px solid #DDD; border-right:1px solid #DDD; border-bottom:1px solid #DDD;
+			border-radius:0  0 5px 5px; -moz-border-radius:0 0 5px 5px;
+			width:60px;
+			float:right; 
+			padding:5px 5px 5px 40px;
+			margin:0 10px 0 0;
+			font-family:arial, verdana, sans-serif; 
+			font-size:12px;
+			text-decoration:none;
+		}
+		a.toggleSection span{font-weight:bold; display:block;}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>	
+	<script language="javascript">
+		$(document).ready(function() {
+			$('.buttonWrap').click(function() {
+				if ($('.toggleSection').is(":hidden")) {
+					$('.toggleSection').slideDown("slow");
+				} else {
+					$('.toggleSection').slideUp("slow");
+				}
+				return false;
+			});
+		});
+     </script>
+
+</head>
+<body>
+	<div id="container">
+
+	
+		
+		
+		<div class="buttonWrap">
+			<div class="toggleButton">Download Now!</div>
+			 <a href="#" class="toggleSection">
+					<span>Exe</span>
+					7.27 MB
+			</a>
+		</div>
+		
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>	</div>
+</body>
+</html>

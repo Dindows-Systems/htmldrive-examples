@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Flashy AW Menu #1</title>
+<link rel="stylesheet" href="css/styles.css" type="text/css" media="all"/>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.delay.js"></script>
+<script type="text/javascript" src="js/jquery.backgroundPosition.js"></script>
+
+
+<script>
+	$(document).ready(function() {	
+		$("#menu, #white_line").css("opacity","0");
+		$("#menu").stop().animate({
+				opacity: 0.9,
+				marginLeft: '50px' 
+		}, 2400, 'easeInSine');
+		$('#white_line').stop().animate(
+			{opacity: 0.8},
+			{duration:2400,easing: 'easeInSine'
+		})
+	
+		$('#menu span').mouseenter(function(element) {
+			$("#menu ul li").css("opacity","1");
+			$('#white_line').stop().animate(
+				{top: 40, height:400},
+				{duration:400,easing: 'easeInSine'
+			})
+			$("#menu ul li").eachDelay(function(){ 
+				$(this).stop().animate({
+				opacity: 1,
+				marginLeft: '0px' 
+				}, 600, 'easeOutBack');			
+			}, 30);			
+		});
+		
+		$('#menu').mouseleave(function(element) {
+			$("#menu ul li").eachDelay(function(){ 
+				$(this).stop().animate({
+				opacity: 0,
+				marginLeft: '-200px',
+				backgroundPosition: "150px 0px"
+				}, 600, 'linear');			
+			}, 50);
+		});
+		
+		
+		
+		
+		$('#menu ul li').mouseenter(function(element) {			
+			$('#menu ul li').not(this).stop().animate({
+				backgroundPosition: "150px 0px",
+				opacity: '0.2' 
+			}, 500, 'linear');
+			$(this).stop().animate({
+				backgroundPosition: "300px 0px",
+				opacity: '1' 
+			}, 200, 'linear');				
+		});
+		
+		$('#menu ul li').mouseleave(function(element) {			
+			$(this).stop().animate({
+				backgroundPosition: "150px 0px",
+				opacity: '1' 
+			}, 200, 'linear');	
+		});
+		
+	
+		
+		
+	});	
+</script>
+</head>
+<body >
+	
+
+		<div id="bg"><img src="images/bg.jpg" width="100%"/></div>		
+		<div id="filter"></div>		
+		<div id="white_line"></div>		
+		<div id="menu">
+			<span></span>
+			<ul>
+				<li class="item1"><a href="">New Arrivals</a></li>
+				<li class="item2"><a href="">Dresses</a></li>
+				<li class="item3"><a href="">Polos</a></li>
+				<li class="item4"><a href="">Blouses</a></li>
+				<li class="item5"><a href="">Sweaters</a></li>
+				<li class="item6"><a href="">Pants </a></li>
+				<li class="item7"><a href="">Jeans</a></li>
+				<li class="item8"><a href="">Jackets</a></li>
+				<li class="item9"><a href="">Footwear</a></li>
+				
+			</ul>
+		</div>
+		
+	
+
+	
+
+
+</body>
+</html>
+
+
+
+
+

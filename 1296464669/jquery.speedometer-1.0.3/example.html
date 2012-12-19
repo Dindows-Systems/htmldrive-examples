@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Untitled Document</title>
+
+	<style>
+
+
+	</style>
+
+	<script src="jquery-1.4.min.js"></script>
+
+
+	<script src="jquery.speedometer.js"></script>
+	<script src="jquery.jqcanvas-modified.js"></script>
+	<script src="excanvas-modified.js"></script>
+
+
+	<script>
+
+		$(function(){
+			$('#test').speedometer();
+
+			$('.changeSpeedometer').click(function(){
+				$('#test').speedometer({ percentage: $('.speedometer').val() || 0 });
+			});
+
+		});
+
+
+		
+	</script>		
+		
+
+	</head>
+	
+	<body>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a><br />
+<br />
+
+		<input type="text" class="speedometer" value="90"></input>
+		<button class="changeSpeedometer">Submit</button><br/>
+
+
+		<div id="test">
+		90
+		</div>
+
+
+
+
+
+
+
+</body>
+</html>

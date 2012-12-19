@@ -1,0 +1,22 @@
+body { background: #fff; font: 11px "Trebuchet MS", Verdana, Arial, sans-serif; }
+a			{ text-decoration: none; outline: none; color:#d00000; }
+p 			{ padding-bottom:10px; position:absolute; left:47%; bottom:5px;}
+p a:hover	{ border-bottom: 2px dotted #d00000; cursor:pointer;}
+
+#iconbar	{ height:25px; position:absolute; top:45%; left:45%;}
+#iconbar li { float:left; position:relative; margin-right:20px;}
+
+#iconbar span {
+	background: url(ttbg.jpg) no-repeat;
+	width: 110px;
+	height: 35px;
+	position: absolute;
+	top: -50px;
+	left: -80px;
+	text-align: center;
+	padding: 5px;
+	display: none;
+	line-height:110%;
+	color:#000000;
+	cursor:pointer;
+}

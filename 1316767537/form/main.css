@@ -1,0 +1,137 @@
+/*
+    (c) 2009 ajaxBlender - Source files for AB articles
+    General CSS Stylesheet 
+*/
+
+BODY {
+    margin: 20px;
+    padding: 20px;
+    font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+    color: #444444;
+    font-size: 12px;
+    background: #F3F1E9;
+}
+A IMG { border: none; }
+A { color: #0A8ECC; }
+A:HOVER {
+	text-decoration: none;
+	color: #8FCB2F;
+}	
+H1 {
+	font-weight: normal;
+	color: #0A8ECC;
+	margin: 0;
+	padding: 0;
+}
+.no-gap { 
+	margin-top: 0;
+	padding-top: 0;	
+}
+
+.picture-frame {
+	background: #FFFFFF;
+	border: 1px solid #DEDBD2;
+	padding: 5px;
+	float: left;
+}
+.picture-frame IMG { float: left; }
+.controls {
+	clear: both;
+	float: left;
+	margin: 20px 0;
+
+}
+.controls UL, .controls UL LI{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.controls UL, .controls UL LI, .controls UL LI A {
+	float: left;
+	display: inline;
+}
+.controls UL LI {
+	margin-right: 3px;
+}	
+.controls UL LI A {
+	padding: 4px 8px;
+	background: #0A8ECC;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 15px; 
+	text-decoration: none;
+}
+.controls UL LI A:HOVER {
+	background: #8FCB2F;
+	
+}
+.tutorial {
+	float: left;
+	padding: 4px 4px 4px 27px;
+	margin-top: 20px;
+	background: #FFFFFF url(/article-sources/images/tutorial-icon.gif) no-repeat 7px center;
+}
+.about {
+	clear: both;
+	color: #777777;
+	font-size: 11px;
+	padding-top: 10px;
+	margin-top: 10px;
+	border-top: 1px dotted #B9B4AD;
+}
+.clear {
+	height: 1px;
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+}
+UL.thumbnails, UL.thumbnails LI {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none; 
+}
+UL.thumbnails LI {
+	display: inline;
+	margin-right: 10px;
+	background: #FFFFFF;
+	padding: 4px;
+    border: 1px solid #D9D4CD;
+}
+.counter {
+	font-size: 30px;
+	font-weight: bold;
+	color: #FFFFFF;
+	float: left;
+	background: #8FCB2F;
+	padding: 5px;
+}
+PRE.code {
+	border: 1px dotted #B9B4AD;
+	padding: 10px;
+	background: #FFFFFF;
+	color: #444444;
+}
+SPAN.remark {
+	color: #AAAAAA;
+}
+INPUT, SELECT, TEXTAREA, BUTTON {
+   font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+   font-size: 12px;
+}
+INPUT, SELECT { width: 150px; }
+.sample-form {
+    float: left;
+    background: #FFFFFF;
+    padding: 20px;
+}
+.sample-form P {
+	clear: both;
+	float: left;
+	margin: 0;
+	padding: 3px;
+}
+.sample-form P LABEL {
+	width: 100px;
+	float: left;
+}

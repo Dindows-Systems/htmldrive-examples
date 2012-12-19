@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+  <head>
+    <title>Slide and hide section with jquery - WebAir</title>
+    <meta name="description" content="Realizzazione Siti Web Bologna, Webdesign e Web2.0 per le aziende" />
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+    <meta name="ROBOTS" content="INDEX,FOLLOW" />
+    <script type="text/javascript" src="images/jquery.js"></script>
+    <script type="text/javascript" src="images/application.js"></script>
+    <script type="text/javascript" src="images/jquery.scrollable-1.0.2.js"></script>
+    <script type="text/javascript" src="images/jquery.mousewheel.js"></script>
+
+    <style type="text/css">
+      body {
+        background-color: black;
+        color: white;
+      }
+      .imgcatalogo {
+        position: absolute;
+      }
+
+      #website_catalogo{
+        left: 2%;
+        z-index: 0;
+      }
+
+      #software_catalogo {
+        left:50%;
+        margin-left: -100px;
+        z-index: 1;
+      }
+
+      #marketing_catalogo{
+        left:98%;
+        margin-left: -200px;
+        z-index: 2;
+      }
+
+      #image_catalogo {
+        width: 240px;
+        height: 500px;
+        float:left;
+        text-align:center;
+      }
+
+      .catalogo-text {
+        position:absolute;
+        z-index: -1;
+        padding-left: 250px;
+      }
+    </style>
+  </head>
+  <body>
+<p><a href="http://www.webair.it/blog">Back to blog</a><br />
+<br />
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+</p>
+    <div id="catalogo_description">
+      <div id="image_catalogo">
+        <img src="images/marketin.jpg" class="imgcatalogo" align="middle" alt="Marketing" title="Marketing" name="Marketing" id="marketing_catalogo" />
+        <img src="images/siti-web.jpg" class="imgcatalogo" align="middle" alt="Web Site" title="Web Site" name="Web Site" id="website_catalogo" />
+        <img src="images/software.jpg" class="imgcatalogo" align="middle" alt="Software" title="Software" name="Software" id="software_catalogo" />
+      </div>
+      <div id="marketing-text" class="catalogo-text" style="display:none;">Section 1 Marketing</div>
+      <div id="website-text" class="catalogo-text" style="display:none; ">Section 2 Web Site</div>
+      <div id="software-text" class="catalogo-text" style="display:none;">Section 3 Software</div>
+    </div>
+
+
+        <script type="text/javascript">
+          var detailed = false;
+          var interrupt;
+          $('.imgcatalogo').click(function() {
+            if (detailed == false) {
+              clearTimeout ( interrupt );
+              detailed = true;
+              $(".imgcatalogo:not(#" + $(this)[0].id + ")").animate({
+                left: '2%',
+                marginLeft: '0px'
+              }, 1500 );
+              $(".imgcatalogo:not(#" + $(this)[0].id + ")").slideUp();
+              $(this).animate({
+                left: '2%',
+                marginLeft: '0px'
+              }, 3000 );
+              interrupt = setTimeout(' $("#' + $(this)[0].id.replace("_catalogo", "-text") +'").slideDown("fast")', 3000);
+            }
+            else {
+              detailed = false;
+              clearTimeout ( interrupt );
+              $('.catalogo-text').slideUp();
+              $(".imgcatalogo:not(#" + $(this)[0].id + ")").slideDown("fast");
+              $("img#marketing_catalogo").animate({
+                marginLeft: '-200px',
+                left: '98%'
+              }, 1500 );
+              $("img#website_catalogo").animate({
+                left: '2%'
+              }, 1500 );
+              $("img#software_catalogo").animate({
+                left: '50%',
+                marginLeft: '-100px'
+              }, 1500 );
+              $(".imgcatalogo").slideDown("fast");
+            }
+          });
+        </script>
+  </body>
+</html>
+
+
+<!-- This document saved from http://www.webair.it/doc/slide-and-hide-section-with-jquery.html -->

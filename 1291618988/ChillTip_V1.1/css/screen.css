@@ -1,0 +1,150 @@
+/* Softstart UK Website Screen Stylesheet */
+/* Author: Christopher Hill - Chill Web Designs */
+/* Info: http://www.chillwebdesigns.co.uk/ */
+
+@charset "utf-8";
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background:transparent;
+	border:0;
+	margin:0;
+	outline:0;
+	padding:0;	
+	vertical-align:baseline;
+	}
+
+/* Page Styles */
+
+body{
+	background-image:url(../images/screen/stripe.png);
+	background-repeat:repeat;
+
+	color:#333;
+	font-family:Arial," Helvetica", sans-serif;
+	height:auto;
+	margin:0 auto;
+	text-align:center;
+	width:920px;
+	}
+#container{
+	margin:20px 0;
+	text-align:left;
+	width:920px;
+	height:auto;
+	}
+#top{
+	background:url(../images/screen/top-trans.png) no-repeat;
+	width:920px;
+	height:10px;
+	margin:0;
+	}
+#bottom{
+	background:url(../images/screen/bottom-trans.png) no-repeat;
+	width:920px;
+	height:10px;
+	margin:0;
+	}
+#content{
+	width:918px;
+	min-height:600px;
+	height:auto;
+	background-color:#fff;
+	border-left:1px #999 solid;
+	border-right:1px #999 solid;
+	}
+#content img{
+	margin:0;
+	padding:0 15px;
+	}
+#content a img{
+	margin:0;
+	padding:0;
+	}
+#content button{
+	margin:0 15px;
+	padding:8px;
+	background-color:#000;
+	color:#fff;
+	border:none;
+	}
+#content span#span, #content a#anc, #content a#link {
+	margin:0 15px;
+	}
+h3{
+	font-size:14px;
+	padding:15px 15px 0 15px;
+	margin:0;
+	font-weight:100;
+	color:#007eff;
+	}
+p b{
+	color:#000;
+	}
+p{	margin:0;
+	padding:15px;
+	font-size:12px;
+	text-align:justify;
+	}
+a.link {
+	margin:15px;
+	padding:0;
+	color:#007eff;
+	font-size:12px;
+	text-decoration:none;
+	}
+a{
+	color:#007eff;
+	font-size:12px;
+	text-decoration:none;
+	}
+#header{
+	background:url(../images/screen/header-trans.png) no-repeat;
+	height:60px;
+	width:920px;
+	margin-bottom:10px;
+	}
+.line{
+	background:url(../images/screen/line.jpg) no-repeat;
+	width:918px;
+	height:1px;
+	}
+.code{
+	font-family:"Courier New", Courier, monospace;
+	font-size:12px;
+	margin:15px 0 30px 15px;
+	}
+.code span.bl,span.bl,span.blue{
+	color:#0066ff;
+	}
+.code span.bk{
+	color:#000;
+	}
+span.gr{
+	color:#00CC33;
+	}
+.code span.pur{
+	color:#bc00bc;
+	}
+.code span.dp{
+	color:#660099;
+	}
+.code span.red,span.red{
+	color:#FF0000;
+	}
+/* IE6 HACKS */
+
+/* Min Height Hack IE6 */
+
+* html #container{
+	height:600px;
+	}	

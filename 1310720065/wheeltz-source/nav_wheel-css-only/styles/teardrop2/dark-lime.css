@@ -1,0 +1,366 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**************************************************************
+If you choose to use the Franklin Gothic font then this code will help get you started with embedding it.
+**************************************************************/
+@font-face {
+    font-family: 'FranklinGothicMediumRegular'; /* For non-web-standard fonts, define the font name here */
+    src: url('framd-webfont.eot?') format('eot'),  /* Define the directory where you put your fonts under src: url('') and the format of the font (e.g. TrueType) */
+         url('framd-webfont.woff') format('woff'),
+         url('framd-webfont.ttf') format('truetype'),
+         url('framd-webfont.svg#webfontb01Cou6J') format('svg');
+    font-weight: normal;
+    font-style: normal; /* The style of your font (e.g. italic) */
+			}
+
+body{
+	} /* Editing this may conflict with the body tag in your main sites css file.  Delete it if you like. */
+
+a{ 
+	text-decoration:none; 
+	outline:none; /* For keeping links clear of underlines or other decorations */
+	}
+
+#menu-wrap{
+	background:#e7e7e7; /* This isn't needed */
+	height:600px; /* This is importand and keeps the wheel in place when hovering over elements */
+	font-family:Franklin Gothic Medium,Helvetica, Arial, sans-serif; /* If not using Franklin, it will automatically go to the next font in the family */ 
+	font-size:13px; /* Establishes the global font size */
+	letter-spacing: 1px !important; /* Effects spacing between letters for all fonts in the wheel */
+	}
+
+#menu-wrap .orbit{
+	height: 210px;
+    margin: 30px; /* Pushes the images in the display to the center */
+    position: absolute;
+	top:-5px; width:210px;
+	}
+	
+#menu-wrap .orbit-frame{
+	border:2px solid #999; /* Creates a division between the image and wrap5 */
+	}
+	
+	/** menu links **/
+	
+		/** tester **/
+ul.menuBuild, ul.menuBuild ul {
+  	width: 80px;                 /* sets the size of the menu blocks */
+  	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.01); /* makes the menu blocks mint green - a bg-color MUST be included for IE to work properly! */
+  	padding-left: 0px;           /* stops the usual indent from ul */
+  	margin-left: 76px;            /* Opera 7 final's margin and margin-box model cause problems */
+	}
+	
+ul.menuBuild li {
+  	list-style-type: none;       /* removes the bullet points */
+  	position: relative;
+  	-webkit-border-radius: 0 15px 15px 0; /* webkit browsers */
+  	-moz-border-radius: 0 15px 15px 0;  /* firefox */
+  	border-radius: 4px 0 0 4px; /* opera */
+  	background: none repeat scroll 0 0 #464646; /* Solid background for older browsers to fall back on */
+  	height: 14px;
+  	left: -177px;
+  	padding: 8px; 
+  	margin: 6px 0 0;
+  	width:140px; 
+  	text-indent:5px;  /* How far the text is from the left edge of the menu */       
+  	color: #fff; /* sets the default font colour to white */
+	}
+
+ul.menuBuild ul.submenu li{
+	background: #f2f2f2; /* old browsers */
+	background: -moz-linear-gradient(left, #565656 0%, #666 3%, #FFF 14%); /* firefox */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#565656), color-stop(3%,#666), color-stop(14%,#FFF)); /* webkit */
+	background: url(bg-image.png) no-repeat, linear-gradient(left, #565656 0%, #666 3%, #FFF 14%); /*future CSS3 browsers*/
+    -pie-background: url(bg-image.png) no-repeat, linear-gradient(left, #565656 0%, #666 3%, #FFF 14%); /*PIE*/
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7e7e7', endColorstr='#FFF',GradientType=1 );*/ /* ie */
+	color:#464646; 
+	position:relative; 
+	left:297px; /* This is how the menu ends up on the other side of the wheel */
+	-webkit-box-shadow: -2px 3px 12px -7px #161616;  /* webkit browsers */
+	box-shadow: 16px 0 10px -8px #464646 inset; /* opera */
+	-moz-box-shadow: -2px 3px 12px -7px #161616; /* firefox */
+	}
+	
+ul.menuBuild ul.submenu li.first{
+	margin-left: -12px;
+	opacity: 0.70;
+	}
+	
+ul.menuBuild ul.submenu li.second, ul.menuBuild ul.submenu li.third{	margin-left:-12px;
+	opacity: 0.85;
+	}
+	
+ul.menuBuild ul.submenu li.last{
+	margin-left:22px;
+	opacity: 0.70;
+	}
+
+ul.menuBuild li > ul{          /* using the > selector prevents many lesser browsers (and IE - see below) hiding child ULs */
+  	display: none;         /* make child blocks hover without leaving space for them */
+  	top: -169px;
+  	position: absolute;
+    right: -86px;
+	color:#565656; 
+    width: 160px;
+	-webkit-border-radius: 0 4px 4px 0; /* webkit */
+	-moz-border-radius: 0 4px 4px 0;  /* firefox */
+	border-radius: 0 4px 4px 0; /* opera */
+	padding:50px;
+    height: 24px;	background: rgb(255, 255, 255);  /* Fallback for web browsers that don't support RGBa */
+	background: rgba(255, 255, 255, 0.00);   /* RGBa with 0.01 opacity */
+	}
+	
+	/**ul.menuBuild li span{display:none;}
+	
+	ul.menuBuild li:hover span{display:block;}**/
+	
+ul.menuBuild li#menu1, ul.menuBuild li#menu2, ul.menuBuild li#menu3, ul.menuBuild li#menu4{
+	-webkit-border-radius: 15px 0 0 15px;  /* webkit */
+	-moz-border-radius: 15px 0 0 15px;  /* firefox */
+	border-radius: 15px 0 0 15px;  /* opera */
+	-webkit-box-shadow:-2px 7px 8px -7px #161616;   /* webkit */
+	-moz-box-shadow:-2px 7px 8px -7px #161616;  /* firefox */
+	box-shadow:-16px 0 8px -7px #222222 inset;  /* opera */
+	background: #121212; /* old browsers */
+	background: -moz-linear-gradient(left, #121212 78%, #363636 97%, #222222 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, right top, color-stop(78%,#121212), color-stop(97%,#363636), color-stop(100%,#222222)); /* webkit */
+	background: linear-gradient(left, #121212 78%, #363636 97%, #222222 100%); /*future CSS3 browsers*/
+	-pie-background: linear-gradient(left, #121212 78%, #363636 97%, #222222 100%); /*IE fix using Pie*/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121212', endColorstr='#222222',GradientType=1 ); /* ie */
+    height: 18px;
+    padding: 8px;
+    position: absolute; 
+	margin-top:100px; 
+	width:138px; 
+	}
+
+ul.menuBuild li#menu2{
+	-webkit-transform:rotate(-10deg); /* webkit */
+	-moz-transform:rotate(-10deg);  /* firefox */
+	-o-transform:rotate(-10deg); /* opera */
+	-ms-transform: rotate(-10deg); /* ie9 and future versions */
+	transform: rotate(-10deg); /* older browsers */
+    margin-top: 141px; 
+	margin-left:5px;
+	}
+
+ul.menuBuild li#menu3{ 
+	-webkit-transform:rotate(-21deg);  /* webkit */
+	-moz-transform:rotate(-21deg); /* firefox */
+	-o-transform:rotate(-21deg); /* opera */
+	-ms-transform: rotate(-21deg); /* ie9 and future versions */
+	transform: rotate(-21deg); /* older browsers */
+    margin-top: 181px;
+	margin-left:18px;
+	}
+	
+ul.menuBuild li#menu4{
+	-moz-transform: rotate(-32deg); /* firefox */
+	-ms-transform: rotate(-32deg); /* ie9 and future versions */
+	transform: rotate(-32deg); /* older browsers */
+	-webkit-transform: rotate(-32deg); /* webkit */
+	-o-transform: rotate(-32deg); /* opera */
+    margin-top: 218px; 
+	margin-left:38px;
+	}
+	
+	/***********************************
+	Here's some support for the sub-menus
+	************************************/
+	
+ul.menuBuild li#menu1 > ul{
+	margin-top:0; 
+	left:19px;
+	}
+	
+ul.menuBuild li#menu2 > ul{
+	-webkit-transform:rotate(10deg); /* webkit */
+	-moz-transform:rotate(10deg); /* firefox */
+	-o-transform:rotate(10deg); /* opera */
+	-ms-transform: rotate(-10deg); /* ie9 and future versions */
+	transform: rotate(-10deg); /* older browsers */
+	left: 24px;
+    margin-top: 6px;
+	}
+	
+ul.menuBuild li#menu3 > ul{
+	-webkit-transform:rotate(21deg); /* webkit */
+	-moz-transform:rotate(21deg); /* firefox */
+	-o-transform:rotate(21deg); /* opera */
+	-ms-transform: rotate(-21deg); /* ie9 and future versions */
+	transform: rotate(-21deg); /* older browsers */
+	left: 27px;
+    margin-top: 16px;
+	}
+
+ul.menuBuild li#menu4 > ul{
+	-webkit-transform:rotate(32deg); /* webkit */
+	-moz-transform:rotate(32deg); /* firefox */
+	-o-transform:rotate(32deg); /* opera */
+	-ms-transform: rotate(32deg); /* ie9 and future versions */
+	transform: rotate(32deg); /* older browsers */
+	left: 28px;
+    margin-top: 27px;
+	}                
+	
+ul.menuBuild li:hover > ul {    /* one of the most important declarations - the browser must detect hovering over arbitrary elements, the > targets only the child ul, not any child uls of that child ul */
+  	display: block;   /* makes the child block visible - one of the most important declarations */
+  	position:absolute; 
+  	left:0; 
+  	width:400px; 
+  	height:200px; 
+	}
+	
+/**********************************************************
+ and some link styles 
+ *********************************************************/
+ 
+ul.menuBuild ul.submenu li a{ 
+	color:#464646;  /* the color of submenu fonts */
+	opacity:0.65;  /* This blends the font in with the background */
+	filter:alpha(opacity=65);
+	}
+	
+ul.menuBuild ul.submenu li a:hover{
+	opacity:1.0;   /* and this brings the font opacity back to 100% */
+	filter:alpha(opacity=100)
+	}
+	
+ul.menuBuild li a {  /* for the main menu links */
+	color: #fff; 
+	display: block; 
+	width: 100%; 
+	}
+	
+ul.menuBuild li:hover > a { 
+	color: #fff; 
+	border-left:solid 5px #A9C60D;  /* the indicator for when an item is hovered over */
+	} /* do not use display: block; */
+	
+.sub1, .sub2, .sub3, .sub4{ /* You can use this to individually style your sub-menu items */
+	}
+	
+	/******************************************************
+	Now we get to the containers
+	******************************************************/
+
+.wrap1, .wrap2, .wrap3, .wrap4, .wrap5, .nav-holder{  /* styles all of the wheel containers */
+	-moz-border-radius: 220px 0 200px 220px;  /* firefox */
+	-webkit-border-radius: 220px 0 200px 220px; /* webkit */
+	border-radius: 220px 0 200px 220px;   /* opera */
+	-moz-box-shadow: 1px 5px 7px 0 #000000;  /* firefox */
+	-webkit-box-shadow: 1px 5px 7px 0 #000000; /* webkit */
+	box-shadow: 1px 5px 7px 0 #000000; /* opera */
+	border: 2px groove #006600;
+ 	margin:0 auto; 
+	position:relative !important;  /* Do not touch unless you know what you are doing */ 
+	top:20px;
+	}
+
+.wrap1{ 
+	background: #A9C60D; /* old browsers */
+	background: -moz-linear-gradient(top, #A9C60D 5%, #ACE600 41%, #CCFF00 44%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#A9C60D), color-stop(41%,#ACE600), color-stop(44%,#CCFF00)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A9C60D', endColorstr='#CCFF00',GradientType=0 ); /* ie */
+	background: linear-gradient(top, #A9C60D 5%, #ACE600 41%, #CCFF00 44%); /*future CSS3 browsers*/
+	-pie-background: linear-gradient(top, #A9C60D 5%, #ACE600 41%, #CCFF00 44%); /*IE fix using PIE*/
+	height:394px; 
+	width:394px;
+	}
+
+.wrap2{ 
+	background: #69C60D; /* old browsers */
+	background: -moz-linear-gradient(top, #69C60D 5%, #ACE600 41%, #CCFF00 44%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#69C60D), color-stop(41%,#ACE600), color-stop(44%,#CCFF00)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69C60D', endColorstr='#CCFF00',GradientType=0 ); /* ie */
+	background: linear-gradient(top, #69C60D 5%, #ACE600 41%, #CCFF00 44%); /*future CSS3 browsers*/
+	-pie-background: linear-gradient(top, #69C60D 5%, #ACE600 41%, #CCFF00 44%); /*IE fix using PIE*/
+ 	height:354px; 
+	width:354px;
+	}
+
+.wrap3{ 
+	background: #39C60D; /* old browsers */
+	background: -moz-linear-gradient(top, #39C60D 5%, #ACE600 41%, #CCFF00 44%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#39C60D), color-stop(41%,#ACE600), color-stop(44%,#CCFF00)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39C60D', endColorstr='#CCFF00',GradientType=0 ); /* ie */
+	background: linear-gradient(top, #39C60D 5%, #ACE600 41%, #CCFF00 44%); /*future CSS3 browsers*/
+	-pie-background: linear-gradient(top, #39C60D 5%, #ACE600 41%, #CCFF00 44%); /*IE fix using PIE*/
+ 	height:314px; 
+	width:314px;
+	}
+
+.wrap4{ 
+	background: #09C60D; /* old browsers */
+	background: -moz-linear-gradient(top, #09C60D 5%, #ACE600 41%, #CCFF00 44%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#09C60D), color-stop(41%,#ACE600), color-stop(44%,#CCFF00)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09C60D', endColorstr='#CCFF00',GradientType=0 ); /* ie */
+	background: linear-gradient(top, #09C60D 5%, #ACE600 41%, #CCFF00 44%); /*future CSS3 browsers*/
+	-pie-background: linear-gradient(top, #09C60D 5%, #ACE600 41%, #CCFF00 44%); /*IE fix using PIE*/
+	-moz-box-shadow: 0 0 15px 2px #262626;
+	-webkit-box-shadow: 0 0 15px 2px #262626;
+	box-shadow: 0 0 15px 2px #262626;
+ 	height:274px; 
+	width:274px;
+	}
+ 
+.wrap5{
+	-moz-box-shadow: -5px -3px 11px 2px #121212 inset; /* firefox */
+	-webkit-box-shadow: -5px -3px 11px 2px #121212 inset;  /* webkit */
+	box-shadow: -5px -3px 11px 2px #121212 inset;  /* opera */
+    border: 20px solid #EBFC0E;  /* creates the wrap to see the image behind it */
+    height: 214px;
+    top: 5px;  /* center the element */
+    width: 214px;
+	}
+ 
+.nav-holder{
+	background: none repeat scroll 0 0 transparent;
+    border-color: #121212;  /***  The border declarations are used to create the final wrapper, middle see through and hides the right border to show the submenus */
+    border-style: solid hidden solid double;
+    border-width: 73px medium 73px 73px;
+    height: 252px;
+    margin: -92px;  /*  center the object on relative elements */
+    top: 0;
+    width: 324px;
+	-moz-box-shadow: -22px 0 119px 0 #000 inset;
+	-webkit-box-shadow: -22px 0 119px 0 #000 inset;
+	box-shadow: -22px 0 119px 0 #000 inset;
+	}
+	
+.completer, .completer2{ /** absolute elements to hide the border of images **/
+	-moz-border-radius: 0 120px 0 113px;  /* firefox */
+	-webkit-border-radius: 0 120px 0 113px; /* webkit */
+	border-radius: 0 120px 0 113px; /* opera */
+    -moz-transform: rotate(-20deg); /* firefox */
+	-webkit-transform: rotate(-21deg); /* webkit */
+	-o-transform: rotate(-20deg); /* opera */
+	-ms-transform: rotate(-20deg); /* ie9 and future versions */
+	transform: rotate(-20deg); /* older browsers */
+    background-attachment: scroll;
+    background-color: #121212;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: repeat;
+    height: 135px;
+    position: absolute;
+    right: -24px;
+    top: -56px;
+    width: 130px;
+	}
+	
+.completer{
+	display:none;
+	}
+	
+.completer2{
+	-moz-transform: rotate(110deg); /* firefox */
+ 	-webkit-transform: rotate(111deg); /* webkit */
+	-o-transform: rotate(110deg); /* opera */
+	-ms-transform: rotate(110deg); /* ie9 and future versions */
+	transform: rotate(110deg); /* older browsers */
+    top: 190px;
+	}

@@ -1,0 +1,25 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+a { color:#fff; text-decoration:none;}
+a:hover { color:#295776}
+.alta { color:#000; font-weight:bold; text-decoration:underline;}
+.altf { color:#000;}
+
+#target,#code{
+border:1px solid #999;
+background:#eee;
+padding:1em;
+-moz-border-radius:5px;
+border-radius:5px;
+-webkit-border-radius:5px;
+}
+#target{
+  overflow:auto;
+  max-height:200px;
+}
+#ft{font-size:12px;text-align:right;}
+.ajaxtrigger span{font-weight:bold;color:#000}
+.ajaxtrigger span.error{color:#c00}

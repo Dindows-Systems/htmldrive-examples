@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquerking.com sexy notifications</title>
+<!-- The stylesheet  --> 
+<link href="style/style.css" type="text/css" rel="stylesheet"/>
+
+<!-- LOAD JQUERY FROM GOOGLE CDN  --> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+</head>
+
+<!-- the javascript -->
+<script type="text/javascript">
+$(document).ready(function() {
+
+
+	// Closing notifications 
+	// this is the class that we will target
+	$(".hideit").click(function() {
+	//fades the notification out	
+		$(this).fadeOut(700);
+	});
+	
+});	
+	
+</script>	
+<body>
+
+<div class="main_container">
+            <h3>Jquery sexy Notifications by jqueryking</h3>
+
+            
+            <p> Click to watch the notifications fade away!</p>
+            
+            
+            <!--START NOTIFICATIONS  -->
+            
+            <!-- WARNING - USES CLASS OF "WARNING" and the CANHIDE ENABLES CICK TO FADE AWAY-->
+            <div class="notification warning hideit">
+            	
+                <p><strong>WARNING: </strong>
+                This is a warning message. You can use this to warn users on any events
+                </p>
+            </div>
+
+            
+            <!-- INFORMATION - USES CLASS OF "INFORMATION" and the CANHIDE ENABLES CICK TO FADE AWAY-->
+            <div class="notification information hideit">
+            
+                <p><strong>INFORMATION: </strong>
+                This is a message for information, can be any general information.</p>
+            </div>    
+            
+            <!-- SUCCESS - USES CLASS OF "SUCCESS" and the CANHIDE ENABLES CICK TO FADE AWAY-->
+            <div class="notification success hideit">
+            
+                <p><strong>SUCCESS: </strong>
+                 Success message! hoooraaay!!!!
+               </p>
+            </div>  
+            
+            <!-- FAILURE - USES CLASS OF "FAILURE" and the CANHIDE ENABLES CICK TO FADE AWAY-->
+            <div class="notification failure hideit">
+            
+                <p><strong>FAILURE: </strong>
+                Oops sorry. That action is not valid, or our servers have gone bonkers</p>
+                
+            </div>
+                 <p> And this one doesnt</p>
+              <div class="notification information ">
+            
+                <p><strong>INFORMATION: </strong>
+                This is a message for information, can be any general information.</p>
+            </div> 
+            
+        </div>
+        
+                  
+        
+        </div>
+         <!-- Main container ends here-->
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>        <!--END NOTIFICATIONS  -->
+</body>
+</html>

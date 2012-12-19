@@ -1,0 +1,45 @@
+﻿/* Slider CSS */
+.scrollerWrapper
+{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.scrollerScroller
+{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.scrollerNext, .scrollerPrev
+{
+	padding: 2px;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	display: none;
+	background: #aaaaaa url(../img/arrow_prev.png) no-repeat center center;
+	cursor: pointer;
+	cursor: hand;
+	
+	border: solid 1px #444444;
+	
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-border-radius: 8px;
+}
+
+.scrollerNext
+{
+	display: block;
+	background: #aaaaaa url(../img/arrow_next.png) no-repeat center center;
+}
+
+.itemBackground , .itemLink
+{
+	display: none;
+}

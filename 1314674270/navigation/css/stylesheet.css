@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background:#000;
+	font-family:Arial,LucidaGrande, Lucida Sans, Arial;
+	color:#FFFFFF
+	}
+a{ color:#FFCC66}
+.main-navigation{
+	width:890px;
+	height:44px;
+	border:1px dashed #a2d2cf;
+	background:url(../images/nav-bg.jpg) left repeat-x;
+	top:50%;
+	left:50%;
+	margin:-22px 0 0 -445px;
+	position:absolute;
+	}
+	
+ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	
+	}
+	
+li{
+	float:left;
+	font-size:15px;
+	color:#FFFFFF;
+	height:42px;
+	display:block;
+	position:relative;
+	
+	}
+	
+	
+li .hover{
+	color:#FFFFFF;
+	text-decoration:none;
+	position:absolute;
+	background:url(../images/hover-bg.png) top left no-repeat;
+	top:0;
+	left:0;
+	z-index:0;
+	height:44px;
+	display:none;
+	}
+
+li a{
+	display:block;
+	color:#FFFFFF;
+	text-decoration:none;
+	padding:14px 43px 13px 44px;
+	z-index:1000;	
+	position:relative;
+	}
+	
+.search{
+	float:right;
+	margin:9px 26px 0 0;
+	padding:0px;
+	}
+	
+.search-input{
+	font-family:LucidaGrande, Lucida Sans, Arial;
+	font-size:12px;
+	color:#FFFFFF;
+	width:117px;
+	height:26px;
+	padding:0 5px 0 10px;
+	padding:5px 5px 0 10px \9;/* IE 7 and 8 */
+	border:0;
+	outline:none;
+	background:url(../images/search-input-bg.png) top left no-repeat;
+	float:left;
+	}
+	
+.search-btn{
+	width:37px;
+	height:26px;
+	border:0;
+	outline:none;
+	background:url(../images/search-btn.png) top left no-repeat;
+	float:left;
+	}
+	
+ul li ul{
+	width:200px;
+	position:absolute;
+	display:none;
+	top:44px;
+	padding:1px 0 0 0;
+	}
+	
+ul li:hover ul{
+	
+	display:block;
+
+	}
+	
+ul li ul li{
+	display:block;
+	padding:10px 10px 10px 0;
+	width:200px;
+	padding:0px;
+	margin:0px;
+	background:url(../images/nav-bg.jpg) left repeat-x;
+	position:relative;
+	}
+	
+ul li ul li a{
+	display:block;
+	color:#FFFFFF;
+	text-decoration:none;
+	padding:14px 43px 13px 28px;
+	z-index:1000;	
+	position:relative;
+	}
+

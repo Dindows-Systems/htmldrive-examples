@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<title>jquery.dropSlideMenu.js demo - projects - coda.coza</title>
+
+		<link rel="stylesheet" href="demo.css" type="text/css" media="all">
+		<link rel="stylesheet" href="jquery.dropSlideMenu.css" type="text/css" media="all">
+
+		<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="jquery-ui-1.7.2.custom.min.js"></script>
+		<script type="text/javascript" src="jquery.event.hover.js"></script>
+		<script type="text/javascript" src="jquery.dropSlideMenu.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#navigation").dropSlideMenu({
+					indicators: true, // adds a div to the list items for attaching indicators (arrows)
+					clickstream: true, // highlights the clickstream in a menu by comparing the links to the current URL path
+					openEasing: "easeOutQuad", // open animation effect
+					closeEasing: "easeInQuad", // close animation effect
+					duration: 600, // speed of drop down animation (in milliseconds)
+					delay: 800, // delay before the drop down closes (in milliseconds)
+					hideSelects: true // hide all select elements on the page when the menu is active (IE6 only)
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="header">
+			<h1>jquery.dropSlideMenu.js</h1>
+			<h2>Powered by <a href="http://jquery.com" title="The Write Less, Do More, JavaScript Library">jQuery</a>, <a href="http://jqueryui.com">jQuery UI</a> and <a href="http://blog.threedubmedia.com/2008/08/eventspecialhover.html">jquery.event.hover</a></h2>
+		</div>
+
+		<p><a href="http://coda.co.za/content/projects/jquery.dropSlideMenu/jquery.dropSlideMenu.zip" class="download">Download</a> | <a href="jquery.dropSlideMenu.js">View JavaScript</a> | <a href="jquery.dropSlideMenu.css">View CSS</a> | <a href="http://coda.co.za/blog/2009/07/24/dropslidemenu">Return to blog post</a></p>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+		<div id="container">
+			<p id="clickstream">You are here: <a href="/home">Home</a> &rarr; <a href="/continents">Continents</a> &rarr; <a href="/continents/europe">Europe</a></p>
+
+			<div id="navigation">
+				<ul>
+					<li><a href="/home">Home</a></li>
+					<li><a href="/planets">Planets</a>
+						<ul>
+							<li><a href="/planets/mercury">Mercury</a></li>
+							<li><a href="/planets/venus">Venus</a></li>
+							<li><a href="/planets/earth">Earth</a></li>
+							<li><a href="/planets/mars">Mars</a></li>
+							<li><a href="/planets/jupiter">Jupiter</a></li>
+							<li><a href="/planets/saturn">Saturn</a></li>
+							<li><a href="/planets/uranus">Uranus</a></li>
+							<li><a href="/planets/neptune">Neptune</a></li>
+						</ul>
+					</li>
+					<li><a href="demo.html">Continents</a>
+						<ul>
+							<li><a href="/continents/africa">Africa</a></li>
+							<li><a href="/continents/antarctica">Antarctica</a></li>
+							<li><a href="/continents/asia">Asia</a></li>
+							<li><a href="/continents/australia">Australia</a></li>
+							<li><a href="demo.html">Europe</a></li>
+							<li><a href="/continents/north-america">North America</a></li>
+							<li><a href="/continents/south-america">South America</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Oceans</a>
+						<ul>
+							<li><a href="/oceans/arctic">Arctic</a></li>
+							<li><a href="/oceans/atlantic">Atlantic</a></li>
+							<li><a href="/oceans/indian">Indian</a></li>
+							<li><a href="/oceans/pacific">Pacific</a></li>
+							<li><a href="/oceans/southern">Southern</a></li>
+						</ul>
+					</li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</div>
+
+			<form action="">
+				<p>
+				<select name="s" id="s">
+					<option value="">Testing z-index and hiding</option>
+					<option value="">Testing z-index and hiding</option>
+					<option value="">Testing z-index and hiding</option>
+				</select><button type="submit">Submit</button>
+				</p>
+			</form>
+
+			<p><span class="h2">Requirements:</span> <a href="http://jquery.com" title="The Write Less, Do More, JavaScript Library">jQuery</a>, <a href="http://jqueryui.com">jQuery UI</a> and <a href="http://blog.threedubmedia.com/2008/08/eventspecialhover.html">jquery.event.hover</a></p>
+
+			<p><span class="h2">Size:</span> 4Kb (or 2Kb <a href="jquery.dropSlideMenu.min.js">minified</a>)</p>
+
+			<h2>Features:</h2>
+			<ul id="features">
+				<li>Requires the mouse cursor to decelerate over the menu before activating, to prevent unintentional opening (jquery.event.hover)</li>
+				<li>Dynamic styling of clickstream (path of links are compared with path of the current URL) - optional</li>
+				<li>Possible to set widths on each list item and its drop down (see 'Oceans' for example)</li>
+				<li>Possible to individually style each list item and its drop down (see 'Planets' for example)</li>
+				<li>List items with no link behaviour (where href is "#") are disabled (see 'Oceans' for example)</li>
+				<li>Settings to control the duration (speed of drop down animation), and delay (before the drop down closes)</li>
+				<li>Select elements are hidden (IE6) - optional</li>
+				<li>Customisable <a href="http://docs.jquery.com/UI/Effects/AdvancedEasing">Easing Effects</a></li>
+				<li>W3C-valid HTML and CSS</li>
+			</ul>
+		</div>
+
+		<div id="footer">
+			<p>jquery.dropSlideMenu.js v1.0<br />
+			Last updated: 24 July 2009</p>
+
+			<a href="http://creativecommons.org/licenses/by-nc/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" alt="Creative Commons License" /></a>
+			<p>Licensed under a Creative Commons Attribution-Non-Commercial 3.0 Unported License</p>
+		</div>
+	</body>
+</html>

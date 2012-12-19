@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<link rel="Stylesheet" type="text/css" href="blinds.css" /> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<script language="Javascript" type="text/javascript" src="js/jquery-1.4.1.js"></script>
+	<script language="Javascript" type="text/javascript" src="js/jquery.blinds-0.9.js"></script>
+
+	<title>Blinds: jQuery Slideshow using CSS sprites - little web things</title>
+</head>
+
+<body>
+	<div id="container">
+		<h1>jQuery Blinds</h1>
+		<h2 class="subtitle">Slideshow using CSS Sprites</h2>
+
+		<h3>Demo </h3>
+		<!-- slideshow images -->
+		<div class="slideshow"> 
+		   <ul> 
+			  <li><img src="lemons/1.jpg" alt="lemon" /></li>
+			  <li><img src="lemons/2.jpg" alt="lemon tea" /></li>
+			  <li><img src="lemons/3.jpg" alt="splashing lemon" /></li>
+			  <li><img src="lemons/4.jpg" alt="salad with lemon" /></li>
+			  <li><img src="lemons/5.jpg" alt="lemonade!" /></li>
+			  <li><img src="lemons/6.jpg" alt="sliced lemon" /></li>
+			  <li><img src="lemons/7.jpg" alt="dripping lemon" /></li>
+		   </ul> 
+		</div> 
+
+		<div class="comment">Images from <a href="http://sxc.hu">stock.xchng</a></div>
+
+		<!-- change image links -->
+		<a href="#" class="change_link" onclick="$('.slideshow').blinds_change(0)">1</a>
+		<a href="#" class="change_link" onclick="$('.slideshow').blinds_change(1)">2</a>
+		<a href="#" class="change_link" onclick="$('.slideshow').blinds_change(2)">3</a>
+		<a href="#" class="change_link" onclick="$('.slideshow').blinds_change(3)">4</a>
+		<a href="#" class="change_link" onclick="$('.slideshow').blinds_change(4)">5</a>
+		<a href="#" class="change_link" onclick="$('.slideshow').blinds_change(5)">6</a>
+		<a href="#" class="change_link" onclick="$('.slideshow').blinds_change(6)">7</a>
+
+		<br/><br/>
+
+		<h3>Features</h3>
+		<ul>
+			<li>Smooth <b>animated transition</b></li>
+			<li>Customizable sprite <b>grid</b></li>
+			<li>Customizable animation <b>ochestration</b></li>
+			<li><b>Multiple instances</b> on the same webpage</li>
+			<li><b>jQuery compatible</b> (plugin)</li>
+			<li><b>Unobtrusive</b> javascript</li>
+		</ul>
+
+		<h3>Compatibility</h3>
+		Works great on the following browsers (Windows):
+		<ul>
+			<li>Firefox 3.5</li>
+			<li>IE 8</li>
+			<li>IE 7</li>
+			<li>IE 6 (imagine my surprise!)</li>
+			<li>Opera 10</li>
+			<li>Chrome 4</li>
+			<li>Safari 4</li>
+		</ul>
+
+		<h3>Usage</h3>
+
+		<div class="code">
+			<div class="title">HTML</div>
+<pre style="color:#330066; background-color:#ffffff; font-size:10pt; font-family:'Courier New';"><span style="color:#555555">&lt;</span>div <span style="color:#ff3030">class</span><span style="color:#555555">=</span><span style="color:#1861a7">&quot;slideshow&quot;</span><span style="color:#555555">&gt;</span>
+   <span style="color:#555555">&lt;</span>ul<span style="color:#555555">&gt;</span>
+      <span style="color:#555555">&lt;</span>li<span style="color:#555555">&gt;&lt;</span>img src<span style="color:#555555">=</span><span style="color:#1861a7">&quot;lemons/1.jpg&quot;</span> alt<span style="color:#555555">=</span><span style="color:#1861a7">&quot;lemon&quot;</span> <span style="color:#555555">/&gt;&lt;/</span>li<span style="color:#555555">&gt;</span>
+      <span style="color:#555555">&lt;</span>li<span style="color:#555555">&gt;&lt;</span>img src<span style="color:#555555">=</span><span style="color:#1861a7">&quot;lemons/2.jpg&quot;</span> alt<span style="color:#555555">=</span><span style="color:#1861a7">&quot;lemon tea&quot;</span> <span style="color:#555555">/&gt;&lt;/</span>li<span style="color:#555555">&gt;</span>
+      <span style="color:#555555">&lt;</span>li<span style="color:#555555">&gt;&lt;</span>img src<span style="color:#555555">=</span><span style="color:#1861a7">&quot;lemons/3.jpg&quot;</span> alt<span style="color:#555555">=</span><span style="color:#1861a7">&quot;splashing lemon&quot;</span> <span style="color:#555555">/&gt;&lt;/</span>li<span style="color:#555555">&gt;</span>
+      <span style="color:#555555">&lt;</span>li<span style="color:#555555">&gt;&lt;</span>img src<span style="color:#555555">=</span><span style="color:#1861a7">&quot;lemons/4.jpg&quot;</span> alt<span style="color:#555555">=</span><span style="color:#1861a7">&quot;salad with lemon&quot;</span> <span style="color:#555555">/&gt;&lt;/</span>li<span style="color:#555555">&gt;</span>
+      <span style="color:#555555">&lt;</span>li<span style="color:#555555">&gt;&lt;</span>img src<span style="color:#555555">=</span><span style="color:#1861a7">&quot;lemons/5.jpg&quot;</span> alt<span style="color:#555555">=</span><span style="color:#1861a7">&quot;lemonade!&quot;</span> <span style="color:#555555">/&gt;&lt;/</span>li<span style="color:#555555">&gt;</span>
+      <span style="color:#555555">&lt;</span>li<span style="color:#555555">&gt;&lt;</span>img src<span style="color:#555555">=</span><span style="color:#1861a7">&quot;lemons/6.jpg&quot;</span> alt<span style="color:#555555">=</span><span style="color:#1861a7">&quot;sliced lemon&quot;</span> <span style="color:#555555">/&gt;&lt;/</span>li<span style="color:#555555">&gt;</span>
+      <span style="color:#555555">&lt;</span>li<span style="color:#555555">&gt;&lt;</span>img src<span style="color:#555555">=</span><span style="color:#1861a7">&quot;lemons/7.jpg&quot;</span> alt<span style="color:#555555">=</span><span style="color:#1861a7">&quot;dripping lemon&quot;</span> <span style="color:#555555">/&gt;&lt;/</span>li<span style="color:#555555">&gt;</span>
+   <span style="color:#555555">&lt;/</span>ul<span style="color:#555555">&gt;</span>
+<span style="color:#555555">&lt;/</span>div<span style="color:#555555">&gt;</span>
+
+<span style="color:#555555">&lt;</span>a href<span style="color:#555555">=</span><span style="color:#1861a7">&quot;#&quot;</span> <span style="color:#ff3030">class</span><span style="color:#555555">=</span><span style="color:#1861a7">&quot;change_link&quot;</span> onclick<span style="color:#555555">=</span><span style="color:#1861a7">&quot;$('.slideshow').blinds_change(0)&quot;</span><span style="color:#555555">&gt;</span><span style="color:#32ba06">1</span><span style="color:#555555">&lt;/</span>a<span style="color:#555555">&gt;</span>
+<span style="color:#555555">&lt;</span>a href<span style="color:#555555">=</span><span style="color:#1861a7">&quot;#&quot;</span> <span style="color:#ff3030">class</span><span style="color:#555555">=</span><span style="color:#1861a7">&quot;change_link&quot;</span> onclick<span style="color:#555555">=</span><span style="color:#1861a7">&quot;$('.slideshow').blinds_change(1)&quot;</span><span style="color:#555555">&gt;</span><span style="color:#32ba06">2</span><span style="color:#555555">&lt;/</span>a<span style="color:#555555">&gt;</span>
+<span style="color:#555555">&lt;</span>a href<span style="color:#555555">=</span><span style="color:#1861a7">&quot;#&quot;</span> <span style="color:#ff3030">class</span><span style="color:#555555">=</span><span style="color:#1861a7">&quot;change_link&quot;</span> onclick<span style="color:#555555">=</span><span style="color:#1861a7">&quot;$('.slideshow').blinds_change(2)&quot;</span><span style="color:#555555">&gt;</span><span style="color:#32ba06">3</span><span style="color:#555555">&lt;/</span>a<span style="color:#555555">&gt;</span>
+<span style="color:#555555">&lt;</span>a href<span style="color:#555555">=</span><span style="color:#1861a7">&quot;#&quot;</span> <span style="color:#ff3030">class</span><span style="color:#555555">=</span><span style="color:#1861a7">&quot;change_link&quot;</span> onclick<span style="color:#555555">=</span><span style="color:#1861a7">&quot;$('.slideshow').blinds_change(3)&quot;</span><span style="color:#555555">&gt;</span><span style="color:#32ba06">4</span><span style="color:#555555">&lt;/</span>a<span style="color:#555555">&gt;</span>
+<span style="color:#555555">&lt;</span>a href<span style="color:#555555">=</span><span style="color:#1861a7">&quot;#&quot;</span> <span style="color:#ff3030">class</span><span style="color:#555555">=</span><span style="color:#1861a7">&quot;change_link&quot;</span> onclick<span style="color:#555555">=</span><span style="color:#1861a7">&quot;$('.slideshow').blinds_change(4)&quot;</span><span style="color:#555555">&gt;</span><span style="color:#32ba06">5</span><span style="color:#555555">&lt;/</span>a<span style="color:#555555">&gt;</span>
+<span style="color:#555555">&lt;</span>a href<span style="color:#555555">=</span><span style="color:#1861a7">&quot;#&quot;</span> <span style="color:#ff3030">class</span><span style="color:#555555">=</span><span style="color:#1861a7">&quot;change_link&quot;</span> onclick<span style="color:#555555">=</span><span style="color:#1861a7">&quot;$('.slideshow').blinds_change(5)&quot;</span><span style="color:#555555">&gt;</span><span style="color:#32ba06">6</span><span style="color:#555555">&lt;/</span>a<span style="color:#555555">&gt;</span>
+<span style="color:#555555">&lt;</span>a href<span style="color:#555555">=</span><span style="color:#1861a7">&quot;#&quot;</span> <span style="color:#ff3030">class</span><span style="color:#555555">=</span><span style="color:#1861a7">&quot;change_link&quot;</span> onclick<span style="color:#555555">=</span><span style="color:#1861a7">&quot;$('.slideshow').blinds_change(6)&quot;</span><span style="color:#555555">&gt;</span><span style="color:#32ba06">7</span><span style="color:#555555">&lt;/</span>a<span style="color:#555555">&gt;</span>
+</pre>
+		
+		</div>
+		<br/>
+		<div class="code">
+			<div class="title">Javascript</div>
+<pre style="color:#330066; background-color:#ffffff; font-size:10pt; font-family:'Courier New';">$<span style="color:#555555">(</span>window<span style="color:#555555">).</span><span style="color:#d11ced">load</span><span style="color:#555555">(</span><span style="color:#ff3030">function</span> <span style="color:#555555">() {</span>
+    $<span style="color:#555555">(</span><span style="color:#1861a7">'.slideshow'</span><span style="color:#555555">).</span><span style="color:#d11ced">blinds</span><span style="color:#555555">();</span>
+<span style="color:#555555">})</span>
+</pre>
+	</div>
+
+
+<a href="http://littlewebthings.com">littlewebthings.com</a> &copy; 2010<br /><br />
+
+
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+		<script type="text/javascript">
+			$(window).load(function () {
+				// start the slideshow
+				$('.slideshow').blinds();
+			})
+		</script>
+
+		
+	</div>
+</body>
+
+</html>

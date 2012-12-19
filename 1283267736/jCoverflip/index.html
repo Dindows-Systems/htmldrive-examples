@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jCoverflip Test</title>
+    
+    <style>
+      .ui-jcoverflip {
+        position: relative;
+      }
+      
+      .ui-jcoverflip--item {
+        position: absolute;
+        display: block;
+      }
+      
+      /* Basic sample CSS */
+      #flip {
+        height: 200px;
+        width: 630px;
+      }
+      
+      #flip .ui-jcoverflip--title {
+        position: absolute;
+        bottom: -30px;
+        width: 100%;
+        text-align: center;
+        color: #555;
+      }
+      
+      #flip img {
+        display: block;
+        border: 0;
+        outline: none;
+      }
+      
+      #flip a {
+        outline: none;
+      }
+      
+      
+      #wrapper {
+        height: 300px;
+        width: 630px;
+        overflow: hidden;
+      }
+      
+      
+      
+      
+      body {
+        font-family: Arial, sans-serif;
+        width: 630px;
+        padding: 0;
+        margin: 0;
+      }
+      
+
+    </style>
+    
+    <script type="text/javascript" src="jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.7.2.custom.js"></script>
+    <script type="text/javascript" src="jquery.jcoverflip.js"></scrip>
+    <script>
+    
+    </script>
+    
+    <script>
+    jQuery( document ).ready( function(){
+        jQuery( '#flip' ).jcoverflip( {current: 2});
+      });
+    </script>
+        
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="flip">
+      <a href="http://newsignature.com" title="The first image"><img src="1.png"/></a>
+      <a href="http://newsignature.com" title="A second image"><img src="2.png"/></a>
+      <a href="http://newsignature.com" title="This is the description"><img src="5.png"/></a>
+      <a href="http://newsignature.com" title="Another description"><img src="4.png"/></a>
+      <a href="http://newsignature.com" title="A title for the image"><img src="3.png"/></a>
+      
+    </div>
+    </div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+  </body>
+</html>

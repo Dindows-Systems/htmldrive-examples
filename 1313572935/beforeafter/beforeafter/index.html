@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Before/After Plugin Demo</title>
+<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.beforeafter-1.3.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$('#container').beforeAfter({imagePath:'js/'});
+	$('#container1').beforeAfter({imagePath:'js/'});
+	$('#container2').beforeAfter({imagePath:'js/'});
+	$('#container3').beforeAfter({imagePath:'js/'});
+	$('#container4').beforeAfter({imagePath:'js/'});
+	$('#container5').beforeAfter({imagePath:'js/'});
+	$('#container6').beforeAfter({imagePath:'js/'});
+});
+</script>
+ <style> html{display : none ; } </style>
+
+ <script>
+    if( self == top ) {
+        document.documentElement.style.display = 'block' ; 
+    } else {
+        top.location = self.location ; 
+    }
+ </script>
+
+
+<style type="text/css">
+body {
+	background: #ccc;
+}
+#content {
+	margin:0 auto;
+	width:755px;
+}
+#container + div.balinks {
+<!--	margin-left: 200px; -->
+}
+</style>
+
+</head>
+
+<body>
+<div id="content">
+<div id="container5">
+	<div><img alt="before" src="conan-before.jpg" width="755" height="425" /></div>
+	<div><img alt="after" src="conan-after.jpg" width="755" height="425" /></div>
+</div>
+<div id="container3">
+	<div><img alt="before" src="blonde1_before.jpg" width="326" height="495" /></div>
+	<div><img alt="after" src="blonde1_after.jpg" width="326" height="495" /></div>
+</div>
+</div>
+</body>
+</html>

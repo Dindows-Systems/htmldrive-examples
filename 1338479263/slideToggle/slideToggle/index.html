@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Simple JQuery Toggle Demo | CSS JQuery Slide Toggle Demo</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("li").click(function(){
+			$(this).toggleClass("active");
+			$(this).next("div").stop('true','true').slideToggle("slow");
+		});
+	});
+	</script>
+	
+	<style>
+		body{font-family:Tahoma;}
+		ul{width:450px;}
+		li:hover{background:#FFFFE0}
+		li{list-style-type:none; cursor:pointer; -moz-border-radius:0 10px 0 10px; border:3px solid #666666; margin:2px; padding:5px 5px 5px 5px;}
+		ul div{color: #666666; cursor: auto; display: none; font-size: 13px; padding: 5px 0 5px 20px; text-decoration: none; }
+		ul div a{color:#000000; font-weight:bold;}
+		li div:hover{text-decoration:none !important;}
+		li:before {content: "+"; padding:10px 10px 10px 0; color:red; font-weight:bold;}
+		li.active:before {content: "-"; padding:10px 10px 10px 0; color:red; font-weight:bold;}
+		#toggle{width:500px; margin:0 auto;}
+	</style>
+	
+</head>
+
+<body>
+
+<div id="toggle">
+	<ul>
+		<li>Youtube Video Scraping</li>
+		<div>
+				Always I wondered to display youtube videos below my posts or for some other purpose. But always had to use some plugins or some complicated scripts. So finally coded for you people a small function which will fetch or scrape...<a href="http://webstutorial.com/youtube-video-scraping-fetch-youtube-video-through-rss/programming/php">Continue reading</a>
+		</div>
+		<li>WordPress Multiple Category Search</li>
+			<div>
+				Since when I started wordpress, I had a question in my mind, why wordpress doesn’t give multiple search option? I googled a lot, but couldn’t find a plugin or code which exactly works. So finally decided to go more into...<a href="http://webstutorial.com/wordpress-multiple-category-search/content-management-system-cms/wordpress-cms">Continue reading</a>
+			</div>
+		
+		<li>Youtube Video Scraping</li>
+			<div>
+				Always I wondered to display youtube videos below my posts or for some other purpose. But always had to use some plugins or some complicated scripts. So finally coded for you people a small function which will fetch or scrape...<a href="http://webstutorial.com/youtube-video-scraping-fetch-youtube-video-through-rss/programming/php">Continue reading</a>
+			</div>
+		
+		<li>Ten WordPress Useful Functions And Snippets</li>
+			<div>
+				Some useful WordPress PHP funtions. Just copy and paste these functions in your themes functions.php file Change the WP Login Logo & URL Link Load JQuery From Google CDN How to remove the WordPress Version Information Remove Default WordPress Meta...<a href="http://webstutorial.com/ten-wordpress-useful-functions/content-management-system-cms/wordpress-cms">Continue reading</a>
+			</div>
+		
+		<li>A Good PHP Developer Can Answer This | PHP Test</li>
+			<div>
+				PHP developers go through 3 stages in their life Beginner Good Best A beginner PHP coder is some one who just started making some PHP projects in CMS like WordPress, Joomla, Magento and other PHP based CMS. A good PHP... <a href="http://webstutorial.com/good-php-developer-answer-php-test/programming/php">Continue reading</a>
+			</div>
+		
+	</ul>
+</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></body>
+</html>

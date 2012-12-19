@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sticky Sidebar</title>
+
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+var obj = $('#sticky');
+var offset = obj.offset();
+var topOffset = offset.top;
+var leftOffset = offset.left;
+var marginTop = obj.css("marginTop");
+var marginLeft = obj.css("marginLeft");
+
+$(window).scroll(function() {
+var scrollTop = $(window).scrollTop();
+
+	if (scrollTop >= topOffset){
+
+		obj.css({
+			marginTop: 0,
+			marginLeft: leftOffset,
+			position: 'fixed',
+		});
+	}
+
+	if (scrollTop < topOffset){
+
+		obj.css({
+			marginTop: marginTop,
+			marginLeft: marginLeft,
+			position: 'relative',
+		});
+	}
+});
+});
+
+</script>
+
+
+
+</head>
+<body>
+
+	
+    <div id="sticky">
+        <div id="carbonads-container">
+			<div class="carbonad">
+				<div id="azcarbon"></div>
+					<img src="pic.jpg"/>
+				</div>
+			</div>
+
+		</div>
+        
+	<div id="text">
+   		<div class="header">d<span class="italic">w</span></div>
+
+			<h1>Tutorial: Creating A Sticky Sidebar Using jQuery</h1>
+            <p>DesignWoop welcomes this guest post by <a href="#">Alexandre Smirnov</a> a web designer and developer who lives and works in Cal-i-for-nia.</p>
+
+            
+            <h2><strong>Read the tutorial:</strong> <a href="#">Creating A Sticky Sidebar Using jQuery</a></h2>
+
+            <p>Elementum ultricies duis porttitor, nec rhoncus placerat hac aenean turpis ultricies? Urna. Placerat. Porttitor est lacus sit mus. Turpis, vel a natoque odio sagittis, in, non pellentesque lorem cum penatibus, porta et! Eros. Nascetur eu. Amet. Magnis tristique in, pellentesque odio quis parturient integer urna. Rhoncus aliquam parturient, ut massa, proin augue rhoncus augue. Aliquam aenean, sed, tortor, elementum aliquet nec. Enim lorem porta! Sagittis, aliquam, aenean auctor porta adipiscing. Penatibus penatibus, nascetur, sed amet, magna, a in? Massa cras, arcu odio tortor ultrices? Lectus duis ut turpis rhoncus montes lacus egestas? Arcu nisi scelerisque lundium! Pid, natoque in, in eros porta, in dis nascetur magnis auctor proin, sit habitasse. Sit, dapibus nunc ac pulvinar nisi phasellus hac purus, lacus.</p>
+            
+            <p>Enim velit diam. Ac facilisis quis magna odio in amet est? Sed purus nisi turpis, magnis pid sed ac? Massa vel, magna nisi, porta elementum ultricies turpis integer aliquet! Turpis rhoncus turpis enim cursus natoque integer odio ac eros, aenean augue adipiscing ultricies? Ut auctor tincidunt dolor? Pid pid tempor! Dapibus parturient aenean rhoncus cum sit, nec lectus odio turpis dapibus. Quis mid pid porta ut mauris magnis! Nisi elit natoque aliquet proin. Augue, augue cum aliquam, ridiculus ridiculus egestas quis turpis cursus pulvinar sed lundium porta arcu, dapibus! Porta integer adipiscing dolor duis ut lundium tempor pellentesque urna facilisis, a, nisi, elementum! Porttitor rhoncus purus integer? A nisi in cras odio in? Integer, ac tortor enim eu ac.</p>
+            
+            <p>Ac mid ultrices. Adipiscing, sit risus diam! Diam in, porttitor magna nisi urna, turpis rhoncus turpis et, cras a, ac et diam scelerisque eros habitasse! Nisi, massa placerat elementum, sit ac, placerat, purus. Augue enim etiam tincidunt lundium vut! Cras, magna, pulvinar turpis nisi sagittis! Mus facilisis ultrices massa? Velit a adipiscing ridiculus, cras odio nec et adipiscing ut? Aenean dis in augue magna, facilisis, natoque dapibus. Nisi duis, eu auctor et natoque phasellus in enim magna integer hac, sed massa ut? A? Diam tincidunt egestas a. Mattis massa, augue mus. Dolor tortor auctor tincidunt, porttitor nisi placerat nascetur. Eu risus tortor in, risus tincidunt elementum pulvinar. Penatibus a penatibus, a porttitor odio tristique in mattis in, amet ut.</p>
+            
+            <p>Lorem platea turpis auctor cursus. Adipiscing, et, ut. In scelerisque in? Tortor hac urna porta elementum mid natoque lectus proin mus augue in, in? Pulvinar arcu elementum diam aenean, tortor magna augue est, porttitor parturient? Habitasse pellentesque phasellus ultricies augue augue massa augue dis? Sagittis. Tortor proin, aliquet elit, tortor odio, ut velit? Mauris eu mid tristique magna nisi, proin aliquam ut? Natoque, ut. Eu a magna elementum eu, ac nunc! Mattis nisi dis vut sed enim, nunc ridiculus, montes ultrices dictumst cursus ac mid, ac risus? Risus phasellus, lectus massa nascetur hac magnis placerat, montes eros parturient arcu, parturient placerat? Dis et! Tortor lectus risus placerat, dignissim enim aenean quis! Rhoncus eros scelerisque turpis? Tincidunt magna placerat integer.</p>
+
+            
+            <p>Mattis parturient mus platea integer ut cursus diam turpis a scelerisque sit, scelerisque! Mauris, ac pellentesque velit purus cras porttitor ut vel arcu, augue mauris! Etiam placerat turpis etiam amet augue velit? Dis odio ridiculus, lundium nec tempor platea, phasellus sagittis! Mattis. Ac nisi! Scelerisque, facilisis elit nascetur, mid parturient vut? Turpis aenean, placerat. Velit placerat mid in turpis, ut hac et turpis odio ac rhoncus elementum tortor turpis, eu habitasse nunc mattis ac dapibus habitasse integer duis tortor duis tortor aliquam, amet ultrices, nunc. Aliquam aliquam. Aliquet penatibus, nec elit pulvinar ridiculus, ut arcu, lacus natoque magnis tempor in et enim amet, lorem. Urna tristique placerat! Rhoncus amet tincidunt integer. Dapibus facilisis sit cum, diam vut, odio pulvinar.</p>
+            
+            <p>Elementum ultricies duis porttitor, nec rhoncus placerat hac aenean turpis ultricies? Urna. Placerat. Porttitor est lacus sit mus. Turpis, vel a natoque odio sagittis, in, non pellentesque lorem cum penatibus, porta et! Eros. Nascetur eu. Amet. Magnis tristique in, pellentesque odio quis parturient integer urna. Rhoncus aliquam parturient, ut massa, proin augue rhoncus augue. Aliquam aenean, sed, tortor, elementum aliquet nec. Enim lorem porta! Sagittis, aliquam, aenean auctor porta adipiscing. Penatibus penatibus, nascetur, sed amet, magna, a in? Massa cras, arcu odio tortor ultrices? Lectus duis ut turpis rhoncus montes lacus egestas? Arcu nisi scelerisque lundium! Pid, natoque in, in eros porta, in dis nascetur magnis auctor proin, sit habitasse. Sit, dapibus nunc ac pulvinar nisi phasellus hac purus, lacus.</p>
+            
+            <p>Enim velit diam. Ac facilisis quis magna odio in amet est? Sed purus nisi turpis, magnis pid sed ac? Massa vel, magna nisi, porta elementum ultricies turpis integer aliquet! Turpis rhoncus turpis enim cursus natoque integer odio ac eros, aenean augue adipiscing ultricies? Ut auctor tincidunt dolor? Pid pid tempor! Dapibus parturient aenean rhoncus cum sit, nec lectus odio turpis dapibus. Quis mid pid porta ut mauris magnis! Nisi elit natoque aliquet proin. Augue, augue cum aliquam, ridiculus ridiculus egestas quis turpis cursus pulvinar sed lundium porta arcu, dapibus! Porta integer adipiscing dolor duis ut lundium tempor pellentesque urna facilisis, a, nisi, elementum! Porttitor rhoncus purus integer? A nisi in cras odio in? Integer, ac tortor enim eu ac.</p>
+            
+            <p>Ac mid ultrices. Adipiscing, sit risus diam! Diam in, porttitor magna nisi urna, turpis rhoncus turpis et, cras a, ac et diam scelerisque eros habitasse! Nisi, massa placerat elementum, sit ac, placerat, purus. Augue enim etiam tincidunt lundium vut! Cras, magna, pulvinar turpis nisi sagittis! Mus facilisis ultrices massa? Velit a adipiscing ridiculus, cras odio nec et adipiscing ut? Aenean dis in augue magna, facilisis, natoque dapibus. Nisi duis, eu auctor et natoque phasellus in enim magna integer hac, sed massa ut? A? Diam tincidunt egestas a. Mattis massa, augue mus. Dolor tortor auctor tincidunt, porttitor nisi placerat nascetur. Eu risus tortor in, risus tincidunt elementum pulvinar. Penatibus a penatibus, a porttitor odio tristique in mattis in, amet ut.</p>
+            
+            <p>Lorem platea turpis auctor cursus. Adipiscing, et, ut. In scelerisque in? Tortor hac urna porta elementum mid natoque lectus proin mus augue in, in? Pulvinar arcu elementum diam aenean, tortor magna augue est, porttitor parturient? Habitasse pellentesque phasellus ultricies augue augue massa augue dis? Sagittis. Tortor proin, aliquet elit, tortor odio, ut velit? Mauris eu mid tristique magna nisi, proin aliquam ut? Natoque, ut. Eu a magna elementum eu, ac nunc! Mattis nisi dis vut sed enim, nunc ridiculus, montes ultrices dictumst cursus ac mid, ac risus? Risus phasellus, lectus massa nascetur hac magnis placerat, montes eros parturient arcu, parturient placerat? Dis et! Tortor lectus risus placerat, dignissim enim aenean quis! Rhoncus eros scelerisque turpis? Tincidunt magna placerat integer.</p>
+            
+            <p>Mattis parturient mus platea integer ut cursus diam turpis a scelerisque sit, scelerisque! Mauris, ac pellentesque velit purus cras porttitor ut vel arcu, augue mauris! Etiam placerat turpis etiam amet augue velit? Dis odio ridiculus, lundium nec tempor platea, phasellus sagittis! Mattis. Ac nisi! Scelerisque, facilisis elit nascetur, mid parturient vut? Turpis aenean, placerat. Velit placerat mid in turpis, ut hac et turpis odio ac rhoncus elementum tortor turpis, eu habitasse nunc mattis ac dapibus habitasse integer duis tortor duis tortor aliquam, amet ultrices, nunc. Aliquam aliquam. Aliquet penatibus, nec elit pulvinar ridiculus, ut arcu, lacus natoque magnis tempor in et enim amet, lorem. Urna tristique placerat! Rhoncus amet tincidunt integer. Dapibus facilisis sit cum, diam vut, odio pulvinar.</p>
+
+            
+            <p>Elementum ultricies duis porttitor, nec rhoncus placerat hac aenean turpis ultricies? Urna. Placerat. Porttitor est lacus sit mus. Turpis, vel a natoque odio sagittis, in, non pellentesque lorem cum penatibus, porta et! Eros. Nascetur eu. Amet. Magnis tristique in, pellentesque odio quis parturient integer urna. Rhoncus aliquam parturient, ut massa, proin augue rhoncus augue. Aliquam aenean, sed, tortor, elementum aliquet nec. Enim lorem porta! Sagittis, aliquam, aenean auctor porta adipiscing. Penatibus penatibus, nascetur, sed amet, magna, a in? Massa cras, arcu odio tortor ultrices? Lectus duis ut turpis rhoncus montes lacus egestas? Arcu nisi scelerisque lundium! Pid, natoque in, in eros porta, in dis nascetur magnis auctor proin, sit habitasse. Sit, dapibus nunc ac pulvinar nisi phasellus hac purus, lacus.</p>
+            
+            <p>Enim velit diam. Ac facilisis quis magna odio in amet est? Sed purus nisi turpis, magnis pid sed ac? Massa vel, magna nisi, porta elementum ultricies turpis integer aliquet! Turpis rhoncus turpis enim cursus natoque integer odio ac eros, aenean augue adipiscing ultricies? Ut auctor tincidunt dolor? Pid pid tempor! Dapibus parturient aenean rhoncus cum sit, nec lectus odio turpis dapibus. Quis mid pid porta ut mauris magnis! Nisi elit natoque aliquet proin. Augue, augue cum aliquam, ridiculus ridiculus egestas quis turpis cursus pulvinar sed lundium porta arcu, dapibus! Porta integer adipiscing dolor duis ut lundium tempor pellentesque urna facilisis, a, nisi, elementum! Porttitor rhoncus purus integer? A nisi in cras odio in? Integer, ac tortor enim eu ac.</p>
+            
+            <p>Ac mid ultrices. Adipiscing, sit risus diam! Diam in, porttitor magna nisi urna, turpis rhoncus turpis et, cras a, ac et diam scelerisque eros habitasse! Nisi, massa placerat elementum, sit ac, placerat, purus. Augue enim etiam tincidunt lundium vut! Cras, magna, pulvinar turpis nisi sagittis! Mus facilisis ultrices massa? Velit a adipiscing ridiculus, cras odio nec et adipiscing ut? Aenean dis in augue magna, facilisis, natoque dapibus. Nisi duis, eu auctor et natoque phasellus in enim magna integer hac, sed massa ut? A? Diam tincidunt egestas a. Mattis massa, augue mus. Dolor tortor auctor tincidunt, porttitor nisi placerat nascetur. Eu risus tortor in, risus tincidunt elementum pulvinar. Penatibus a penatibus, a porttitor odio tristique in mattis in, amet ut.</p>
+            
+            <p>Lorem platea turpis auctor cursus. Adipiscing, et, ut. In scelerisque in? Tortor hac urna porta elementum mid natoque lectus proin mus augue in, in? Pulvinar arcu elementum diam aenean, tortor magna augue est, porttitor parturient? Habitasse pellentesque phasellus ultricies augue augue massa augue dis? Sagittis. Tortor proin, aliquet elit, tortor odio, ut velit? Mauris eu mid tristique magna nisi, proin aliquam ut? Natoque, ut. Eu a magna elementum eu, ac nunc! Mattis nisi dis vut sed enim, nunc ridiculus, montes ultrices dictumst cursus ac mid, ac risus? Risus phasellus, lectus massa nascetur hac magnis placerat, montes eros parturient arcu, parturient placerat? Dis et! Tortor lectus risus placerat, dignissim enim aenean quis! Rhoncus eros scelerisque turpis? Tincidunt magna placerat integer.</p>
+            
+            <p>Mattis parturient mus platea integer ut cursus diam turpis a scelerisque sit, scelerisque! Mauris, ac pellentesque velit purus cras porttitor ut vel arcu, augue mauris! Etiam placerat turpis etiam amet augue velit? Dis odio ridiculus, lundium nec tempor platea, phasellus sagittis! Mattis. Ac nisi! Scelerisque, facilisis elit nascetur, mid parturient vut? Turpis aenean, placerat. Velit placerat mid in turpis, ut hac et turpis odio ac rhoncus elementum tortor turpis, eu habitasse nunc mattis ac dapibus habitasse integer duis tortor duis tortor aliquam, amet ultrices, nunc. Aliquam aliquam. Aliquet penatibus, nec elit pulvinar ridiculus, ut arcu, lacus natoque magnis tempor in et enim amet, lorem. Urna tristique placerat! Rhoncus amet tincidunt integer. Dapibus facilisis sit cum, diam vut, odio pulvinar.</p>
+            
+            <p>Elementum ultricies duis porttitor, nec rhoncus placerat hac aenean turpis ultricies? Urna. Placerat. Porttitor est lacus sit mus. Turpis, vel a natoque odio sagittis, in, non pellentesque lorem cum penatibus, porta et! Eros. Nascetur eu. Amet. Magnis tristique in, pellentesque odio quis parturient integer urna. Rhoncus aliquam parturient, ut massa, proin augue rhoncus augue. Aliquam aenean, sed, tortor, elementum aliquet nec. Enim lorem porta! Sagittis, aliquam, aenean auctor porta adipiscing. Penatibus penatibus, nascetur, sed amet, magna, a in? Massa cras, arcu odio tortor ultrices? Lectus duis ut turpis rhoncus montes lacus egestas? Arcu nisi scelerisque lundium! Pid, natoque in, in eros porta, in dis nascetur magnis auctor proin, sit habitasse. Sit, dapibus nunc ac pulvinar nisi phasellus hac purus, lacus.</p>
+
+            
+            <p>Enim velit diam. Ac facilisis quis magna odio in amet est? Sed purus nisi turpis, magnis pid sed ac? Massa vel, magna nisi, porta elementum ultricies turpis integer aliquet! Turpis rhoncus turpis enim cursus natoque integer odio ac eros, aenean augue adipiscing ultricies? Ut auctor tincidunt dolor? Pid pid tempor! Dapibus parturient aenean rhoncus cum sit, nec lectus odio turpis dapibus. Quis mid pid porta ut mauris magnis! Nisi elit natoque aliquet proin. Augue, augue cum aliquam, ridiculus ridiculus egestas quis turpis cursus pulvinar sed lundium porta arcu, dapibus! Porta integer adipiscing dolor duis ut lundium tempor pellentesque urna facilisis, a, nisi, elementum! Porttitor rhoncus purus integer? A nisi in cras odio in? Integer, ac tortor enim eu ac.</p>
+            
+            <p>Ac mid ultrices. Adipiscing, sit risus diam! Diam in, porttitor magna nisi urna, turpis rhoncus turpis et, cras a, ac et diam scelerisque eros habitasse! Nisi, massa placerat elementum, sit ac, placerat, purus. Augue enim etiam tincidunt lundium vut! Cras, magna, pulvinar turpis nisi sagittis! Mus facilisis ultrices massa? Velit a adipiscing ridiculus, cras odio nec et adipiscing ut? Aenean dis in augue magna, facilisis, natoque dapibus. Nisi duis, eu auctor et natoque phasellus in enim magna integer hac, sed massa ut? A? Diam tincidunt egestas a. Mattis massa, augue mus. Dolor tortor auctor tincidunt, porttitor nisi placerat nascetur. Eu risus tortor in, risus tincidunt elementum pulvinar. Penatibus a penatibus, a porttitor odio tristique in mattis in, amet ut.</p>
+            
+            <p>Lorem platea turpis auctor cursus. Adipiscing, et, ut. In scelerisque in? Tortor hac urna porta elementum mid natoque lectus proin mus augue in, in? Pulvinar arcu elementum diam aenean, tortor magna augue est, porttitor parturient? Habitasse pellentesque phasellus ultricies augue augue massa augue dis? Sagittis. Tortor proin, aliquet elit, tortor odio, ut velit? Mauris eu mid tristique magna nisi, proin aliquam ut? Natoque, ut. Eu a magna elementum eu, ac nunc! Mattis nisi dis vut sed enim, nunc ridiculus, montes ultrices dictumst cursus ac mid, ac risus? Risus phasellus, lectus massa nascetur hac magnis placerat, montes eros parturient arcu, parturient placerat? Dis et! Tortor lectus risus placerat, dignissim enim aenean quis! Rhoncus eros scelerisque turpis? Tincidunt magna placerat integer.</p>
+            
+            <p>Mattis parturient mus platea integer ut cursus diam turpis a scelerisque sit, scelerisque! Mauris, ac pellentesque velit purus cras porttitor ut vel arcu, augue mauris! Etiam placerat turpis etiam amet augue velit? Dis odio ridiculus, lundium nec tempor platea, phasellus sagittis! Mattis. Ac nisi! Scelerisque, facilisis elit nascetur, mid parturient vut? Turpis aenean, placerat. Velit placerat mid in turpis, ut hac et turpis odio ac rhoncus elementum tortor turpis, eu habitasse nunc mattis ac dapibus habitasse integer duis tortor duis tortor aliquam, amet ultrices, nunc. Aliquam aliquam. Aliquet penatibus, nec elit pulvinar ridiculus, ut arcu, lacus natoque magnis tempor in et enim amet, lorem. Urna tristique placerat! Rhoncus amet tincidunt integer. Dapibus facilisis sit cum, diam vut, odio pulvinar.</p>
+            
+            <p>Elementum ultricies duis porttitor, nec rhoncus placerat hac aenean turpis ultricies? Urna. Placerat. Porttitor est lacus sit mus. Turpis, vel a natoque odio sagittis, in, non pellentesque lorem cum penatibus, porta et! Eros. Nascetur eu. Amet. Magnis tristique in, pellentesque odio quis parturient integer urna. Rhoncus aliquam parturient, ut massa, proin augue rhoncus augue. Aliquam aenean, sed, tortor, elementum aliquet nec. Enim lorem porta! Sagittis, aliquam, aenean auctor porta adipiscing. Penatibus penatibus, nascetur, sed amet, magna, a in? Massa cras, arcu odio tortor ultrices? Lectus duis ut turpis rhoncus montes lacus egestas? Arcu nisi scelerisque lundium! Pid, natoque in, in eros porta, in dis nascetur magnis auctor proin, sit habitasse. Sit, dapibus nunc ac pulvinar nisi phasellus hac purus, lacus.</p>
+            
+            <p>Enim velit diam. Ac facilisis quis magna odio in amet est? Sed purus nisi turpis, magnis pid sed ac? Massa vel, magna nisi, porta elementum ultricies turpis integer aliquet! Turpis rhoncus turpis enim cursus natoque integer odio ac eros, aenean augue adipiscing ultricies? Ut auctor tincidunt dolor? Pid pid tempor! Dapibus parturient aenean rhoncus cum sit, nec lectus odio turpis dapibus. Quis mid pid porta ut mauris magnis! Nisi elit natoque aliquet proin. Augue, augue cum aliquam, ridiculus ridiculus egestas quis turpis cursus pulvinar sed lundium porta arcu, dapibus! Porta integer adipiscing dolor duis ut lundium tempor pellentesque urna facilisis, a, nisi, elementum! Porttitor rhoncus purus integer? A nisi in cras odio in? Integer, ac tortor enim eu ac.</p>
+
+            
+            <p>Ac mid ultrices. Adipiscing, sit risus diam! Diam in, porttitor magna nisi urna, turpis rhoncus turpis et, cras a, ac et diam scelerisque eros habitasse! Nisi, massa placerat elementum, sit ac, placerat, purus. Augue enim etiam tincidunt lundium vut! Cras, magna, pulvinar turpis nisi sagittis! Mus facilisis ultrices massa? Velit a adipiscing ridiculus, cras odio nec et adipiscing ut? Aenean dis in augue magna, facilisis, natoque dapibus. Nisi duis, eu auctor et natoque phasellus in enim magna integer hac, sed massa ut? A? Diam tincidunt egestas a. Mattis massa, augue mus. Dolor tortor auctor tincidunt, porttitor nisi placerat nascetur. Eu risus tortor in, risus tincidunt elementum pulvinar. Penatibus a penatibus, a porttitor odio tristique in mattis in, amet ut.</p>
+            
+            <p>Lorem platea turpis auctor cursus. Adipiscing, et, ut. In scelerisque in? Tortor hac urna porta elementum mid natoque lectus proin mus augue in, in? Pulvinar arcu elementum diam aenean, tortor magna augue est, porttitor parturient? Habitasse pellentesque phasellus ultricies augue augue massa augue dis? Sagittis. Tortor proin, aliquet elit, tortor odio, ut velit? Mauris eu mid tristique magna nisi, proin aliquam ut? Natoque, ut. Eu a magna elementum eu, ac nunc! Mattis nisi dis vut sed enim, nunc ridiculus, montes ultrices dictumst cursus ac mid, ac risus? Risus phasellus, lectus massa nascetur hac magnis placerat, montes eros parturient arcu, parturient placerat? Dis et! Tortor lectus risus placerat, dignissim enim aenean quis! Rhoncus eros scelerisque turpis? Tincidunt magna placerat integer.</p>
+            
+            <p>Mattis parturient mus platea integer ut cursus diam turpis a scelerisque sit, scelerisque! Mauris, ac pellentesque velit purus cras porttitor ut vel arcu, augue mauris! Etiam placerat turpis etiam amet augue velit? Dis odio ridiculus, lundium nec tempor platea, phasellus sagittis! Mattis. Ac nisi! Scelerisque, facilisis elit nascetur, mid parturient vut? Turpis aenean, placerat. Velit placerat mid in turpis, ut hac et turpis odio ac rhoncus elementum tortor turpis, eu habitasse nunc mattis ac dapibus habitasse integer duis tortor duis tortor aliquam, amet ultrices, nunc. Aliquam aliquam. Aliquet penatibus, nec elit pulvinar ridiculus, ut arcu, lacus natoque magnis tempor in et enim amet, lorem. Urna tristique placerat! Rhoncus amet tincidunt integer. Dapibus facilisis sit cum, diam vut, odio pulvinar.</p>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+</div>
+</body>
+</html>

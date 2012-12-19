@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>ChillTip Project - Christopher Hill</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="Designed by Christopher Hill, ChillTip is a JQuery Plugin that allows you to have a custom designed tooltip for your website. It can be used for span, img, anchor attributes and pretty much anything else that uses the title attribute. ChillTip has been tested with IE6, IE7, IE8, Firefox, Google Chrome, Opera and Safari" name="description" />
+<meta content="ChillTip, Tooltip, Chill Web Designs, Christopher Hill " name="keywords" />
+<meta http-equiv="Content-Language" content="en-GB" />
+<meta name="author" content="Christopher Hill" />
+<meta name="copyright" content="Christopher Hill" />
+<link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+<link type="text/css" rel="stylesheet" href="css/screen.css" media="screen" />
+</head>
+<body>
+<div id="container">
+<div id="header">
+
+</div>
+
+<div id="top"><!-- Top --></div>
+<div id="content">
+<h3>Overview</h3>
+<p>Designed by Christopher Hill, ChillTip is a JQuery Plugin that allows you to have a custom designed tooltip for your website. It can be used for span, img, anchor attributes and pretty much anything else that uses the title attribute. ChillTip has been tested with IE6, IE7, IE8, Firefox, Google Chrome, Opera and Safari. 
+<br />
+<br />
+
+Before starting this project I had previously used custom tooltips, whilst using a few I quickly came across problems. Many of them had custom designed attributes that were not recognized by HTML Validators which led to the failure of validation of a webpage.
+<br />
+<br />
+
+Others showed the default browser tooltip aswell as the custom one. Some would not allow symbols or characters to be displayed and would stop the page working and others where not customizable.
+<br />
+<br />
+Therefore I set out to design my own one tooltip and to provide a solution that addressed these problems and to design a tooltip that really works without any limitations.
+</p>
+
+<div class="line"></div>
+
+<h3>Example &amp; Demonstration</h3>
+
+<p>Here are a few examples, simply hover your mouse over the attributes to reveal ChillTip:-</p>
+<img src="images/screen/chilltip.png" class="ChillTip" alt="Image of ChillTip" title="ChillTip can be customised to use 6 other colors &#60;span class=&#34;four&#34;&#62;Purple&#60;&#47;span&#62;, &#60;span class=&#34;two&#34;&#62;Pink&#60;&#47;span&#62;, &#60;span class=&#34;three&#34;&#62;Green&#60;&#47;span&#62;, &#60;span class=&#34;one&#34;&#62;Blue&#60;&#47;span&#62;, &#60;span class=&#34;five&#34;&#62;Red&#60;&#47;span&#62;, &#60;span class=&#34;six&#34;&#62;Yellow&#60;&#47;span&#62; &amp; charcters &#33;&#34;&#35;&#36;&#37;&#38;&#39;&#40;&#41;&#42;&#43;&#44;&#45;&#47;&#163;&#169;&#171;&#187;&#174; etc." /><br />
+<br />
+
+
+<button class="ChillTip" title="This is a button example">Button</button><br />
+<br />
+
+
+<span class="ChillTip" id="span" title="This is a span example.">This is a span example.</span><br />
+<br />
+
+
+<a href="javascript:void(0);" class="ChillTip" id="anc" title="This is a link example.">This is a link example.</a><br />
+<br />
+
+
+<a class="ChillTip" id="link" title="This is a anchor example.">This is a anchor example.</a><br />
+<br />
+
+<div class="line"></div>
+<h3>Download</h3><br />
+
+<a href="http://www.chillwebdesigns.co.uk/downloads/ChillTip_V1.1.zip"  class="link"  title="Download ChillTip"><img src="images/screen/chilltip-download.jpg" alt="Download ChillTip" /></a><br /><br />
+<div class="line"></div>
+<h3>How to install</h3>
+<p><b>Step One - Download ChillTip</b></p>
+<p>Downlaod chilltip-packed.js and place it in your javascript directory in this example we are using a directory called 'js'.</p>
+<p><b>Step Two - Download JQuery</b></p>
+<p>ChillTip is a JQuery Plugin, therefore you will require Jquery for it to work. Simply download the latest version from the <a href="http://jquery.com/" title="JQuery Website" target="_blank">JQuery Website</a> and save it to the 'js' directory.</p>
+<p><b>Step Three - Add PlugIn &amp; Framework to the head section</b></p>
+<p>Now add the Jquery Framework and chilltip-packed.js to the head section of your web page. Now we should have something like below in our head section:</p>
+<div class="code">
+<span class="pur">&#60;head&#62;<br /><br />
+&#60;script</span> <span class="dp">type=</span><span class="bl">&#34;text&#47;javascript&#34;</span> <span class="dp">src=</span><span class="bl">&#34;js&#47;jquery-1.4.2.min.js&#34;</span><span class="pur">&#62;&#60;&#47;script&#62;<br />
+&#60;script</span> <span class="dp">type=</span><span class="bl">&#34;text&#47;javascript&#34;</span> <span class="dp">src=</span><span class="bl">&#34;js&#47;chilltip-packed.js&#34;</span><span class="pur">&#62;&#60;&#47;script&#62;<br /><br />
+ 
+&#60;&#47;head&#62;</span>
+</div>
+ 
+<p><b>Step Four - Add ChillTip to attributes.</b></p>
+ 
+ 
+<p>Now we can now add ChillTip to our html code.  To do this create a img, anchor or span attribute.  In this example we are going to use anchor attribute to create a link.  Then I we are going to add a <b>class="ChillTip"</b> as we want the Chilltip to be applied to this link.  Then add the title="YOUR CONTENT" attribute to give a description of what the link is for.   </p>
+<div class="code">
+<span class="pur">&#60;head&#62;<br /><br />
+&#60;script</span> <span class="dp">type=</span><span class="bl">&#34;text&#47;javascript&#34;</span> <span class="dp">src=</span><span class="bl">&#34;js&#47;jquery-1.4.2.min.js&#34;</span><span class="pur">&#62;&#60;&#47;script&#62;<br />
+&#60;script</span> <span class="dp">type=</span><span class="bl">&#34;text&#47;javascript&#34;</span> <span class="dp">src=</span><span class="bl">&#34;js&#47;chilltip-packed.js&#34;</span><span class="pur">&#62;&#60;&#47;script&#62;<br />
+<br />
+&#60;&#47;head&#62;<br />
+&#60;body&#62;<br /><br />&#60;a href=&#34;chilltip.html&#34; class=&#34;ChillTip&#34; title=&#34;To learn more about the Chilltip Project click here.&#34;&#62;For more info.&#60;&#47;a&#62;<br /><br />
+&#60;&#47;body&#62;</span>
+</div>
+<p>Result: <a href="chilltip.html" class="ChillTip" title="To learn more about the Chilltip Project click here.">For more info.</a></p>
+ 
+<p><b>Step Five - Adding Colour</b></p>
+<p>In this example we are going to change the colour of the word Chilltip to blue. We need to put the word ChillTip &#60;span class&#61;&#34;one&#34;&#62;&#60;&#47;span&#62;. But for it to work correctly we need to change the &#60; &#47; &#34; &#62; to <a href="http://www.ascii.cl/htmlcodes.htm" title="Ascii HTML Codes." target="_blank">ascii html codes</a>. For example change &#60;  to &amp;&#35;60&#59;  ,  &#47;  to &amp;&#35;47&#59; ,  &#34;  to &amp;&#35;34&#59;  ,  &#62;  to &amp;&#35;62&#59; like below.</p>
+<div class="code">
+<span class="pur">&#60;head&#62;<br /><br />
+&#60;script</span> <span class="dp">type=</span><span class="bl">&#34;text&#47;javascript&#34;</span> <span class="dp">src=</span><span class="bl">&#34;js&#47;jquery-1.4.2.min.js&#34;</span><span class="pur">&#62;&#60;&#47;script&#62;<br />
+&#60;script</span> <span class="dp">type=</span><span class="bl">&#34;text&#47;javascript&#34;</span> <span class="dp">src=</span><span class="bl">&#34;js&#47;chilltip-packed.js&#34;</span><span class="pur">&#62;&#60;&#47;script&#62;<br /><br />
+ 
+&#60;&#47;head&#62;<br />
+&#60;body&#62;<br /><br />&#60;a href=&#34;chilltip.html&#34; class=&#34;ChillTip&#34; title=&#34;To learn more about the &amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;one&amp;&#35;34&#59;&amp;&#35;62&#59;Chilltip&amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;  Project click here.&#34;&#62;For more info.&#60;&#47;a&#62;<br /><br />
+&#60;&#47;body&#62;</span>
+</div>
+<p>Result: <a href="chilltip.html" class="ChillTip" title="To learn more about the &#60;span class=&#34;one&#34;&#62; Chilltip  &#60;&#47;span&#62;  Project click here.">For more info.</a><br /><br />The reason why we have to use ascii html characters is that the html validators will see the a span attribute inside a title attribute that uses &#60; &#47; &#34; &#62; characters that can not be used inside the title attribute therefore it will fail to validate your web page. To use other symbols or characters just use that ascii html code for that character.</p>
+ 
+ 
+<p><b>Step Six - Adding More Colour</b></p>
+<p>ChillTip has been designed to be easily customizable and can use up to 6 colours at one time. Theses colours values can be changed in the chilltip-packed.js file at the top. <br /><br />To add up to six colours in your ChillTip just add:
+<br /><br />
+For Color One Add &amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;one&amp;&#35;34&#59;&amp;&#35;62&#59; YOUR CONTENT &amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;
+<br /><br />
+For Color Two Add &amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;two&amp;&#35;34&#59;&amp;&#35;62&#59; YOUR CONTENT &amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;
+<br /><br />
+For Color Three Add &amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;three&amp;&#35;34&#59;&amp;&#35;62&#59; YOUR CONTENT &amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;
+<br /><br />
+For Color Four Add &amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;four&amp;&#35;34&#59;&amp;&#35;62&#59; YOUR CONTENT &amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;
+<br /><br />
+For Color Five Add &amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;five&amp;&#35;34&#59;&amp;&#35;62&#59; YOUR CONTENT &amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;
+<br /><br />
+For Color Six Add &amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;six&amp;&#35;34&#59;&amp;&#35;62&#59; YOUR CONTENT &amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;
+ </p>
+ 
+ 
+<p>So if we use all six colours should should have something similar to below:-</p>
+ 
+<div class="code">
+<span class="pur">&#60;head&#62;<br /><br />
+&#60;script</span> <span class="dp">type=</span><span class="bl">&#34;text&#47;javascript&#34;</span> <span class="dp">src=</span><span class="bl">&#34;js&#47;jquery-1.4.2.min.js&#34;</span><span class="pur">&#62;&#60;&#47;script&#62;<br />
+&#60;script</span> <span class="dp">type=</span><span class="bl">&#34;text&#47;javascript&#34;</span> <span class="dp">src=</span><span class="bl">&#34;js&#47;chilltip-packed.js&#34;</span><span class="pur">&#62;&#60;&#47;script&#62;<br /><br />
+ 
+&#60;&#47;head&#62;<br />
+&#60;body&#62;<br /><br />&#60;a href=&#34;chilltip.html&#34; class=&#34;ChillTip&#34; title=&#34;&amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;one&amp;&#35;34&#59;&amp;&#35;62&#59;Blue&amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;,
+&amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;two&amp;&#35;34&#59;&amp;&#35;62&#59;Pink&amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;,
+&amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;three&amp;&#35;34&#59;&amp;&#35;62&#59;Green&amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;,
+&amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;four&amp;&#35;34&#59;&amp;&#35;62&#59;Purple&amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;,
+&amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;five&amp;&#35;34&#59;&amp;&#35;62&#59;Red&amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;,
+&amp;&#35;60&#59;span class&#61;&amp;&#35;34&#59;six&amp;&#35;34&#59;&amp;&#35;62&#59;Yellow&amp;&#35;60&#59;&amp;&#35;47&#59;span&amp;&#35;62&#59;&#34;&#62;For more info.&#60;&#47;a&#62;<br /><br />
+&#60;&#47;body&#62;</span>
+</div>
+<p>Result: <a href="chilltip.html" class="ChillTip" title="&#60;span class=&#34;one&#34;&#62;Blue&#60;&#47;span&#62;, &#60;span class=&#34;two&#34;&#62;Pink&#60;&#47;span&#62;, &#60;span class=&#34;three&#34;&#62;Green&#60;&#47;span&#62;, &#60;span class=&#34;four&#34;&#62;Purple&#60;&#47;span&#62;, &#60;span class=&#34;five&#34;&#62;Red&#60;&#47;span&#62;, &#60;span class=&#34;six&#34;&#62;Yellow&#60;&#47;span&#62;">For more info.</a></p>
+
+<div class="line"></div> 
+<h3>Support</h3>
+
+<p><b>Can I use the script in a commercial project?</b><br /><br />
+ChillTip is licensed under the Creative Commons Attribution 2.5 License. As for correct attribution, all that is required is that you leave my name and link at the top of the chillbox-packed.js (Javascript File). I would appreciate an html link, but it is not required.<br /><br />
+<b>What versions of JQuery will ChillTip work with?</b><br /><br />ChillTip has been tested on all JQuery Versions 1.3 to 1.4.2 (Latest Version).  </p>
+
+<div class="line"></div>
+<h3>Change Log</h3> 
+<p><strong>Version 1.1</strong> - Compiled into one javascript file and options added for   border colour, text colour, opacity and more. <br />
+  <strong>Version 1.0</strong> - Original   Release</p>
+<div class="line"></div> 
+<h3>Contact</h3>
+<p>For troubleshooting, feature requests, and general help, send me a message by using the enquiry form on my contact page. Make sure to include details on your browser, operating system, ChillTip version, and a link (or relevant code).More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a> Alternatively you can email mail me by clicking <a href="mailto:info@chillwebdesigns.co.uk?subject=ChillTip" title="Click here to send me a email">here</a>.
+</p>
+
+</div>
+<div id="bottom"><!-- Bottom --></div>
+
+</div>
+
+<!-- Scripts -->
+<!--[if lt IE 7]> 
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta3)/IE7.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/chilltip-packed.js"></script>
+<!-- End of scripts -->
+</body>
+</html>

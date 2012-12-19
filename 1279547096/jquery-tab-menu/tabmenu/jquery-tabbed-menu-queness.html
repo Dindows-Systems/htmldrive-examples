@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Tab Menu</title>
+
+<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {	
+
+
+  //Get all the LI from the #tabMenu UL
+  $('#tabMenu > li').click(function(){
+        
+    //remove the selected class from all LI    
+    $('#tabMenu > li').removeClass('selected');
+    
+    //Reassign the LI
+    $(this).addClass('selected');
+    
+    //Hide all the DIV in .boxBody
+    $('.boxBody div').slideUp('1500');
+    
+    //Look for the right DIV in boxBody according to the Navigation UL index, therefore, the arrangement is very important.
+    $('.boxBody div:eq(' + $('#tabMenu > li').index(this) + ')').slideDown('1500');
+    
+  }).mouseover(function() {
+
+    //Add and remove class, Personally I dont think this is the right way to do it, anyone please suggest    
+    $(this).addClass('mouseover');
+    $(this).removeClass('mouseout');   
+    
+  }).mouseout(function() {
+    
+    //Add and remove class
+    $(this).addClass('mouseout');
+    $(this).removeClass('mouseover');    
+    
+  });
+
+  //Mouseover with animate Effect for Category menu list
+  $('.boxBody #category li').mouseover(function() {
+
+    //Change background color and animate the padding
+    $(this).css('backgroundColor','#888');
+    $(this).children().animate({paddingLeft:"20px"}, {queue:false, duration:300});
+  }).mouseout(function() {
+    
+    //Change background color and animate the padding
+    $(this).css('backgroundColor','');
+    $(this).children().animate({paddingLeft:"0"}, {queue:false, duration:300});
+  });  
+	
+  //Mouseover effect for Posts, Comments, Famous Posts and Random Posts menu list.
+  $('.boxBody li').click(function(){
+    window.location = $(this).find("a").attr("href");
+  }).mouseover(function() {
+    $(this).css('backgroundColor','#888');
+  }).mouseout(function() {
+    $(this).css('backgroundColor','');
+  });  	
+	
+});
+
+</script>
+<style>
+
+body{font-family:arial;font-size:10px;color:#ccc;background-color:#555}
+a {color:#ccc;text-decoration:none;}
+a:hover {color:#ccc;text-decoration:none}
+
+#tabMenu {margin:0;padding:0 0 0 15px;list-style:none;}
+#tabMenu li {float:left;height:32px;width:39px;cursor:pointer;cursor:hand}
+
+li.comments {background:url(images/tabComment.gif) no-repeat 0 -32px;}
+li.posts {background:url(images/tabStar.gif) no-repeat 0 -32px;}
+li.category {background:url(images/tabFolder.gif) no-repeat 0 -32px;}
+li.famous {background:url(images/tabHeart.gif) no-repeat 0 -32px;}
+li.random {background:url(images/tabRandom.gif) no-repeat 0 -32px;}
+
+li.mouseover {background-position:0 0;}
+li.mouseout {background-position:0 -32px;}
+li.selected {background-position:0 0;}
+
+.box {width:227px}
+.boxTop {background:url(images/boxTop.gif) no-repeat;height:11px;clear:both}
+*html .boxTop {margin-bottom:-2px;}
+.boxBody {background-color:#282828;}
+.boxBottom {background:url(images/boxBottom.gif) no-repeat;height:11px;}
+
+.boxBody div {display:none;}
+.boxBody div.show {display:block;}
+.boxBody #category a {display:block;}
+
+.boxBody div ul {margin:0 10px 0 25px;padding:0;width:190px;list-style-image:url(images/arrow.gif)}
+*html .boxBody div ul {margin-left:10px;padding-left:15px;}
+.boxBody div li {border-bottom:1px dotted #8e8e8e; padding:4px 0;cursor:hand;cursor:pointer;}
+.boxBody div ul li.last {border-bottom:none}
+.boxBody div li span {font-size:8px;font-style:italic; color:#888;}
+</style>
+</head>
+<body>
+<h2><a href="http://www.queness.com">jQuery Tabbed Side Menu from Queness WebBlog</a></h2>
+
+<div class="box">
+<ul id="tabMenu">
+  <li class="posts selected"></li>
+  <li class="comments"></li>
+  <li class="category"></li>
+  <li class="famous"></li>
+  <li class="random"></li>
+</ul>
+<div class="boxTop"></div>
+
+<div class="boxBody">
+  
+  <div id="posts" class="show">
+    <ul>
+      <li>Create a Simple CSS + Javascript Tooltip with jQuery.</li>
+      <li>Simple JQuery Modal Window Tutorial.</li>
+      <li>Navigation List menu + Jquery Animate Effect Tutorial.</li>
+      <li>Exclusive RSS Icons from Queness.</li>
+      <li>50 Monochromatic Website Designs.</li>
+      <li>Food Plates and Creative Dishware Designs.</li>
+      <li>Breadcrumbs In Web Design: Examples And Best Practices.</li>
+      <li class="last">New Smashing Freebies For Designers and Bloggers.</li>
+    </ul>  
+  </div>  
+  
+  <div id="comments">
+    <ul>
+      <li><a>jQuery Tabbed Navigation Menu. <span> - kevin</span></a></li>
+      <li><a>You can add links in here! <span> - kevin</span></a></li>
+      <li><a>It's easy to understand. Though it's not the best, but hell yeah it works. <span> - kevin</span></a></li>
+      <li><a>I hope you will like it. <span> - kevin</span></a></li>
+      <li><a>My next tutorial will be jQuery-based Accordion. <span> - kevin</span></a></li>
+      <li class="last"><a>And, I'm working on a free wordpress template as well : ) <span> - kevin</span></a></li>
+    </ul>
+  </div>
+  
+  <div id="category">
+    <ul>
+      <li><a href="http://www.queness.com/tag/ajax">ajax</a></li>
+      <li><a href="http://www.queness.com/tag/css-html">css-html</a></li>
+      <li><a href="http://www.queness.com/tag/freebies">freebies</a></li>
+      <li><a href="http://www.queness.com/tag/icon">icon</a></li>
+      <li><a href="http://www.queness.com/tag/inspiration">inspiration</a></li>
+      <li><a href="http://www.queness.com/tag/javascript">javascript</a></li>
+      <li><a href="http://www.queness.com/tag/logo">logo</a></li>
+      <li><a href="http://www.queness.com/tag/photography">photography</a></li>
+      <li><a href="http://www.queness.com/tag/photoshop">photoshop</a></li>
+      <li><a href="http://www.queness.com/tag/php">php</a></li>
+      <li><a href="http://www.queness.com/tag/seo">seo</a></li>
+      <li><a href="http://www.queness.com/tag/tutorial">tutorial</a></li>
+      <li><a href="http://www.queness.com/tag/usability">usability</a></li>
+      <li><a href="http://www.queness.com/tag/wallpaper">wallpaper</a></li>
+      <li class="last"><a href="http://www.queness.com/tag/wordpress">wordpress</a></li>
+    </ul>  
+  </div>
+  
+  <div id="famous">
+    <ul>
+      <li>Simple JQuery Modal Window Tutorial.</li>
+      <li>Create a Simple CSS + Javascript Tooltip with jQuery.</li>
+      <li>Navigation List menu + Jquery Animate Effect Tutorial.</li>
+      <li class="last">Exclusive RSS Icons from Queness.</li>
+    </ul>  
+  </div>
+  
+  <div id="random">
+    <ul>
+      <li>50 Monochromatic Website Designs.</li>
+      <li>Breadcrumbs In Web Design: Examples And Best Practices.</li>
+      <li>Simple JQuery Modal Window Tutorial.</li>
+      <li>Navigation List menu + Jquery Animate Effect Tutorial.</li>
+      <li>Create a Simple CSS + Javascript Tooltip with jQuery.</li>
+      <li>Exclusive RSS Icons from Queness.</li>
+      <li>New Smashing Freebies For Designers and Bloggers.</li>
+      <li class="last">Food Plates and Creative Dishware Designs.</li>
+    </ul>    
+  </div>        
+
+</div>
+
+<div class="boxBottom"></div>
+
+</div>
+<div style="font-size:12px;color:#ccc">
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></div>
+
+</body>
+</html>

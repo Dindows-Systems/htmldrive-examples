@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Contained Sticky Scroll Demo - A jQuery Plugin by Echo Enduring Media</title>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="jquery-contained-sticky-scroll.js"></script>
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('#sidebar').containedStickyScroll();
+		});
+
+		</script>
+		<style type="text/css">
+			/* Reset Code */
+			html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+			
+			/* 960.gs Code */
+			.container_12,.container_16{margin-left:auto;margin-right:auto;width:960px}.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12,.grid_13,.grid_14,.grid_15,.grid_16{display:inline;float:left;margin-left:10px;margin-right:10px}.container_12 .grid_3,.container_16 .grid_4{width:220px}.container_12 .grid_6,.container_16 .grid_8{width:460px}.container_12 .grid_9,.container_16 .grid_12{width:700px}.container_12 .grid_12,.container_16 .grid_16{width:940px}.alpha{margin-left:0}.omega{margin-right:0}.container_12 .grid_1{width:60px}.container_12 .grid_2{width:140px}.container_12 .grid_4{width:300px}.container_12 .grid_5{width:380px}.container_12 .grid_7{width:540px}.container_12 .grid_8{width:620px}.container_12 .grid_10{width:780px}.container_12 .grid_11{width:860px}.container_16 .grid_1{width:40px}.container_16 .grid_2{width:100px}.container_16 .grid_3{width:160px}.container_16 .grid_5{width:280px}.container_16 .grid_6{width:340px}.container_16 .grid_7{width:400px}.container_16 .grid_9{width:520px}.container_16 .grid_10{width:580px}.container_16 .grid_11{width:640px}.container_16 .grid_13{width:760px}.container_16 .grid_14{width:820px}.container_16 .grid_15{width:880px}.container_12 .prefix_3,.container_16 .prefix_4{padding-left:240px}.container_12 .prefix_6,.container_16 .prefix_8{padding-left:480px}.container_12 .prefix_9,.container_16 .prefix_12{padding-left:720px}.container_12 .prefix_1{padding-left:80px}.container_12 .prefix_2{padding-left:160px}.container_12 .prefix_4{padding-left:320px}.container_12 .prefix_5{padding-left:400px}.container_12 .prefix_7{padding-left:560px}.container_12 .prefix_8{padding-left:640px}.container_12 .prefix_10{padding-left:800px}.container_12 .prefix_11{padding-left:880px}.container_16 .prefix_1{padding-left:60px}.container_16 .prefix_2{padding-left:120px}.container_16 .prefix_3{padding-left:180px}.container_16 .prefix_5{padding-left:300px}.container_16 .prefix_6{padding-left:360px}.container_16 .prefix_7{padding-left:420px}.container_16 .prefix_9{padding-left:540px}.container_16 .prefix_10{padding-left:600px}.container_16 .prefix_11{padding-left:660px}.container_16 .prefix_13{padding-left:780px}.container_16 .prefix_14{padding-left:840px}.container_16 .prefix_15{padding-left:900px}.container_12 .suffix_3,.container_16 .suffix_4{padding-right:240px}.container_12 .suffix_6,.container_16 .suffix_8{padding-right:480px}.container_12 .suffix_9,.container_16 .suffix_12{padding-right:720px}.container_12 .suffix_1{padding-right:80px}.container_12 .suffix_2{padding-right:160px}.container_12 .suffix_4{padding-right:320px}.container_12 .suffix_5{padding-right:400px}.container_12 .suffix_7{padding-right:560px}.container_12 .suffix_8{padding-right:640px}.container_12 .suffix_10{padding-right:800px}.container_12 .suffix_11{padding-right:880px}.container_16 .suffix_1{padding-right:60px}.container_16 .suffix_2{padding-right:120px}.container_16 .suffix_3{padding-right:180px}.container_16 .suffix_5{padding-right:300px}.container_16 .suffix_6{padding-right:360px}.container_16 .suffix_7{padding-right:420px}.container_16 .suffix_9{padding-right:540px}.container_16 .suffix_10{padding-right:600px}.container_16 .suffix_11{padding-right:660px}.container_16 .suffix_13{padding-right:780px}.container_16 .suffix_14{padding-right:840px}.container_16 .suffix_15{padding-right:900px}.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}.clearfix{display:inline-block}* html .clearfix{height:1%}.clearfix{display:block}
+			
+			/* Clear Fix */
+			.clearfix:after {
+				content: ".";
+				display: block;
+				clear: both;
+				visibility: hidden;
+				line-height: 0;
+				height: 0;
+			}
+			
+			/* 
+			.clearfix {
+				display: inline-block;
+			}
+			*/
+			 
+			html[xmlns] .clearfix {
+				display: block;
+			}
+			 
+			* html .clearfix {
+				height: 1%;
+			}
+			#headerwrap{
+				padding: 60px 0 30px 0;
+				color: #eee;
+				background: #444 url(pattern.jpg);
+				margin-bottom: 40px;
+				border-bottom: 8px double #fff;
+			}
+			#headerwrap h1{
+				font-size: 2em;
+				margin-bottom: 0.25em;
+			}
+			#main{
+			}
+			#footerwrap{
+				margin-top: 40px;
+				padding: 40px 0px;
+				color: #eee;
+				background: #444 url(pattern.jpg);
+				border-top: 8px double #fff;
+			}
+			#footerwrap h2{
+				font-size: 2em;
+			}
+			#footerwrap h3{
+				font-size: 1.4em;
+			}
+			#footerwrap ul{
+				list-style-position: outside;
+				list-style-type: square;
+				margin-left: 20px;
+				margin-bottom: 1em;
+			}
+			code{
+				padding-left: 30px;
+				color: #666;
+			}
+			body{
+				color: #444 url(pattern.jpg);
+				line-height: 1.4em;
+			}
+			p{
+				padding: 0 0 0.8em 0;
+			}
+			h2,h3{
+				line-height: 1.4em;
+			}
+			table{
+				border-collapse: separate;
+				border-spacing: 3px;
+			}
+			th{
+				padding: 10px;
+				text-align: left;
+				color: #eee;
+				background: #444 url(pattern.jpg);
+			}
+			td{
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+	
+	<div id="headerwrap">
+	<div id="header" class="container_12 clearfix">
+		<div class="grid_8">
+		<h1>Contained Sticky Scroll Demo</h1>
+		<p>A jQuery Plugin by Echo Enduring Media</p>
+		</div>
+	</div>
+	</div>
+	<div id="main" class="container_12 clearfix">
+	
+		<div id="info" class="grid_8">
+		
+		<p>The Contained Sticky Scroll plugin is designed to allow an element to stick to the top of the screen as page scrolls down, but without moving outside of the parent container.</p>
+		<p>For example, the sidebar to the right has been animated with the plugin. When you scroll down to read the different options that the plugin allows you to use, you will notice that the sidebar will actually stick to the top of the window until we scroll past the main content area and into the footer. Then the sticky scrolling will stop.</p>
+		<p>However, some users don't like this kind of sticky scrolling, so the plugin <em>also</em> includes a feature that allows a user to turn off the sticky scrolling, causing the sidebar to flip back to its default position. Just click the circumflex(^) to trigger this.</p>
+		<p>To initialize this plugin, simply use this basic syntax:</p>
+		<p><pre><code>jQuery('.sidebar').containedStickyScroll();
+		
+</code></pre></p>
+		<p>Or, if you want to include custom options, write like this:</p>
+		<p><pre><code>jQuery('.sidebar').containedStickyScroll({
+        duration: 300,
+        unstick: true,
+        closeChar: 'x' 
+    });
+
+</code></pre></p>
+		<p>The plugin comes equipped with a number of different options:</p>
+		<table>
+		<tr>
+		<th>easing</th>
+		<td><i>String</i> - Allows the user to set the type of easing to be used in the animation. Defaults to linear.</td>
+		</tr>
+		<tr>
+		<th>duration</th>
+		<td><i>Numeric</i> - Allows the user to set the duration of the animation. Defaults to 500</td>
+		</tr>
+		<tr>
+		<th>queue</th>
+		<td><i>Boolean</i> - Allows the user to set whether the animation is placed into the queue. If false, animation starts immediately. Defaults to false</td>
+		</tr>
+		<tr>
+		<th>unstick</th>
+		<td><i>Boolean</i> - Allows the user to turn the unstick functionality on and off. Defaults to true (on)</td>
+		</tr>
+		<tr>
+		<th>closeChar</th>
+		<td><i>String</i> - Allows the user to set the character to be used as the unstick trigger. Defaults to ^</td>
+		</tr>
+		<tr>
+		<th>closeTop</th>
+		<td><i>Numeric</i> - Allows the user to set relative position of the unstick trigger to the top of the selected element, in pixels. Defaults to 0</td>
+		</tr>
+		<tr>
+		<th>closeRight</th>
+		<td><i>Numeric</i> - Allows the user to set relative position of the unstick trigger to the right of the selected element, in pixels. Defaults to 0</td>
+		</tr>
+		<tr>
+		<th>oSelector <em>(deprecated)</em></th>
+		<td>In version 1.0, this option is was set by the plugin and contains the selector information of the selected element. It is was used for internal purposes but has been deprecated for improved performance</td>
+		</tr>
+		</table>
+		</div>
+			
+		<div id="sidebar" class="grid_4">
+		
+		<h2>Sticky Sidebar</h2>
+		<p>This is the sticky sidebar, which will stick to the top of the browser window as you scroll down, but which will <em>not</em> leave boundaries of its parent element.</p>
+		</div>
+	
+	</div>
+	<div id="footerwrap">
+	<div id="footer" class="container_12 clearfix">
+	
+		<div class="grid_8">
+			<h2>Important Notes</h2>		
+			<p>What follows is a list of a few things that you will want to keep in mind when using this plugin. More importantly, it is a useful way to fill up space so that the sticky scrolling functionality can actually be seen in action!</p>
+			<ol>
+			<li>
+				<h3>Parent/Child Relationship</h3>
+				<p>This plugin is built specifically to rely on a parent/child relationship, where the child is the selected element and the parent is the element that surrounds it. Because of this, the sticky scroll effect will be bound to the parent element. This is worth considering when structuring your HTML.</p>
+			</li>
+			<li>
+				<h3>Box Model</h3>
+					<p>The plugin is also built on the assumption that the parent element will be a block level element, such as a &lt;div&gt;, and which has been properly cleared. Uncleared, collapsed parent elements will prevent the plugin from working, since part of the algorithm to keep the element contained within its parent actually uses the dimensions of the parent. Collapsed, uncleared blocks may not accurately reflect the required dimensional properties.</p>
+			</li>
+			<li>
+				<h3>WordPress Friendly</h3>
+				<p>WordPress is probably the most popular CMS on the planet right now, and while it includes a native jQuery library, it uses the $( ) shorthand for another library. As such, using this shorthand in WordPress can cause strange things to happen. This plugin is designed to be WordPress friendly, by avoiding the use of shorthand jQuery calls.</p>
+			</li>
+			<li>
+				<h3>Play Around with It</h3>
+				<p>Not every plugin will be exactly what you're looking for. Since this one is really not all that complex, I encourage you to play around with it! Tweaking some of the code might help it fit your purposes better.</p>
+			</li>
+			</ol>
+		</div>
+		<div class="grid_4">
+		<h2>Release Notes</h2>
+		<p>&copy; 2010 Echo Enduring Media</p>
+		<p>This plugin is free for you to use for both personal and commercial works. I would appreciate credit wherever possible, and would love to see any creation or design that makes use of this plugin.<br>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 
+
+Library">www.htmldrive.net </a></p>
+		<p>YOU MAY NOT:</p>
+		<ul>
+			<li>sell or otherwise profit from the distribution of this plugin</li>
+			<li>distribute this plugin without proper credit and acknowledgement to the author (me).</li>
+			<li>use this plugin for any use that would (or potentially could) be deemed pornographic, racist, hateful, criminal or otherwise damaging.</li>
+		</ul>
+		<p>Thanks for understanding! And if you do use these textures, I encourage you to drop me a line! I always love seeing my freebies in action!<br>
+</p>
+		</div>
+	</div>
+	</div>
+	</body>
+</html>

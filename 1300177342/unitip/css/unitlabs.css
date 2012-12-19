@@ -1,0 +1,568 @@
+/*Unit Labs CSS*/
+/*Created for Unit Interactive by Nathan Ford on 06/06/08*/
+
+/*-------Colors----------
+
+lt blue:	#e7fefc
+lt teal:	#209b93
+dk teal:	#0f5b56
+green:		#7faa2d
+grey:		#999
+dk grey:	#666
+
+-----------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 62.5%;
+	background: #fff;
+}
+
+h1, h2, h4, h5, div.ad h3 {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	text-align: left;
+	font-weight: normal;
+}
+
+p, li, dl, h3 {
+	font: normal normal 1.4em/1.4em Arial, Helvetica Neue, Helvetica, sans-serif;
+	text-align: left;
+	color: #666;
+}
+
+a:link, a:visited {
+	color: #209b93;
+	text-decoration: none;
+	border-bottom: 1px dotted #209b93;
+}
+
+a:hover {
+	color: #0f5b56;
+	text-decoration: underline;
+	border-bottom: none;
+}
+
+acronym {
+	cursor: help;
+	border-bottom: 1px dotted #999;
+}
+
+.inner {
+	width: 750px;
+	margin: 0 auto;
+}
+
+/*-------------------------------------------------- Header / Nav --------------------------------------------------*/
+
+#header {
+	height: 90px;
+	border-bottom: 1px dashed #0f5b56;
+	position: relative;
+	background: url(../images/logo_unit.gif) no-repeat left top;
+}
+
+	#header h1 a {
+		width: 246px;
+		height: 42px;
+		display: block;
+		text-indent: -5555px;
+		text-decoration: none;
+		float: left;
+		position: absolute;
+		top: 12px;
+		left: 15px;
+	}
+	
+	#header p {
+		position: absolute;
+		top: 33px;
+		right: 15px;
+		text-align: right;
+		font-weight: bold;
+		font-size: 1.4em;
+		color: #c6c8ca;
+	}
+	
+	#header a:link, #header a:visited {
+		color: #999;
+		border-bottom: none;
+	}
+	
+	#header a:hover {
+		color: #0f5b56;
+		text-decoration: none;
+	}
+
+/*-------------------------------------------------- Banner --------------------------------------------------*/
+
+#banner {
+	margin: 20px auto 0;
+	width: 100%;
+	height: auto;
+	position: relative;
+	background: #0f5b56;
+	padding: 15px 0;
+}
+
+	#banner h2 {
+		font-size: 2.8em;
+		color: #209b93;
+		letter-spacing: -1px;
+		margin-bottom: 10px;
+	}
+	
+	#banner p {
+		font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+		color: #fff;
+		line-height: 1.6em;
+		margin-bottom: 10px;
+	}
+	
+	#banner a:hover {
+		color: #c6c8ca;
+	}
+	
+	#banner ul {
+		margin-left: 125px;
+	}
+	
+	#banner ul li {
+		list-style: none outside url(../images/plus.gif);
+		margin: 5px 0 5px 10px;
+	}
+	
+	#banner ol li {
+		list-style: decimal outside;
+		margin: 5px 0;
+	}
+	
+	#banner ol li, #banner ul li {
+		color: #c6c8ca;
+		font-family: Georgia, Times, "Times New Roman", serif;
+	}
+
+		#banner li p {
+			color: #0f5b56;
+			padding: 0;
+			font-family: Georgia, Times, "Times New Roman", serif;
+			font-size: 1.0em;
+		}
+		
+	/*--------- Download Box ----------*/	
+	
+	div.download {
+		float: right;
+		clear: left;
+		width: 123px;
+		background: #209b93;
+		padding: 10px;
+		margin-left: 20px;
+	}
+	
+		div.downbot {
+			margin-bottom: 30px;
+		}
+	
+		div.download a.button:link, div.download a.button:visited {
+			padding: 3px 0;
+			width: 119px;
+			display: block;
+			margin: 0;
+		}
+		
+		div.download dl {
+			margin-top: 10px;
+			font-size: 1.1em;
+		}
+			
+			div.download dt {
+				display: inline;
+				color: #0f5b56;
+				width: 51px;
+				text-align: right;
+				float: left;
+			}
+			
+			div.download dd {
+				display: inline;
+				color: #fff;
+				width: 68px;
+				float: right;
+				padding-left: 3px;
+			}
+
+/*-------------------------------------------------- Content --------------------------------------------------*/
+
+#content, div.ad {
+	border-top: 1px dashed #0f5b56;
+	padding: 20px 0 50px;
+	margin: 20px auto 0;
+	width: 750px;
+	overflow: visible;
+}
+
+	#content h3 {
+		font-family: Verdana, Tahoma, Geneva, sans-serif;
+		width: 740px;
+		height: 15px;
+		background: #0f5b56;
+		color: #fff;
+		font-size: 2.0em;
+		font-weight: bold;
+		line-height: 0.7em;
+		padding: 0 5px;
+		margin-bottom: 30px;
+		overflow: visible;
+	}
+		
+		#content h3 span {
+			float: right;
+		}
+	
+		#content h3 div.labsPostInn span {
+			line-height: 1.0em;
+			position: relative;
+			top: -3px;
+			_line-height: 0.7em; /* fix IE6 */
+			_top: 0px; /* fix IE6 */
+		}
+		
+		#content h3 span em {
+			font-size: 0.7em;
+			font-style:normal;
+			color: #bbb;
+		}
+	
+	#content p {
+		margin-bottom: 15px;
+	}
+	
+	#content p.caption {
+		font: italic normal 1.4em Georgia, Times, "Times New Roman", serif;
+		margin-left: 125px;
+	}
+	
+	#content img { 
+		border: 1px solid #209b93; 
+		padding: 10px; 
+		margin: 15px 0 5px 125px;
+	}
+	
+	div.labsPost {
+		position: relative;
+		width: 750px;
+		border-bottom: 1px dashed #0f5b56;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+	}
+	
+		div.labsPostInn {
+			width: 100%;
+			height: 220px;
+			padding: 10px;
+			margin: -10px;
+		}
+			
+			#content div.labsPost h3 {
+				margin-bottom: 10px;
+			}
+	
+			div.labsPost h4 {
+				color: #999;
+				font-size: 2.8em;
+				background:url(../images/posttitlebg.gif) repeat-x;
+				width: 750px;
+				margin-bottom: 10px;
+			}
+			
+			div.labsPost h4 span {
+				background: #fff;
+				padding-right:5px;
+			}
+		
+		div.postpic {
+			float: left;
+			height: 140px;
+			width: 240px;
+			overflow: hidden;
+			text-indent: -9999px;
+			border: 5px solid #d2d2d2;
+			margin-right: 10px;
+			_background-position: 0 -140px; /* fix IE6 */
+		}
+			#UniTip-img {
+				background-image: url(../images/UniTipEx.jpg);
+			}
+		
+			#UnitPNGFix-img {
+				background-image: url(../images/UnitPNGEx.jpg);
+			}
+			
+			#UniTweets-img {
+				background-image: url(../images/UniTweetsEx.png);
+			}
+			
+			#Unitlicious-img {
+				background-image: url(../images/UniTweetsEx.png);
+			}
+	
+		div.postLinks {
+			position: absolute;
+			top: 200px;
+			right: 0px;
+			.top: 190px; /* fix IE */
+			padding: 5px 0;
+			text-align: right;
+		}
+		
+			a.button:link, a.button:visited {
+				background: #ececec;
+				border: 2px solid #d2d2d2;
+				padding: 3px 10px;
+				color: #666;
+				font-size: 1.4em;
+				font-family: Georgia, Times, "Times New Roman", serif;
+				margin-left: 10px;
+				text-align: center;
+			}
+			
+			a.button:hover {
+				color: #fff;
+				background: #0f5b56;
+				text-decoration: none;
+			}
+		
+		/*--------- labsPost Hover Styles ----------*/	
+		
+		div.labsPostInn:hover {
+			background: #e7fefc;
+		} 
+		
+		#content div.labsPostInn:hover h3 {
+			color: #e7fefc;
+		}
+		
+		div.labsPostInn:hover h4 {
+			color: #0f5b56;
+			background-position: 0 -32px;
+		}
+		
+		div.labsPostInn:hover h4 span {
+			background: #e7fefc;
+		}
+		
+		div.labsPostInn:hover .postpic {
+			background-position: 0 -140px;
+		}
+		
+		div.labsPostInn:hover .postLinks a:link, div.labsPostInn:hover .postLinks a:visited {
+			color: #fff;
+			background: #209b93;
+		}
+		
+			div.labsPostInn:hover a.button:hover {
+				background: #0f5b56;
+				text-decoration: none;
+			}	
+	
+	/*--------- Docs ----------*/
+	
+	p.postDocs {
+		font-size: 1.2em;
+	}
+	
+	div.update {
+		color: #0f5b56;
+		background: #ececec;
+		padding: 10px 0;
+		margin-bottom: 20px;
+	}
+	
+	/*--------- Demo Area ----------*/	
+	
+	div.demo {
+		width: 100%;
+		border-bottom: 1px dashed #0f5b56;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+	}
+	
+		#content .demo h3 {
+			margin-bottom: 0;
+		}
+		
+		#content .demo h3 span {
+			font-size: 0.5em;
+			font-weight: normal;
+		}
+		
+		div.demoInn {
+			position: relative;
+			min-height: 130px;
+			_height: 130px; 
+			background: #e7fefc;
+			border: 6px solid #0f5b56;
+			border-top: 0;
+			padding: 20px;
+		}
+	
+	/*--------- Deployment Area ----------*/
+	
+	div.codeEx { 
+		margin: 30px 0 30px 125px;
+		color: #666;
+		border-top: 10px solid #d2d2d2;
+		background: #e7fefc;
+		padding: 10px 30px;
+		font: normal normal 1.3em/1.4em Georgia, Times, "Times New Roman", serif;
+	}
+	
+		div.codeEx span {
+			font-style: italic;
+			font-size: 0.9em;
+			color: #999;
+			width: 300px;
+		}
+	
+	/*--------- Docs and Feedback ----------*/
+	
+	div.docs, p.feedback {
+		clear: right;
+		border-top: 1px dashed #0f5b56;
+		padding-top: 30px;
+		margin-top: 30px;
+	}
+	
+		ul.changeList {
+			font-size: 0.7em;
+			list-style: none;
+		}
+		
+			ul.changeList li {
+				margin: 0 0 5px 0;
+				padding: 0;
+				border-top: none;
+			}
+		
+			ul.changeList p {
+				float: left;
+				font-size: 1.2em;
+				display: block;
+				padding: 2px 0;
+				margin-bottom: 0;
+				width: 615px;
+			}
+			
+			ul.changeList p.docDate {
+				background: #ccc;
+				padding: 2px 5px;
+				margin-right: 10px;
+				width: 115px;
+			}
+		
+/*-------------------------------------------------- Page Specific Items --------------------------------------------------*/
+
+/*--------- uniTip ----------*/
+
+a.tip:link, a.tip:visited { 
+	margin-top: 50px;
+	width: 120px;
+	text-align: center;
+	font: normal bold 1.2em Georgia, Times, "Times New Roman", serif;
+	display: block; 
+	padding: 3px; 
+	background: #85B521; 
+	color: #0f5b56;
+	border-bottom: none;
+}
+
+a.tip:hover { 
+	background: #a7e22b;
+}
+
+.right { 
+	float:right; 
+}
+	
+/*-------------------------------------------------- Footer --------------------------------------------------*/
+
+#footer {
+	position: relative;
+	width: 100%;
+	height: 150px;
+	background: #d2d2d2 url(../images/footerbg.gif) repeat-x;
+	padding-top: 20px;
+}
+
+	#footer p {
+		font-size: 0.9em;
+	}
+	
+	.footerleft {
+		float: left;
+	}
+	
+	.footerright {
+		float: right;
+		width: 450px;
+		text-align: right;
+		margin-bottom: 10px;
+		clear: right;
+	}
+		
+		.footerright img {
+			float: right;
+			margin: 2px 0 0 10px;
+			border: none;
+		}
+
+/*-------------------------------------------------- Ad --------------------------------------------------*/
+
+div.ad {
+	padding-bottom: 0;
+}
+
+div.ad a.adbutton:link, div.ad a.adbutton:visited {
+	width: 120px;
+	height: 40px;
+	display: block;
+	margin-right: 15px;
+	float: left;
+	border-bottom: none;
+	text-indent: -5000px;
+	overflow: hidden;
+	background: url(../images/btn-try-unify.jpg) no-repeat 0 0;
+}
+
+div.ad a.adbutton:hover {
+	background-position: 0 -40px;
+}
+
+div.ad h3 {
+	line-height: 40px;
+	height: 40px;
+	font-style: italic;
+	font-size: 14px;
+	color: #999;
+}
+
+div.ad h3 a {
+	color: #7faa2d;
+}
+
+/*---------- Clear Fix for divs with items floated inside them---------- */
+.clearfix:after {
+content:".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+/* End hide from IE Mac */

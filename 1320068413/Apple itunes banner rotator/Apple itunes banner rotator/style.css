@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+}
+body {
+	font-family: Arial, sans-serif;
+	background: #FFF;
+	margin: 0;
+	padding: 0;
+}
+.title {
+	width: 750px;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 10px;
+	color: #333;
+}
+#block-itunes {
+	position: relative;
+	width: 771px;
+	height: 219px;
+	background: #fff;
+	margin: 0 auto;
+}
+#block-itunes img {
+	display: block;
+	border: 0 none;
+}
+#itune_images {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 220px;
+	height: 219px;
+	overflow: hidden;
+}
+#blockB {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 220px;
+}
+#blockB a {
+	position: relative;
+	display: block;
+	width: 220px;
+	height: 73px;
+}
+#blockB a .min {
+	width: 220px;
+	height: 73px;
+}
+#blockB a .max {
+	display: none;
+	width: 550px;
+	height: 219px;
+}
+#blockA {
+	position: relative;
+	width: 550px;
+	height: 219px;
+}
+#blockA a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 550px;
+	height: 219px;
+}
+#blockA a .min {
+	display: none;
+}
+#blockA a .max {
+	width: 550px;
+	height: 219px;
+}
+#bi-button {
+	position: absolute;
+	right: 89px;
+	bottom: 5px;
+	width: 42px;
+	height: 42px;
+	background: url(itunes-button.png) 0% 0% no-repeat;
+	border: 0 none;
+	cursor: pointer;
+}
+#bi-button.btn-down {
+	background-position: 0% 100%;
+}
+#block-itunes {
+	-webkit-border-bottom-right-radius: 20px;
+	-webkit-border-bottom-left-radius: 20px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	overflow: hidden;
+	-webkit-box-shadow: 0px 2px 5px #888;
+	-moz-box-shadow: 0px 2px 5px #888;
+	box-shadow: 0px 2px 5px #888;
+}
+footer {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.04);
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 3px 1px rgba(0, 0, 0, 0.02) inset, 0 1px 0 white;
+	padding: 1.5em;
+	bottom: 0;
+	display: block;
+	height: 40px;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 100000;
+}
+footer h2 {
+	color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 1px 0 white;
+	font-size: 20px;
+	font-weight: normal;
+	left: 50%;
+	margin-left: -400px;
+	padding: 15px 0;
+	position: absolute;
+	width: 500px;
+	text-shadow: 1px #000000;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+}
+footer a.youhacked, a.youhacked:visited {
+	background: url("youhack.png") no-repeat scroll right top transparent;
+	border: medium none;
+	font-size: 12px;
+	height: 70px;
+	left: 50%;
+	line-height: 31px;
+	margin: 25px 0 0 110px;
+	position: absolute;
+	text-decoration: none;
+	top: 0;
+	width: 310px;
+	color: #000000;
+	letter-spacing: 1px;
+	text-shadow: 1px #000000;
+}
+

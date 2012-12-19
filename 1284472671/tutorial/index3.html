@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="style3.css" />
+<!--[if IE]>
+<link rel="stylesheet" href="iestyle.css" type="text/css" media="screen" /<
+< ![endif]-->
+<script type="text/javascript" src="jquery-1.2.6.pack.js"></script>  
+<script type="text/javascript">
+    $(function() {
+        $('.temphol').hover(function() {
+            $(this).children('.front').stop().animate({ "top" : '160px'}, 500);   
+        }, function() {
+            $(this).children('.front').stop().animate({ "top" : '7px'}, 300);       
+        });
+    });
+	</script>
+</head>
+
+<body>
+        <div class="temp">
+        		<div class="temphol">
+                  <img src='images/thumb_screen_thumb.jpg' alt='Your Blog' border='0'/>
+                  <img src='images/screen_thumb.jpg' class='front' alt='color structure' border='0'/>
+                  <div class="new"></div>
+                </div><br />
+<br />
+
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+        </div>
+</body>
+</html>

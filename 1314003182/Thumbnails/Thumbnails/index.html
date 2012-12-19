@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head>
+	<title>Beautiful Thumbnail Effect</title>
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/mootools/1.2.3/mootools-yui-compressed.js'></script>
+<style>
+body {
+	color:#939393;
+	font-family:Arial;
+	font-size:13px;
+	line-height:22px;background-color:#222222; 
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.thumbnail-wrap {
+	float:left;
+	height:151px;
+	margin:30px;
+	width:151px;
+}
+.thumbnail-div {
+	background-color:#313131;
+	float:left;
+	height:146px;
+	padding:5px 0 0 5px;
+	width:146px;
+}
+.thumbnail-shadow {
+	float:left;
+	height:33px;
+	width:100%;
+}
+.thumbnail-div .sections-overlay {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(thumbnail-overlay.png) no-repeat scroll -40px -300px;
+	float:left;
+	margin-top:-33px;
+}
+.thumbnail-div div{
+	height:141px;
+	width:141px;
+}
+.sections-overlay {
+	background-image:url(readmore-bg.png);
+	opacity: 0; 
+	visibility:hidden;
+	background-position: 0px -167px;
+}
+.thumbnail-div .sections-overlay .zoom {
+	margin:60px 0 0 61px;
+}
+.sections-overlay .zoom {
+	border:medium none;
+	margin:165px 0 0 312px;
+}
+.readmore {
+	background-image:url(readmore-bg.png);
+	color:#FFFFFF;
+	display:block;
+	float:right;
+	font-size:10px;
+	margin:17px 0 0 40px;
+	padding:5px 10px;
+}
+</style>
+<script type="text/javascript" src="imagezoom.js"></script>
+<link type="text/css" href="imagezoom.css" rel="stylesheet" />
+</head>
+<body>
+<div style='width:640px;height:215px;margin:50px auto;'>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a><div class="thumbnail-wrap">
+	<div class="thumbnail-div">
+		<div style="background-image: url(1_thumb.jpg);">    
+			<img src="thumbnail-shadow.png" alt="bottom" class="thumbnail-shadow" /> 
+			<div class="sections-overlay">
+				<a rel="imagezoom" href="1.jpg">
+					<img src="zoom.png" alt="Some Title of the Image 1" class="zoom" />
+				</a>
+				<a href="#" class="readmore">read more >></a>
+			</div>
+        </div>
+    </div>
+</div> 
+
+<div class="thumbnail-wrap">
+	<div class="thumbnail-div">
+		<div style="background-image: url(2_thumb.jpg);">    
+			<img src="thumbnail-shadow.png" alt="bottom" class="thumbnail-shadow" /> 
+			<div class="sections-overlay">
+				<a rel="imagezoom" href="2.jpg">
+					<img src="zoom.png" alt="Some Title of the Image 2" class="zoom" />
+				</a>
+				<a href="#" class="readmore">read more >></a>
+			</div>
+        </div>
+    </div>
+</div> 
+
+<div class="thumbnail-wrap">
+	<div class="thumbnail-div">
+		<div style="background-image: url(3_thumb.jpg);">    
+			<img src="thumbnail-shadow.png" alt="bottom" class="thumbnail-shadow" /> 
+			<div class="sections-overlay">
+				<a rel="imagezoom" href="3.jpg">
+					<img src="zoom.png" alt="Some Title of the Image 3" class="zoom" />
+				</a>
+				<a href="#" class="readmore">read more >></a>
+			</div>
+        </div>
+    </div>
+</div> 
+
+<div class="thumbnail-wrap">
+	<div class="thumbnail-div">
+		<div style="background-image: url(4_thumb.jpg);">    
+			<img src="thumbnail-shadow.png" alt="bottom" class="thumbnail-shadow" /> 
+			<div class="sections-overlay">
+				<a rel="imagezoom" href="4.jpg">
+					<img src="zoom.png" alt="Some Title of the Image 4" class="zoom" />
+				</a>
+				<a href="#" class="readmore">read more >></a>
+			</div>
+        </div>
+    </div>
+</div> 
+
+<div class="thumbnail-wrap">
+	<div class="thumbnail-div">
+		<div style="background-image: url(5_thumb.jpg);">    
+			<img src="thumbnail-shadow.png" alt="bottom" class="thumbnail-shadow" /> 
+			<div class="sections-overlay">
+				<a rel="imagezoom" href="5.jpg">
+					<img src="zoom.png" alt="Some Title of the Image 5" class="zoom" />
+				</a>
+				<a href="#" class="readmore">read more >></a>
+			</div>
+		</div>
+    </div>
+</div> 
+
+<div class="thumbnail-wrap">
+	<div class="thumbnail-div">
+		<div style="background-image: url(6_thumb.jpg);">    
+			<img src="thumbnail-shadow.png" alt="bottom" class="thumbnail-shadow" /> 
+			<div class="sections-overlay">
+				<a rel="imagezoom" href="6.jpg">
+					<img src="zoom.png" alt="Some Title of the Image 6" class="zoom" />
+				</a>
+				<a href="#" class="readmore">read more >></a>
+			</div>
+        </div>
+    </div>
+</div> 
+
+
+</div>
+
+<script>
+window.addEvent('domready',function(e){
+initImageZoom();
+$$('div.sections-overlay').each(function(div){
+	div.set('opacity',0);
+	div.set('morph', {duration:'1000'});
+})
+$$('div.thumbnail-div').each(function(div){
+	div.set('tween', {duration: '450'});
+	div.addEvents({
+		'mouseover': function(){
+			$(this).tween('marginTop', '-10px');
+			$(this).getElements('div.sections-overlay').each(function(d){
+				d.morph({opacity: 1, backgroundPosition: "-40px 0px"});
+			});
+		},
+		'mouseout': function(){
+			$(this).tween('marginTop', '0px');
+			$(this).getElements('div.sections-overlay').each(function(d){
+				d.morph({opacity: 0, backgroundPosition: "0px -167px"});
+			});
+		}
+	});
+
+});
+});
+</script>
+</body>

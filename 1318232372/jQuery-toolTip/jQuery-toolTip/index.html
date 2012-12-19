@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title> A Simple jQuery Plugin Tutorial</title>
+		<link rel="stylesheet" href="css/jQuery.toolTip.css" media="screen" />
+        <link rel="stylesheet" href="css/demo.css" media="screen" />
+         <link rel="icon" href="../favicon.gif" />
+	</head>
+    
+<body>
+
+	<section id="main">
+    
+    <h2>Hover on the contents to reveal the tooltip</h2>
+    
+	<p>
+    Suspendisse imperdiet ullamcorper est at interdum.<a href="" class="tooltip" title="This is a title"> Suspendisse at felis nunc.</a> 				    Integer eu felis lacus, id blandit augue. Mauris commodo hendrerit risus, quis vehicula mi adipiscing in. Integer nec pretium 
+    odio. Sed ligula enim, scelerisque ut tempor lacinia, iaculis eget erat. Integer eu felis lacus, id blandit augue. Mauris commodo hendrerit     risus, quis vehicula mi adipiscing in. <a href="" class="tooltip" title="Wow i did not know plugins can be this fun.">Integer nec pretium odio.</a>  
+     Sed ligulaenim, scelerisque ut tempor lacinia, iaculis eget erat. Integer eu felis lacus, id blandit augue. 
+     Mauris commodo hendrerit risus, <a href="" class="tooltip" title=" <img src='images/tutorial-pot.png' /> Web development tutorials and resources .">quis vehicula mi adipiscing in.</a>
+     Integer nec pretium odio. Sed ligula enim, scelerisque ut tempor lacinia, iaculis eget erat. 
+     
+     
+		
+        
+       <br /><br />
+       
+       Follow me on <a href="http://twitter.com/Tutorialpot/" class="tooltip" title="@Tutorialpot on twitter" >TWITTER</a>
+       & grab the <a href="http://feeds.feedburner.com/Tutorialpot/" class="tooltip" title="Straight to your inbox  Be the first to know" >RSS FEED</a>
+       
+	</p>
+    	
+     <img class="tooltip" title="jQuery tooltip" src="images/tutorial-pot.png" />
+     
+	</section>
+    
+<footer>
+
+	<a class="orig tooltip" href="http://tutorialpot.com/2011/09/jquery-tooltip-plugin-tutorial/" title="GO BACK TO ARTICLE"> &laquo; Back to</a>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+<h1><a class="tooltip" title="jQuery plugin Tutorial" href="http://tutorialpot.com/2011/09/jquery-tooltip-plugin-tutorial/">jQuery plugin Tutorial</a></h1>
+    
+</footer>
+
+	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="js/jQuery.toolTip.js"></script>
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+		//Apply the plugin on every tooltip selector on the page
+		//This piece of code can also be included from an external file
+		$('.tooltip').toolTip();
+		
+	});
+	
+	</script>
+    
+	</body>
+</html>

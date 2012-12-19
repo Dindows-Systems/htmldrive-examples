@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+		<title>Create 3D Buttons with CSS & jQuery</title>
+
+		<meta charset="utf-8" />
+		<meta name="description" content="Learn how to easily create 3D Buttons with only CSS, CSS3 and jQuery!" />
+		<meta name="keywords" content="3D, buttons, css3, jquery" />
+		<meta name="author" content="Benjamin Charity" />
+
+		<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+	</head>
+
+	<body>
+		<div id="three-d">3D</div>
+		<div id="container">
+
+			<header>
+				<h1>Create 3D Buttons with CSS & jQuery</h1>
+			</header>
+
+			<section id="content">
+				<article id="round">
+					<h1>Demo One</h1>
+						<a href="#" id="tutorial-toggle" class="button">Off</a>
+					<a class="dot">The tutorial mode is on!</a>
+				</article><!-- end #round -->
+
+				<article id="long">
+					<h1>Demo Two</h1>
+						<a href="#" id="long-toggle" class="button">Click to turn tutorial mode on</a>
+					<a class="dot2">The tutorial mode is on!</a>
+				</article><!-- end #round -->
+
+			</section><!-- end #content -->
+
+			<footer>
+				<p class="legal-crap">Developed by <a href="http://eyemilk.com">Benjamin Charity</a>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></p>
+
+<!-- Main call to jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+// Demo #1		
+			// Find the link with an ID of 'tutorial-toggle' and listen for when it is clicked
+			$("a#tutorial-toggle").click(function () {
+				// When it get's clicked, toggle the class 'on'
+				$(this).toggleClass("on");
+				
+				// If the class 'on' was added...
+				if($('a#tutorial-toggle').hasClass('on')) 
+				{ 
+					// Then fade in all the dots
+					$(this).text('on');
+					$('a.dot').fadeIn();
+				}
+				// Otherwise, the class 'on' must have been removed, so...
+				else 
+				{
+					// Fade the dots out
+					$(this).text('off');
+					$('a.dot').fadeOut();
+				}
+					return false;
+			});
+
+// Demo #2		
+			$("a#long-toggle").click(function () {
+				$(this).toggleClass("on");
+				
+				if($('a#long-toggle').hasClass('on')) 
+				{ 
+					$(this).text('Click to turn tutorial mode off');
+					$('a.dot2').fadeIn();
+				}
+				else 
+				{
+					$(this).text('Click to turn tutorial mode on');
+					$('a.dot2').fadeOut();
+				}
+				return false;
+			});
+
+		});
+	</script>
+			</footer>
+		</div><!-- end #container -->
+
+	</body>
+
+</html>

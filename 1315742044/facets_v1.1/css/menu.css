@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/final_drop.html
+Copyright (c) 2005-2008 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+
+.menu { width:700px; position:relative; height:36px; z-index:10000; }
+
+/* remove all the bullets, borders and padding from the default list styling */
+.menu ul { width:700px; }
+.menu ul li ul { visibility:hidden; position:absolute; height:0; left:0; border-top:1px solid #fff; width:139px; }
+
+/* style the table so that it takes no ppart in the layout - required for IE to work */
+.menu table { position:absolute; top:0; left:0; }
+
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+.menu ul li { float:left; position:relative; margin:0 1px 0 0; width:139px; background-color:#e1e63b; }
+.menu ul li.last { margin:0; width:140px; }
+
+/* style the links for the top level */
+.menu ul li a,
+.menu ul li a:visited { display:block; padding:7px 7px 8px 7px; text-decoration:none !important; color:#000; font-weight:bold; font-size:16px; }
+
+.menu ul ul li { border-bottom:1px solid #fff; }
+
+/* another hack for IE */
+* html .menu ul ul { top:35px; }
+
+/* style the second level links */
+.menu ul li ul li a,
+.menu ul li ul li a:visited { background-color:#f4f87e; color:#000; font-size:13px; font-weight:normal; height:auto; line-height:12px; padding:5px 5px 5px 7px; }
+
+/* style the second level hover */
+.menu ul a:hover{ color:#000; background-color:#f4f87e; }
+.menu ul :hover > a { color:#000; background-color:#f4f87e; }
+
+/* style the top level hover */
+.menu a:hover,
+.menu ul li ul li a:hover { color:#000; background-color:#e1e63b; text-decoration:none; }
+.menu :hover > a,
+.menu ul li ul :hover > a { color:#000; background-color:#e1e63b; text-decoration:none; }
+
+/* make the second level visible when hover on first level list OR link */
+.menu ul li:hover ul,
+.menu ul a:hover ul{visibility:visible;}
+/* keep the third level hidden when you hover on first level list OR link */
+.menu ul :hover ul ul{visibility:hidden;}
+
+.menu ul ul li.active a { background-color:#3488cf !important; }
+.menu ul ul li.active a:hover { color:#fff; }
+.menu ul ul li.active:hover a { color:#fff; }

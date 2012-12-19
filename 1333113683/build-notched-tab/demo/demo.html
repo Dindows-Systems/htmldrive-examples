@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+	
+	<title>Indicated Tabs Tutorial</title>
+	<meta charset="utf-8" />	
+	
+	<!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />	
+	
+	<!-- javascript -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<!--[if lt IE9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+</head>
+
+<body>	
+	
+	<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs').children('li');
+
+			$("#tabs").tabs("#content section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 400,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+
+		});
+
+	</script>
+	
+	<header>
+		<hgroup>
+			<h1>Indicated Tabs Tutorial</h1>
+			<h2>.net magazine issue 207</h2>
+		</hgroup>
+	</header>
+	
+	<nav>		
+		<ul id="tabs">
+			<li><a class="current" href="#">Item 1</a></li>
+			<li><a href="#">Item 2</a></li>
+			<li><a href="#">Item 3</a></li>
+			<li><a href="#">Item 4</a></li>
+			<li><a href="#">Item 5</a></li>
+		</ul>
+		<span id="indicator"></span>
+	</nav>
+	
+	<div id="content">
+	
+		<section>				
+			<p>It is not clear what is to be understood here by "position" and "space." I stand at the window of a railway carriage which is travelling uniformly, and drop a stone on the embankment, without throwing it. Then, disregarding the influence of the air resistance, I see the stone descend in a straight line. A pedestrian who observes the misdeed from the footpath notices that the stone falls to earth in a parabolic curve. I now ask: Do the "positions" traversed by the stone lie "in reality" on a straight line or on a parabola?</p>		
+			<p>Moreover, what is meant here by motion "in space"? From the considerations of the previous section the answer is self-evident. In the first place we entirely shun the vague word "space," of which, we must honestly acknowledge, we cannot form the slightest conception, and we replace it by "motion relative to a practically rigid body of reference." The positions relative to the body of reference (railway carriage or embankment) have already been defined in detail in the preceding section.</p>			
+		</section>
+	
+		<section>		
+			<p>The most important result of a general character to which the special theory of relativity has led is concerned with the conception of mass. Before the advent of relativity, physics recognised two conservation laws of fundamental importance, namely, the law of the conservation of energy and the law of the conservation of mass these two fundamental laws appeared to be quite independent of each other. By means of the theory of relativity they have been united into one law. We shall now briefly consider how this unification came about, and what meaning is to be attached to it.</p>		
+		</section>
+		
+		<section>
+			<p>The second class of facts to which we have alluded has reference to the question whether or not the motion of the earth in space can be made perceptible in terrestrial experiments. We have already remarked in Section 5 that all attempts of this nature led to a negative result. Before the theory of relativity was put forward, it was difficult to become reconciled to this negative result, for reasons now to be discussed. The inherited prejudices about time and space did not allow any doubt to arise as to the prime importance of the Galileian transformation for changing over from one body of reference to another.</p>
+		</section>
+		
+		<section>
+			<p>If now, as we find from experience, the acceleration is to be independent of the nature and the condition of the body and always the same for a given gravitational field, then the ratio of the gravitational to the inertial mass must likewise be the same for all bodies. By a suitable choice of units we can thus make this ratio equal to unity. We then have the following law: The gravitational mass of a body is equal to its inertial law.</p>			
+			<p>It is true that this important law had hitherto been recorded in mechanics, but it had not been interpreted. A satisfactory interpretation can be obtained only if we recognise the following fact : The same quality of a body manifests itself according to circumstances as "inertia" or as "weight" (lit. "heaviness"). In the following section we shall show to what extent this is actually the case, and how this question is connected with the general postulate of relativity.</p>
+		</section>
+		
+		<section>
+			<p>In the example of the transmission of light just dealt with, we have seen that the general theory of relativity enables us to derive theoretically the influence of a gravitational field on the course of natural processes, the laws of which are already known when a gravitational field is absent. But the most attractive problem, to the solution of which the general theory of relativity supplies the key, concerns the investigation of the laws satisfied by the gravitational field itself. Let us consider this for a moment.</p>
+			<p>We are acquainted with space-time domains which behave (approximately) in a "Galileian" fashion under suitable choice of reference-body, i.e. domains in which gravitational fields are absent. If we now refer such a domain to a reference-body K1 possessing any kind of motion, then relative to K1 there exists a gravitational field which is variable with respect to space and time.[3]** The character of this field will of course depend on the motion chosen for K1. According to the general theory of relativity, the general law of the gravitational field must be satisfied for all gravitational fields obtainable in this way. Even though by no means all gravitational fields can be produced in this way, yet we may entertain the hope that the general law of gravitation will be derivable from such gravitational fields of a special kind. This hope has been realised in the most beautiful manner. But between the clear vision of this goal and its actual realisation it was necessary to surmount a serious difficulty, and as this lies deep at the root of things, I dare not withhold it from the reader. We require to extend our ideas of the space-time continuum still farther.</p>
+		</section>			
+		
+	</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+
+</html>	

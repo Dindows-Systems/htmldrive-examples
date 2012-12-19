@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JavaScript Demos - Form Hints Using JavaScript</title>
+
+<script type="text/javascript" src="jquery-1.4.1.js"></script>
+<link href="main.css" type="text/css" rel="stylesheet" />
+
+<style type="text/css">
+    .auto-hint { color: #AAAAAA; }
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //  Focus auto-focus fields
+        $('.auto-focus:first').focus();
+        
+        //  Initialize auto-hint fields
+        $('INPUT.auto-hint, TEXTAREA.auto-hint').focus(function(){
+            if($(this).val() == $(this).attr('title')){ 
+                $(this).val('');
+                $(this).removeClass('auto-hint');
+            }
+        });
+        
+        $('INPUT.auto-hint, TEXTAREA.auto-hint').blur(function(){
+            if($(this).val() == '' && $(this).attr('title') != ''){ 
+                $(this).val($(this).attr('title'));
+                $(this).addClass('auto-hint'); 
+            }
+        });
+        
+        $('INPUT.auto-hint, TEXTAREA.auto-hint').each(function(){
+            if($(this).attr('title') == ''){ return; }
+            if($(this).val() == ''){ $(this).val($(this).attr('title')); }
+            else { $(this).removeClass('auto-hint'); } 
+        });
+    });
+</script>
+
+</head>
+
+<body>
+
+    <div id="page">
+        <h1>How to Add Hints and Auto Focus to Form Fields Using jQuery</h1>
+        <div>
+            <form action="#" class="sample-form">
+                <p>
+	                <label for="fullname">Full Name <em>(auto focused field)</em>:</label>
+
+	                <input type="text" name="fullname" id="fullname" class="auto-focus" />
+                </p>
+                <p>
+	                <label for="email">Email Address:</label>
+	                <input type="text" name="email" id="email" title="i.e. me@example.com" class="auto-hint" />
+                </p>
+                <p>
+	                <label for="phone">Phone Number:</label>
+
+	                <input type="text" name="phone" id="phone" title="(123) 123-1234" class="auto-hint" />
+                </p>
+                <p>
+	                <label for="message">Message:</label>
+	                <textarea cols="10" rows="4" id="message" name="message" class="auto-hint" title="Enter Your Message Here..."></textarea>
+                </p>
+                <p>
+                    <button type="submit">Submit</button>
+
+                </p>
+            </form>
+        </div>
+        
+        <div class="clear"></div>
+	    <p class="tutorial">More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery 
+
+plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></p>
+
+    </div>
+</body>
+</html>

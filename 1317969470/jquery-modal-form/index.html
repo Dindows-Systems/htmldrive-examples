@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery PM Modal Box Demo</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".mainCompose").hide();
+    $('.loader').hide();
+    $('#errortxt').hide();
+
+    $('.compose').click(function() {
+    	$('.mainCompose').slideToggle();
+    });
+    
+    $('.sendbtn').click(function(e) {
+    	e.preventDefault();
+    	$('.sendbtn').hide();
+    	$('.loader').show();
+    	
+    	if($('#mymsg').val() == "") {
+			$('#errortxt').show();
+			$('.sendbtn').show();
+			$('.loader').hide();
+    	}
+    	else {
+    		$('sendbtn').hide();
+    		$('.loader').show();
+    		$('#errortxt').hide();
+    		
+    		var formQueryString = $('#sendprivatemsg').serialize(); // form data for ajax input
+    		finalSend();    		
+    	}
+    
+    	// possibly include Ajax calls here to external PHP
+    	function finalSend() {
+    		$('.mainCompose').delay(1000).slideToggle('slow', function() {
+    			$('#composeicon').addClass('sent').removeClass('compose').hide();
+    		
+    			// hide original link and display confirmation icon
+    			$('#composebtn').append('<img src="img/check-sent.png" />');
+    		});
+    	}
+    });
+});
+</script>
+</head>
+
+<body>
+<div id="wrap">
+<div class="profile clearfix">
+
+	<section id="left">
+		<img src="img/avatar.png" alt="Jake's Avatar" class="usrava" />
+	</section>
+	
+	<section id="right">
+		<!-- begin modal msg box -->
+		<div class="containmsg">
+			<p id="composebtn"><img src="img/compose.gif" alt="compose" class="compose" id="composeicon" /></p>
+		
+			<div class="mainCompose">
+				<div class="calloutUp">
+					<div class="calloutUp2">
+					</div>
+				</div>	
+				<div id="msgform">
+				<form name="sendprivatemsg" id="sendprivatemsg" action="#" method="post">
+				
+					<label for="tofield" class="tofield">To</label>
+					<ul class="userslist clearfix">
+					<li><a href="http://designshack.co.uk/author/jakerocheleau/" target="_blank" class="recipient">Jake Rocheleau</a></li>
+					</ul>
+					
+					<div class="break"></div>
+					
+					<label for="mymsg" id="msmglabel">Message</label>
+					<textarea name="mymsg" id="mymsg" class="msgField"></textarea>
+					<p id="errortxt">**Enter some text!</p>
+					
+					<div id="sendbtncontain"><a class="sendbtn">Send Message</a><img src="img/ajax-loader.gif" class="loader" /></div>
+				</form>
+				</div>
+			</div>
+		</div>
+		<!-- @end modal -->
+	
+		<h1>Jake Rocheleau</h1>
+		<h3>blogger and freelance web designer.</h3>
+	</section>
+</div>
+</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery 
+
+plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

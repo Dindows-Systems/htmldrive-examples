@@ -1,0 +1,38 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
+	<head>
+		<title>jQuery Plugin - delayed password masking - Demo | by DECAF&deg;</title>
+		<style type="text/css">
+			body {
+				font-family: sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>DECAF&deg; jQuery Plugin - delayed password masking | Demo</h1>
+		<form action="#">
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="password" value="" />
+			<input type="submit" name="submit" value="show password" id="submit" onclick="alert('fieldname: ' + $('#password').attr('name') + '\npassword value: '+ $('#password').val()); return false;"/>
+		</form>
+		<p>and another password field:</p>
+		<form action="#">
+			<label for="password2">Password:</label>
+			<input type="password" name="password2" id="password2" value="" />
+			<input type="submit" name="submit2" value="show password" id="submit2" onclick="alert('fieldname: ' + $('#password2').attr('name') + '\npassword value: '+ $('#password2').val()); return false;"/>
+		</form>
+	<br />
+
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript" src="lib/jQuery.dPassword.js"></script>
+		<script type="text/javascript">
+			$(document).ready( function() {
+				$('input:password').dPassword();
+			});
+		</script>
+	</body>
+</html>
+	

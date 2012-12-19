@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Facets - Demo</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/facets2.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.clip.js"></script>
+<script type="text/javascript" src="js/jquery.facets.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#main-image-box').children().removeClass('facets').end().facets({
+		clipSpacing: 2,
+		minWidth: 25,
+		animationSpeed: 350,
+		minimizeTimeout: 150,
+		sense: true,
+		contentRelations: true,
+		beforeMax: function(index) {
+			$('#main-image-box .clip:eq('+index+') .infotext').show();
+		},
+		beforeMin: function(index) {
+			$('#main-image-box .clip:eq('+index+')').find('p').hide().end().find('.infotext').hide();
+		}
+	});
+	
+	$('a.infotext').click(function() {
+		$(this).parents('.container').children('p').toggle();
+	});
+});
+</script>
+</head>
+
+<body>
+    <div id="container" style="width:950px">
+    
+        <div id="logo"><a href="http://www.tn34.de" title="www.tn34.de"><img src="images/tn34.jpg" alt="TN34.DE" /></a> <h1>facets</h1></div>
+        <hr />
+     
+        <div>
+            <div class="demo-description" style="margin-bottom:10px;float:right;width:370px;">
+            	<h2>Einstellungsbeschreibung</h2>
+                <p>Auf "<strong>autoCliping</strong>" kann hier verzichtet, da die Bereichsaufteilung im Gegensatz zu den anderen Demos auch bei ausgeschaltetem JavaScript funktioniert, dadurch können unterschiedlich breite Bereiche definiert werden. <i>Beim aufruf des Plugins wird hier deshalb $('#main-image-box')<strong class="red">.children().removeClass('facets').end()</strong>.facets({... verwendet um bei eingeschaltetem JavaScript das aufteilen bei mouseover durch CSS aufzuheben.</i></p>
+                <p>"<strong>clipSpacing</strong>" lässt 2 Pixel Abstand zwischen den Bereichen.<br />Durch "<strong>minWidth</strong>" bleiben verdrängte Bereiche 25 Pixel sichtbar. "<strong>animationSpeed</strong>" setzt die Animationsdauer auf 350 ms. "<strong>minimizeTimeout</strong>" wird verwendet um einen Bereich erst 150 ms nach dem mouseleave zu schliessen.</p>
+                <p>"<strong>sense</strong>" weist alles Anchor-Tags im darunterliegenden Text mit einer der Bereichs-Ids im Rel-Attribut die CSS-Klasse "on" zu, dadurch werden diese gelb hervorgehoben. Durch die Option "<strong>contentRelations</strong>" öffnen sich Bereich auch dann wenn ein Anchor-Tag mit einer der Bereichs-Ids im rel-Attribut berührt wird.</p>
+                <p>Die Funktion "<strong>beforeMax</strong>" macht den i-Button beim öffnen eines Bereichs sichtbar. "<strong>beforeMin</strong>" versteckt diesen beim verlassen des geöffneten Bereichs.</p>
+            </div>
+            <div id="navigation-panel">
+                <div id="main-image-box">
+                    <div class="clip facets" id="elefant">
+                        <div class="container">
+                            <h1>Elefant</h1>
+                            <p><span>Die Elefanten (Elephantidae)  bilden eine Familie der Rüsseltiere. Diese Familie umfasst alle heute noch lebenden Vertreter der Rüsseltiere.</span> <a class="wikipedia" target="_blank" href="http://de.wikipedia.org/wiki/Elefant">wissenswertes</a></p>
+                            <div><a class="infotext"><span class="i">i</span> <span class="text">Hier klicken für weitere Infos</span></a></div>
+                        </div>
+                    </div>
+                    <div class="clip facets" id="giraffe">
+                        <div class="container">
+                            <h1>Giraffe</h1>
+                            <p><span>Die Giraffe (Giraffa camelopardalis) ist ein Säugetier aus der Ordnung der Paarhufer. Sie ist das höchste landlebende Tier der Welt. Zur Unterscheidung vom verwandten Okapi (der Waldgiraffe) wird sie auch als Steppengiraffe bezeichnet.</span> <a class="wikipedia" target="_blank" href="http://de.wikipedia.org/wiki/Giraffe">wissenswertes</a></p>
+                            <div><a class="infotext"><span class="i">i</span> <span class="text">Hier klicken für weitere Infos</span></a></div>
+                        </div>
+                    </div>
+                    <div class="clip facets" id="loewe">
+                        <div class="container">
+                            <h1>Löwe</h1>
+                            <p><span>Der Löwe (Panthera leo, veraltet/poetisch Leu) ist eine Art der Katzen. Er lebt im Unterschied zu anderen Katzen in Rudeln, ist durch die Mähne des Männchens gekennzeichnet und ist heute in Afrika sowie im indischen Bundesstaat Gujarat beheimatet.</span> <a class="wikipedia" target="_blank" href="http://de.wikipedia.org/wiki/L%C3%B6we">wissenswertes</a></p>
+							<div><a class="infotext"><span class="i">i</span> <span class="text">Hier klicken für weitere Infos</span></a></div>
+                        </div>
+                    </div>
+                    <div class="clip facets" id="zebra">
+                        <div class="container">
+                            <h1>Zebra</h1>
+                            <p><span>Das Grevyzebra (Equus grevyi) ist ein Zebra aus der Familie der Pferde (Equidae) und gehört zur Ordnung der Unpaarhufer (Perissodactyla). Die Art ist nach dem ehemaligen französischen Präsidenten Jules Grévy benannt, dem in den 1880er Jahren ein Tier von der Regierung Abessiniens geschenkt wurde.</span> <a class="wikipedia" target="_blank" href="http://de.wikipedia.org/wiki/Grevyzebra">wissenswertes</a></p>
+                            <div><a class="infotext"><span class="i">i</span> <span class="text">Hier klicken für weitere Infos</span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="text">
+                <strong>Afrikas wilde Tiere </strong>in freier Wildbahn beobachten zu können, war sicher meine größte Motivation für Afrikareisen. Und wir hatten das Glück, fast alle meine Träume in diesem Punkt erfüllen zu können.<br />
+                <br />
+                Mit ausgiebigen Pirschfahrten, bei denen wir uns immer viel Zeit nahmen, haben wir die meisten Tiere Afrikas, ausgenommen der ausschließlich nachtaktiven Tiere, mehrfach zu Gesicht und vor die Linse meiner Video - und Fotokamera bekommen.<br />
+                <br />
+                Ein Highlight ist dabei immer wieder, wenn es gelingt die berühmten s.g. Big Five : <a rel="elefant">Elefant</a>, Rhinozeros, Büffel, <a rel="loewe">Löwe</a> und Leopard auf zu spüren. Das Glück einen der scheuen und seltenen Leoparden zu fotografieren, war mir bis jetzt nur ein einziges mal vergönnt.<br />
+                <br />
+                Eine Überbetonung der Sonderstellung dieser 5 Spezies halten wir jedoch für völlig übertrieben und überflüssig. Für uns war es auch dann ein schöner Tag und Pirscherfolg, wenn wir viele der anderen Tierarten wie z. B. Hyppos (Flusspferde) Warthogs (Warzenschweine), <a rel="giraffe">Giraffen</a>, die großen Tierherden der Grasfresser mit <a rel="zebra">Zebras</a>, Gnus oder Wasserböcken zu Gesicht bekamen. Und nicht zu vergessen die große Zahl der Antilopen, u. a. Kudus, Nyalas, Oryx (Spießbock) und Elenantilope und die Vielfalt der afrikanischen Vogelwelt.<br />
+                <br />
+                Nur manchmal bei den ungefähr rehgroßen Impalas, die sehr oft in großen Herden ohne jede Mühe an den Fahrtstrecken anzutreffen sind, entschlüpfte uns ein Satz wie &quot;Ach, schon wieder Impalas&quot;.
+            </div>
+            <br />
+            <div class="sources">Quelle: <a target="blank" href="http://www.faszinierendes-afrika.de/afrika-tiere.htm">www.faszinierendes-afrika.de</a></div>
+        </div>
+    
+        <div class="footer">
+        	<hr />
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery 
+
+plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>        </div>
+    </div>
+</body>
+</html>

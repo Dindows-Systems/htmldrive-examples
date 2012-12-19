@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Digg-style Share it toolbox</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+<script>
+
+
+$(document).ready(function() {
+
+	//grab all the anchor tag with rel set to shareit
+	$('a[rel=shareit], #shareit-box').mouseenter(function() {		
+		
+		//get the height, top and calculate the left value for the sharebox
+		var height = $(this).height();
+		var top = $(this).offset().top;
+		
+		//get the left and find the center value
+		var left = $(this).offset().left + ($(this).width() /2) - ($('#shareit-box').width() / 2);		
+		
+		//grab the href value and explode the bar symbol to grab the url and title
+		//the content should be in this format url|title
+		var value = $(this).attr('href').split('|');
+		
+		//assign the value to variables and encode it to url friendly
+		var field = value[0];
+		var url = encodeURIComponent(value[0]);
+		var title = encodeURIComponent(value[1]);
+		
+		//assign the height for the header, so that the link is cover
+		$('#shareit-header').height(height);
+		
+		//display the box
+		$('#shareit-box').show();
+		
+		//set the position, the box should appear under the link and centered
+		$('#shareit-box').css({'top':top, 'left':left});
+		
+		//assign the url to the textfield
+		$('#shareit-field').val(field);
+		
+		//make the bookmark media open in new tab/window
+		$('a.shareit-sm').attr('target','_blank');
+		
+		//Setup the bookmark media url and title
+		$('a[rel=shareit-mail]').attr('href', 'http://mailto:?subject=' + title);
+		$('a[rel=shareit-delicious]').attr('href', 'http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url=' + url + '&title=' + title);
+		$('a[rel=shareit-designfloat]').attr('href', 'http://www.designfloat.com/submit.php?url='  + url + '&amp;title=' + title);
+		$('a[rel=shareit-digg]').attr('href', 'http://digg.com/submit?phase=2&amp;url=' + url + '&amp;title=' + title);
+		$('a[rel=shareit-stumbleupon]').attr('href', 'http://www.stumbleupon.com/submit?url=' + url + '&title=' + title);
+		$('a[rel=shareit-twitter]').attr('href', 'http://twitter.com/home?status=' + title + '%20-%20' + title);
+		
+	});
+
+	//onmouse out hide the shareit box
+	$('#shareit-box').mouseleave(function () {
+		$('#shareit-field').val('');
+		$(this).hide();
+	});
+	
+	//hightlight the textfield on click event
+	$('#shareit-field').click(function () {
+		$(this).select();
+	});
+});
+
+
+</script>
+
+<style>
+#shareit-box {
+	position:absolute;
+	display:none;
+}
+
+	#shareit-header {
+		width:138px;
+	}
+
+
+	#shareit-body {
+		width:138px; height:100px;
+		background:url(images/shareit.png);
+	}
+
+		#shareit-blank {
+			height:20px;
+		}
+
+		#shareit-url {
+			height:50px;
+			text-align:center;
+		}
+
+			#shareit-url input.field{
+				width:100px; height:26px;
+				background: transparent url(images/field.gif) no-repeat;
+				border:none; outline:none;
+				padding:7px 5px 0 5px;
+				margin:3px auto;font-size:11px;
+			}
+
+		#shareit-icon  {
+			height:20px;
+		}
+		
+			#shareit-icon ul {
+				list-style:none;
+				width:130px;
+				margin:0; padding:0 0 0 8px;
+			}
+
+			#shareit-icon ul  li{
+				float:left;
+				padding:0 2px;
+			}
+			
+			#shareit-icon ul  li img{
+				border:none;
+			}			
+
+
+</style>
+</head>
+
+<body>
+<div align="center">
+<h2><a href="http://www.queness.com">Digg-style shareit toolbox tutorail from Queness WebBlog</a></h2><br/>
+<a href="http://www.queness.com/post/297/Create-a-super-modal">I don't support shareit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.queness.com/|Queness - jQuery resources" rel="shareit">I'm the supporter!</a>
+</div>
+<div id="shareit-box">
+
+	<div id="shareit-header"></div>
+	<div id="shareit-body">
+		<div id="shareit-blank"></div>
+		<div id="shareit-url"><input type="text" value="" name="shareit-field" id="shareit-field" class="field"/></div>
+		<div id="shareit-icon">
+		<ul>
+			<li><a href="#" rel="shareit-mail" class="shareit-sm"><img src="images/sm_mail.gif" width="16" height="16" alt="Mail" title="Mail" /></a></li>
+			<li><a href="#" rel="shareit-delicious" class="shareit-sm"><img src="images/sm_delicious.gif" width="16" height="16" alt="Delicious" title="Delicious" /></a></li>
+			<li><a href="#" rel="shareit-designfloat" class="shareit-sm"><img src="images/sm_designfloat.gif" width="16" height="16" alt="Designfloat" title="Designfloat" /></a></li>
+			<li><a href="#" rel="shareit-digg" class="shareit-sm"><img src="images/sm_digg.gif" width="16" height="16" alt="Digg" title="Digg" /></a></li>
+			<li><a href="#" rel="shareit-stumbleupon" class="shareit-sm"><img src="images/sm_stumbleupon.gif" width="16" height="16" alt="StumbleUpon" title="StumbleUpon" /></a></li>
+			<li><a href="#" rel="shareit-twitter" class="shareit-sm"><img src="images/sm_twitter.gif" width="16" height="16" alt="Twitter" title="Twitter" /></a></li>
+		</ul>
+		</div>
+	</div>
+</div>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+</body>
+</html>

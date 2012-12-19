@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Create Your Own Kwicks jQuery Effect by Banhawi</title>
+ 		 <script src="http://code.jquery.com/jquery-latest.js"></script>
+  		<script type="text/javascript">
+  		$(document).ready(function(){
+ 
+    		$("li").mouseover(function(){
+   				$(this).removeClass("inactive");
+   				$(this).addClass("active");
+        		$("li.active").animate({ width: "200px",height: "95px"}, 500 );
+      			$("li.inactive").animate({height: "65px"}, 500 );
+      		});
+      		$("li").mouseout(function(){
+    			$(this).removeClass("active");
+   				$(this).addClass("inactive");
+      			$("li").animate({ width: "125px",height: "75px"}, 500 );
+    		});   
+     
+  		});
+		</script>
+		<style type="text/css">
+			ul li {
+				list-style-type: none;
+				width: 125px;
+				height: 75px;
+				overflow: hidden;
+			}
+			a img {
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="inactive"><a href=""><img src="images/products.jpg" alt=""/></a></li>
+			<li class="inactive"><a href=""><img src="images/history.jpg" alt=""/></a></li>
+			<li class="inactive"><a href=""><img src="images/news.jpg" alt=""/></a></li>
+			<li class="inactive"><a href=""><img src="images/urideas.jpg" alt=""/></a></li>
+		</ul><br>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+	</body>
+</html>

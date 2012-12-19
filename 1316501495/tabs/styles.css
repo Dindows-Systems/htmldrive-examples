@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+padding:0;
+margin:0; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+
+html, body {
+background-color:#2f2f2f;
+color:#eaeaea;
+}
+
+img { border:none; }
+
+.center {
+width:400px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.centerText {
+text-align:center;
+}
+
+/* ------------------------------ liens */
+a { color:#baee00; text-decoration:none; }
+a:link { color:#baee00; }
+a:visited { color:#baee00; }
+a:hover { color:#baee00; text-decoration:underline; }
+a:active { color:#baee00; }

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Mouse Events</title>
+		<style type="text/css" media="screen">
+			body{
+				background-color: #111;
+				color: #ddd;
+				font-family: Arial, "MS Trebuchet", sans-serif;
+			}
+			a{
+				color:#777;
+			}
+			#wrapper{
+				width:600px;
+				margin:0 auto;
+				padding-top:100px;
+				text-align: center;
+			}
+			#toolTip{
+				padding:5px;
+				background-color: #577FAF;
+				display:none;
+				position:absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+		<h1 id="link">
+			<a href="#">Empty Link</a><br /><br />
+			 <a href="http://www.google.com">Link to Google</a>
+		</h1>
+		<span id="toolTip"></span>
+		</div><br />
+<br />
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				
+				var offsetX = +40;
+				var offsetY = -20;
+				
+				$('a').mousemove(function(event) {
+					
+					$('#toolTip').html("Page Co-ordinates: "+ event.pageX+' , '+event.pageY);
+					$('#toolTip').css({top:event.pageY + offsetY+ "px", left: event.pageX + offsetX +"px"})
+					$('#toolTip').show("fast");
+				});
+				
+				$('a').mouseout(function(){
+					$('#toolTip').hide("fast");
+				});
+				$("a").each(function(i) {
+				
+					$(this).bind("click",{index:i},function(event){
+						event.preventDefault();
+
+						$('#toolTip').html("You Click link # "+event.data.index);
+					});
+				});
+				
+			});
+
+	</script>
+</html>

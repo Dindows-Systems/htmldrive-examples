@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Flickr Image Stack Demo</title>
+		<link rel="stylesheet" href="../../style/zoomooz.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="../../js/jquery-1.4.2.js"></script>
+		<script type="text/javascript" src="../../js/jquery.zoomooz.js"></script>
+		<script type="text/javascript" src="../../js/sylvester.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		    $(document).keypress(function(evt){if(evt.keyCode==13) loadImages(true);});
+		    $("#searchtext").blur(function(evt){loadImages(false);});
+		});
+		
+		var previousSearchString = "";
+		var notLoaded = true;
+		
+		function loadImages(forceImages) {
+		    var searchString = $("#searchtext").val();
+		    if(searchString=="") return;
+		    if(!forceImages && searchString==previousSearchString) return;
+		    previousSearchString = searchString;
+		    
+		    if(notLoaded) {
+		        notLoaded = false;
+		        
+		        $(window).click(function (evt) {
+				    $("body").zoomTo({targetsize: 1.0});
+				    $("#searchtext").focus();
+			        evt.stopPropagation();
+			    });
+			    $("body").zoomTo({targetsize: 1.0});
+			    $("#searchtext").focus();
+			
+			    $("#output").click(function(evt) {
+			        $(this).zoomTo({targetsize: 0.97});
+			        evt.stopPropagation();
+			    });
+		    }
+		    
+			var path = "http://api.flickr.com/services/feeds/photos_public.gne";
+			var params = "?tags="+searchString+"&tagmode=any&format=json&jsoncallback=?";
+			$("#output").text("");
+			$("#output").zoomTo({targetsize: 0.97});
+			$.getJSON(path+params, function (data) {
+			    $.each(data.items, function (i, item) {
+					var elem = $("<img/>");
+					var smallimg = item.media.m;
+					var fullimg = smallimg.replace("_m", "");
+					elem.attr("src", fullimg);
+		            var parentElem = $("#output");
+		            
+					var rot = "rotate(" + (Math.random() * 2 - 1) * 180 + "deg)";
+					
+					/*var xpos = xcenter + (Math.random() * 2 - 1) * maxoffset - imgsize / 2;
+					var ypos = ycenter + (Math.random() * 2 - 1) * maxoffset - imgsize / 2;*/
+		
+		            var margin = 20;
+		            var width = 10;
+		            var left = margin+Math.round(Math.random()*(100-2*margin-width))+"%";
+					var top = margin+Math.round(Math.random()*(100-2*margin-width))+"%";
+					var cssAttr = {"left":left,"top":top,"width":width+"%","opacity":0.0};
+					cssAttr["-webkit-transform"] = rot;
+					cssAttr["-o-transform"] = rot;
+					cssAttr["-moz-transform"] = rot;
+					elem.css(cssAttr);
+				
+					elem.click(function (evt) {
+						$(this).zoomTo({targetsize: 0.7});
+						$("img").not(this).css({"z-index":1});
+						$(this).css({"z-index":2});
+						evt.stopPropagation();
+					});
+					elem.appendTo("#output").delay(500).animate({opacity:1.0},600);
+				});
+				
+				window.ondragstart = function() { return false };
+				window.onselectstart = function() { return false };
+			});
+		}
+		</script>
+	</head>
+	<body>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+	    <div id="container">
+	    <label>Flickr search text:</label><input id="searchtext">
+		<div id="output"></div>
+		<div id="info">Made with <a href="http://janne.aukia.com/zoomooz/">Zoomooz.js</a></div>
+		</div>
+	</body>
+</html>
+	

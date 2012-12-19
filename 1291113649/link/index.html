@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Link Control Plugin</title>
+
+<style type="text/css">
+	body {background:#ccc; font:normal normal 12px Verdana, Arial, Helvetica, sans-serif;}
+	#container {width:580px; padding:10px; border:#333 3px solid; background:#fff; color:#333; margin:0 auto;}
+	h1 {font-size:1.8em; text-align:center;}
+		h1 span {color:#aaa;}
+	h2 {font-size:1.4em; color:#555; margin:20px 0 5px;}
+	p {background:#eee; border:#aaa 1px dashed; padding:10px; margin:0 0 5px 0;}
+	.script {display:block; background:#ddd; border:#aaa 1px solid; margin:5px 0; padding:4px;}
+	span.indent {padding-left:10px;}
+	
+	a {color:#00CCFF; font-weight:bold; cursor:pointer;}
+	a:hover {color:#333;}
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+<script type="text/javascript" src="jQuery.linkControl.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		// alert ('jQuery running');
+		
+		$('a.inline').linkControl({inline:true});
+		$('a.overlay').linkControl({overlay:true, padding:5, bgColor:'#fff', borderColor:'#333'});
+	});
+</script>
+
+</head>
+
+<body>
+
+<div id="container">
+
+    <h1>jQuery Link Control<span> - Give it to your users</span></h1>
+    
+	<h2>Demos</h2>
+    <p>
+
+        <b>Inline Sample:</b><br />
+      This is a inline sample, when you roll over the <a href="#" class="inline">link</a> it simply pushes the text to the right.<br /><br />
+        Just a note, this could become problamatic if your text wraps to the next line and you'll more than likely want to give one of the other options a go.
+	</p>
+    
+    <p>
+        <b>Overlay Sample:</b><br />
+
+        This is the overlay sample, when you roll over the <a href="#" class="overlay">link</a> it will display above the content to the right, like a tooltip.<br /><br />
+        This is the best used option and will give your user more real estate when it comes to clicking what they want.
+        <br /><br />
+        It adapts to <a href="#" class="overlay">your longer links</a> also.
+    </p>
+    
+    <h2>Adding to Your Website</h2>
+
+    <p>
+    	To add this you'll need <a href="http://www.jquery.com" class="overlay">jQuery</a> and <a href="jQuery.linkControl.js" class="overlay">jQuery.linkControl.js</a>, then add the following to the head of your document:
+    	
+        <span class="script">
+            &lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;<br />
+
+            &lt;script type=&quot;text/javascript&quot; src=&quot;jQuery.linkControl.js&quot;&gt;&lt;/script&gt;<br /><br />
+            &lt;script type=&quot;text/javascript&quot;&gt;<br /><br />
+            $().ready(function(){<br />
+                <span class="indent">$('<b>a.inline</b>').linkControl({inline:true});</span><br />
+
+                <span class="indent">$('<b>a.overlay</b>').linkControl({overlay:true, padding:5, bgColor:'#fff', borderColor:'#333'});</span><br />
+            });<br /><br />
+            &lt;/script&gt;<br /><br />
+        </span>
+        
+        The two areas in <b>bold</b> are the DOM elements you want to add the code to. If you want to add it to all links just use $('a') then add the function call '.linkControl({})'.
+        <br /><br />      
+        You then need to specify whether you're using inline or overlay controls inside the open/close brackets. If you where using inline it would look like this:<br />
+
+        $('a').linkControl({inline:true});
+    </p>
+    
+    <h2>Options</h2>
+    <p>
+    	After you have the initial plugin working there are a few different options to help in customizing this. They go inside the open/close brackets.
+        <br />
+        <br />
+            <span class="indent">inline:true (sets links up to inline style)</span><br /><br />
+            <span class="indent">overlay:true (sets links up to overlay style)</span><br /><br />
+
+            <span class="indent">padding:NUMERIC VALUE (sets padding for overlay link)</span><br /><br />
+            <span class="indent">bgColor:'#HEX COLOR' (sets background color for overlay link)</span><br /><br />
+            <span class="indent">borderColor:'#HEX COLOR' (sets border color for overlay link)</span>
+        <br />
+        <br />
+        So, if I wanted to use the overlay style with 10 pixel padding, a grey background and white border, it would look like this:<br />
+        $('a').linkControl({overlay:true, padding:10, bgColor:'#777', borderColor:'#fff'});
+    </p>
+
+    
+    <h2>Other Plugins</h2>
+    <p>
+    	Right now I've only got 1 other one, but be assured, the list will grow.<br /><br />
+        <a href="../pagePeel" class="overlay">jQuery Page Peel</a>: A jQuery plugin for the page peel ad effect used on quite a few sites now.
+    </p>
+</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://smple.com/stats/" : "http://smple.com/stats/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 1;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://smple.com/stats/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+
+</body>
+</html>

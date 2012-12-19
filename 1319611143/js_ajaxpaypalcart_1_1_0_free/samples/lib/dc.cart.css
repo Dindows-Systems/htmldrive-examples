@@ -1,0 +1,331 @@
+/*
+ *  AJAX Paypal Cart CSS
+ *  Copyright (c) 2011 DIGICRAFTS. All Right Reserved.
+ *
+ *  This software is the proprietary information of
+ *  DIGICRAFTS. ("Proprietary Information").  You shall not
+ *  disclose such Proprietary Information and shall use it only in
+ *  accordance with the terms of the license agreement you entered into
+ *  with DIGICRAFTS. 
+ */
+ 
+ /*************************************
+ 
+   General
+ 
+  **************************************/
+.dc_ui.cart .button {
+    color:#FFF;
+    background-color:#669900;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    border-radius: .4em .4em .4em .4em;
+    overflow: hidden;
+    background-image:url(glossy.png);
+    padding:.3em 1em;
+    border:thin solid #336600;
+}
+
+.dc_ui.cart .button.disabled {
+    background-color: #BBB;
+    border: thin solid #999;
+}
+
+
+.dc_ui.cart .button.over {
+    background-color:#99cc00;
+}
+
+
+/*************************************
+ 
+   Cart Widget
+ 
+  **************************************/
+
+.cartWidget {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;    
+    color:#FFF;       
+    background-color:#669900;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    border-radius: .3em .3em .3em .3em;
+    background-image:url(glossy.png);
+    -moz-box-shadow: 0px 0px 6px #000;
+    -webkit-box-shadow: 0px 0px 6px #000;
+    box-shadow: 0px 0px 6px #000;
+    cursor: pointer;
+}
+.cartWidget .amount{
+   font-size:.9em;
+   font-weight: bold;
+    padding:6px 20px;
+}
+.cartWidget .badge{
+    font-size:.4em;
+    padding:3px 5px;
+    text-align: center;
+}
+
+/*************************************
+ 
+   Main Cart View
+ 
+  **************************************/
+
+.cartcontainer {
+    position: fixed;
+    background-color: #FFF;
+    border: thin #999 solid;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    border-radius: .3em .3em .3em .3em;
+    -moz-box-shadow: 0px 0px 6px #000;
+    -webkit-box-shadow: 0px 0px 6px #000;
+    box-shadow: 0px 0px 6px #000;
+    padding:10px;
+}
+
+.cartcontainer > .header {
+    height:40px;
+}
+
+.cartcontainer > .footer {
+    font-size: .8em;
+    color: #333333;
+    height:25px;
+    text-align: center;    
+}
+
+.cartcontainer > .header_container {
+    height:40px;
+}
+
+.cartcontainer > .header_container .title{
+    padding:5px;
+    height:100%;
+}
+
+.cartcontainer > .header_container .title p{
+    padding:5px;
+    height:100%;
+}
+
+/* Step header bar */
+
+.cartcontainer > .header_container .step{
+    display: inline;
+    font-size: .6em;
+    background-color:#DDD;
+    padding: 15px 15px;
+    text-shadow: 0.1em 0.1em #999;
+}
+
+.cartcontainer > .header_container .step.selected{
+    background-color:#99cc00;
+}
+
+.cartcontainer > .header_container .step .tag{
+    padding:5px;
+    color:#999;
+    background-color:#cccccc;
+    padding: 5px 10px;
+    display: inline;
+   -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em .5em .5em .5em;
+}
+.cartcontainer > .header_container .step.selected .tag{
+    color:#FFF;
+    background-color:#336600;
+}
+
+/* Text below step header bar */
+
+.cartcontainer > .title_container {
+    height:50px;
+}
+.cartcontainer > .title_container .title{
+    font-size: .9em;
+    padding:5px;
+    height:100%;
+}
+
+/* Area to hold the control button */
+
+.cartcontainer > .control_container {
+    height:40px;
+}
+
+.cartcontainer > .control_container > .left_button{
+    top:5px;
+    left:10px;
+}
+
+.cartcontainer > .control_container > .right_button{
+    top:5px;
+    right:10px;
+}
+
+/*************************************
+ 
+   Cart List page
+ 
+  **************************************/
+
+.cartview {
+    font-size: .9em;
+}
+
+.cartview .title_container{
+    height:25px;
+    font-size: .9em;
+    padding: .5em;
+}
+
+.cartview .title_container .title_label{
+    width:100%;
+    text-align: center;
+}
+
+.cartview .info_container{
+    height:55px;
+    background-color:#F9F9F9;
+    border: #DDD solid thin;
+}
+
+.cartview .info_container .total_label{
+    font-size: 1em;
+    padding: .7em 1em;
+
+    right:10px;
+}
+
+.cartview .info_container .total_label .currency{
+    display:inline;
+    color: #336600;
+    font-weight: bold;
+    font-size: .3em;
+}
+
+.cartview .info_container .total_label .amount{
+    font-size: 1.5em;
+    display:inline;
+    color: #336600;
+    font-weight: bold;
+}
+
+.cartview .info_container .update_button{
+    font-size: .8em;
+    right:180px;
+    top:15px;
+}
+
+/* Each item in cart */
+
+.cartview .renderer {
+    font-size: .9em;
+    height: 40px;
+    border-bottom: thin #cccccc dotted;
+}
+
+.cartview .renderer.over{
+    background-color: #EEE;
+}
+
+.cartview .renderer .container {
+    left:5px;
+}
+.cartview .renderer .thumbnail{
+    top:5px;
+}
+.cartview .renderer .title {
+    width:150px;
+    top:5px;
+}
+.cartview .renderer .itemid {
+    font-size: .5em;
+    width:150px;
+    top:25px;
+}
+
+.cartview .renderer .qty {
+    right:160px;
+    top:10px;
+}
+
+.cartview .renderer .price {
+    right:90px;
+    top:10px;
+}
+
+.cartview .renderer .button.delete_button{
+    color:#336600;
+    background-color: #FFF;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    padding:.2em .5em;
+    right:20px;
+    top:10px;
+}
+.cartview .renderer .button.delete_button.over{
+    color:#fff;
+    background-color: #336600;
+}
+
+/*************************************
+ 
+   Shipping Page
+ 
+  **************************************/
+
+.shippingview .form textarea,
+.shippingview .form input {
+    border:#333333 thin inset;
+    padding:0;
+    margin: 0;
+    top:0;
+    display: block;
+    -moz-box-shadow: 1px 1px 2px #999 inset;
+    -webkit-box-shadow: 1px 1px 2px #999 inset;
+    box-shadow: 1px 1px 2px #999 inset;
+}
+
+.shippingview .form .highlight textarea,
+.shippingview .form .highlight input {
+    background-color:#ffcccc;
+}
+
+.shippingview .form .label {
+    font-size: .8em;
+    padding:0 10px;
+}
+
+.shippingview .form .highlight{
+    border: red dotted thin;
+}
+
+/*************************************
+ 
+   Payment Page
+ 
+  **************************************/
+
+.paymentview .detail_container {
+    padding: 20px;
+    width:100%;
+    background-color:#EEE;
+    border-top: dotted thin #999;
+    border-bottom: dotted thin #999;
+}
+
+.paymentview .pay_button_container {
+    left: 40%;
+    top:120px;
+    
+}
+
+.paymentview .payment_button {
+    padding: 10px;
+}

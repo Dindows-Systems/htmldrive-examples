@@ -1,0 +1,8 @@
+.feed_menu select{
+	filter:alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+* html .feed_menu{
+    width:auto;
+    background:none;
+}`

@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/*
+#navigation-panel {
+	margin:0 1.6667em 1.6667em 1.6667em;
+	overflow:hidden;
+}
+*/
+
+#navigation-panel {
+	overflow:visible;
+}
+		
+	/* MAIN IMAGE BOX */
+	#main-image-box {
+		margin:0;
+		width:400px;
+		height:450px;
+		position:relative;
+	}
+		#main-image-box .clip {
+			width:400px;
+			height:450px;
+			position:absolute;
+			top:0;
+			left:0;
+			display:block;
+			background-color:#fff;
+			background-position:center top;
+			background-repeat:no-repeat;
+			z-index:1;
+		}
+
+		#main-image-box #aries {
+			background-image:url("../images/illustrations/1-widder.jpg");
+		}
+
+		#main-image-box #taurus {
+			background-image:url("../images/illustrations/2-stier.jpg");
+		}
+			
+		#main-image-box #gemini {
+			background-image:url("../images/illustrations/3-zwillinge.jpg");
+		}
+			
+		#main-image-box #cancer {
+			background-image:url("../images/illustrations/4-krebs.jpg");
+		}
+			
+		#main-image-box #leo {
+			background-image:url("../images/illustrations/5-loewe.jpg");
+		}
+			
+		#main-image-box #virgo {
+			background-image:url("../images/illustrations/6-jungfrau.jpg");
+		}
+			
+		#main-image-box #libra {
+			background-image:url("../images/illustrations/7-waage.jpg");
+		}
+			
+		#main-image-box #scorpio {
+			background-image:url("../images/illustrations/8-skorpion.jpg");
+		}
+			
+		#main-image-box #sagittarius {
+			background-image:url("../images/illustrations/9-schuetze.jpg");
+		}
+			
+		#main-image-box #capricorn {
+			background-image:url("../images/illustrations/10-steinbock.jpg");
+		}
+		
+		#main-image-box #aquarius {
+			background-image:url("../images/illustrations/11-wassermann.jpg");
+		}
+			
+		#main-image-box #pisces {
+			background-image:url("../images/illustrations/12-fische.jpg");
+		}
+			
+
+		#main-image-box .facets:hover {
+			z-index:10;
+		}
+
+		/* Container Styles */
+		h1 {
+			font-family:Georgia, "Times New Roman", Times, serif;
+			font-style:italic;
+		}
+		#main-image-box,
+		#zodiac-content {
+			float:left;
+		}
+		#zodiac-content {
+			margin-left:20px;
+			width:230px;
+		}
+			#zodiac-signs ul li {
+				display:inline;
+			}
+				#zodiac-signs ul li a {
+					padding:2px;
+				}
+				#zodiac-signs ul li a.on {
+					background-color:yellow;
+				}
+
+		#zodiac-information {
+			margin-top:20px;
+		}

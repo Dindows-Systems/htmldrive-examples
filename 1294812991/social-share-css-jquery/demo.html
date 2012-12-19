@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Creating A Social Media Share Menu Using CSS and jQuery</title>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+			<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#social_nav_vertical li a').hover(function() { 
+				$(this).stop().animate({ marginLeft: '20px' },300); // on Mouseover move to left
+				}, function() { //on Mouseout move back to original positon
+				$(this).stop().animate({ marginLeft: '0px' }, 300);
+			});
+			
+			});
+			</script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<h2> Creating Social Share Menu using CSS and jQuery </h2>
+		
+		<div id="social_nav_horizontal">
+						 <h3> Bookmark or Share This Post </h3>
+						<ul>
+							<li> <a class="delicious" href="http://del.icio.us/post?url=Your website title" title="Share this on del.icio.us">Delicious</a>
+							</li><li><a class="facebook" href="http://www.facebook.com/sharer.php?u=http://yourwebsite.com">Facebook</a></li>
+							<li><a class="stumbleupon" href="http://www.stumbleupon.com/submit? url=http://www.yoursite.com/"> Stumble</a></li>
+							<li><a class="twitter" href="http://twitter.com/home?status=Your Website Title- http://yourwebsite.com@TwitterUserName">Twitter</a></li>
+						</ul>
+		</div>
+<!-- with jQuery -->
+		<div id="social_nav_vertical">
+				<ul>
+					<li> <a class="delicious" href="http://del.icio.us/post?url=Your website title" title="Share this on del.icio.us">Delicious</a>
+					</li><li><a class="facebook" href="http://www.facebook.com/sharer.php?u=http://yourwebsite.com">Facebook</a></li>
+					<li><a class="stumbleupon" href="http://www.stumbleupon.com/submit? url=http://www.yoursite.com/"> Stumble</a></li>
+					<li><a class="twitter" href="http://twitter.com/home?status=Your Website Title- http://yourwebsite.com@TwitterUserName">Twitter</a></li>
+				</ul>
+				<p class="vertical_title"> Enjoyed This Post? <br />
+				  Share or Bookmark it .</p>
+			</div>
+		<br/>
+		<br/>
+		<p style="text-align:center"> <a href="http://sixrevisions.com/tutorials/web-development-tutorials/social-media-share-css-jquery/">Back to the Tutorial</a><br />
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</p>
+
+	</div>
+	<!--end wrapper-->
+</body>
+</html>

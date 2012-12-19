@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery + CSS3 Rounded Images</title>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".rounded-img, .rounded-img2").load(function() {
+		$(this).wrap(function(){
+			return '<span class="' + $(this).attr('class') + '" style="background:url(' + $(this).attr('src') + ') no-repeat center center; width: ' + $(this).width() + 'px; height: ' + $(this).height() + 'px;" />';
+		});
+		$(this).css("opacity","0");
+	});
+
+});
+</script>
+<style type="text/css">
+/* normal image */
+.normal-img {
+	background: #ccc;
+	border: solid 1px #000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+}
+.normal-img-2 {
+	display: inline-block;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .8), 0 1px 0 rgba(255, 255, 255, 1), 0 -1px 0 rgba(0, 0, 0, .6);
+	-moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, 1), 0 -1px 0 rgba(0, 0, 0, .6);
+}
+
+/* rounded image styles */
+.rounded-img {
+	display: inline-block;
+	border: solid 1px #000;
+	overflow: hidden;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+}
+.rounded-img2 {
+	display: inline-block;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	-moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+}
+
+
+/* demo styling */
+body {
+	width: 800px;
+	margin: 30px auto;
+	font: normal 14px/150% Arial, Helvetica, sans-serif;
+}
+p {
+	margin: 0 0 10px;
+}
+h2, h3 {
+	margin: 0 0 5px;
+}
+hr {
+	margin: 30px 0;
+	background: #999;
+	height: 0;
+	padding: 0 0 1px;
+	border: none;
+}
+.demo {
+	margin: 40px 0;
+	padding: 20px;
+	background: #d7d7d7;
+	border: solid 1px #ccc;
+}
+.left {
+	float: left;
+	margin-right: 20px;
+}
+/* clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .clearfix {
+	zoom: 1;
+} /* IE6 */
+*:first-child+html .clearfix {
+	zoom: 1;
+} /* IE7 */
+
+</style>
+</head>
+
+<body>
+<h1>jQuery + CSS3 Rounded Images</h1>
+
+<h3>Problems</h3>
+<p>Border-radius and box-shadow applied to image element. Note: the rounded corners and inset box-shadow doesn't display probably.</p>
+<p>
+	<img src="img/thumb1.jpg" width="70" height="70" class="normal-img" /> 
+	<img src="img/thumb2.gif" width="70" height="70" class="normal-img-2" />
+</p>
+<div class="demo clearfix">
+	<h3>CSS Background-Image Trick:</h3>
+	<p>Using background-image CSS trick will solve the problem (view source code to find out how).</p>
+	<p><span class="rounded-img" style="background: url(img/thumb1.jpg) no-repeat center center; width: 70px; height: 70px;">
+
+		<img src="img/thumb1.jpg" style="opacity: 0;" /> 
+		</span> 
+		<span class="rounded-img2" style="background: url(img/thumb2.gif) no-repeat center center; width: 70px; height: 70px;">
+			<img src="img/thumb2.gif" style="opacity: 0;" /> 
+		</span> 
+	</p>
+	<p>Note: Google Chrome (Windows version) does not display inset box shadow correctly. View this demo page with Mac Chrome or Firefox.</p>
+</div>
+<div class="demo clearfix">
+	<h3>With jQuery:</h3>
+	<p><img src="img/thumb1.jpg" class="rounded-img" /> 
+	<img src="img/thumb2.gif" class="rounded-img2" /></p>
+
+	<hr />
+	<p>It works with any image size <img src="img/img1.jpg" class="rounded-img" /> and inline content.</p>
+	<hr />
+	<img src="img/img1.jpg" width="296" height="170" class="rounded-img2 left" /> 
+	<p>It works with or without the width and height attribute in the img tag.
+	Note: this image also has a "left" class.</p>
+</div>
+<h3>Credits</h3>
+<p>Read related article: <a href="http://www.webdesignerwall.com/tutorials/css3-rounded-image-with-jquery/">CSS3 Rounded Image With jQuery</a></p>
+
+<p>Thanks to <a href="http://clarke78.com">Darcy Clarke</a> for the jQuery code.</p>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

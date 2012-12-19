@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8;charset=utf-8" />
+<title>CSS navigation rollovers with a dropdown menu</title>
+<link href="images_files/reset000.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/final_drop.html
+Copyright (c) 2005-2008 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+body {font-family:Arial, Helvetica, sans-serif;}
+
+#navigation {width:145px;position:relative; z-index:100;margin-top:50px; border-right:1px solid #999; padding:10px 0px; float:left;}
+/* hack to correct IE5.5 faulty box model */
+* html #navigation {width:145px; w\idth:144px;}
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+#navigation li {width:145px;position:relative;}
+/* style the links for the top level */
+#navigation a, #navigation a:visited {display:block; height:47px; background:url(images_files/navigati.png) top left; text-indent:-9000px;}
+/* a hack so that IE5.5 faulty box model is corrected */
+* html #navigation a, * html #navigation a:visited {width:145px; w\idth:145px;}
+
+/* style the second level background */
+#navigation ul ul a.drop, #navigation ul ul a.drop:visited {background:#2d3d47}
+/* style the second level hover */
+#navigation ul ul a.drop:hover{background:#fff; color:#202c32;}
+#navigation ul ul :hover > a.drop {background:#fff; color:#202c32;}
+/* style the third level background */
+#navigation ul ul ul a, #navigation ul ul ul a:visited {background:#e2dfa8;}
+/* style the third level hover */
+#navigation ul ul ul a:hover {background:#b2ab9b;}
+
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+#navigation ul ul {visibility:hidden;position:absolute;top:-10px;left:145px;  padding:4px; background:#2d3d47; height:96px; width:145px; border-left:1px solid #999;}
+/* another hack for IE5.5 */
+* html #navigation ul ul {top:-9px;t\op:-10px;}
+
+/* position the third level flyout menu */
+#navigation ul ul ul{left:149px; top:-1px; width:149px;}
+
+/* position the third level flyout menu for a left flyout */
+#navigation ul ul ul.left {left:-149px;}
+
+/* style the table so that it takes no ppart in the layout - required for IE to work */
+#navigation table {position:absolute; top:0; left:0; border-collapse:collapse;}
+
+/* style the second level links */
+#navigation ul ul a, #navigation ul ul a:visited {background:#2d3d47; color:#fff; height:auto; line-height:14px; text-indent:0px; display:block; padding:5px; text-decoration:none; font-size:11px;}
+/* yet another hack for IE5.5 */
+* html #navigation ul ul a, * html #navigation ul ul a:visited {width:145px;w\idth:145px;}
+
+/* style the top level hover */
+#navigation :hover > a, #navigation ul ul :hover > a {background:url(images_files/navigati.png) top left;}
+
+/* top level image background placements */
+#navigation a.link1:hover {background-position:-146px 0px;}
+#navigation a.link2 {background-position:0px -47px;}
+/* DO NOT consolodate next 2 lines into one, this breaks IE6 */
+#navigation a.link2:hover {background-position:-146px -47px;}
+#navigation :hover > a.link2, #navigation ul ul :hover > a.link2  {background-position:-146px -47px;}
+#navigation a.link3 {background-position:0px -94px;}
+#navigation a.link3:hover{background-position:-146px -94px;}
+#navigation :hover > a.link3, #navigation ul ul :hover > a.link3  {background-position:-146px -94px;}
+#navigation a.link4 {background-position:0px -141px;}
+#navigation a.link4:hover {background-position:-146px -141px;}
+#navigation :hover > a.link4, #navigation ul ul :hover > a.link4  {background-position:-146px -141px;}
+#navigation a.link5 {background-position:0px -188px;}
+#navigation a.link5:hover {background-position:-146px -188px;}
+#navigation a.link6 {background-position:0px -235px;}
+#navigation a.link6:hover {background-position:-146px -235px;}
+#navigation a.link7 {background-position:0px -282px;}
+#navigation a.link7:hover {background-position:-146px -282px;}
+#navigation a.link8 {background-position:0px -329px;}
+#navigation a.link8:hover {background-position:-146px -329px;}
+#navigation a.link9 {background-position:0px -375px; height:65px;}
+#navigation a.link9:hover {background-position:-146px -375px;}
+
+#navigation ul ul a:hover {background:#fff; color:#202c32;}
+/* make the second level visible when hover on first level list OR link */
+#navigation ul li:hover ul,
+#navigation ul a:hover ul{visibility:visible; }
+/* keep the third level hidden when you hover on first level list OR link */
+#navigation ul :hover ul ul{visibility:hidden;}
+/* make the third level visible when you hover over second level list OR link */
+#navigation ul :hover ul :hover ul{ visibility:visible;}
+</style>
+
+</head>
+
+<body>
+
+<div id="navigation">
+    <ul>
+
+        <li><a href="http://jorenrapini.com/posts/css-rollovers/index.php" class="link1">Home</a></li>
+        <li><a href="http://jorenrapini.com/posts/css-rollovers/metal" class="drop link2">Metal<!--[if IE 7]><!--></a><!--<![endif]-->
+            <!--[if lte IE 6]><table><tr><td><![endif]-->
+            <ul>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/gold.php">Gold</a></li>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/aluminum.php">Aluminum</a></li>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/brass.php">Brass</a></li>
+
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/stainless-steel.php">Stainless Steel</a></li>
+            </ul>
+            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+        </li>
+        <li><a href="http://jorenrapini.com/posts/css-rollovers/plastic" class="drop link3">Plastic<!--[if IE 7]><!--></a><!--<![endif]-->
+            <!--[if lte IE 6]><table><tr><td><![endif]-->
+            <ul>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/polyethelene.php">Polyethelene</a></li>
+
+    
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/polycarbonate.php">Polycarbonate</a></li>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/fiberglass.php">Fiberglass</a></li>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/pvc.php">PVC</a></li>
+            </ul>
+            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+        </li>
+        <li><a href="http://jorenrapini.com/posts/css-rollovers/services.php" class="drop link4">Services<!--[if IE 7]><!--></a><!--<![endif]-->
+
+    
+            <!--[if lte IE 6]><table><tr><td><![endif]-->
+            <ul style="height:240px;top:-40px;">
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/art.php">Art</a></li>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/design-for-manufacturing.php">Design For Manufacturing</a></li>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/prototyping.php">Prototyping</a></li>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/quickturn.php">Quickturn</a></li>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/safety-design.php">Safety Design</a></li>
+
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/kits-and-assembly.php">Kits &amp; Assembly</a></li>
+                <li><a href="http://jorenrapini.com/posts/css-rollovers/rfq.php">Request For Quote</a></li>
+    
+            </ul>
+            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+        </li>
+        <li><a href="http://jorenrapini.com/posts/css-rollovers/news.php" class="link5">News</a></li>
+
+        <li><a href="http://jorenrapini.com/posts/css-rollovers/catalog.php" class="link6">Catalog</a></li>
+        <li><a href="http://jorenrapini.com/posts/css-rollovers/about.php" class="link7">About Us</a></li>
+        <li><a href="http://jorenrapini.com/posts/css-rollovers/contact.php" class="link8">Contact</a></li> 
+        <li><a href="http://jorenrapini.com/posts/css-rollovers/users.php" class="link9">Registered Users</a></li>
+    </ul>
+</div>
+
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+
+</body>
+</html>
+
+<!-- This document saved from http://jorenrapini.com/posts/css-rollovers/post2.html -->

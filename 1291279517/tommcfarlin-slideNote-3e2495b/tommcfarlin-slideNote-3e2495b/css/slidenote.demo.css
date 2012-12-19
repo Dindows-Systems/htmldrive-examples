@@ -1,0 +1,4 @@
+body { height: 1000px; font-family: Arial, Sans-serif; }
+.slidenote { width: 540px; height: 140px; background: #FBEC78; padding: 1em; }
+.slidenote img { float: left; margin-left: -2em; margin-top: -2em; }
+.slidenote img:hover { margin-top: -1.95em; }

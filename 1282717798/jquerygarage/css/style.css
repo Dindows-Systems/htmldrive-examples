@@ -1,0 +1,22 @@
+body {
+	font-size: 10px;
+	font-family: verdana,sans-serif;
+	background-color: gray;
+	background-image: url(http://gayadesign.com/images/background.jpg);
+	background-position: 50% 50%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.content {
+	width: 800px;
+	margin: 0px auto;
+	background-color: #ffffff;
+	padding: 20px;
+}
+
+h1 {
+	color:#221A69;
+	font-weight:normal;
+	text-decoration:none;
+}

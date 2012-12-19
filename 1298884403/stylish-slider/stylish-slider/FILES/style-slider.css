@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: helvetica, tahoma, Sans-serif;
+    font-size: 13px;
+    background: url(images/bg.jpg) repeat;
+}
+
+/*###########################################
+text & links
+###########################################*/
+
+a { 
+    text-decoration: none;
+}
+
+h2 {
+    font-family: Helvetica, tahoma, Sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px white;
+}
+
+p {
+    text-shadow: 0 1px 1px white;
+}
+
+/*###########################################
+navbar
+###########################################*/
+
+#navbar {
+    margin: 20px 0 0 40px;
+    width: 650px;
+    font-weight: bold;
+	
+}
+
+/*###########################################
+ul li (all)
+###########################################*/
+
+ul li{
+    display: inline-block;
+}
+
+ul li a {
+float:left
+    position: relative;
+    display: block;
+    width: 150px;
+    text-align: center;
+}
+
+/*###########################################
+Active
+###########################################*/
+
+.active a{
+    padding: 28px 0 20px 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#db0000), to(#9b0000));
+    background: -moz-linear-gradient(top center, #db0000, #9b0000);
+    border: 1px solid #8d0000;
+    text-shadow: 0 1px 1px black;
+    -webkit-border-radius: 10px 10px 0 0;
+    -webkit-background-clip: padding-box;
+    -webkit-box-shadow: inset 0 0 1px #fd0000;
+    -moz-border-radius: 10px 10px 0 0;
+    -moz-background-clip: padding-box;
+    -moz-box-shadow: inset 0 0 1px #fd0000;
+    margin-left: -5px;
+    z-index: 2;
+    color: white;
+    text-shadow: 0 1px 1px black;
+}
+
+.active a:focus {
+    outline: none;
+}
+
+/*###########################################
+Inactive
+###########################################*/
+
+
+.inactive a:hover {
+    background: -webkit-gradient(linear, left bottom, left top, from(#eee), to(#ddd));
+    background: -moz-linear-gradient(top center, #ddd, #eee);
+}
+
+.inactive a {
+    color: #222;
+    text-shadow: 0 1px 1px white;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));
+    background: -moz-linear-gradient(top center, #eee, #ddd);
+    -webkit-box-shadow: inset 0 0 5px white;
+    -moz-box-shadow: inset 0 0 5px white;
+    padding: 20px 0;
+    -webkit-box-shadow: inset 0 0 5px white;
+    -moz-box-shadow: inset 0 0 5px white;
+    border: 1px solid #ccc;
+    margin-left: -5px;
+    z-index: 1;
+}
+
+.inactive a:focus {
+    outline: none;
+}
+
+/*###########################################
+notification
+###########################################*/
+span.notification {;
+    position: absolute;
+    padding: 5px;
+    margin-top: -6px;
+    color: white;
+    min-width: 15px;
+    text-align: center;
+    border: 1px solid #000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2a2a2a), to(#222));
+    background: -moz-linear-gradient(top center, #2a2a2a, #222);
+    -webkit-box-shadow: inset 0 0 1px #333;
+    -moz-box-shadow: inset 0 0 1px #333;
+    text-shadow: 0 -1px 1px black;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    margin-left: 10px;
+}
+
+/*###########################################
+slider
+###########################################*/
+
+#slider {
+    width: 555px;
+    background: rgba(250,250,250,0.3);
+    padding: 30px 25px 30px 25px;
+    line-height: 25px;
+    margin-left: 35px;
+}
+
+/*###########################################
+Back
+###########################################*/
+
+.back {
+	font-weight: bold;
+	padding: 20px 0 30px 0;
+	line-height: 25px;
+	margin-left: 35px;
+}
+
+.back a, .back a:visited{
+	padding: 0 0 3px 0;
+	color: #000000;
+	border-bottom: 1px solid #ffffff;
+}
+
+.back a:hover, .back a:visited:hover{
+	padding: 0 0 3px 0;
+	color: #990000;
+	border-bottom: 1px solid #000000;
+}
+
+.back a:active{
+	padding: 0 0 3px 0;
+	color: #000000;
+	border-bottom: 4px solid #000000;
+}

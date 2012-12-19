@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Animated Header</title>
+		<style type="text/css" media="screen">
+			
+			body{
+				background-color: #000;color:#FFFFFF;
+			}
+			
+			/* Center the website */
+			#wrapper{
+				width:920px;
+				margin:0 auto;
+			}
+			
+			/* Give the header a height and a background image */
+			#header{
+				height:300px; 
+				background: #000 url(background.jpg) repeat-y scroll left top;
+				text-align:center;
+			}
+			
+			/* Create a Shadow Overlay */ 
+			#header div{
+				width:920px;
+				height:300px;
+				background: transparent url(overlay.png) no-repeat scroll left top;
+			}
+			
+			/* Vertically position header text and style it*/
+			#header h1{
+				padding-top:125px;
+				font-family: Arial, "MS Trebuchet", sans-serif;
+				color:white;
+			}
+			
+			/* Give basic styles to the body and the navigation */
+
+		</style>
+		<!--[if lte IE 6]>
+			<style type="text/css" media="screen">
+				#header div{
+					background-image: none;
+					filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='overlay.png', sizingMethod='scale');
+				}
+			</style>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				
+				<!-- Div is for Shadow Overlay-->
+				<div>
+					<h1>Animated Header Background</h1>	
+				</div>	
+			</div>
+	</div>
+	
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+	</body>		
+	
+	<!-- Import jQuery-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		
+			var scrollSpeed = 70; 		// Speed in milliseconds
+			var step = 1; 				// How many pixels to move per step
+			var current = 0;			// The current pixel row
+			var imageHeight = 4300;		// Background image height
+			var headerHeight = 300;		// How tall the header is.
+			
+			//The pixel row where to start a new loop
+			var restartPosition = -(imageHeight - headerHeight);
+			
+			function scrollBg(){
+				
+				//Go to next pixel row.
+				current -= step;
+				
+				//If at the end of the image, then go to the top.
+				if (current == restartPosition){
+					current = 0;
+				}
+				
+				//Set the CSS of the header.
+				$('#header').css("background-position","0 "+current+"px");
+				
+				
+			}
+			
+			//Calls the scrolling function repeatedly
+			var init = setInterval("scrollBg()", scrollSpeed);
+
+			
+	</script>	
+
+</html>

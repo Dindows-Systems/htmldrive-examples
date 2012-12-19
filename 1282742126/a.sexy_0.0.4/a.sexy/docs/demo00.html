@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>(a)Sexy Images jQuery Plugin: Default configuration</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../style.css"/>
+    <style type="text/css">
+    	#images img {
+    	   float:left;
+    	   margin:10px;
+    	   border:2px solid #ccc;
+    	}
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.asexy.min.js"></script>
+
+    
+    <script type="text/javascript" src="http://scripts.hohli.com/brush/shCore.js"></script>
+	<script type="text/javascript" src="http://scripts.hohli.com/brush/shBrushJScript.js"></script>
+	<script type="text/javascript" src="http://scripts.hohli.com/brush/shBrushXml.js"></script>
+	<link type="text/css" rel="stylesheet" href="http://scripts.hohli.com/brush/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="http://scripts.hohli.com/brush/styles/shThemeDefault.css"/>
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = 'http://scripts.hohli.com/brush/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body>
+
+<h2>Default configuration</h2>
+<div>
+<hr>
+    <div id="images">
+        <img src="images/Peach_and_Lime.jpg" alt="Peach and Lime" />
+        <img src="images/Rock_Chick.jpg" alt="Rock Chick" />
+        <img src="images/Angel.jpg" alt="Angel" />
+        <img src="images/More_stripes.jpg" alt="More stripes" />
+        <br class="clear"/>
+    </div>
+</div>
+<h2>Source</h2>
+<div>
+    <b>HTML</b>:
+    <pre class="brush:xml;">
+&lt;div id=&quot;images&quot;&gt;
+        &lt;img src="images/Peach_and_Lime.jpg" alt="Peach and Lime" /&gt;
+        &lt;img src="images/Rock_Chick.jpg" alt="Rock Chick" /&gt;
+        &lt;img src="images/Angel.jpg" alt="Angel" /&gt;
+        &lt;img src="images/More_stripes.jpg" alt="More stripes" /&gt;
+&lt;/div&gt;
+    </pre>
+    
+    <b>JavaScript</b>:
+    <pre class="brush: jscript">
+&lt;script type=&quot;text/javascript&quot;&gt;
+//&lt;![CDATA[
+$(document).ready(function(){
+    $('#images img').asexy();
+});
+//]]&gt;
+&lt;/script&gt;
+    </pre>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){    
+    $('#images img').asexy();
+});
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<title>Fancy Hover Effect | Demo page</title>
+	<link rel="stylesheet" href="style.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+	<style type="text/css">
+
+		#featured-wrap {
+			position: relative;
+			width: 592px;
+			height: 96px;
+			margin: 0 auto;
+		}
+
+		#featured-content {
+			overflow: hidden;	
+		}
+
+		#featured-content a {
+			float: left;	
+			margin: 0 5px;
+		}
+
+		#featured-content a img {
+			border: 1px solid #888;	
+			padding: 3px;
+			vertical-align: top;
+		}
+
+		#featured-preview {
+			position: absolute;
+			top: -64px;
+			left: 0;
+			z-index: 90;
+			display: none;
+			overflow: hidden;
+			width: 320px;
+			height: 217px;	
+		}
+
+		#featured-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 100;
+		}
+
+		#featured-overlay div {
+			float: left;
+			cursor: e-resize;
+			background: red;
+			display: none;
+			width: 148px;
+			height: 96px;
+		}
+
+	</style>
+	<script type="text/javascript">
+	
+		function showPreview(event) {
+			$("#featured-preview").show();
+		};
+
+		function hidePreview(event) {
+			$("#featured-preview").hide();
+		};
+
+		function updatePreview(index) {
+			$("#featured-preview img").hide().eq( index ).show();
+		};
+
+		function movePreview(event) {
+			var content_position = $("#featured-content").offset();
+
+			$("#featured-preview").css("left", event.pageX - content_position.left - 160);
+		};
+
+		$(document).ready(function() {
+			var content_els		= $("#featured-content a");
+			var overlay_wrap	= $("#featured-overlay");
+			var overlay_els		= $("div", overlay_wrap)
+
+			overlay_els
+				.css('opacity', 0)
+				.mousemove( movePreview )
+				.mouseenter(function() {
+					updatePreview( overlay_els.index( this ) );
+				})
+				.click(function() {
+					window.location.href = content_els.eq( overlay_els.index( this ) ).attr("href");
+				})
+				.show();
+
+			overlay_wrap
+				.mouseenter( showPreview )
+				.mouseleave( hidePreview );
+
+		});
+	</script>
+</head>
+<body>
+	<div id="content">
+		<h1>Fancy Hover Effect</h1>
+
+		<p>This is a demo page. You can view the supporting article <a href="http://jqueryglobe.com/article/fancy-hover-effect">here</a></p>
+
+		<hr />
+
+		<div id="featured-wrap">
+			<div id="featured-content">
+				<a href="http://www.jardinesdelte.com/"><img alt="Jardines" src="2_s.jpg" /></a>
+				<a href="http://101.es/"><img alt="101 - Cientouno" src="1_s.jpg" /></a>
+				<a href="http://www.missionbicycle.com/"><img alt="Mission Bicycle Company" src="3_s.jpg" /></a><a href="http://betyourfollowers.com/"><img alt="Bet Your Followers" src="5_s.jpg" /></a>
+			</div>
+			<div id="featured-preview">
+				<img alt="Jardines" src="2_b.jpg" />
+				<img alt="101 - Cientouno" src="1_b.jpg" />
+				<img alt="Mission Bicycle Company" src="3_b.jpg" />
+				<img alt="Bet Your Followers" src="5_b.jpg" />
+			</div>
+			<div id="featured-overlay">
+				<div></div><div></div><div></div><div></div>
+			</div>
+		</div>
+
+	</div>
+	
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

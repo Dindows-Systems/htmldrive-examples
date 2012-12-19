@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>Senamion.com - jMagnify (Magnify effect on text) plugin: documentation and demo page</title>
+
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/jquery.jMagnify.js" ></script>
+	<script type="text/javascript">
+		$().ready(function() {
+			$('#first').jMagnify();
+			$('#second').jMagnify({
+				centralEffect: {'color': 'yellow'},
+				lat1Effect: {'color': 'orange'},
+				lat2Effect: {'color': 'red'},
+				lat3Effect: {'color': 'magenta'},
+				resetEffect: {'color': 'black'}
+			});
+			$('#third').jMagnify({
+				centralEffect: {'background-color': '#FFFF00'},
+				lat1Effect: {'background-color': '#FFFF44'},
+				lat2Effect: {'background-color': '#FFFF88'},
+				lat3Effect: {'background-color': '#FFFFCC'},
+				resetEffect: {'background-color': 'white'}
+			});
+			$('#fourth').jMagnify({
+				centralEffect: {'border': '4px solid red', 'font-size': '200%'},
+				lat1Effect: {},
+				lat2Effect: {},
+				lat3Effect: {},
+				resetEffect: {'border': '0', 'font-size': '100%'}
+			});
+			$('#double').jMagnify({
+				centralEffect: {'border-bottom': '4px solid red'},
+				lat1Effect: {'border-bottom': '3px solid red'},
+				lat2Effect: {'border-bottom': '2px solid red'},
+				lat3Effect: {'border-bottom': '1px solid red'},
+				resetEffect: {'border': '0'}
+			});
+		});
+	</script>
+
+
+
+
+</head>
+<body>
+
+				<h2>jMagnify plugin: documentation and demo page</h2>
+				<h3 id='h31'>Demo 1 - Standard options</h3>
+				<p>Hover text below to see jMagnify in action!</p>
+				<div style='font-size: 26px; height: 100px; color: green; background-color: #FAFAF0;'>
+					<p id='first'>jQuery jMagnify, magnify effect on text!</p>
+				</div>
+
+				<p>This is the javascript code to launch jMagnify with standard options:</p>
+				<pre>
+$().ready(function() {
+	$('#first').jMagnify();
+});
+				</pre>
+
+				<h3 id='h32'>Demo 2 - jMagnify text color demo (in a A element)</h3>
+				<p>Hover text below to see jMagnify in action!</p>
+				<a href='http://www.senamion.it' id='second' style='font-size: 22pt; color: black;'>Click here for my italian blog! (this is an A element)</a>
+
+				<p>This is the javascript code to launch jMagnify text color demo:</p>
+				<pre>
+$().ready(function() {
+	$('#second').jMagnify({
+		centralEffect: {'color': 'yellow'},
+		lat1Effect: {'color': 'orange'},
+		lat2Effect: {'color': 'red'},
+		lat3Effect: {'color': 'magenta'},
+		resetEffect: {'color': 'black'}
+	});
+});
+				</pre>
+
+				<h3 id='h33'>Demo 3 - jMagnify background-color demo</h3>
+				<p>Hover text below to see jMagnify in action!</p>
+				<div id='third'>OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</div>
+				<p>This is the javascript code to launch jMagnify background-color demo:</p>
+				<pre>
+$().ready(function() {
+	$('#third').jMagnify({
+		centralEffect: {'background-color': '#FFFF00'},
+		lat1Effect: {'background-color': '#FFFF44'},
+		lat2Effect: {'background-color': '#FFFF88'},
+		lat3Effect: {'background-color': '#FFFFCC'},
+		resetEffect: {'background-color': 'white'}
+	});
+});
+				</pre>
+
+
+				<h3 id='h34'>Demo 4 - jMagnify character box demo</h3>
+				<p>Hover text below to see jMagnify in action!</p>
+				<div style='font-size: 26px; height: 100px; color: green; background-color: #FAFAF0;'>
+					<p id='fourth' >jQuery jMagnify, magnify effect on text! - Character in a box</p>
+				</div>
+				<p>This is the javascript code to launch jMagnify character box demo:</p>
+				<pre>
+$().ready(function() {
+	$('#fourth').jMagnify({
+		centralEffect: {'border': '4px solid red', 'font-size': '200%'},
+		lat1Effect: {},
+		lat2Effect: {},
+		lat3Effect: {},
+		resetEffect: {'border': '0', 'font-size': '100%'}
+	});
+});
+				</pre>
+
+
+				<h3 id='h35'>Demo 5 - jMagnify border-bottom demo</h3>
+				<p>Hover text below to see jMagnify in action!</p>
+				<div id='double' style='font-size: 26px;'>jQuery jMagnify, magnify effect on text! - Only border-bottom parameters</div>
+				<p>This is the javascript code to launch jMagnify border-bottom demo:</p>
+				<pre>
+$().ready(function() {
+	$('#double').jMagnify({
+		centralEffect: {'border-bottom': '4px solid red'},
+		lat1Effect: {'border-bottom': '3px solid red'},
+		lat2Effect: {'border-bottom': '2px solid red'},
+		lat3Effect: {'border-bottom': '1px solid red'},
+		resetEffect: {'border': '0'}
+	});
+});
+				</pre>
+
+
+				<h3>Documentation</h3>
+
+				<p>
+				To use this jquery plugin:<br />
+				<ul>
+				<li><a href="#download" title="Download jMagnify (magnify effect on text)">download</a> jquery.jMagnify.js and images files</li>
+				<li><a href="http://www.jquery.com">download</a> last version of jquery.js</li>
+				<li>
+				include the js in the head section of the page:
+<pre>
+&lt;head&gt;
+...
+&lt;script type="text/javascript" src="js/jquery.js" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.jMagnify.js" &gt;&lt;/script&gt;
+...
+&lt;/head&gt;
+</pre>
+				</li>
+				<li>
+				in the read function launch the jMagnify (magnify effect on text) relative at your element:
+<pre>
+&lt;script type="text/javascript"&gt;
+	$().ready(function() {
+		$("#elementId").jMagnify();
+	});
+&lt;/script&gt;
+</pre>
+				</li>
+				</ul>
+
+				<h4>Parameters:</h4>
+				<ul>
+					<li>centralEffect - effect of central element - default {'font-size': '200%'}</li>
+					<li>lat1Effect - effect of first element near the central - default {'font-size': '180%'}</li>
+					<li>lat2Effect - effect of second element near the central - default {'font-size': '150%'}</li>
+					<li>lat3Effect - effect of third element near the central - default {'font-size': '120%'}</li>
+				</ul>
+
+				For comments <a href="http://www.senamion.com/blog/2010/03/24/jquery-jmagnify-magnify-effect-on-text/">see the blog page</a>.
+				</p>
+
+				<h3 id='download'>Download</h3>
+				<p>
+					You can download the entire archive:
+					<ul>
+						<li><a href="jMagnify.zip">jMagnify.zip</a> - a zip archive containing the plugin source, a minified version of jQuery and a demo page.</li>
+					</ul>
+					Or single file:
+					<ul>
+						<li><a href="jMagnify/js/jquery.jMagnify.js">jquery.jMagnify.js</a> - js code.</li>
+					</ul>
+				</p>
+
+
+				<h3>Release</h3>
+				<p>
+				<ul>
+					<li><strong>0.0</strong> - Mar 23 2010 - First release of jMagnify (magnify effect on text)</li>
+				</ul>
+				</p>
+
+
+				<h3>License</h3>
+				<p>
+				Dual licensed under the MIT and GPL licenses. 
+				</p>
+
+<a href="http://www.senamion.com">Senamion.com</a> &amp;&amp; <a href="http://www.senamion.it">Senamion.it</a>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+</body>
+</html>

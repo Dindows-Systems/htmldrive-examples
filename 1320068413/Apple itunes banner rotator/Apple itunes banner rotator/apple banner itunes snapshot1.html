@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+	<title>Itunes store-like banner using Jquery - Snapshot 1</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript">
+    
+    
+ $(document).ready(function() {
+	// ############################################################################## Block B code - START
+	
+	var height = $('#blockB a').height();// get the height of the first image in block B
+	var timeout = 0;
+
+	
+	function nextA() {
+	clearTimeout(timeout);
+		
+$('#blockB').css({bottom: 0});// set style bottom:0px to div with id = blockB 
+		$('#blockB').animate({bottom: -height}, 600);// make image move 73 px to the bottom with animated effect for 600 ms
+		$('#blockB a:last-child').prependTo('#blockB');// take the last image and add  the top in the save div i.e id= blockB
+
+		timeout = setTimeout(function() { // call the function nextA() repeatedly evey 5000 ms
+			nextA();
+		}, 5000);
+	}
+	
+
+	
+
+	nextA();// call function nextA() => This is where it starts ! :)
+});
+    </script>
+	
+</head>
+<body>
+<div id="block-itunes">
+	<div id="blockA"><!-- Block A for large image-->
+     <a href="#largeimage">
+      <!-- large Image is added here -->
+     </a>
+      </div>
+		<div id="itune_images">
+			<div id="blockB"> <!-- Block B for small Images-->
+				<a href="#image1">
+					<img src="banners/harrypotter_small.jpg" alt="" class="min"  />
+				</a>
+				<a href="#image2">
+	                <img src="banners/prisonbreak_small.jpg" alt="" class="min"  />
+				</a>
+				<a href="#image3">
+				    <img src="banners/transformers_small.jpg" alt="" class="min" />
+				</a>
+				<a href="#image4">
+	                <img src="banners/xmenfirstclass_small.jpg" alt="" class="min"  />
+				</a>
+			</div>
+		</div>
+		<button type="button" id="bi-button"></button>
+	</div>
+	<div class="title">Apple iTunes Banner &copy; - Snapshot 1</div>
+    <footer><h2>Apple Itunes Banner with Jquery - Snapshot 1 </h2>
+    <a class="youhacked" href="http://youhack.me/2011/08/11/create-an-itunes-like-banner-rotatorslideshow-with-jquery/">Read this article on  </a>
+    </footer>
+</body>
+
+</html>

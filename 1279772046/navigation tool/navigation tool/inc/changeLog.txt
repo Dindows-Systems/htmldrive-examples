@@ -1,0 +1,24 @@
+jquery.mb.extruder
+
+>> to ADD >>
+
+    1. bottom and right positioning.
+
+1.8.0
+    1. Extruder is child of any DOM element.
+    2. Extruder can have inline content. (not only Ajax).
+    3. better close event.
+    4. added autoCloseTime parameter to specify time in milliseconds the extruder should close on mouse out (0 = never).
+    4. added hidePanelsOnClose parameter to specify if subpanels must should hide on extruder close.
+
+1.6
+    1. Removed the ".content" div from HTML
+    2. support content defined in HTML
+
+1.5
+  modified the flipText behavior.
+  added "positionFixed" param to control the position of the extruder (true id default and the extruder doesn't scroll with the page; if set to false it scrolls).
+  added a method to disable/enable a voice on the fly: $.fn.disableExtruderVoice and $.fn.enableExtruderVoice.
+
+1.0
+  Initial release.

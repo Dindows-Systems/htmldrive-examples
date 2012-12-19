@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Orbit Demo</title>
+		
+		<!-- Use the ID of your slider here to avoid the flash of unstyled content -->
+	  	<style type="text/css">
+	  		#featured { width: 565px; height: 290px; background: #009cff url('orbit/loading.gif') no-repeat center center; overflow: hidden; }
+	  		/* Want a different Loading GIF - visit http://www.webscriptlab.com/ - that's where we go this one :) */
+	  	</style>
+		
+		<!-- Attach our CSS -->
+	  	<link rel="stylesheet" href="orbit.css">	
+	  	
+		<!--[if IE]>
+			<style type="text/css">
+				.timer { display: none !important; }
+				div.caption { background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1; }
+			</style>
+		<![endif]-->
+	  	
+		<!-- Attach necessary scripts -->
+		<script type="text/javascript" src="jquery-1.4.1.min.js"></script>
+		<script type="text/javascript" src="jquery.orbit.min.js"></script>
+		
+		<!-- Run the plugin -->
+		<script type="text/javascript">
+			$(window).load(function() {
+				$('#featured').orbit({
+					'bullets': true,
+					'timer' : true,
+					'animation' : 'horizontal-slide'
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<div id="featured"> 
+			<img src="http://www.htmldrive.net/edit_media/2010/201007/20100728/Image_Slider/images/prince_o.jpg" alt="Link" />
+			<a href="http://www.zurb.com/playground" target="_blank"><img src="http://www.htmldrive.net/edit_media/2010/201007/20100728/Image_Slider/images/spiderma.jpg" alt="Ezio" rel="ezioCaption" /></a>
+			<img src="http://www.htmldrive.net/edit_media/2010/201007/20100728/Image_Slider/images/batman_a.jpg" alt="Master Chief" />
+			<img src="http://www.htmldrive.net/edit_media/2010/201007/20100728/Image_Slider/images/star_war.jpg"  alt="Marcus Fenix" rel="marcusCaption" />
+		</div> 
+		<span class="orbit-caption" id="ezioCaption">This is an <em>awesome caption</em> for Ezio. <strong>Note:</strong> This whole image is linked</span>
+		<span class="orbit-caption" id="marcusCaption">This is an <em>awesome caption</em> for Marcus with a <a href="http://www.zurb.com/playground" target="_blank" style="color: #fff">link</a></span>
+	More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+	
+	</body>
+</html>

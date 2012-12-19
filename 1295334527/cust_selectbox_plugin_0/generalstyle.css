@@ -1,0 +1,33 @@
+body{
+	background-color: #efefef;
+}
+a,a:LINK,a:VISITED{color:#27558e;}
+#page_wrapper{
+	border:2px dashed #999;
+	margin: auto;
+	padding:10px 30px 60px 30px ;
+	position:relative;
+	background:#fff;
+	width:800px;
+}
+.code{
+	clear:both;
+}
+label.lbl_header{
+	font-weight: bold;
+	clear:both;
+	display:block;
+	margin-top:25px;
+	border:1px solid #999;
+	padding:2px;
+	background:#efefef;
+}
+h2 div{
+	font-size:12px;
+	font-family: arial,helvetica,san-serif;
+	color:#999;
+}
+.html{
+	color:#999;
+}/* CSS Document */
+

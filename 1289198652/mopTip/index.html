@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Description" content="MopStudio,Miura Hiroki,Jquery,MopTip" />
+<meta name="Keywords" content="MopStudio,Miura Hiroki,Jquery,MopTip" />
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="mopTip/mopTip-2.2.css">
+<script type="text/javascript" src="js/font.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="mopTip/mopTip-2.2.js"></script>
+<script type="text/javascript" src="js/jquery.pngFix-1.2.js"></script>
+<script type="text/javascript" src="js/copy.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+$("#demo1Btn").mopTip({'w':150,'style':"overOut",'get':"#demo1"});
+$("#demo2Btn").mopTip({'w':150,'style':"overClick",'get':"#demo2"});
+$("#demo3Btn").mopTip({'w':150,'style':"overOut",'get':"#demo3"});
+$("#demo4Btn").mopTip({'w':150,'style':"overClick",'get':"#demo4"});
+$("#demo5Btn").mopTip({'w':150,'style':"overOut",'get':"#demo5"});
+});
+</script>
+<title>Jquery Plugin MopTip 2.2 demo</title>
+<style type="text/css">
+<!--
+#demo {
+	top: 0px;
+	width: 100%;
+}
+#demo .expl {
+	background-color: #F8F8F2;
+	margin: 0 20px 0 20px;
+}
+#tipBox1 {
+	position: absolute;
+	left: 150px;
+	top: 120px;
+}
+#tipBox2 {
+	margin-top: 150px;
+}
+#tipBox2case {
+	height: 100px;
+	width: 100%;
+	top: 0px;
+	left:0px;
+	text-align: center;
+}
+#tipBox3 {
+	position: absolute;
+	left: 100px;
+	bottom: 110px;
+}
+#demo3Btn {
+	padding: 5px;
+	width: 100px;
+	margin: 0 5px 0 0;
+	background-color: #AE0000;
+	text-align: center;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+#demo4Btn {
+	padding: 5px;
+	width: 100px;
+	margin: 0 0 0 5px;
+	background-color: #AE0000;
+	text-align: center;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+#tipBox4case {
+	position: absolute;
+	right: 120px;
+	top: 180px;
+}
+.demo4Case {
+	height: 220px;
+	width: 250px;
+	text-align: left;
+	padding: 10px;
+}
+.mopTipCase {
+	width: 600px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#tipBox5case {
+	position: absolute;
+	right: 100px;
+	bottom: 150px;
+}
+#demo5Btn {
+	width: 100px;
+	padding: 30px 0 30px 0;
+	background-color: #AE0000;
+	text-align: center;
+	color: #FFFFFF;
+	cursor: pointer;
+	margin: 0 0 0 5px;
+}
+#footerBoxForThisPage {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+}
+.setMiddle {
+	vertical-align: middle;
+}
+.tipTxtcCase {
+	height: 100%;
+}
+.bottomLine {
+	height: 190px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #AE0000;
+	right: 0px;
+}
+.bottomLineIn {
+	padding: 3px 0 0 10px;
+	color: #AE0000;
+}
+
+-->
+</style>
+</head>
+<body>
+<div id="demo">
+  <div class="space20"></div>
+  <div class="expl contentCenter">
+    <div class="contentCenter pad10_0_10_0 18F bold">MopTip2.2Demo</div>
+    <div class="normalF gray pad0_0_10_0"> | <a class="navi eng" href="mopTip2descrip.html">document</a> | </div>
+
+    <div class="check"></div>
+  </div>
+</div>
+  <div id="tipBox2" class="contentCenter"><span class="gray eng f12">$(&quot;#demo2Btn&quot;).mopTip({'w':150,'style':&quot;overClick&quot;,'get':&quot;#demo2&quot;}); </span><a id="demo2Btn" class="navi f14 bold" href="#">demo2</a>
+</div>
+<div class="bottomLine f12 gray">
+
+  <div class="bottomLineIn">bottom:200px Default vertical Line of Changing shape</div>
+</div>
+<div id="tipBox1">
+  <div><a id="demo1Btn" class="navi f14 bold" href="#">demo1</a><span class="gray eng f12"> $(&quot;#demo1Btn&quot;).mopTip({'w':150,'style':&quot;overOut&quot;,'get':&quot;#demo1&quot;});</span></div>
+</div>
+
+<div id="tipBox3">
+  <table class="f_left" height="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    	<td class="setMiddle"><div id="demo3Btn" class="f_right f14 bold">demo3</div></td>
+      <td class="setMiddle"><span class="gray eng f12">$(&quot;#demo3Btn&quot;).mopTip({'w':150,'style':&quot;overOut&quot;,'get':&quot;#demo3&quot;});</span></td>
+
+      
+    </tr>
+  </table>
+</div>
+<div id="tipBox4case">
+  <table class="f_left" height="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="setMiddle"><span class="gray eng f12">$(&quot;#demo4Btn&quot;).mopTip({'w':150,'style':&quot;overClick&quot;,'get':&quot;#demo4&quot;});</span></td>
+
+      <td class="setMiddle"><div id="demo4Btn" class="f_right f14 bold">demo4</div></td>
+    </tr>
+  </table>
+</div>
+<div id="tipBox5case">
+  <table class="f_left" height="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="pad5_0_0_0 f12 eng gray" valign="top">$(&quot;#demo5Btn&quot;).mopTip({'w':150,'style':&quot;overOut&quot;,'get':&quot;#demo5&quot;});</td>
+
+      <td valign="middle"><div id="demo5Btn" class="f_right f14 bold">demo5</div></td>
+    </tr>
+  </table>
+</div>
+<div id="footerBoxForThisPage" class="normalF gray contentCenter">
+  <div id="mailto"><a class="navi eng" href="mailto:info@mopstudio.jp">info@mopstudio.jp</a></div>
+  <div id="url"><a class="navi smallF eng" href="http://www.mopstudio.jp">www.mopstudio.jp</a></div>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+  <div id="copyright">Copyright</div>
+
+  <div class="space10"></div>
+</div>
+<div class="hidden">
+  <div id="demo1">"overOut" txt txt txt txt txt txt txt</div>
+  <div id="demo2">"overClick" txt txt txt txt txt txt txt</div>
+  <div id="demo3"><img class="f_left" src="jpg4.jpg" />"overOut" txt txt txt txt txt txt txt</div>
+  <div id="demo4"><img class="f_left" src="jpg4.jpg" />"overClick" txt txt txt txt txt txt txt</div>
+  <div id="demo5"><img class="f_left" src="jpg4.jpg" />"overOut" txt txt txt txt txt txt txt</div>
+
+</div>
+<!--analytics-->
+<script type="text/javascript">
+　var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+　document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+　var pageTracker = _gat._getTracker("UA-3324600-1");
+　pageTracker._initData();
+　pageTracker._trackPageview();
+</script>
+</body>
+</html>

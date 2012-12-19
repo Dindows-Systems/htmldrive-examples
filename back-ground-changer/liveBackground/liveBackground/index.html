@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Webspeaks.in | Live background change with jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style>
+body{background-color:#CCCCCC;}
+#main{margin:0; position:absolute; width:100%; text-align:center;bottom:100px;}
+ul.menu{list-style-type:none;}
+ul.menu li{ display:inline;}
+img{height:90px; width:105px; border:5px solid #333333; padding:2px;-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	cursor:pointer;
+	margin:5px;
+}
+img:hover{border-color:#990099;}
+.text a{background-color:#33CCCC; color:#FFFFFF; font-size:20px; font-weight:bold;
+	font-family:Georgia, "Times New Roman", Times, serif; height:40px; line-height:40px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	margin:10px;
+	padding:10px;
+	text-decoration:none;
+}
+.text .small{ font-size:16px;}
+.text .title{ color:#993366;}
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('ul.menu').find('img').fadeTo('slow', 1);
+	$('ul.menu').find('img').hover(function(){
+		$(this).fadeTo('fast', 0.7);
+		$('body').css({ 'background-image' : 'url('+$(this).attr('src')+')' });
+	}, function(){
+		$(this).fadeTo('slow', 1);
+	});
+});
+</script>
+</head>
+
+<body>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+<div id="main">
+	<div class="text"><a href="#">Live background change using jQuery <span class="small">by</span> <span class="title">Webspeaks.in</span></a></div>
+	<div>
+		<ul class="menu">
+			<li><img src="1.gif" /></li>
+			<li><img src="2.jpg" /></li>
+			<li><img src="3.png" /></li>
+			<li><img src="4.jpg" /></li>
+			<li><img src="5.png" /></li>
+			<li><img src="6.jpg" /></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

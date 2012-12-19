@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Windows 7 menu</title>
+    <script src="jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#bkg1").click(function(){
+                $("body").css("background","#fff url(bkg.jpg) no-repeat scroll center center");
+            });    
+            $("#bkg2").click(function(){
+                $("body").css("background","#fff url(bkg2.jpg) no-repeat scroll center center");
+            });    
+            $("#bkg3").click(function(){
+                $("body").css("background","#fff url(bkg3.jpg) no-repeat scroll center center");
+            });    
+        });
+    </script>
+    <style type="text/css">
+        body { font-family:Segoe UI, Arial, Sans-Serif; font-size:12px; color:#4b4b4b; background:#fff url(bkg.jpg) no-repeat scroll center center;}
+        #meta { position:absolute; top:70px; right:20px; }
+        #meta div { padding:20px; color:#000; margin: 0 0 20px;
+                -moz-border-radius:5px;-webkit-border-radius:5px;
+                background:rgba(255,255,255,0.50)}
+        #meta a {color:#005aff;}
+        #meta a img {margin:0 10px 0 0; border:solid 1px #000;}  
+              
+        #startmenu { border:solid 1px #102a3e; overflow:visible; display:inline-block; margin:60px 0 0 20px;
+                     -moz-border-radius:5px;-webkit-border-radius:5px; position:relative;
+                     box-shadow: inset 0 0 1px #fff; -moz-box-shadow: inset 0 0 1px #fff; -webkit-box-shadow: inset 0 0 1px #fff;
+                     background-color:#619bb9;
+                     background: -moz-linear-gradient(top, rgba(50, 123, 165, 0.75), rgba(46, 75, 90, 0.75) 50%, rgba(92, 176, 220, 0.75));
+                     background: -webkit-gradient(linear, center top, center bottom, from(#327aa4),color-stop(45%, #2e4b5a), to(#5cb0dc)); }
+        #programs, #links {float:left; display:block; padding:0; list-style:none;}
+        #programs { background:#fff; border:solid 1px #365167; margin:7px 0 7px 7px;
+                    box-shadow: 0 0 1px #fff; -moz-box-shadow: 0 0 1px #fff; -webkit-box-shadow: 0 0 1px #fff;
+                    -moz-border-radius:3px;-webkit-border-radius:3px;}
+        #programs a { border:solid 1px transparent; display:block; padding:3px; margin:3px; 
+                      color:#4b4b4b; text-decoration:none; min-width:220px;}
+        #programs a:hover {border:solid 1px #7da2ce; 
+                     -moz-border-radius:3px; -webkit-border-radius:3px;
+                     box-shadow: inset 0 0 1px #fff; -moz-box-shadow: inset 0 0 1px #fff; -webkit-box-shadow: inset 0 0 1px #fff;
+                     background-color:#cfe3fd;
+                     background: -moz-linear-gradient(top, #dcebfd, #c2dcfd);
+                     background: -webkit-gradient(linear, center top, center bottom, from(#dcebfd), to(#c2dcfd));}
+        #programs a img {border:0; vertical-align:middle; margin:0 5px 0 0;}             
+        #links {margin:7px; margin-top:-30px;}
+        #links li.icon {text-align:center;}
+        #links a {border:solid 1px transparent; display:block; margin:5px 0; position:relative;
+                      color:#fff; text-decoration:none; min-width:120px;}
+        #links a:hover {border:solid 1px #000;
+                     -moz-border-radius:3px; -webkit-border-radius:3px;
+                     box-shadow: 0 0 1px #fff; -moz-box-shadow: inset 0 0 1px #fff; -webkit-box-shadow: inset 0 0 1px #fff;
+                     background-color:#658da0;
+                     background: -moz-linear-gradient(center left, rgba(81,115,132,0.55), rgba(121,163,184,0.55) 50%, rgba(81,115,132,0.55));
+                     background: -webkit-gradient(linear, 0% 100%, 100% 100%, from(#517384), color-stop(50%, #79a3b8), to(#517384)); 
+                     }
+        #links a span { padding:5px; display:block; }
+        #links a:hover span  { background: -moz-linear-gradient(center top, transparent, transparent 49%, rgba(2,37,58,0.5) 50%, rgba(63,111,135,0.5));
+                    background: -webkit-gradient(linear, center top, center bottom, from(transparent), color-stop(49%, transparent), 
+                               color-stop(50%, rgba(2,37,58,0.5)), to(rgba(63,111,135,0.5))); }
+    </style>
+</head>
+<body>
+    <div id="startmenu">
+        <ul id="programs">
+            <li><a href="#"><img src="firefox-32.png" alt="" />Mozilla Firefox</a></li>
+            <li><a href="#"><img src="chrome.png" alt="" />Google Chrome</a></li>
+            <li><a href="#"><img src="safari.png" alt="" />Safari</a></li>
+            <li><a href="#"><img src="opera.png" alt="" />Opera</a></li>
+            <li><a href="#"><img src="ie.png" alt="" />Internet Explorer</a></li>
+            <li><a href="#"><img src="rss_32.png" alt="" />RSS Feeds</a></li>
+            <li><a href="#"><img src="twitter_32.png" alt="" />Twitter</a></li>
+            <li><a href="#"><img src="delicious_32.png" alt="" />Delicious</a></li>
+        </ul>
+        <ul id="links">
+            <li class="icon"><img src="folder.png" alt="" /></li>
+            <li><a href="#"><span>Documents</span></a></li>
+            <li><a href="#"><span>Pictures</span></a></li>
+            <li><a href="#"><span>Music</span></a></li>
+            <li><a href="#"><span>Computer</span></a></li>
+            <li><a href="#"><span>Network</span></a></li>
+            <li><a href="#"><span>Connect to</span></a></li>
+        </ul>
+    </div>
+    <p style="margin-left:20px; color:#000;">This menu is creted using CSS3 only (except for icons)<br />
+    More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></p>
+    <div id="meta">
+        <div>
+            <h1>Create Windows 7 start menu using CSS3 only</h1>
+            <h3><a href="#">Visit the tutorial if you want to se how to create this.</a></h3>
+        </div>
+        <div>
+            <h4>Click on image to change background</h4>
+            <a id="bkg1" href="#"><img src="bkg_small.jpg" alt="" /></a>
+            <a id="bkg2" href="#"><img src="bkg2_small.jpg" alt="" /></a>
+            <a id="bkg3" href="#"><img src="bkg3_small.jpg" alt="" /></a>
+        </div>
+    </div>
+</body>
+</html>

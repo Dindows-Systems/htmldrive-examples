@@ -1,0 +1,191 @@
+/* 
+
+Css Chart created by Alen Grakalic
+Brought to you by Css Globe (cssglobe.com)
+
+*/
+ul.xAxis{margin:0 0 0 27px;padding:0;float:left;clear:left;display:inline;width:454px;}
+ul.yAxis{margin:14px 0 0 0;padding:0;display:inline;float:left;}
+ul.xAxis li{float:left; list-style:none;width:33px;text-align:center;}
+ul.yAxis li{
+	list-style:none;
+	height:33px;
+	text-align:right;
+	float:left;
+	clear:left;
+}
+dl#csschart, dl#csschart dt, dl#csschart dd{
+	margin:0;
+	padding:0;
+	} 	
+dl#csschart{
+	background:url(../images/bg_chart.gif) no-repeat 0 0;
+	width:454px;
+	height:360px;
+	padding-left:11px;
+	float:left;
+	} 
+dl#csschart dt{
+	display:none;
+	}
+dl#csschart dd{
+	position:relative;
+	float:left;
+	display:inline;
+	width:33px;
+	height:330px;
+	margin-top:22px;		
+	} 
+dl#csschart span{
+	position:absolute;
+	display:block;
+	width:33px;	
+	bottom:0;
+	left:0;	
+	z-index:1;
+	color:#555;
+	text-decoration:none;
+	} 		
+dl#csschart span b{
+	display:block;
+	font-weight:bold;
+	font-style:normal;
+	float:left;
+	line-height:200%;
+	color:#fff;
+	position:absolute;
+	top:5px;
+	left:3px;
+	text-align:center;
+	width:23px;
+	} 		
+
+/* default column styling */		
+
+	dl#csschart span{
+		height:50%;
+		background:url(../images/bar.png) repeat-y;
+		} 
+
+
+dl#csschart .sub{
+	margin-left:-33px;
+	
+}
+dl#csschart .sub span{
+	background:url(../images/subBar.png) repeat-y;
+}
+
+/* // column types */	
+
+/* percentages */
+
+	dl#csschart .p1 span{height:1%}
+	dl#csschart .p2 span{height:2%}
+	dl#csschart .p3 span{height:3%}
+	dl#csschart .p4 span{height:4%}
+	dl#csschart .p5 span{height:5%}
+	dl#csschart .p6 span{height:6%}
+	dl#csschart .p7 span{height:7%}
+	dl#csschart .p8 span{height:8%}
+	dl#csschart .p9 span{height:9%}
+	dl#csschart .p10 span{height:10%}
+	dl#csschart .p11 span{height:11%}
+	dl#csschart .p12 span{height:12%}
+	dl#csschart .p13 span{height:13%}
+	dl#csschart .p14 span{height:14%}
+	dl#csschart .p15 span{height:15%}
+	dl#csschart .p16 span{height:16%}
+	dl#csschart .p17 span{height:17%}
+	dl#csschart .p18 span{height:18%}
+	dl#csschart .p19 span{height:19%}
+	dl#csschart .p20 span{height:20%}
+	dl#csschart .p21 span{height:21%}
+	dl#csschart .p22 span{height:22%}
+	dl#csschart .p23 span{height:23%}
+	dl#csschart .p24 span{height:24%}
+	dl#csschart .p25 span{height:25%}
+	dl#csschart .p26 span{height:26%}
+	dl#csschart .p27 span{height:27%}
+	dl#csschart .p28 span{height:28%}
+	dl#csschart .p29 span{height:29%}
+	dl#csschart .p30 span{height:30%}
+	dl#csschart .p31 span{height:31%}
+	dl#csschart .p32 span{height:32%}
+	dl#csschart .p33 span{height:33%}
+	dl#csschart .p34 span{height:34%}
+	dl#csschart .p35 span{height:35%}
+	dl#csschart .p36 span{height:36%}
+	dl#csschart .p37 span{height:37%}
+	dl#csschart .p38 span{height:38%}
+	dl#csschart .p39 span{height:39%}
+	dl#csschart .p40 span{height:40%}
+	dl#csschart .p41 span{height:41%}
+	dl#csschart .p42 span{height:42%}
+	dl#csschart .p43 span{height:43%}
+	dl#csschart .p44 span{height:44%}
+	dl#csschart .p45 span{height:45%}
+	dl#csschart .p46 span{height:46%}
+	dl#csschart .p47 span{height:47%}
+	dl#csschart .p48 span{height:48%}
+	dl#csschart .p49 span{height:49%}
+	dl#csschart .p50 span{height:50%}
+	dl#csschart .p51 span{height:51%}
+	dl#csschart .p52 span{height:52%}
+	dl#csschart .p53 span{height:53%}
+	dl#csschart .p54 span{height:54%}
+	dl#csschart .p55 span{height:55%}
+	dl#csschart .p56 span{height:56%}
+	dl#csschart .p57 span{height:57%}
+	dl#csschart .p58 span{height:58%}
+	dl#csschart .p59 span{height:59%}
+	dl#csschart .p60 span{height:60%}
+	dl#csschart .p61 span{height:61%}
+	dl#csschart .p62 span{height:62%}
+	dl#csschart .p63 span{height:63%}
+	dl#csschart .p64 span{height:64%}
+	dl#csschart .p65 span{height:65%}
+	dl#csschart .p66 span{height:66%}
+	dl#csschart .p67 span{height:67%}
+	dl#csschart .p68 span{height:68%}
+	dl#csschart .p69 span{height:69%}
+	dl#csschart .p70 span{height:70%}
+	dl#csschart .p71 span{height:71%}
+	dl#csschart .p72 span{height:72%}
+	dl#csschart .p73 span{height:73%}
+	dl#csschart .p74 span{height:74%}
+	dl#csschart .p75 span{height:75%}
+	dl#csschart .p76 span{height:76%}
+	dl#csschart .p77 span{height:77%}
+	dl#csschart .p78 span{height:78%}
+	dl#csschart .p79 span{height:79%}
+	dl#csschart .p80 span{height:80%}
+	dl#csschart .p81 span{height:81%}
+	dl#csschart .p82 span{height:82%}
+	dl#csschart .p83 span{height:83%}
+	dl#csschart .p84 span{height:84%}
+	dl#csschart .p85 span{height:85%}
+	dl#csschart .p86 span{height:86%}
+	dl#csschart .p87 span{height:87%}
+	dl#csschart .p88 span{height:88%}
+	dl#csschart .p89 span{height:89%}
+	dl#csschart .p90 span{height:90%}
+	dl#csschart .p91 span{height:91%}
+	dl#csschart .p92 span{height:92%}
+	dl#csschart .p93 span{height:93%}
+	dl#csschart .p94 span{height:94%}
+	dl#csschart .p95 span{height:95%}
+	dl#csschart .p96 span{height:96%}
+	dl#csschart .p97 span{height:97%}
+	dl#csschart .p98 span{height:98%}
+	dl#csschart .p99 span{height:99%}
+	dl#csschart .p100 span{height:100%}
+
+
+/* // percentages */				
+	
+	
+	
+	
+	
+	

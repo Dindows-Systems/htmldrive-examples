@@ -1,0 +1,134 @@
+/* foundation */
+
+body {
+	font: 100% normal "Arial", "Helvetica", sans-serif;
+}
+#books {
+	width: 515px; /* optional */
+}
+#books img {
+	border: 0;
+}
+#books .clear_both {
+	clear: both;
+}
+#books .float_left,
+#books  ul li {
+	float: left;
+	display: inline;
+}
+#books .float_right {
+	float: right;
+}
+#books .overclear {
+	width: 100%;
+	overflow: hidden;
+}
+
+/* styles */
+
+#books .buttons {
+	position: relative;
+	height: 30px;
+	margin: 0 0 5px 0;
+}
+#books .prev {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+}
+#books .next {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#books .showing {
+	margin: 5px 60px 0 60px;
+	text-align: center;
+	font-size: .8em;
+}
+#books .top {
+	background: url(../images/books_top.gif) repeat-x;
+}
+#books .inner {
+	padding: 0 0 0 20px;
+	margin: 0 0 -20px 0;
+	background: url(../images/books_left_mid.gif) repeat-y;
+}
+#books  ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background: url(../images/books_right_mid.gif) repeat-y top right;
+}
+#books  ul li {
+	display: none;
+	position: relative;
+	margin: 0;
+	padding: 0 20px 20px 0;
+	font-size: .8em;
+	z-index: 1;
+}
+#books  ul li.loader {
+	display: block;
+	float: none;
+	height: 115px;
+	margin: 0 0 20px -20px;
+	background: url(../images/books_loader.gif) no-repeat center center;
+}
+#books  ul li a.info {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+#books  ul li a.thumb {
+	display: block;
+	border: 1px solid #ddd;
+}
+#books  ul li a.thumb img {
+	display: block;
+	margin: 0;
+	padding: 3px;
+}
+#books .btm {
+	background: url(../images/books_btm.gif) repeat-x;
+}
+.books_tool_tip {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 350px;
+	z-index: 9999;
+}
+.books_tool_tip .books_pointer_left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	background: url(../images/books_pointer_left.gif);
+}
+.books_tool_tip .books_pointer_right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	background: url(../images/books_pointer_right.gif);
+}
+.books_tool_tip .inner {
+	border: 1px solid #ddd;
+	padding: 15px 15px 3px 15px;
+	margin: 0 0 0 9px;
+	background: #fff;
+}
+.books_tool_tip .inner_right {
+	margin: 0 9px 0 0;
+}
+.books_tool_tip .inner p {
+	font-size: .8em;
+	margin: 0;
+	padding: 0 0 12px 0;
+}

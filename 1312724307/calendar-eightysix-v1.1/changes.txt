@@ -1,0 +1,18 @@
+Version 1.1
+
+    * Created a workaround for the MooTools Date parser bug with - as delimiter;
+    * Added new function getDate;
+    * Added date correction functionality, which tries to correct the date if it is outside the maximum or minimum date, a exluded weekday or exluded date.
+    * Added arrow key navigation option;
+    * Fixed disappearing navigation arrow bug in month view;
+    * Changes css names to more unique names;
+    * Dates are now stored instead of set on the elements;
+    * Removed pickFunction, use events instead;
+    * Added event functionality;
+    * Included more examples.
+
+Version 1.0.1
+
+    * linkWithInput weekday render bug fixed. If a textinput field was changed the weekdays would render incorrecly;
+    * linkWithInput empty input bug fixed. When a textfield was emptied by the user a default date of 1 January 1970 is choosen. This is changed to the current date;
+    * Added new function setDate, with which you can set the calendars date easily.

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head profile="http://gmpg.org/xfn/11">
+		<link rel="stylesheet" type="text/css" href="css/slidenote.demo.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.slidenote.css" media="screen" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slidenote.js"></script>
+		<title>slideNote Demo</title>
+	</head>
+	<body><h2>Please scroll down the mouse
+</h2>
+		<div id="note" class="slidenote"></div>
+		<div id="leftNote" class="slidenote">
+			<h2>Important Notes...</h2>
+			<span>
+				<em>
+					Don't miss this stuff!
+				</em>
+			</span>
+			<p>
+				This is the stuff we want to appear as we scroll down the page.
+			</p>
+		</div>
+		<script type="text/javascript">
+$('#leftNote').slideNote({
+	corner: 'left',
+	where: 340
+});
+
+$('#note').slideNote({ 
+	url: 'ajax.html',
+	closeImage: 'images/slidenote.close.png'
+});
+		</script>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 
+
+Library">www.htmldrive.net </a>
+	</body>
+</html>
+	

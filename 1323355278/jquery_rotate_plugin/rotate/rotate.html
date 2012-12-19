@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="jquery-1.6.4.min.js"></script>
+    <script src="jquery.rotate.js"></script>
+    <script>
+        $(function() {
+            $("#content").myrotate();
+            $("#circle").myrotate();
+        });
+    </script>
+    <style>
+        body {
+            background: #fff url('px_by_Gre3g.png') repeat top right;
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background: #0099cc;
+            margin-top: 0;
+            padding: 2px 0 4px 0;
+            text-align: center;
+        }
+        #main a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: Arial;
+            text-shadow: -1px -1px 1px #999;
+        }
+        #main a:hover {
+            text-decoration: underline;
+        }
+        #container {
+            width:780px;
+            margin:0 auto;
+        }
+        #help {
+            color: #fff;
+            font-size: 34px;
+            text-align: center;
+            margin-top: 40px;
+            text-shadow: -1px -1px 1px #666;
+        }
+        #content, #circle {
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            margin-top: 60px;
+            padding:20px;
+            background:#f3f3f3;
+            -webkit-border-radius: .8em;
+            -moz-border-radius: .8em;
+            border-radius: .8em;
+            float: left;
+            margin-right: 50px;
+        }
+        #content img {
+            -webkit-box-shadow: 0 0 2px #999;
+            -moz-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+            -webkit-border-radius: .8em;
+            -moz-border-radius: .8em;
+            border-radius: .8em;
+        }
+        #circle img {
+            -webkit-box-shadow: 0 0 2px #999;
+            -moz-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+            -webkit-border-radius: 8.8em;
+            -moz-border-radius: 8.8em;
+            border-radius: 8.8em;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+      <a href="http://superdit.com">Superdit.com</a>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+  </div>
+    <div id="container">
+        <div id="help">
+            Click on the image & move mouse to rotate<br/>
+            Click again or leave mouse from image to stop rotating
+        </div>
+        
+        <div id="content">
+            <img src="img.jpg"/>
+        </div>
+
+        <div id="circle">
+            <img src="img.jpg"/>
+        </div>
+    </div>
+	
+</body>
+</html>

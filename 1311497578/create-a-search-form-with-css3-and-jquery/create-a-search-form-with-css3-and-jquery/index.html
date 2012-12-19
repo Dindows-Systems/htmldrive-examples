@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Search-Form - Demo</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2'></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+	
+	// Add the value of "Search..." to the input field
+	$("#search").val("Search...");
+	
+	// When you click on #search
+	$("#search").focus(function(){
+		
+		// If the value is equal to "Search..."
+		if($(this).val() == "Search...") {
+			// remove all the text
+			$(this).val("");	
+		}
+		
+	});
+	
+	// When the focus on #search is lost
+	$("#search").blur(function(){
+		
+		// If the input field is empty
+		if($(this).val() == "") {
+			// Add the text "Search..."
+			$(this).val("Search...");	
+		}
+		
+	});
+	
+	$("#search-submit").hover(function(){
+		$(this).addClass("hover");
+	});
+
+});
+</script>
+</head>
+<body>
+	<div id="page-wrap">
+	    <a href="http://css-plus.com/2010/06/create-a-search-form-with-css3-and-jquery/" id="post-return">Return to post</a>
+		<div id="content">
+            <h2>Search Form</h2>
+			<form action="" id="search-form">
+                <fieldset>
+                    <input type="text" id="search" name="search" />
+                    <input type="submit" id="search-submit" value="" />
+                </fieldset>
+            </form>
+		</div>
+	</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+</body>
+</html>

@@ -1,0 +1,139 @@
+body {
+	margin:0;
+	padding:0;
+	font-family:Arial;
+}
+
+@font-face {
+    font-family: 'Social';
+    src: url('./fonts/socialicons-webfont.eot');
+    src: url('./fonts/socialicons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/socialicons-webfont.woff') format('woff'),
+         url('./fonts/socialicons-webfont.ttf') format('truetype'),
+         url('./fonts/socialicons-webfont.svg#SocialIconsMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#content {
+	width:960px;
+	margin:100px auto;
+	background:#ccc;
+	padding:20px 0;
+}
+
+#content .menu {
+	text-align:center;
+	padding-top:30px;
+}
+
+#content .menu .primary-menu {
+	list-style-type:none;
+	position:relative;
+}
+
+#content .menu .primary-menu li {
+	display:inline;
+	text-align:center;
+	margin:0 10px;
+	position:relative;
+}
+
+#content .menu .primary-menu li a {
+	position:relative;
+	text-decoration:none;
+	font-family:'Social' !important;
+	font-size:25px;
+	background:#d9d9d9;
+	display:inline-block;
+	width:50px;
+	height:35px;
+	padding-top:15px;
+	color:#fff;
+	border:3px solid #fff;
+	
+	-webkit-border-radius:100px;
+	-moz-border-radius:100px;
+	-o-border-radius:100px;
+	-ms-border-radius:100px;
+	-khtml-border-radius:100px;
+	border-radius:100px;
+	
+	-webkit-box-shadow:0 0 1px 1px #afafaf;
+	-moz-box-shadow:0 0 1px 1px #afafaf;
+	-o-box-shadow: 0 0 1px 1px #afafaf;
+	-ms-box-shadow: 0 0 1px 1px #afafaf;
+	-khtml-box-shadow:0 0 1px 1px #afafaf;
+	box-shadow:0 0 1px 1px #afafaf;
+	
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	-o-transition:all 1s;
+	-ms-transition:all 1s;
+	-khtml-transition:all 1s;
+	transition:all 1s;
+	
+	behavior: url(pie/PIE.htc); /* CSS3 Fix for Internet Explorer */
+}
+
+#content .menu .primary-menu li.facebook a:hover { background:#00438f;}
+#content .menu .primary-menu li.twitter a:hover { background:#00b8df;}
+#content .menu .primary-menu li.flickr a:hover { background:#df00bd;}
+#content .menu .primary-menu li.rss a:hover { background:#ff7800;}
+#content .menu .primary-menu li.mail a:hover { background:#1d1d1d;}
+
+#content .menu .primary-menu li a:hover {
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-khtml-transform: rotate(360deg);
+	transform: rotate(360deg);
+	
+	behavior: url(pie/PIE.htc); /* CSS3 Fix for Internet Explorer */
+}
+
+#content .menu .primary-menu li span.social-span {
+	font-family:Arial;
+	font-size:11px;
+	position:absolute;
+	width:100px;
+	top:45px;
+	left:-45%;
+	background:#ffffff;
+	padding:5px;
+	border:1px solid #B8B8B8;
+	opacity:0;
+	
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;
+	-ms-border-radius:10px;
+	-khtml-border-radius:10px;
+	border-radius:10px;
+	
+	-webkit-transition:opacity 1s ease-in-out;
+	-moz-transition:opacity 1s ease-in-out;
+	-o-transition:opacity 1s ease-in-out;
+	-ms-transition:opacity 1s ease-in-out;
+	-khtml-transition:opacity: 1s ease-in-out;
+	transition:opacity 1s ease-in-out;
+	
+	behavior: url(pie/PIE.htc); /* CSS3 Fix for Internet Explorer */
+}
+
+#content .menu .primary-menu li a:hover ~ span.social-span {
+	opacity:1;
+}
+
+#content .menu .primary-menu li span.social-span:after {
+	content:"";
+	position:absolute;
+	border-color:#fff transparent;
+	display:block;
+	top:-7px;
+	left:40%;
+	width:0;
+	border-width:0 7px 7px;
+	border-style:solid;
+}

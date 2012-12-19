@@ -1,0 +1,163 @@
+body,h1,h2,h3,p,quote,small,form,input,ul,li,ol,label{
+	/* Simple page reset */
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	/* Setting default text color, background and a font stack */
+	color:#eeeeee;
+	font-size:13px;
+	background: #1b232a;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+/* The code for the share box starts here: */
+
+#share{
+	/* The share box container */
+	width:500px;
+	background:#ececec;
+	height:220px;
+	margin:60px auto;
+	overflow:hidden;
+	
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+}
+
+#share-label{
+	/* The image on the right */
+	background:url(img/share.png) no-repeat 50% 50%;
+	float:left;
+	height:220px;
+	width:200px;
+}
+
+#stage{
+	/* This is where the animation takes place */
+	position:relative;
+	
+	border-right:1px solid #DDDDDD;
+	width:290px;
+	height:220px;
+	background:white;
+	float:left;
+	
+	border-bottom-left-radius:12px;
+	border-top-left-radius:12px;
+	
+	-moz-border-radius-bottomleft:12px;
+	-moz-border-radius-topleft:12px;
+	
+	-webkit-border-bottom-left-radius:12px;
+	-webkit-border-top-left-radius:12px;
+}
+
+.btn{
+	/* This class is assigned to every share button */
+	background-color:white;
+	height:90px;
+	left:0;
+	top:0;
+	width:60px;
+	position:relative;
+	margin:20px 0 0 10px;
+	float:left;
+}
+
+.bcontent{
+	/* Positioned inside the .btn container */
+	position:absolute;
+	top:auto;
+	bottom:20px;
+	left:0;
+}
+
+/* Individual rules for every share button */
+
+.digg{	background:url(img/digg_reflection.png) no-repeat -4px bottom;}
+.reddit{	background:url(img/reddit_reflection.png) no-repeat -4px bottom;}
+.facebook{	background:url(img/facebook_reflection.png) no-repeat bottom center;}
+.tweetmeme{	background:url(img/twit_reflection.png) no-repeat -5px bottom;}
+.dzone{	background:url(img/dzone_reflection.png) no-repeat -7px bottom;}
+
+.thanksto{
+	position:absolute;
+	bottom:2px;
+	right:110px;
+	font-size:10px;
+}
+
+.thanksto a,.thanksto a:visited{
+	color:#BBB;
+}
+
+/* Customizing the facebook share button */
+
+span.fb_share_no_count {
+	display:block;
+}
+
+span.fb_share_count_top.fb_share_no_count {
+	line-height:54px;
+}
+
+span.fb_share_count_nub_top.fb_share_no_count{
+	display:none;
+}
+
+span.fb_share_no_count span.fb_share_count_inner {
+	background:#3B5998 url(http://static.fbshare.me/f_only.png) no-repeat scroll 20px 5px;
+	display:block;
+}
+
+/* The styles below are only necessary for the demo page */
+
+h1{
+	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+	font-size:36px;
+	font-weight:normal;
+	margin-bottom:15px;
+}
+
+h2{
+	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	padding-right:140px;
+	right:0;
+	text-align:right;
+	text-transform:uppercase;
+	top:15px;
+}
+
+.clear{
+	clear:both;
+}
+
+#main{
+	/* The main container */
+	margin:15px auto;
+	text-align:center;
+	width:865px;
+	position:relative;
+}
+
+
+a, a:visited {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+p{
+	/* The tut info on the bottom of the page */
+	padding:10px;
+	text-align:center;
+}

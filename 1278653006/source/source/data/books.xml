@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book>
+		<title><![CDATA[Design Patterns: Elements of Reusable Object-Oriented Software]]></title>
+		<author>Erich Gamma, Richard Helm, Ralph Johnson, John M. Vlissides</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0201633612.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Design-Patterns-Object-Oriented-Addison-Wesley-Professional/dp/0201633612/]]></href>
+		<reviews>
+			<total>250</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[The Pragmatic Programmer: From Journeyman to Master]]></title>
+		<author>Andrew Hunt, David Thomas</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_020161622X.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/]]></href>
+		<reviews>
+			<total>131</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Refactoring: Improving the Design of Existing Code]]></title>
+		<author>Martin Fowler, Kent Beck, John Brant, William Opdyke</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0201485672.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Technology/dp/0201485672/]]></href>
+		<reviews>
+			<total>139</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Patterns of Enterprise Application Architecture]]></title>
+		<author>Martin Fowler</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0321127420.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Enterprise-Application-Architecture-Addison-Wesley-Signature/dp/0321127420/]]></href>
+		<reviews>
+			<total>56</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Head First Design Patterns]]></title>
+		<author>Elisabeth Freeman, Eric Freeman, Bert Bates, Kathy Sierra</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0596007124.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Head-First-Design-Patterns/dp/0596007124/]]></href>
+		<reviews>
+			<total>252</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Introduction to Algorithms]]></title>
+		<author>Thomas Cormen, Charles Leiserson, Ronald Rivest, Clifford Stein</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0262032937.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Introduction-Algorithms-Thomas-Cormen/dp/0072970545/]]></href>
+		<reviews>
+			<total>167</total>
+			<average_rating>4.0</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[The Mythical Man-Month: Essays on Software Engineering, Anniversary Edition (2nd Edition)]]></title>
+		<author>Frederick P. Brooks</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0201835959.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959/]]></href>
+		<reviews>
+			<total>128</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Effective Java (2nd Edition)]]></title>
+		<author>Joshua Bloch</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0321356683.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Effective-Java-2nd-Joshua-Bloch/dp/0321356683/]]></href>
+		<reviews>
+			<total>120</total>
+			<average_rating>5.0</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Mastering Regular Expressions]]></title>
+		<author>Jeffrey Friedl</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0596528124.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Mastering-Regular-Expressions-Jeffrey-Friedl/dp/0596528124/]]></href>
+		<reviews>
+			<total>125</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Introduction to the Theory of Computation, Second Edition]]></title>
+		<author>Michael Sipser</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0534950973.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Introduction-Theory-Computation-Second-Michael/dp/0534950973/]]></href>
+		<reviews>
+			<total>52</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Don&#39;t Make Me Think: A Common Sense Approach to Web Usability (2nd Edition)]]></title>
+		<author>Steve Krug</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0321344758.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758/]]></href>
+		<reviews>
+			<total>453</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[The Visual Display of Quantitative Information, 2nd edition]]></title>
+		<author>Edward R. Tufte</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0961392142.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Visual-Display-Quantitative-Information-2nd/dp/0961392142/]]></href>
+		<reviews>
+			<total>96</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[JavaScript: The Definitive Guide]]></title>
+		<author>David Flanagan</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0596101996.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/]]></href>
+		<reviews>
+			<total>278</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Designing Interfaces: Patterns for Effective Interaction Design]]></title>
+		<author>Jenifer Tidwell</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0596008031.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Designing-Interfaces-Patterns-Effective-Interaction/dp/0596008031/]]></href>
+		<reviews>
+			<total>47</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Universal Principles of Design]]></title>
+		<author>William Lidwell, Kritina Holden, Jill Butler</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_1592530079.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Universal-Principles-Design-William-Lidwell/dp/1592530079/]]></href>
+		<reviews>
+			<total>54</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Ambient Findability: What We Find Changes Who We Become]]></title>
+		<author>Peter Morville</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_0596007655.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Ambient-Findability-What-Changes-Become/dp/0596007655/]]></href>
+		<reviews>
+			<total>46</total>
+			<average_rating>4.0</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[The Search: How Google and Its Rivals Rewrote the Rules of Business and Transformed Our Culture]]></title>
+		<author>John Battelle</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_1591841410.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Search-Rewrote-Business-Transformed-Culture/dp/B000QRIHXE/]]></href>
+		<reviews>
+			<total>99</total>
+			<average_rating>4.5</average_rating>
+		</reviews>
+	</book>
+	<book>
+		<title><![CDATA[Beginning PHP and MySQL 5 (2nd Edition)]]></title>
+		<author>W. Jason Gilmore</author>
+		<image width="95" height="115">
+			<src><![CDATA[images/books/isbn_1590595521.jpg]]></src>
+		</image>
+		<href><![CDATA[http://www.amazon.com/Beginning-PHP-MySQL-Novice-Professional/dp/1590595521/]]></href>
+		<reviews>
+			<total>100</total>
+			<average_rating>4.0</average_rating>
+		</reviews>
+	</book>
+</books>

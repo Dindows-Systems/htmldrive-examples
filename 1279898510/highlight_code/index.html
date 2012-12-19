@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <title>Demo for - 'Highlight your source code with jQuery and Chili'</title>
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/960.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+    <script type="text/javascript" src="js/chili/jquery.chili-2.2.js"></script>
+    <script type="text/javascript" src="js/chili/recipes.js"></script>
+  </head>
+  
+  <body>
+    <div class="container_12" id="wrapper">
+      <div class="grid_8" id="content">
+        <h1>Demo for '<a href="#">Highlight your source code with jQuery and Chili</a>'</h1>
+        
+        <p>
+          In the first example we want to show some jQuery code. Note that the code-box has no horizontal
+          scrollbar because the content fits.          
+        </p>
+        
+        <!-- relevant for the tutorial! - start -->
+<pre class="ln-124"><code class="js">$(document).ready(function() {
+  $('div:first').text('DOM Ready!')
+});</code></pre>
+        <!-- relevant for the tutorial! - end -->
+        
+        <p>
+          In the second example we have some CSS. Note that we now have a horizontal scrollbar because
+          the long lines does not fit in the code-box.
+        </p>
+        
+        <!-- relevant for the tutorial! - start -->
+<pre class="ln-"><code class="css">html { font-size: 16px; }
+body { font-size: 62.5%; font-family: Verdana, Arial, sans-serif; color: #555555; background: #22384d url(../images/bg.jpg) repeat-x; }
+a { color: #0F67A1; text-decoration: none; }
+a:hover { text-decoration: underline; }</code></pre>
+        <!-- relevant for the tutorial! - end -->
+        
+        <div id="footer">
+          More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></a>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<!-- saved from url=(0014)about:internet -->
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Rotating Banner / Image Sequence Sample</title>
+<link href="css/banner.css" rel="stylesheet" type="text/css" /> 
+<link href="css/samplesStyles.css" rel="stylesheet" type="text/css" />
+
+
+<!--Start Glimmer Insertion-->
+<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
+<!--glimmer generated file--><script type='text/javascript' src='js/banner.html.glimmer.js'></script>
+<!--End Glimmer Insertion--></head>
+
+<body>
+	<div id="mainContainer">
+		<div id="topSection">
+				
+				<div>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+					<h3>Rotating Banner / Image-Sequence</h3>
+					<div class="slideshow">
+						<ul class="buttons">
+						<li class="active" id="button1"><a href="#" title="website named desire">1</a></li>
+						<li id="button2"><a href="#" title="">2</a></li>
+						<li id="button3"><a href="#" title="oomph">3</a></li>
+						</ul>
+						
+						<ul class="slides">
+						<li style="visibility:visible" class="slide" id="image1">
+						<a href="#"><img  alt="website named desire" src="images/home_masthead_awnd.jpg" /></a></li>
+						<li class="slide" id="image2">
+						<a href="#"><img  alt="" src="images/home_masthead_mix09.jpg" /></a></li>
+						<li class="slide" id="image3">
+						<a href="#"><img  alt="oomph" src="images/home_masthead_oomph.jpg" /></a></li>
+						</ul>
+					</div>
+		
+					<div class="codeContainer">
+						<h2>HTML</h2>
+						<p>&lt;div class=&quot;slideshow&quot;&gt;<br />
+						&lt;ul class=&quot;buttons&quot;&gt;<br />
+						&lt;li class=&quot;active&quot; id=&quot;button1&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;website named desire&quot;&gt;1&lt;/a&gt;&lt;/li&gt;<br />
+						&lt;li id=&quot;button2&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;2&lt;/a&gt;&lt;/li&gt;<br />
+						&lt;li id=&quot;button3&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;oomph&quot;&gt;3&lt;/a&gt;&lt;/li&gt;<br />
+						<br />
+						&lt;/ul&gt;<br />
+						&lt;ul class=&quot;slides&quot;&gt;<br />
+						&lt;li style=&quot;visibility:visible&quot; class=&quot;slide&quot; id=&quot;image1&quot;&gt;<br />
+						&lt;a href=&quot;http://www.awebsitenameddesire.com&quot;&gt;&lt;img alt=&quot;website named desire&quot; src=&quot;../images/home_masthead_awnd.jpg&quot; 
+						/&gt;&lt;/a&gt;&lt;/li&gt;<br />
+						&lt;li class=&quot;slide&quot; id=&quot;image2&quot;&gt;<br />
+						&lt;a href=&quot;http://2009.visitmix.com&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;../images/home_masthead_mix09.jpg&quot; 
+						/&gt;&lt;/a&gt;&lt;/li&gt;<br />
+						&lt;li class=&quot;slide&quot; id=&quot;image3&quot;&gt;<br />
+						&lt;a href=&quot;http://visitmix.com/lab/oomph&quot;&gt;&lt;img alt=&quot;oomph&quot; src=&quot;../images/home_masthead_oomph.jpg&quot; 
+						/&gt;&lt;/a&gt;&lt;/li&gt;<br />
+						<br />
+						&lt;/ul&gt;<br />
+						&lt;/div&gt;<br />
+						</p>
+				  </div>
+
+						<div class="codeContainer"><h2>CSS</h2>
+						<p>
+						font-family:Arial, Helvetica, sans-serif;<br />
+						font-size:11px;<br />
+						font-weight:bold;<br />
+						margin-left:40px;<br />
+						background-color:#e5e5e5;<br />
+						}<br />
+						<br />
+						/* begin: slideshow */<br />
+						.slideshow {<br />
+						position:relative;<br />
+						padding:0;<br />
+						margin:0;<br />
+						}<br />
+						.slideshow a img {<br />
+						border:none;<br />
+						}<br />
+						.slideshow li.slide {<br />
+						list-style-type:none;<br />
+						}<br />
+						.slideshow .slides {<br />
+						height:260px;<br />
+						margin:0;<br />
+						}<br />
+						.slideshow .slides li.slide {<br />
+						visibility:hidden;<br />
+						position:absolute;<br />
+						left:0px;<br />
+						top:0;<br />
+						}<br />
+						.slideshow .buttons {<br />
+						display:none;<br />
+						}<br />
+						.slideshow .buttons {<br />
+						display:block;<br />
+						position:absolute;<br />
+						z-index:100;<br />
+						left:0px;<br />
+						bottom:20px;<br />
+						margin:0;<br />
+						}<br />
+						.slideshow .buttons li {<br />
+						float:left;<br />
+						display:inline;<br />
+						width:30px;<br />
+						height:30px;<br />
+						margin:0;<br />
+						padding-left:11px;<br />
+						line-height:30px;<br />
+						background-image:url(&#39;buttonBg.png&#39;);<br />
+						background-repeat:no-repeat;<br />
+						}<br />
+						.slideshow .buttons li a {<br />
+						float:left;<br />
+						text-decoration:none;<br />
+						width:30px;<br />
+						height:30px;<br />
+						color:#fff;<br />
+						outline:0;<br />
+						}<br />
+						.slideshow ul.buttons li a:hover {<br />
+						text-decoration:none;<br />
+						color:#0a0a0a;<br />
+						}<br />
+						.slideshow ul.buttons li.active a:hover,<br />
+						.slideshow ul.buttons li.active a {<br />
+						color:#666666;<br />
+						}<br />
+						/* end: slideshow */<br />
+						<br />
+						</p>
+					</div>
+				
+				
+					<div class="codeContainer"><h2>jQuery</h2>
+					</div>
+				</div>
+	  </div>
+		
+			<div id="footer">jQuery(function($) {<br />
+				var timer;<br />
+				function button1_click(event)<br />
+				{<br />
+				$(&quot;.slide&quot;).css(&quot;visibility&quot;,&quot;hidden&quot;);<br />
+				$(&quot;#image1&quot;).css(&quot;visibility&quot;,&quot;visible&quot;);<br />
+				$(&quot;#image1&quot;).css(&quot;opacity&quot;,&quot;0&quot;);<br />
+				$(&quot;#image1&quot;).animate({&quot;opacity&quot;:1},300, &quot;linear&quot;, null);<br />
+				$(&quot;ul.buttons li&quot;).removeClass(&quot;active&quot;);<br />
+				$(&quot;#image1&quot;).animate({&quot;opacity&quot;:1},300, &quot;linear&quot;, null);<br />
+				$(&quot;#button1&quot;).addClass(&quot;active&quot;);<br />
+				clearTimeout(timer);<br />
+				timer = setTimeout(eval(&quot;button2_click&quot;),&quot;3000&quot;);<br />
+				$(&quot;#image1&quot;).animate({&quot;opacity&quot;:1},300, &quot;linear&quot;, null);<br />
+				}<br />
+				<br />
+				function button2_click(event)<br />
+				{<br />
+				$(&quot;.slide&quot;).css(&quot;visibility&quot;,&quot;hidden&quot;);<br />
+				$(&quot;#image2&quot;).css(&quot;visibility&quot;,&quot;visible&quot;);<br />
+				$(&quot;#image2&quot;).css(&quot;opacity&quot;,&quot;0&quot;);<br />
+				$(&quot;#image2&quot;).animate({&quot;opacity&quot;:1},300, &quot;linear&quot;, null);<br />
+				$(&quot;ul.buttons li&quot;).removeClass(&quot;active&quot;);<br />
+				$(&quot;#image2&quot;).animate({&quot;opacity&quot;:1},300, &quot;linear&quot;, null);<br />
+				$(&quot;#button2&quot;).addClass(&quot;active&quot;);<br />
+				clearTimeout(timer);<br />
+				timer = setTimeout(eval(&quot;button3_click&quot;),&quot;3000&quot;);<br />
+				$(&quot;#image2&quot;).animate({&quot;opacity&quot;:1},300, &quot;linear&quot;, null);<br />
+				}<br />
+				<br />
+				function button3_click(event)<br />
+				{<br />
+				$(&quot;.slide&quot;).css(&quot;visibility&quot;,&quot;hidden&quot;);<br />
+				$(&quot;#image3&quot;).css(&quot;visibility&quot;,&quot;visible&quot;);<br />
+				$(&quot;#image3&quot;).css(&quot;opacity&quot;,&quot;0&quot;);<br />
+				$(&quot;#image3&quot;).animate({&quot;opacity&quot;:1},300, &quot;linear&quot;, null);<br />
+				$(&quot;ul.buttons li&quot;).removeClass(&quot;active&quot;);<br />
+				$(&quot;#image3&quot;).animate({&quot;opacity&quot;:1},300, &quot;linear&quot;, null);<br />
+				$(&quot;#button3&quot;).addClass(&quot;active&quot;);<br />
+				clearTimeout(timer);<br />
+				timer = setTimeout(eval(&quot;button1_click&quot;),&quot;3000&quot;);<br />
+				$(&quot;#image3&quot;).animate({&quot;opacity&quot;:1},300, &quot;linear&quot;, null);<br />
+				}<br />
+				<br />
+				function OnLoad(event)<br />
+				{<br />
+				clearTimeout(timer);<br />
+				timer = setTimeout(eval(&quot;button2_click&quot;),&quot;3000&quot;);<br />
+				}<br />
+				<br />
+				$(&#39;#button1&#39;).bind(&#39;click&#39;, button1_click);<br />
+				<br />
+				$(&#39;#button2&#39;).bind(&#39;click&#39;, button2_click);<br />
+				<br />
+				$(&#39;#button3&#39;).bind(&#39;click&#39;, button3_click);<br />
+				<br />
+				OnLoad();<br />
+				<br />
+				});</div>
+
+		</div>
+</body>
+
+</html>

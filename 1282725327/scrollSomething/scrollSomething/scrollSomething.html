@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Scroll Something
+</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    
+    <script src="js/jQuery.scrollSomething-1.0.0.js" type="text/javascript"></script>
+    <link href="css/jQuery.scrollSomething-1.0.0.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#myScrollebleItems1").scrollSomething({
+                scrollerWidth: 650,
+                scrollerHeight: 125,
+                scrollInterval: 5000,
+                scrollPrefix: "example1_",
+                itemsVisable: 1,
+                itemsScrolling: 1,
+                buttonPosition: "bottomRight"
+            });
+            
+            $("#myScrollebleItems2").scrollSomething({
+                scrollerWidth: 999,
+                scrollerHeight: 125,
+                scrollInterval: 5000,
+                scrollPrefix: "example2_",
+                itemsVisable: 3,
+                itemsScrolling: 1,
+                buttonPosition: "bottomRight"
+            });
+            
+            $("#myScrollebleItems3").scrollSomething({
+                scrollerWidth: 500,
+                scrollerHeight: 125,
+                scrollInterval: 5000,
+                scrollPrefix: "example3_",
+                itemsVisable: 2,
+                itemsScrolling: 2,
+                buttonPosition: "bottomRight",
+                buttonSettings: "show"
+            });
+        });
+    </script>
+</head>
+<body>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+    <h2>Example 1: Automatic scroller with 1 item visable:</h2>
+    <div id="myScrollebleItems1">
+        <div class="wrapDark">
+            An example with the text wrapped in a "wrapDark" box. This item also has a background and a link!
+            <img src="http://isenne.com/wp-content/uploads/2010/06/DuckHunt.png" alt="Duck Hunt" class="itemBackground" />
+            <a href="http://isenne.com/2010/06/duck-hunt-behind-the-scenes/" class="itemLink">Invisable link</a>
+        </div>
+        <div class="wrapLight">
+            An example with the text wrapped in a "wrapLight" box. This item also has a background and a link!
+            <img src="http://isenne.com/wp-content/uploads/2010/06/car_explosion_thumb.png" alt="Car explosion" class="itemBackground" />
+            <a href="http://isenne.com/2010/06/this-is-not-how-youre-supposed-to-fly-out-of-dallas-fort-worth-international-airport/" class="itemLink">Invisable link</a>
+        </div>
+        <div class="wrapDark">
+            An example with the text wrapped in a "wrapDark" box. This item has a link but doesn't have a background!
+            <a href="http://isenne.com/2010/04/new-nokia-n8-is-coming-in-q3/" class="itemLink">Invisable link</a>
+        </div>
+        <span>
+            In stead of a div element, this is a span.
+        </span>
+        <div>
+            <img style="float: left; margin-right: 5px;" src="http://isenne.com/wp-content/uploads/2010/04/youtube.png" alt="youtube" />
+            This is a item with a normal picture in it. That picture is not a background!
+        </div>
+        <ul>
+            <li>This is the last slide! After this it will rewind!</li>
+        </ul>
+    </div>
+    <br /><br />
+    <h2>Example 2: Automatic scroller with 3 items visable and scrolling 1 at a time:</h2>
+    <div id="myScrollebleItems2">
+        <div class="wrapDark">
+            An example with the text wrapped in a "wrapDark" box. This item also has a background and a link!
+            <img src="http://isenne.com/wp-content/uploads/2010/06/DuckHunt.png" alt="Duck Hunt" class="itemBackground" />
+            <a href="http://isenne.com/2010/06/duck-hunt-behind-the-scenes/" class="itemLink">Invisable link</a>
+        </div>
+        <div class="wrapLight">
+            An example with the text wrapped in a "wrapLight" box. This item also has a background and a link!
+            <img src="http://isenne.com/wp-content/uploads/2010/06/car_explosion_thumb.png" alt="Car explosion" class="itemBackground" />
+            <a href="http://isenne.com/2010/06/this-is-not-how-youre-supposed-to-fly-out-of-dallas-fort-worth-international-airport/" class="itemLink">Invisable link</a>
+        </div>
+        <div class="wrapDark">
+            An example with the text wrapped in a "wrapDark" box. This item has a link but doesn't have a background!
+            <a href="http://isenne.com/2010/04/new-nokia-n8-is-coming-in-q3/" class="itemLink">Invisable link</a>
+        </div>
+        <span>
+            In stead of a div element, this is a span.
+        </span>
+        <div>
+            <img style="float: left; margin-right: 5px;" src="http://isenne.com/wp-content/uploads/2010/04/youtube.png" alt="youtube" />
+            This is a item with a normal picture in it. That picture is not a background!
+        </div>
+        <ul>
+            <li>This is the last slide! After this it will rewind!</li>
+        </ul>
+    </div>
+    <br /><br />
+    <h2>Example 3: Static scroller with 2 items visable and scrolling 2 at a time:</h2>
+    <div id="myScrollebleItems3">
+        <div class="wrapDark">
+            An example with the text wrapped in a "wrapDark" box. This item also has a background and a link!
+            <img src="http://isenne.com/wp-content/uploads/2010/06/DuckHunt.png" alt="Duck Hunt" class="itemBackground" />
+            <a href="http://isenne.com/2010/06/duck-hunt-behind-the-scenes/" class="itemLink">Invisable link</a>
+        </div>
+        <div class="wrapLight">
+            An example with the text wrapped in a "wrapLight" box. This item also has a background and a link!
+            <img src="http://isenne.com/wp-content/uploads/2010/06/car_explosion_thumb.png" alt="Car explosion" class="itemBackground" />
+            <a href="http://isenne.com/2010/06/this-is-not-how-youre-supposed-to-fly-out-of-dallas-fort-worth-international-airport/" class="itemLink">Invisable link</a>
+        </div>
+        <div class="wrapDark">
+            An example with the text wrapped in a "wrapDark" box. This item has a link but doesn't have a background!
+            <a href="http://isenne.com/2010/04/new-nokia-n8-is-coming-in-q3/" class="itemLink">Invisable link</a>
+        </div>
+        <span>
+            In stead of a div element, this is a span.
+        </span>
+        <div>
+            <img style="float: left; margin-right: 5px;" src="http://isenne.com/wp-content/uploads/2010/04/youtube.png" alt="youtube" />
+            This is a item with a normal picture in it. That picture is not a background!
+        </div>
+        <ul>
+            <li>This is the last slide! After this it will rewind!</li>
+        </ul>
+    </div>
+</body>
+</html>

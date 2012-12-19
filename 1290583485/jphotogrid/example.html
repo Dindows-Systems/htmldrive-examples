@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jPhotoGrid Plugin</title>
+		<link href="style.css" rel="stylesheet" type="text/css" media="all" /> 
+		<link href="jphotogrid.css" rel="stylesheet" type="text/css" media="screen" /> 
+		<!--[if IE]>
+			<link href="jphotogrid.ie.css" rel="stylesheet" type="text/css" media="screen" />
+		<![endif]--> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="jphotogrid.js"></script>
+		<script src="jflickrfeed.js"></script>
+		<script src="setup.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>jPhotoGrid Plugin</h1>
+			<p>This plugin makes it easy to put together a cool image grid from a list of photos.  The markup should look like this:</p>
+			<pre>&lt;ul&gt;
+	&lt;li&gt;
+		&lt;img src="source.jpg" alt="" /&gt;
+		&lt;p&gt;Caption Here&lt;/p&gt;
+	&lt;/li&gt;
+	...
+&lt;ul&gt;</pre>
+			<p>The plugin uses the browser's image scaling to do the zoom.  So the image should be appropriately sized to act as both a thumbnail and a zoomed image.</p>
+			<p>The css for the below slideshow looks like this:</p>
+			<pre>#pg { position: relative; height: 585px; background: #000; }
+#pg li { position: relative; list-style: none; width: 175px; height: 117px; overflow: hidden; float: left; z-index: 2; opacity: .3; }
+#pg li.active { opacity: 1; }
+#pg li.selected { opacity: 1; z-index: 99; -moz-box-shadow: 0px 0px 10px #fff; -webkit-box-shadow: 0px 0px 10px #fff; }
+#pg li img { display: block; width: 100%; }
+#pg li p { color: white; margin: 10px 0; font-size: 12px; }</pre>
+			<p>Finally, the last step is setting up the javascript.  The key think here is passing in two CSS objects.  This is what tells $.animate how to open and close the popup:</p>
+			<pre>$('#pg').jphotogrid({
+	baseCSS: {
+		width: '175px',
+		height: '117px',
+		padding: '0px'
+	},
+	selectedCSS: {
+		top: '50px',
+		left: '100px',
+		width: '500px',
+		height: '360px',
+		padding: '10px'
+	}
+	});</pre>
+			
+			<h3>The Result</h3>
+			
+			<ul id="pg">
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/3.jpg" alt="DSC_0660">
+					<p>DSC_0660</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/2.jpg" alt="DSC_0698">
+					<p>DSC_0698</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/1.jpg" alt="DSC_0668">
+					<p>DSC_0668</p>
+				</li>
+								<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/3.jpg" alt="DSC_0660">
+					<p>DSC_0660</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/2.jpg" alt="DSC_0698">
+					<p>DSC_0698</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/1.jpg" alt="DSC_0668">
+					<p>DSC_0668</p>
+				</li>
+								<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/3.jpg" alt="DSC_0660">
+					<p>DSC_0660</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/2.jpg" alt="DSC_0698">
+					<p>DSC_0698</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/1.jpg" alt="DSC_0668">
+					<p>DSC_0668</p>
+				</li>
+								<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/3.jpg" alt="DSC_0660">
+					<p>DSC_0660</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/2.jpg" alt="DSC_0698">
+					<p>DSC_0698</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/1.jpg" alt="DSC_0668">
+					<p>DSC_0668</p>
+				</li>				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/3.jpg" alt="DSC_0660">
+					<p>DSC_0660</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/2.jpg" alt="DSC_0698">
+					<p>DSC_0698</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/1.jpg" alt="DSC_0668">
+					<p>DSC_0668</p>
+				</li>				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/3.jpg" alt="DSC_0660">
+					<p>DSC_0660</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/2.jpg" alt="DSC_0698">
+					<p>DSC_0698</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/1.jpg" alt="DSC_0668">
+					<p>DSC_0668</p>
+				</li>				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/3.jpg" alt="DSC_0660">
+					<p>DSC_0660</p>
+				</li>
+				<li>
+					<img src="http://www.htmldrive.net/edit_media/2010/201011/20101119/AnimatedPortfolioGallery/images/medium/2.jpg" alt="DSC_0698">
+					<p>DSC_0698</p>
+				</li>
+>
+			</ul>
+		</div>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+	</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Care for design - jQuery : Menu swing</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	function getSpeed(){ return $('input[type=radio][name=speed]:checked').val(); };
+	$('.item').hover(function(){
+		$('.subitem', this).show(getSpeed());
+	}, function(){
+		$('.subitem', this).hide(getSpeed());
+	}); 			   
+});
+-->
+</script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.center, .item  {
+width:200px;
+}
+
+.item, .title {
+width:auto;
+padding:4px;
+background-color:#252525;
+margin:2px 0 2px 0;
+}
+
+.subitem {
+height:40px;
+line-height:40px;
+text-align:center;
+}
+
+ul { list-style-type:none; }
+-->
+</style>
+</head>
+
+<body>
+<div class="center">
+
+<div class="title">Vitesse :</div>
+<ul>
+	<li><input name="speed" type="radio" value="slow" id="slow" /> <label for="slow">Slow</label></li>
+	<li><input name="speed" type="radio" value="normal" id="normal" checked="checked" /> <label for="normal">Normal</label></li>
+	<li><input name="speed" type="radio" value="fast" id="fast" /> <label for="fast">Fast</label></li>
+</ul>
+<div class="item">
+
+  01. <a href="#" title="+ d'infos">Menu item</a>
+  <div class="subitem" style="display:none;">Contenu masqué - <a href="#" title="Care for design">c4d</a></div>
+</div>
+<div class="item">
+  02. <a href="#" title="+ d'infos">Menu item</a>
+  <div class="subitem" style="display:none;">Contenu masqué - <a href="#" title="Care for design">c4d</a></div>
+
+</div>
+<div class="item">
+  03. <a href="#" title="+ d'infos">Menu item</a>
+  <div class="subitem" style="display:none;">Contenu masqué - <a href="#" title="Care for design">c4d</a></div>
+</div>
+<div class="item">
+  04. <a href="#" title="+ d'infos">Menu item</a>
+  <div class="subitem" style="display:none;">Contenu masqué - <a href="#" title="Care for design">c4d</a></div>
+
+</div>
+<div class="item">
+  05. <a href="#" title="+ d'infos">Menu item</a>
+  <div class="subitem" style="display:none;">Contenu masqué - <a href="#" title="Care for design">c4d</a></div>
+</div>
+<div class="item">
+  06. <a href="#" title="+ d'infos">Menu item</a>
+  <div class="subitem" style="display:none;">Contenu masqué - <a href="#" title="Care for design">c4d</a></div>
+
+</div>
+<div class="item">
+  07. <a href="#" title="+ d'infos">Menu item</a>
+  <div class="subitem" style="display:none;">Contenu masqué - <a href="#" title="Care for design">c4d</a></div>
+</div>
+<div class="item">
+  08. <a href="#" title="+ d'infos">Menu item</a>
+  <div class="subitem" style="display:none;">Contenu masqué - <a href="#" title="Care for design">c4d</a></div>
+
+</div>
+<div class="item">
+  09. <a href="#" title="+ d'infos">Menu item</a>
+  <div class="subitem" style="display:none;">Contenu masqué - <a href="#" title="Care for design">c4d</a></div>
+</div>
+<div class="item">
+  10. <a href="#" title="+ d'infos">Menu item</a>
+  <div class="subitem" style="display:none;">Contenu masqué - <a href="#" title="Care for design">c4d</a></div>
+
+</div>
+</div>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+</body>
+</html>

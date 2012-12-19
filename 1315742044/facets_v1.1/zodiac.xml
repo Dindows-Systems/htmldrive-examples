@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zodiac>
+
+  <item id="aries">
+    <id>aries</id>
+    <german>Widder</german>
+    <latin>Aries</latin>
+    <period>21. März - 20. April</period>
+    <length>0°-30°</length>
+    <symbol>1-aries.png</symbol>
+    <element>Feuer</element>
+    <horoscope>http://de.wikipedia.org/wiki/Widder_(Sternbild)</horoscope>
+  </item>
+  
+  <item id="taurus">
+    <id>taurus</id>
+    <german>Stier</german>
+    <latin>Taurus</latin>
+    <period>21. April - 21. Mai</period>
+    <length>30°-60°</length>
+    <symbol>2-taurus.png</symbol>
+    <element>Erde</element>
+    <horoscope>http://de.wikipedia.org/wiki/Stier_(Sternbild)</horoscope>
+  </item>
+  
+  <item id="gemini">
+    <id>gemini</id>
+    <german>Zwillinge</german>
+    <latin>Gemini</latin>
+    <period>22. Mai - 21. Juni</period>
+    <length>60°-90°</length>
+    <symbol>3-gemini.png</symbol>
+    <element>Luft</element>
+    <horoscope>http://de.wikipedia.org/wiki/Zwillinge_(Sternbild)</horoscope>
+  </item>
+  
+  <item id="cancer">
+    <id>cancer</id>
+    <german>Krebs</german>
+    <latin>Cancer</latin>
+    <period>22. Juni - 23. Juli</period>
+    <length>90°-120°</length>
+    <symbol>4-cancer.png</symbol>
+    <element>Wasser</element>
+    <horoscope>http://de.wikipedia.org/wiki/Krebs_(Sternbild)</horoscope>
+  </item>
+
+  <item id="leo">
+    <id>leo</id>
+    <german>Löwe</german>
+    <latin>Leo</latin>
+    <period>24. Juli - 23. August</period>
+    <length>120°-150°</length>
+    <symbol>5-leo.png</symbol>
+    <element>Feuer</element>
+    <horoscope>http://de.wikipedia.org/wiki/L%C3%B6we_(Sternbild)</horoscope>
+  </item>
+  
+  <item id="virgo">
+    <id>virgo</id>
+    <german>Jungfrau</german>
+    <latin>Virgo</latin>
+    <period>24. August - 23. September</period>
+    <length>150°-180°</length>
+    <symbol>6-virgo.png</symbol>
+    <element>Erde</element>
+    <horoscope>http://de.wikipedia.org/wiki/Jungfrau_(Sternbild)</horoscope>
+  </item>
+  
+  <item id="libra">
+    <id>libra</id>
+    <german>Waage</german>
+    <latin>Libra</latin>
+    <period>24. September - 23. Oktober</period>
+    <length>180°-210°</length>
+    <symbol>7-libra.png</symbol>
+    <element>Luft</element>
+    <horoscope>http://de.wikipedia.org/wiki/Waage_(Sternbild)</horoscope>
+  </item>
+  
+  <item id="scorpio">
+    <id>scorpio</id>
+    <german>Skorpion</german>
+    <latin>Scorpio</latin>
+    <period>24. Oktober - 22. November</period>
+    <length>210°-240°</length>
+    <symbol>8-scorpio.png</symbol>
+    <element>Wasser</element>
+    <horoscope>http://de.wikipedia.org/wiki/Skorpion_(Sternbild)</horoscope>
+  </item>
+  
+  <item id="sagittarius">
+    <id>sagittarius</id>
+    <german>Schütze</german>
+    <latin>Sagittarius</latin>
+    <period>23. November - 21. Dezember</period>
+    <length>240°-270°</length>
+    <symbol>9-sagittarius.png</symbol>
+    <element>Feuer</element>
+    <horoscope>http://de.wikipedia.org/wiki/Sch%C3%BCtze_(Sternbild)</horoscope>
+  </item>
+  
+  <item id="capricorn">
+    <id>capricorn</id>
+    <german>Steinbock</german>
+    <latin>Capricornus</latin>
+    <period>22. Dezember - 20. Januar</period>
+    <length>270°-300°</length>
+    <symbol>10-capricornus.png</symbol>
+    <element>Erde</element>
+    <horoscope>http://de.wikipedia.org/wiki/Steinbock_(Sternbild)</horoscope>
+  </item>
+  
+  <item id="aquarius">
+    <id>aquarius</id>
+    <german>Wassermann</german>
+    <latin>Aquarius</latin>
+    <period>21. Januar - 19. Februar</period>
+    <length>300°-330°</length>
+    <symbol>11-aquarius.png</symbol>
+    <element>Luft</element>
+    <horoscope>http://de.wikipedia.org/wiki/Wassermann_(Sternbild)</horoscope>
+  </item>
+  
+  <item id="pisces">
+    <id>pisces</id>
+    <german>Fische</german>
+    <latin>Pisces</latin>
+    <period>20. Februar - 20. März</period>
+    <length>330°-360°</length>
+    <symbol>12-pisces.png</symbol>
+    <element>Wasser</element>
+    <horoscope>http://de.wikipedia.org/wiki/Fische_(Sternbild)</horoscope>
+  </item>
+  
+</zodiac>

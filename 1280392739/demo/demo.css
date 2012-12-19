@@ -1,0 +1,60 @@
+/* Page styles */
+
+body,h1,h2,h3,p,td,quote,small,form,input,ul,li,ol,label{
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	margin-top:20px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#51555C;
+	height:100%;
+	font-size:12px;
+}
+
+/* Navigation menu styles */
+
+ul{
+	height:25px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+ul li{
+	border:1px solid #444444;
+	display:inline-block;
+	float:left;
+	height:25px;
+	list-style-type:none;
+	overflow:hidden;
+}
+
+ul li a, ul li a:hover, 
+ul li a:visited{
+	text-decoration:none;
+}
+
+.normalMenu, .normalMenu:visited,
+.hoverMenu, .hoverMenu:visited,
+.selectedMenu,.selectedMenu:visited {
+	outline:none;
+	padding:5px 10px;
+	display:block;
+}
+
+.hoverMenu,.hoverMenu:visited,
+.selectedMenu,.selectedMenu:visited {
+	margin-top:-25px;
+	background:url(img/grey_bg.gif) repeat-x #eeeeee;
+	color:#444444;
+}
+
+.selectedMenu,.selectedMenu:visited {
+	margin:0;
+}
+
+.normalMenu, .normalMenu:visited{
+	color:white;
+	background:url(img/dark_bg.gif) repeat-x #444444;
+}

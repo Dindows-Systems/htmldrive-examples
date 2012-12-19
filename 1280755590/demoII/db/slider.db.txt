@@ -1,0 +1,5 @@
+﻿Dell Vostro A860			| A great laptop for the business person.	| 500 	| img/content/1.png	| http://dell.com/
+Sony Vaio VGN-FW31J			| A real on the road cinema.				| 640	| img/content/2.png	| http://sony.com/
+Lenovo 3000 N200			| Budget means quality.						| 421	| img/content/3.png	| http://lenovo.com/
+Acer Aspire 5738G			| A notebook for the true gamers.			| 553	| img/content/4.png	| http://acer.com/
+MacBook Air					| A special college edition notebook.		| 710	| img/content/5.png | http://apple.com/
